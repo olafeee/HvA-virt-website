@@ -44,7 +44,7 @@
 			<div class="index_block1">
 			<div class="div-align-span-center"><span class="glyphicon glyphicon-shopping-cart span-shopping-cart"></span></div>
 			<br/>
-  			<p><b>D</b>i<b>N</b>e<b>S</b>h is niet in ons DNA</p>
+  			<p><b>D</b>i<b>N</b>e<b>S</b>h is niet in ons DNA of toch wel</p>
 			</div>
 		</div>
 		<div class="col-md-4">
