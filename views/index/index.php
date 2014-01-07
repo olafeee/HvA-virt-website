@@ -44,11 +44,7 @@
 			<div class="index_block1">
 			<div class="div-align-span-center"><span class="glyphicon glyphicon-shopping-cart span-shopping-cart"></span></div>
 			<br/>
-<<<<<<< HEAD
-  			<p><b>D</b>i<b>N</b>e<b>S</b>h is niet in ons DNA of wel</p>
-=======
-  			<p><b>D</b>i<b>N</b>e<b>S</b>h is niet in ons DNA of toch wel</p>
->>>>>>> 58391420e181ee4b7e6bf03889b3106082aeebe1
+  			<p><b>D</b>i<b>N</b>e<b>S</b>h is my DNA</p>
 			</div>
 		</div>
 		<div class="col-md-4">
