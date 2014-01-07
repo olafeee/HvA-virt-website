@@ -28,7 +28,7 @@ class Bootstrap {
 		// laad class van desbetrefende contoller in
 		$controller = new $url[0];
 
-		print_r($url);
+		//print_r($url);
 		// laad functie van class in en geef variable mee }else{ laad funtie
 		if (isset($url[2])) {
 			if (method_exists($controller, $url[1])) {
