@@ -5,7 +5,7 @@ class Bootstrap {
 	function __construct() {
 		// laad url in 
 		$url = $this->urlfix1();
-		print_r($url);
+		//print_r($url);
 		echo"hoi";
 		// kijk of url doorgegevens word. als hij leeg is word index ingevuld
 		if(empty($url[0])){
