@@ -5,8 +5,7 @@ class Bootstrap {
 	function __construct() {
 		// laad url in 
 		$url = $this->urlfix1();
-		print_r($url);
-		echo"hoi";
+		//print_r($url);
 		// kijk of url doorgegevens word. als hij leeg is word index ingevuld
 		if(empty($url[0])){
 			require 'controllers/index.php';
@@ -29,7 +28,7 @@ class Bootstrap {
 		// laad class van desbetrefende contoller in
 		$controller = new $url[0];
 
-		print_r($url);
+		//print_r($url);
 		// laad functie van class in en geef variable mee }else{ laad funtie
 		if (isset($url[2])) {
 			if (method_exists($controller, $url[1])) {
