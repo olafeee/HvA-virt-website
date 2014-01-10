@@ -33,9 +33,11 @@ class loginModel extends baseModel
 			Session::init();
 			Session::set('loggedIn', true);
 			Session::set('gebruikersnaam', $username);
-			header('location: ../account');
+			echo("IF FIRED")
+			//header('location: ../account');
 		} else {
-			header('location: ../login');
+			echo("else fired");
+			//header('location: ../login');
 		}
 		
 	}
