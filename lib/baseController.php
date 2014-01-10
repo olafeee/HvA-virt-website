@@ -39,7 +39,7 @@ class baseController {
 
 	function loadModel(){
 		$url = $this->urlfix();
-		print_r($url);
+		//print_r($url);
 		echo"test";
 		//laad model in als die er is
 		$file = $url[0].'Model';
@@ -47,7 +47,7 @@ class baseController {
 		
 		if(file_exists($dir_file)){
 			require $dir_file;
-			print_r($dir_file);
+			//print_r($dir_file);
 			echo" model word geladen";
 			$model = new $file();
 			return $model;
