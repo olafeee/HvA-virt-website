@@ -1,6 +1,6 @@
 <?php
 
-require_once("lib/cloudstack.php");
+//require_once("lib/cloudstack.php");
 
 class Login extends baseController {
 
