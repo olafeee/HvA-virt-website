@@ -47,7 +47,9 @@ class baseController {
 		echo"br";
 
 		if(file_exists($dir_file)){
+			echo "fritx";
 			print_r($dir_file);
+			echo"hank";
 			require $dir_file;
 			
 			$model = new $file();
