@@ -1,5 +1,7 @@
 <?php
 
+//require_once("lib/cloudstack.php");
+
 class klantPaneel extends baseController {
 
 	function __construct() {
