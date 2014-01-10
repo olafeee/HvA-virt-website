@@ -37,7 +37,7 @@ class baseController {
 
 	}
 
-	function loadModel1(){
+	function loadModel(){
 		$url = $this->urlfix();
 		//laad model in als die er is
 		$file = $url[0].'Model';
