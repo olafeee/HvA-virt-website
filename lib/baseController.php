@@ -47,9 +47,9 @@ class baseController {
 		echo"br";
 
 		if(file_exists($dir_file)){
-			echo"hoi hoi";
-			require $dir_file;
 			print_r($dir_file);
+			require $dir_file;
+			
 			$model = new $file();
 			print_r($model);
 			return $model;
