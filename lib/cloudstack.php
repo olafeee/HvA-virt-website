@@ -456,7 +456,10 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
     {
         
     }*/
-    // Login in a user
+    // Logs a user into the CloudStack. 
+    // A successful login attempt will generate a JSESSIONID cookie value
+    // that can be passed in subsequent Query command calls until the 
+    // "logout" command has been issued or the session has expired.
     public function login($username, $password)
     {
         $command_array = array(
