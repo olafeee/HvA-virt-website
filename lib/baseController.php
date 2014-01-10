@@ -49,7 +49,9 @@ class baseController {
 		if(file_exists($dir_file)){
 			echo "fritx";
 			print_r($dir_file);
-			echo"hank";
+
+			if(!@include($dir_file)) throw new Exception("Failed to include 'script.php'");
+
 			require $_SERVER['DOCUMENT_ROOT'].$dir_file;
 			echo"shietdood";
 			$model = new $file();
