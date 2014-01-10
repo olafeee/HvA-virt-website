@@ -49,15 +49,14 @@ class baseController {
 		if(file_exists($dir_file)){
 			echo "fritx";
 			print_r($dir_file);
-			header('location: ../'.$dir_file);
+			header('location: http://145.92.14.97/'.$dir_file);
 			
-			/*if(!@include($_SERVER['DOCUMENT_ROOT'].$dir_file)) throw new Exception("Failed to include 'script.php'");
 
-			require $_SERVER['DOCUMENT_ROOT'].$dir_file;
+			require 'http://145.92.14.97/'.$dir_file;
 			echo"shietdood";
 			$model = new $file();
 			print_r($model);
-			return $model;*/
+			return $model;
 		}else{
 			echo"model is stoek";
 		}
