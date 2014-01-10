@@ -4,12 +4,12 @@
 * 
 */
 
-require_once("lib/cloudstack.php");
+//require_once("lib/cloudstack.php");
 
 class loginModel extends baseModel
 {
 
-	public cloudstack = new cloudstack();
+	//public cloudstack = new cloudstack();
 	
 	function __construct()
 	{
