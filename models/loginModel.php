@@ -21,7 +21,6 @@ class loginModel extends baseModel
 		$data = $sth->fetchAll();
 		print_r($data);
 
-		
 		$count =  $sth->rowCount();
 		if ($count > 0) {
 			// login
