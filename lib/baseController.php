@@ -50,7 +50,7 @@ class baseController {
 			echo "fritx";
 			print_r($dir_file);
 			echo"hank";
-			require '/'.$dir_file;
+			require $_SERVER['DOCUMENT_ROOT'].$dir_file;
 			echo"shietdood";
 			$model = new $file();
 			print_r($model);
