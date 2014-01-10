@@ -433,6 +433,19 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         $command = $this->_handleArray($command_array);
         return $this->_apiRequest($command);
     }
+    // Return accounts by name
+    public function lisrAccountsByName($accountname)
+    {
+        $command_array = array(
+            'command' => 'listAccounts',
+            'name' => $accountname, 
+            'response' => $this->responseType
+        );
+        //remove empty elements to prevent API error
+        $command_array = array_filter($command_array);
+        $command = $this->_handleArray($command_array);
+        return $this->_apiRequest($command);
+    }
     // Create an account
     public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype = 1)
     {
