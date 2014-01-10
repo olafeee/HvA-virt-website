@@ -45,6 +45,7 @@ class baseController {
 		print_r($dir_file);
 		echo"</br>";
 		echo"br";
+		
 		if(!file_exists($dir_file)){
 			require $dir_file;
 			print_r($dir_file);
