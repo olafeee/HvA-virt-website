@@ -51,7 +51,7 @@ class baseController {
 			print_r($dir_file);
 			echo"hank";
 			require $dir_file;
-			
+			echo"shietdood";
 			$model = new $file();
 			print_r($model);
 			return $model;
