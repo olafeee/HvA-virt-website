@@ -39,15 +39,16 @@ class baseController {
 
 	function loadModel(){
 		$url = $this->urlfix();
-		print_r($url);
 		//laad model in als die er is
 		$file = $url[0].'Model';
 		$dir_file = 'models/'.$file.'.php';
-		
+		print_r($dir_file);
+		echo"</br>";
 		if(file_exists($dir_file)){
 			require $dir_file;
 			print_r($dir_file);
 			$model = new $file();
+			print_r($model);
 			return $model;
 		}
 	}
