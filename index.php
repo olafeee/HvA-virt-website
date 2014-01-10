@@ -9,7 +9,7 @@ require 'config.php';
 require 'lib/database.php';
 require 'lib/session.php';
 
-
+echo '<script type="text/javascript">alert("indax!");</script>';
 
 $app = new Bootstrap();
 
