@@ -4,12 +4,12 @@
 * 
 */
 
-//require_once("lib/cloudstack.php");
+require_once("lib/cloudstack.php");
 
 class loginModel extends baseModel
 {
 
-	//public cloudstack = new cloudstack();
+	public cloudstack = new cloudstack();
 	
 	function __construct()
 	{
@@ -18,8 +18,9 @@ class loginModel extends baseModel
 
 	/*
 
-		ZIE baseController
-		dit weghalen als require in basecontroller weer werkt.
+		lolol raoul was een ; vergeten
+		allebei moker lang zoeken
+		nou eindelijk gevonden hoor....
 
 */
 	public function run()
