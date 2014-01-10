@@ -433,6 +433,28 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         $command = $this->_handleArray($command_array);
         return $this->_apiRequest($command);
     }
+    // Create an account
+    public function createAccount($accounttype = 1, $email, $firstname, $lastname, $password, $username)
+    {
+        $command_array = array(
+            'accounttype' => $accounttype,
+            'email' => $email,
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'password' => $password,
+            'username' => $username,
+            'response' => $this->responseType
+        );
+        //remove empty elements to prevent API error
+        $command_array = array_filter($command_array);
+        $command = $this->_handleArray($command_array);
+        return $this->_apiRequest($command);
+    }
+    // Update account information, usefull for password changes ect...
+    /*public function updateAccount($account, )
+    {
+        
+    }*/
     
     protected function _signRequest($apiRequest)
     {
