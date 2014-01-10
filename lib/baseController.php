@@ -37,7 +37,7 @@ class baseController {
 
 	}
 
-	function loadModel(){
+	function loadModel1(){
 		$url = $this->urlfix();
 		//laad model in als die er is
 		$file = $url[0].'Model';
@@ -60,6 +60,18 @@ class baseController {
 		}else{
 			echo"model is stoek";
 		}
+	}
+
+	function loadModel(){
+		$url = $this->urlfix();
+		$file = $url[0].'Model';
+		$dir_file = 'models'/.$file.'.php';
+		if(file_exists($dir_file)){
+			require $dir_file;
+			$model = new $file();
+			return $model;
+		}
+
 	}
 
 	function urlfix(){
