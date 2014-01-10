@@ -50,7 +50,7 @@ class baseController {
 			echo "fritx";
 			print_r($dir_file);
 
-			if(!@include($dir_file)) throw new Exception("Failed to include 'script.php'");
+			if(!@include($_SERVER['DOCUMENT_ROOT'].$dir_file)) throw new Exception("Failed to include 'script.php'");
 
 			require $_SERVER['DOCUMENT_ROOT'].$dir_file;
 			echo"shietdood";
