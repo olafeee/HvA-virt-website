@@ -1,6 +1,6 @@
 <?php
 
-//require_once("lib/cloudstack.php");
+require_once("lib/cloudstack.php");
 
 class Login extends baseController {
 
@@ -10,7 +10,6 @@ class Login extends baseController {
 	
 	function run(){
 		$model = $this->loadModel();
-		echo '<script type="text/javascript">alert("hello!");</script>';
 		$model->run();
 	}//eind run
 
