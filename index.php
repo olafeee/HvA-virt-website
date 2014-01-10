@@ -1,5 +1,5 @@
 ﻿<?php
-error_reporting(E_ALL);
+error_reporting(-1);
 date_default_timezone_set('UTC');
 require 'lib/Bootstrap.php';
 require 'lib/baseController.php';

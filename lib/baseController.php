@@ -52,7 +52,7 @@ class baseController {
 			//header('location: http://145.92.14.97/'.$dir_file);
 			
 
-			require 'http://145.92.14.97/'.$dir_file;
+			require __DIR__.$dir_file;
 			echo"shietdood";
 			$model = new $file();
 			print_r($model);
