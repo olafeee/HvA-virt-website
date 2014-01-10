@@ -49,7 +49,7 @@ class baseController {
 		if(file_exists($dir_file)){
 			echo "fritx";
 			print_r($dir_file);
-			header($dir_file);
+			header('location: ../'.$dir_file);
 			
 			/*if(!@include($_SERVER['DOCUMENT_ROOT'].$dir_file)) throw new Exception("Failed to include 'script.php'");
 
