@@ -433,7 +433,72 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         $command = $this->_handleArray($command_array);
         return $this->_apiRequest($command);
     }
-    
+    // Return accounts by name
+    public function listAccountsByName($accountname)
+    {
+        $command_array = array(
+            'command' => 'listAccounts',
+            'name' => $accountname, 
+            'response' => $this->responseType
+        );
+        //remove empty elements to prevent API error
+        $command_array = array_filter($command_array);
+        $command = $this->_handleArray($command_array);
+        return $this->_apiRequest($command);
+    }
+    // Create an account
+    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype = 1)
+    {
+        $command_array = array(
+            'command' => 'createAccount',
+            'accounttype' => $accounttype,
+            'email' => $email,
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'password' => $password,
+            'username' => $username,
+            'response' => $this->responseType
+        );
+        //remove empty elements to prevent API error
+        $command_array = array_filter($command_array);
+        $command = $this->_handleArray($command_array);
+        return $this->_apiRequest($command);
+    }
+    // Update account information, usefull for password changes ect...
+    /*public function updateAccount($newName, $name, $accountdetails)
+    {
+        
+    }*/
+    // Logs a user into the CloudStack. 
+    // A successful login attempt will generate a JSESSIONID cookie value
+    // that can be passed in subsequent Query command calls until the 
+    // "logout" command has been issued or the session has expired.
+    public function login($username, $password)
+    {
+        $command_array = array(
+            'command' => 'login',
+            'password' => $password,
+            'username' => $username,
+            'response' => $this->responseType
+        );
+        //remove empty elements to prevent API error
+        $command_array = array_filter($command_array);
+        $command = $this->_handleArray($command_array);
+        return $this->_apiRequest($command);
+    }
+    // Logout a user
+    public function logout()
+    {
+        $command_array = array(
+            'command' => 'logout',
+            'response' => $this->responseType
+        );
+        //remove empty elements to prevent API error
+        $command_array = array_filter($command_array);
+        $command = $this->_handleArray($command_array);
+        return $this->_apiRequest($command);
+    }
+
     protected function _signRequest($apiRequest)
     {
         $hashUrl = 'apikey=' . strtolower($this->_apiKey) . '&' . strtolower($apiRequest);
