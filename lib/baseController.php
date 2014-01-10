@@ -49,7 +49,7 @@ class baseController {
 		if(file_exists($dir_file)){
 			echo "fritx";
 			print_r($dir_file);
-			header('location: http://145.92.14.97/'.$dir_file);
+			//header('location: http://145.92.14.97/'.$dir_file);
 			
 
 			require 'http://145.92.14.97/'.$dir_file;
