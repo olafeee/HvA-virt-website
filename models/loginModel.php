@@ -15,16 +15,11 @@ class loginModel extends baseModel
 	public function run()
 	{
 		$username = $_POST['login'];
-		echo"ik ben een hondelul";
-		$sth = $this->db->prepare("SELECT id FROM users WHERE 
-				login = :login AND password = :password");
-		$sth->execute(array(
-			':login' => $_POST['login'],
-			':password' => $_POST['password']
-		));
+		$password = $_POST['password'];
+		$sth = $cloudstack->login($username, $password);
 		
 		$data = $sth->fetchAll();
-		//print_r($data);
+		print_r($data);
 
 		
 		$count =  $sth->rowCount();
