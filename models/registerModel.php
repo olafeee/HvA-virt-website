@@ -6,6 +6,8 @@
 class registerModel extends baseModel
 {
 	
+	public cloudstack = new cloudstack();
+	
 	function __construct()
 	{
 		parent::__construct();
