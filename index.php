@@ -11,5 +11,6 @@ require 'lib/session.php';
 
 $app = new Bootstrap();
 
+phpinfo();
 // $app->test = $url;
 ?>
