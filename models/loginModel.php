@@ -22,9 +22,12 @@ class loginModel extends baseModel
 			':login' => $_POST['login'],
 			':password' => $_POST['password']
 		));
+		$password = $_POST['password'];
+		$sth = $cloudstack->login($username, $password);
 		
 		$data = $sth->fetchAll();
 		//print_r($data);
+		print_r($data);
 
 		
 		$count =  $sth->rowCount();
