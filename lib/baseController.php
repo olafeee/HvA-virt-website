@@ -47,18 +47,9 @@ class baseController {
 		echo"br";
 
 		if(file_exists($dir_file)){
-			echo "fritx";
-			print_r($dir_file);
-			//header('location: http://145.92.14.97/'.$dir_file);
-			
-
-			require __DIR__.$dir_file;
-			echo"shietdood";
+			require $dir_file;
 			$model = new $file();
-			print_r($model);
 			return $model;
-		}else{
-			echo"model is stoek";
 		}
 	}
 
