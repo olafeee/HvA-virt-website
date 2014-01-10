@@ -4,21 +4,21 @@
 * 
 */
 
-require_once("lib/cloudstack.php");
+//require_once("lib/cloudstack.php");
 
 class loginModel extends baseModel
 {
 
-	public cloudstack = new cloudstack();
+	//public cloudstack = new cloudstack();
 	
 	function __construct()
 	{
 		parent::__construct();
-		echo"ik doe het wel maar ook niet";
 	}
 
 	public function run()
 	{
+		echo"ik doe het wel maar ook niet";
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 		$sth = $cloudstack->login($username, $password);

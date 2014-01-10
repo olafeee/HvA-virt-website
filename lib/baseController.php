@@ -47,7 +47,6 @@ class baseController {
 		if(file_exists($dir_file)){
 			require $dir_file;
 			print_r($dir_file);
-			echo" model word geladen";
 			$model = new $file();
 			return $model;
 		}
