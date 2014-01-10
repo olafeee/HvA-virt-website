@@ -9,7 +9,7 @@ class Login extends baseController {
 	}
 	
 	function run(){
-		$model = $this->loadModel();
+		$model = $this->laadModel();
 		$model->run();
 	}//eind run
 

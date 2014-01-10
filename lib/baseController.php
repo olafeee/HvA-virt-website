@@ -53,6 +53,22 @@ class baseController {
 		}
 	}
 
+	function laadModel(){
+		$url = $this->urlfix();
+		$file = $url[0].'Model';
+		$dir_file = 'models/'.$file.'.php';
+
+		if(file_exists($dir_file)){
+			print_r($dir_file);
+			echo "<br/>";
+			print_r($file);
+			
+			require $dir_file;
+			$model = new $file();
+			return $model;
+		}
+	}
+
 
 
 	function urlfix(){
