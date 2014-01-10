@@ -37,30 +37,7 @@ class baseController {
 
 	}
 
-	function loadModel1(){
-		$url = $this->urlfix();
-		//laad model in als die er is
-		$file = $url[0].'Model';
-		$dir_file = 'models/'.$file.'.php';
-		print_r($dir_file);
-		echo"</br>";
-		echo"br";
 
-		if(file_exists($dir_file)){
-			echo "fritx";
-			print_r($dir_file);
-			//header('location: http://145.92.14.97/'.$dir_file);
-			
-
-			require __DIR__.$dir_file;
-			echo"shietdood";
-			$model = new $file();
-			print_r($model);
-			return $model;
-		}else{
-			echo"model is stoek";
-		}
-	}
 
 	function loadModel(){
 		$url = $this->urlfix();
