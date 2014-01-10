@@ -37,6 +37,14 @@ class baseController {
 
 	}
 
+	/*
+
+	funtie laad model doet vaag
+	hij wil niet require terwijl het bestand (file_exits) dus wel bestaat
+	ook als ik header('location: ../'$dir_file); doe gaat alles goed
+
+	*/
+
 	function loadModel(){
 		$url = $this->urlfix();
 		//laad model in als die er is
@@ -62,7 +70,7 @@ class baseController {
 			print_r($dir_file);
 			echo "<br/>";
 			print_r($file);
-			
+
 			require $dir_file;
 			$model = new $file();
 			return $model;

@@ -16,6 +16,12 @@ class loginModel extends baseModel
 		parent::__construct();
 	}
 
+	/*
+
+		ZIE baseController
+		dit weghalen als require in basecontroller weer werkt.
+
+*/
 	public function run()
 	{
 		echo"ik doe het wel maar ook niet";
