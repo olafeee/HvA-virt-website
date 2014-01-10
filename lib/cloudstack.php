@@ -434,7 +434,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Return accounts by name
-    public function lisrAccountsByName($accountname)
+    public function listAccountsByName($accountname)
     {
         $command_array = array(
             'command' => 'listAccounts',
@@ -465,7 +465,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Update account information, usefull for password changes ect...
-    /*public function updateAccount($account, )
+    /*public function updateAccount($newName, $name, $accountdetails)
     {
         
     }*/
