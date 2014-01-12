@@ -36,7 +36,7 @@
          <div class="col-md-6"></div>
         <div class="col-md-2"><p class="login-boton-pull-right"> 
 
-          <?php if(Session::get('loggedIn') == true){ echo 'logged in as'.$_SESSION['gebruikersnaam']; }?>
+          <?php if(Session::get('loggedIn') == true){ echo 'logged in as'.$_SESSION['username']; }?>
         </p>
         </div>
         <div class="col-md-1">
