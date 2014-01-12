@@ -45,6 +45,13 @@
 			<div class="div-align-span-center"><span class="glyphicon glyphicon-shopping-cart span-shopping-cart"></span></div>
 			<br/>
   			<p><b>D</b>i<b>N</b>e<b>S</b>h is my DNA</p>
+  			<?php 
+  			session_start();
+  			echo "<pre>";
+			print_r($_SESSION);
+			echo "</pre>";
+
+  			 ?>
 			</div>
 		</div>
 		<div class="col-md-4">

@@ -1,5 +1,5 @@
 <?php if (isset($_SESSION['loggedIn'])):?>
-<?php include'/views/account/klantpaneelHeader.php'; ?>
+<?php require'klantpaneelHeader.php'; ?>
 <div class="acountTable">
 
 <table class="table">

@@ -36,7 +36,7 @@
          <div class="col-md-6"></div>
         <div class="col-md-2"><p class="login-boton-pull-right"> 
 
-          <?php if(Session::get('loggedIn') == true){ echo 'logged in as'.$_SESSION['gebruikersnaam']; }?>
+          <?php if(Session::get('loggedIn') == true){ echo 'logged in as '.$_SESSION['username']; }?>
         </p>
         </div>
         <div class="col-md-1">
@@ -102,8 +102,8 @@
           </div>
         </div>
         <div class="kp_hm_text_right">       
-          <b><?php echo "Henk R de Vries"; ?></b>
-          <p><?php echo $_SESSION['gebruikersnaam']; ?></p>
+          <b><?php echo $_SESSION['firstname']. $_SESSION['lastname'] ; ?></b>
+          <p><?php echo $_SESSION['username']; ?></p>
 
       </div>
  

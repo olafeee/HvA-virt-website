@@ -19,27 +19,21 @@ class loginModel extends baseModel
 
 	public function run()
 	{
-		echo"ik doe het wel maar ook niet";
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 		$sth = $this->cloudstack->login($username, $password);
-		
-		print_r($sth);
-		echo("<br />Login test");
+		$data = json_decode($sth,true);
 
-		/*
-		$count =  $sth->rowCount();
-		if ($count > 0) {
-			// login
+		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			Session::init();
 			Session::set('loggedIn', true);
-			Session::set('gebruikersnaam', $username);
-			echo("IF FIRED");
-			//header('location: ../account');
+			foreach ($data['loginresponse'] as $k => $v) {
+		    	Session::set($k, $v);
+		    }
+			header('location: ../account');
 		} else {
-			echo("else fired");
-			//header('location: ../login');
-		}*/
+			header('location: ../login');
+		}
 		
 	}
 }
