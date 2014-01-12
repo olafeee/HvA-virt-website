@@ -27,6 +27,10 @@ class loginModel extends baseModel
 		$gebruikersnaam=$data['loginresponse']['username'];
 		echo $data['loginresponse'][1];
 
+		foreach ($data as $key => $value) {
+			echo $key;
+			echo $value;
+		}
 		
 		echo "<br/> <pre>";
 		print_r($data);
