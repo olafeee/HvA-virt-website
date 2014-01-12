@@ -30,7 +30,7 @@ class loginModel extends baseModel
 		
 		$data = json_decode($sth,true);
 		$users=$data['loginresponse']['username'];
-		echo $data;
+		echo $users;
 
 		echo "<br/> </pre>";
 
