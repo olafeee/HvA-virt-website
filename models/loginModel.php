@@ -26,7 +26,7 @@ class loginModel extends baseModel
 		echo "<br/>";
 		print_r($sth);
 		echo "<br/>";
-		echo $sth->{'loginresponse'};
+		 echo("status = {$sth->loginresponse}");
 		echo "<br/>";
 
 
