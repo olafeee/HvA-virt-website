@@ -29,9 +29,8 @@ class loginModel extends baseModel
 		var_dump(json_decode($sth));
 		
 		$data = json_decode($sth,true);
-		$users=$data['loginresponse'];
-		$users=$data['username'];
 		$users=$data['loginresponse']['username'];
+		echo $data;
 
 		echo "<br/> </pre>";
 
