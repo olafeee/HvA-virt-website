@@ -23,12 +23,11 @@ class loginModel extends baseModel
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 		$sth = $this->cloudstack->login($username, $password);
-		
+		echo "<br/>";
 		print_r($sth);
 		echo "<br/>";
 		echo $sth[0];
-		echo "<br/>";
-		echo("<br />Login test");
+
 
 		if (is_array($sth) && array_key_exists("loginresponse", $sth)) {
 			// login
@@ -38,6 +37,7 @@ class loginModel extends baseModel
 			echo("IF FIRED");
 			header('location: ../account');
 		} else {
+					echo "<br/>";
 			echo("else vaal");
 			//header('location: ../login');
 		}
