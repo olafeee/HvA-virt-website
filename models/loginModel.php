@@ -26,10 +26,12 @@ class loginModel extends baseModel
 		$data = json_decode($sth,true);
 		$gebruikersnaam=$data['loginresponse']['username'];
 		echo $data['loginresponse'][1];
-		/*  test scirpt
+
+		
 		echo "<br/> <pre>";
-		print_r($sth);
+		print_r($data);
 		echo "<br/>";
+		/*  test scirpt
 		var_dump(json_decode($sth));
 		echo $users;
 		echo $data['loginresponse'];
