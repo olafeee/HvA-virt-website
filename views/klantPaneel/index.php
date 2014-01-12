@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-md-2">
-<?php include'/views/klantpaneel/klantpaneelHeader.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/views/klantpaneel/klantpaneelHeader.php'; ?>
 </div>
 <div class="col-md-8">
   <table class="table">
