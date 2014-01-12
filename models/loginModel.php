@@ -27,7 +27,7 @@ class loginModel extends baseModel
 		print_r($sth);
 		echo("<br />Login test");
 
-		if (is_array($sth) && array_key_exists('loginresponse', $sth)) {
+		if (is_array($sth) && array_key_exists("loginresponse", $sth)) {
 			// login
 			Session::init();
 			Session::set('loggedIn', true);
