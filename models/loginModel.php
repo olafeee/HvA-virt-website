@@ -23,11 +23,11 @@ class loginModel extends baseModel
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 		$sth = $this->cloudstack->login($username, $password);
-		$data = json_decode($sth,true);
+		$a = json_decode($sth,true);
 		$gebruikersnaam=$data['loginresponse']['username'];
 
-		foreach ($data as $key => $value) {
-			echo $key;
+		foreach ($a as $k => $v) {
+		    echo "\$a[$k] => $v.\n";
 		}
 		
 		echo "<br/> <pre>";
