@@ -36,12 +36,12 @@
          <div class="col-md-6"></div>
         <div class="col-md-2"><p class="login-boton-pull-right"> 
 
-          <?php if(Session::get('loggedIn') == true){ echo 'logged in as'.$_SESSION['gebruikersnaam']; }?>
+          <?php if(Session::get('loginresponse') == true){ echo 'logged in as'.$_SESSION['gebruikersnaam']; }?>
         </p>
         </div>
         <div class="col-md-1">
           <div class="login-btn">
-            <?php if(Session::get('loggedIn') == true){
+            <?php if(Session::get('loginresponse') == true){
               echo' <a href="javascript:showLoginMenu()" class="btn btn-default login-boton-pull-right kp_hm_ms">account</a>';
               echo' <a href="javascript:hideLoginMenu()" class="btn btn-default login-boton-pull-right kp_hm_mh">account</a>';
             }else{
