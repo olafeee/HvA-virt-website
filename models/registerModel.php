@@ -3,60 +3,64 @@
 /**
 * 
 */
+
+require_once("lib/cloudstack.php");
+
 class registerModel extends baseModel
 {
 	
-	public cloudstack = new cloudstack();
+	public $cloudstack;
 	
 	function __construct()
 	{
 		parent::__construct();
+		$this->cloudstack = new cloudstack();
 	}
 	
-	public function registreer()
+	public function register()
 	{
-		// We controleren of alle velden gevuld zijn en vervolgens of de mail klopt
-		if(empty($_POST['inputEmail']) || empty($_POST['inputPassword']) || empty($_POST['fname']) ||
-		empty($_POST['lname']) || empty($_POST['number']) || empty($_POST['adzip']) || empty($_POST['adnr']) || 
-		empty($_POST['country']) || !filter_var($_POST['inputEmail'],FILTER_VALIDATE_EMAIL)) {
-			echo "Er is een fout in het formulier gevonden. Controleer alle velden nogmaals.";
-			echo "<a href=\"javascript:history.go(-1);\">Ga terug naar het formulier</a>";
-			
-		} else { 
-			// We knallen alle Post-variabelen PHP variabelen in, dit is voor overzichtelijkheid.
-			$userEmail4 = $_POST['inputEmail'];
-			$userPassw4 = $_POST['inputPassword'];
-			$userFname4 = $_POST['fname'];
-			$userLname4 = $_POST['lname'];
-			$userNumber = $_POST['number'];
-			$userZipcod = $_POST['adzip'];
-			$userAdnumb = $_POST['adnr'];
-			$userCounty = $_POST['country'];
-			
-			// We maken gebruik van prepared statements en moeten deze dus al aanmaken.
-			$statemt = $dbh->prepare("INSERT INTO users (login, password, firstname, lastname, phone, zipcode, housenumber, country) 
-			VALUES (:login, :password, :fname, :lname, :number, :adzip, :adnr, :country)");
-			
-			// We linken de variabelen aan de statements, misschien niet de minste code, maar het werkt.
-			$statemt->bindParam(':login', $userEmail4);
-			$statemt->bindParam(':password', $userPassw4);
-			$statemt->bindParam(':fname', $userFname4);
-			$statemt->bindParam(':lname', $userLname4);
-			$statemt->bindParam(':number', $userNumber);
-			$statemt->bindParam(':adzip', $userZipcod);
-			$statemt->bindParam(':adnr', $userAdnumb);
-			$statemt->bindParam(':country', $userCounty);
-			
-			// en daarna voeren we de query uit.
-			$statemt->execute();
-		
-			echo "Gebruiker is succesvol aangemaakt.";
-		
-		}		
-	}		
+		echo "Test!<br>";
 
+		// We controleren of alle velden gevuld zijn en vervolgens of de mail klopt
+		/*
+		if(empty($_POST['inputEmail']) || empty($_POST['inputPassword']) || empty($_POST['fname']) ||
+                empty($_POST['lname']) || empty($_POST['number']) || empty($_POST['adzip']) || empty($_POST['adnr']) ||
+                empty($_POST['country']) || !filter_var($_POST['inputEmail'],FILTER_VALIDATE_EMAIL)) {
+			//header('location: ../register');
+			echo "<br />Er is een fout in het formulier gevonden. Controleer alle velden nogmaals.<br />";
+			echo "<a href=\"javascript:history.go(-1);\">Ga terug naar het formulier</a><br />";
+			
+		} else { */
+			// We knallen alle Post-variabelen PHP variabelen in, dit is voor overzichtelijkheid.
+			$userEmail = $_POST['inputEmail'];
+			$userPassw = $_POST['inputPassword'];
+			$userFname = $_POST['inputFName'];
+			$userLname = $_POST['inputLName'];
+			
+
+			echo "$userFname <br />";
+			echo "$userLname <br />";
+			echo "$userEmail <br />";
+			echo "$userPassw <br />";
+			echo "<br /><br />";
+
+			$test = $this->cloudstack->listAccountsByName();
+			print_r($test);
+			echo "<br /><br />";
+
+			$accounttype = 0;
+
+			$responce = $this->cloudstack->createAccount($userEmail,$userFname,$userLname,$userPassw,$userEmail,$accounttype);
+
+			print($responce);
+		
+			echo "<br />Gebruiker is succesvol aangemaakt.<br />";
+		
+		//}		
+	}		
+}
 	
 	
-	
+?>	
 	
 	

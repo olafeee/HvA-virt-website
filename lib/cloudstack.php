@@ -14,7 +14,7 @@ class cloudstack
     protected $_apiKey = NULL;
     protected $_targetApi = NULL;
     private $_curlEnabled = NULL;
-    public $responseType = 'xml';
+    public $responseType = 'json';
     public $return_signed_only = false;
     
     /* public function __construct($targetApi, $apiKey, $secretKey)
@@ -434,7 +434,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Return accounts by name
-    public function listAccountsByName($accountname)
+    public function listAccountsByName($accountname = null)
     {
         $command_array = array(
             'command' => 'listAccounts',
@@ -447,7 +447,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Create an account
-    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype = 1)
+    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype=0)
     {
         $command_array = array(
             'command' => 'createAccount',

@@ -16,13 +16,6 @@ class loginModel extends baseModel
 		parent::__construct();
 	}
 
-	/*
-
-		lolol raoul was een ; vergeten
-		allebei moker lang zoeken
-		nou eindelijk gevonden hoor....
-
-*/
 	public function run()
 	{
 		echo"ik doe het wel maar ook niet";
@@ -30,7 +23,7 @@ class loginModel extends baseModel
 		$password = $_POST['password'];
 		$sth = $cloudstack->login($username, $password);
 		
-		$data = $sth->fetchAll();
+		//$data = $sth->fetchAll();
 		print_r($data);
 		echo("Login test");
 
