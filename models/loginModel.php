@@ -25,7 +25,7 @@ class loginModel extends baseModel
 		$sth = $this->cloudstack->login($username, $password);
 		echo "<br/>";
 		print_r($sth);
-		echo $sth->loginresponse;
+		echo $sth->lastname;
 		echo "<br/>";
 
 
