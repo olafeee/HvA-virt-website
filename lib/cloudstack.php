@@ -368,6 +368,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         //remove empty elements to prevent API error
         $command_array = array_filter($command_array);
         $command = $this->_handleArray($command_array);
+        echo "Command: " . $command . "<br><br>"; // DEBUG
         return $this->_apiRequest($command);
     }
     /******** End Zone Methods *********/
@@ -447,11 +448,11 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Create an account
-    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype=0)
+    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype)
     {
         $command_array = array(
             'command' => 'createAccount',
-            'accounttype' => '0',
+            'accounttype' => $accounttype,
             'email' => $email,
             'firstname' => $firstname,
             'lastname' => $lastname,
@@ -460,10 +461,15 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             'response' => $this->responseType
         );
         //remove empty elements to prevent API error
-        $command_array = array_filter($command_array);
+        //use 'strlen' as callback function ONLY  remove NULL, FALSE and Empty Strings, but leave values of 0 (zero)!
+        //0 (zero) is needed for 
+        $command_array = array_filter($command_array,  'strlen' );
         $command = $this->_handleArray($command_array);
+        echo "Command: " . $command . "<br><br>"; // DEBUG
         return $this->_apiRequest($command);
     }
+
+
     // Update account information, usefull for password changes ect...
     /*public function updateAccount($newName, $name, $accountdetails)
     {
