@@ -26,7 +26,7 @@ class loginModel extends baseModel
 		$a = json_decode($sth,true);
 		$gebruikersnaam=$data['loginresponse']['username'];
 
-		foreach ($a as $k => $v) {
+		foreach ($a['loginresponse'] as $k => $v) {
 		    echo "\$a[$k] => $v.\n";
 		}
 		
