@@ -23,28 +23,27 @@ class loginModel extends baseModel
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 		$sth = $this->cloudstack->login($username, $password);
+		$data = json_decode($sth,true);
+		$gebruikersnaam=$data['loginresponse']['username'];
+		echo $data['loginresponse'][1];
+		/*  test scirpt
 		echo "<br/> <pre>";
 		print_r($sth);
 		echo "<br/>";
 		var_dump(json_decode($sth));
-		
-		$data = json_decode($sth,true);
-		$users=$data['loginresponse']['username'];
 		echo $users;
 		echo $data['loginresponse'];
-
 		echo "<br/> </pre>";
+		*/
 
-
-		if (is_array($data) && array_key_exists("loginresponse", $data)) {
+		if (is_array($datsa) && array_key_exists("loginresponse", $data)) {
 			// login
 			Session::init();
 			Session::set('loggedIn', true);
-			Session::set('gebruikersnaam', $sth);
-			echo("IF FIRED");
+			Session::set('gebruikersnaam', $gebruikersnaam);
 			header('location: ../account');
 		} else {
-					echo "<br/>";
+			echo "<br/>";
 			echo("else vaal");
 			//header('location: ../login');
 		}
