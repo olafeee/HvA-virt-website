@@ -28,6 +28,8 @@ class loginModel extends baseModel
 		echo "<br/>";
 		if (is_array($sth)){
 			echo "e";
+		}else{
+			echo"dus niet een array";
 		}
 
 
