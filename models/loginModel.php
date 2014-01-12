@@ -26,7 +26,7 @@ class loginModel extends baseModel
 		
 		print_r($sth);
 		echo "<br/>";
-		echo $sth['loginresponse'];
+		echo $sth[0];
 		echo "<br/>";
 		echo("<br />Login test");
 
