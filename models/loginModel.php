@@ -25,8 +25,8 @@ class loginModel extends baseModel
 		$sth = $this->cloudstack->login($username, $password);
 		echo "<br/>";
 		print_r($sth);
-		echo "<br/>";
-		 echo("status = {$sth->loginresponse}");
+		$obj = json_decode($sth);
+		print $obj->{'loginresponse'}; // 12345
 		echo "<br/>";
 
 
