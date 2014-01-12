@@ -14,7 +14,6 @@ class Account extends baseController {
 	}
 
 	function veranderWachtwoord(){
-
 		$this->index('veranderWachtwoord');
 	}
 
@@ -22,10 +21,7 @@ class Account extends baseController {
 		$model = $this->loadModel();
 		if (isset($model)) {
 			$model->wijzigWachtwoord();
-		}else{
-			echo"stoek";
 		}
 
-	
-		}
 	}
+}
