@@ -35,7 +35,7 @@ class loginModel extends baseModel
 			echo("IF FIRED");
 			header('location: ../account');
 		} else {
-			echo("else fired");
+			echo("else vaal");
 			//header('location: ../login');
 		}
 		
