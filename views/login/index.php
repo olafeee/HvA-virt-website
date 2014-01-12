@@ -7,7 +7,7 @@
 
 
 
-      <form class="form-signin" action="<?php echo'$_SERVER['DOCUMENT_ROOT']."/login/run"' ;?>" method="post">
+      <form class="form-signin" action="<?php echo'$_SERVER['DOCUMENT_ROOT']."/login/run"';?>" method="post">
             <input type="text" class="form-control" placeholder="Email address" required="" autofocus="" name="login">
             <input type="password" class="form-control" placeholder="Password" required="" name="password">
             <label class="checkbox">
