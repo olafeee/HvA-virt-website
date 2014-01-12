@@ -26,7 +26,9 @@ class loginModel extends baseModel
 		echo "<br/>";
 		print_r($sth);
 		echo "<br/>";
-		echo $sth[0];
+		if (is_array($sth)){
+			echo "e";
+		}
 
 
 		if (is_array($sth) && array_key_exists("loginresponse", $sth)) {
