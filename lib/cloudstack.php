@@ -451,7 +451,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
     {
         $command_array = array(
             'command' => 'createAccount',
-            'accounttype' => $accounttype,
+            'accounttype' => '0',
             'email' => $email,
             'firstname' => $firstname,
             'lastname' => $lastname,

@@ -9,11 +9,12 @@ require_once("lib/cloudstack.php");
 class loginModel extends baseModel
 {
 
-	public cloudstack = new cloudstack();
+	public $cloudstack;
 	
 	function __construct()
 	{
 		parent::__construct();
+		$this->cloudstack = new cloudstack();
 	}
 
 	public function run()
@@ -21,12 +22,12 @@ class loginModel extends baseModel
 		echo"ik doe het wel maar ook niet";
 		$username = $_POST['login'];
 		$password = $_POST['password'];
-		$sth = $cloudstack->login($username, $password);
+		$sth = $this->cloudstack->login($username, $password);
 		
-		//$data = $sth->fetchAll();
-		print_r($data);
-		echo("Login test");
+		print_r($sth);
+		echo("<br />Login test");
 
+		/*
 		$count =  $sth->rowCount();
 		if ($count > 0) {
 			// login
@@ -38,7 +39,7 @@ class loginModel extends baseModel
 		} else {
 			echo("else fired");
 			//header('location: ../login');
-		}
+		}*/
 		
 	}
 }
