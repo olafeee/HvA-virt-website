@@ -27,19 +27,17 @@ class loginModel extends baseModel
 		print_r($sth);
 		echo("<br />Login test");
 
-		/*
-		$count =  $sth->rowCount();
-		if ($count > 0) {
+		if (1==1) {
 			// login
 			Session::init();
 			Session::set('loggedIn', true);
-			Session::set('gebruikersnaam', $username);
+			Session::set('gebruikersnaam', $sth['username']);
 			echo("IF FIRED");
 			//header('location: ../account');
 		} else {
 			echo("else fired");
 			//header('location: ../login');
-		}*/
+		}
 		
 	}
 }
