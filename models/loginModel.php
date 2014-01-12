@@ -27,13 +27,13 @@ class loginModel extends baseModel
 		print_r($sth);
 		echo("<br />Login test");
 
-		if (1==1) {
+		if (array_key_exists('loginresponse', $sth)) {
 			// login
 			Session::init();
 			Session::set('loggedIn', true);
 			Session::set('gebruikersnaam', $sth);
 			echo("IF FIRED");
-			//header('location: ../account');
+			header('location: ../account');
 		} else {
 			echo("else fired");
 			//header('location: ../login');
