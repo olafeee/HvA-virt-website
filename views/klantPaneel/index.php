@@ -47,13 +47,22 @@ if (isset($_SESSION['loggedIn'])):?>
 
             $input1 = "255,255,255,255";
             $subBin = explode( ',', $input1 );
-            $var2 = decbin($subBin[0]." ".$subBin[1]." ".$subBin[2]." ".$subBin[3]);
-            $var3 = strlen(str_replace('0', '', $var2));
+            $subBinX = 0;
+            $subnet;
+
+            while ($subBinX <= 3) {
+              $x = decbin($subBin[$subBinX]);
+              $var3 = strlen(str_replace('0', '', $var2));
+              $subnet = $subnet + $var3;
+              $subBinX++;
+            }
+            //$var2 = decbin($subBin[0]." ".$subBin[1]." ".$subBin[2]." ".$subBin[3]);
+            
 
 
 
           echo "<pre>";\
-          print_r($var2);
+          print_r($subnet);
           echo "</br>";
           var_dump($vmResponce);
           //$test = accountFilter();
