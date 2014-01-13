@@ -54,6 +54,7 @@ if (isset($_SESSION['loggedIn'])):?>
           }
           
           echo "<pre>";
+          echo splitSubnet();
           //$john = splitSubnet("255,255,255,0");
           //print_r($john);
           var_dump($vmResponce);
@@ -66,13 +67,14 @@ if (isset($_SESSION['loggedIn'])):?>
         ?>
         <tbody>
           <?php
-            $xy = 0;
+            $xyy = 0;
             $maxArray = count($vmResponce);
             echo $maxArray;
 
-            //foreach ($xy as $x => $maxArray) {
-              # code...
-            //}
+            foreach ($xyy as $xy < $maxArray) {
+              echo "snackbar".$xy;
+              $xy++;
+            }
 
 
 
