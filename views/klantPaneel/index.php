@@ -40,7 +40,7 @@ $vmResponce = $this->vmResponce;
                 <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?> Mhz</td>
                 <td class="memory"><?php echo $vmResponce[$xy]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
-                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /".$this->prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
+                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". $this->prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
                 <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
               </tr>
              <? $xy++;
