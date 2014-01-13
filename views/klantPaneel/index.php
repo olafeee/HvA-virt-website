@@ -1,4 +1,8 @@
-<?php if (isset($_SESSION['loggedIn'])):?>
+<?php 
+
+require_once("lib/cloudstack.php");
+
+if (isset($_SESSION['loggedIn'])):?>
 
 <div class="row">
   <div class="col-md-2">
@@ -18,6 +22,34 @@
             <th></th>
           </tr>
         </thead>
+        <?php
+
+          $cloud = new cloudstack();
+          $cloud->responseType = 'json';
+
+          Session::init();
+          // Bouw een 3D array van de JSON responce
+          $vmResponce = $cloud->listVirtualMachines();
+          $vmResponce = json_decode($vmResponce, true);
+
+          // Bouw nu een array for elke VM
+          $vmResponce = $vmResponce['listvirtualmachinesresponse'];
+          $vmResponce = $vmResponce['virtualmachine'];
+
+          // Haal de vms er uit van de gebruiker die ingeloged is
+          function accountFilter($account)
+          {
+              return (is_array($account) && $account['account'] == $_SESSION['account']);
+          }
+
+          print_r(array_filter($vmResponce, "accountFilter"));
+
+
+          // /var_dump($vmResponce);
+          echo "<br><br><br>";
+
+
+        ?>
         <tbody>
           <tr class="success">
             <td>1</td>
