@@ -53,7 +53,7 @@ if (isset($_SESSION['loggedIn'])):?>
 
 
           echo "<pre>";\
-          print_r($var3);
+          print_r($var2);
           echo "</br>";
           var_dump($vmResponce);
           //$test = accountFilter();
