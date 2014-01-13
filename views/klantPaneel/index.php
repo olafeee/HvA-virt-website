@@ -55,7 +55,7 @@ if (isset($_SESSION['loggedIn'])):?>
         ?>
         <tbody>
           <tr class="success">
-            <td>1</td>
+            <td><?php echo $vmResponce['displayname'];?></td>
             <td class="status"></td>
             <td class="CPU"></td>
             <td class="CPUSPEED"></td>
