@@ -23,7 +23,7 @@ if (isset($_SESSION['loggedIn'])):?>
         <?php
           echo "<pre>";
           echo "<br/>";
-          var_dump($this->klantPaneelModel->vmResponce);
+          var_dump($this->vmResponce);
           echo "</pre>";
         ?><tbody><?php
             $xy = 0;
