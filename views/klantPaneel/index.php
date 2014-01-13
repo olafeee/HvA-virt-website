@@ -47,12 +47,12 @@ if (isset($_SESSION['loggedIn'])):?>
 
             $input1 = "255,255,255,255";
             $var1 = explode( ',', $input1 );
-            $var2 = $var1[0];
-            $var3 = decbin($var1[0]);
+            $var3 = decbin($var1[0].$var1[1]);
 
 
           echo "<pre>";\
-          print_r($var2);
+          print_r($var3);
+          echo "</br>";
           var_dump($vmResponce);
           //$test = accountFilter();
           //print_r($vmResponce);
