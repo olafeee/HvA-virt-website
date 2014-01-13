@@ -32,7 +32,7 @@
 <div class="row">
 		<div class="col-md-4">
 			<div class="index_block1">
-			<div class="div-align-span-center"><h2>Our system</h2></span></div>
+			<div class="div-align-span-center"><h2>Onze systemen</h2></span></div>
 			<br/>
   			<p><img src="/img/73.svg" class="fontpage-img">    Unlimited bandwidth</p>
   			<p><img src="/img/77.svg" class="fontpage-img">    Extremely scalable</p>

@@ -53,14 +53,14 @@ $totalprice = $totalprice + $TP;
     }//end if
 ?>
     <div class="sb-totalprice">
-      <div class="sb-totalprice-1">totaal bedrag</div>
+      <div class="sb-totalprice-1"><b>Totaal bedrag</b></div>
       <div class="sb-totalprice-2">&euro; <?php echo $totalprice; ?></div>
     </div>
 
     <div class="divROWorderTop"></div>
       <div class="sb-totalprice">
       <div class="sb-totalprice-1"></div>
-      <div class="sb-totalprice-2"><button class="btn btn-lg btn-primary btn-block">Place order</button></div>
+      <div class="sb-totalprice-2"><button class="btn btn-lg btn-primary btn-block">Bestellen</button></div>
     </div>
 
     </div>
