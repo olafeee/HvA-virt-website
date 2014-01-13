@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedIn'])):?>
           print_r(array_filter($vmResponce, "accountFilter"));
 
 
-            $input1 = "255,255";
+            $input1 = "255,255,255";
             $input2 = "hello,there";
             var_dump( explode( ',', $input1 ) );
             var_dump( explode( ',', $input2 ) );
