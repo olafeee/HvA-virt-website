@@ -25,7 +25,7 @@ class loginModel extends baseModel
 		$data = json_decode($sth,true);
 		$test = $data['loginresponse'];
 		echo"<pre>";
-		print_r($test);
+		print_r($test['username']);
 
 		/*if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			Session::init();
