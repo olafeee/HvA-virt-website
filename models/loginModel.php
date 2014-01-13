@@ -27,7 +27,7 @@ class loginModel extends baseModel
 		echo"<br/>";
 		print_r($test);
 
-		if (is_array($data) && array_key_exists("loginresponse", $data)) {
+		/*if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			Session::init();
 			Session::set('loggedIn', true);
 			foreach ($data['loginresponse'] as $k => $v) {
@@ -36,7 +36,7 @@ class loginModel extends baseModel
 			//header('location: ../account');
 		} else {
 			header('location: ../login');
-		}
+		}*/
 		
 	}
 }
