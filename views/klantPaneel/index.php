@@ -44,9 +44,11 @@ if (isset($_SESSION['loggedIn'])):?>
 
           print_r(array_filter($vmResponce, "accountFilter"));
 
-          // /var_dump($vmResponce);
+          
           echo "<pre>";
-          print_r($vmResponce);
+          var_dump($vmResponce);
+          //$test = accountFilter();
+          //print_r($vmResponce);
            echo "</pre>";
 
 
