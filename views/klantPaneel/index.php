@@ -46,8 +46,9 @@ if (isset($_SESSION['loggedIn'])):?>
 
 
             $input1 = "255,255,255,255";
-            $var1 = explode( ',', $input1 );
-            $var3 = decbin($var1[0].$var1[1]);
+            $subBin = explode( ',', $input1 );
+            $var2 = decbin($subBin[0].$subBin[1].$subBin[2].$subBin[3]);
+            $var3 = str_replace('0', '', $var2);
 
 
           echo "<pre>";\
