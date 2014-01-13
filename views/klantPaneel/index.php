@@ -21,9 +21,10 @@ if (isset($_SESSION['loggedIn'])):?>
           </tr>
         </thead>
         <?php
+        $vmResponce = $this->vmResponce;
           echo "<pre>";
           echo "<br/>";
-          var_dump($this->klantPaneel->vmResponce);
+          var_dump($this->vmResponce);
           echo "</pre>";
         ?><tbody><?php
             $xy = 0;
