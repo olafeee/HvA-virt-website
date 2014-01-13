@@ -67,11 +67,11 @@ if (isset($_SESSION['loggedIn'])):?>
         ?>
         <tbody>
           <?php
-            $xyy = 0;
+            $xy = 0;
             $maxArray = count($vmResponce);
             echo $maxArray;
 
-            foreach ($xyy as $xy < $maxArray) {
+            while ($xy < $maxArray) {
               echo "snackbar".$xy;
               $xy++;
             }
