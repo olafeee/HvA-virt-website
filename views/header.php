@@ -36,7 +36,7 @@
          <div class="col-md-6"></div>
         <div class="col-md-2"><p class="login-boton-pull-right"> 
 
-          <?php if(Session::get('loggedIn') == true){ echo 'Logged in as '. ucfirst($_SESSION['username']); }?>
+          <?php if(Session::get('loggedIn') == true){ echo 'Logged in as '.($_SESSION['logArr']['username']); }?>
         </p>
         </div>
         <div class="col-md-1">
@@ -102,8 +102,8 @@
           </div>
         </div>
         <div class="kp_hm_text_right">       
-          <b><?php echo ucfirst($_SESSION['firstname']). " " . ucfirst($_SESSION['lastname']) ; ?></b>
-          <p><?php echo ucfirst($_SESSION['username']); ?></p>
+          <b><?php echo ucfirst($_SESSION['logArr']['firstname']). " " ($_SESSION['logArr']['lastname']) ; ?></b>
+          <p><?php echo ucfirst($_SESSION['logArr']['username']); ?></p>
 
       </div>
  
