@@ -17,11 +17,11 @@ $vmResponce = $this->vmResponce;
     }
     return $subnet;
   }
-
-  echo "<pre>";
-  echo "<br/>";
-  var_dump($vmResponce);
-  echo "</pre>";
+  //alleen voor test doeleinden
+  #echo "<pre>";
+  #echo "<br/>";
+  #var_dump($vmResponce);
+  #echo "</pre>";
 
 ?>
 <div class="row">
