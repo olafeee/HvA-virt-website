@@ -46,7 +46,7 @@ if (isset($_SESSION['loggedIn'])):?>
 
 
           function splitSubnet($inpoetin){
-            $poetinout = explode( ',', $inpoetin )
+            $poetinout = explode( ',', $inpoetin );
             return $poetinout;
           }
           
