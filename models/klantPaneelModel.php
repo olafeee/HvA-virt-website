@@ -9,8 +9,6 @@ class klantPaneelModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
-
-          
 	}
 
 	public function getVM(){
@@ -27,7 +25,7 @@ class klantPaneelModel extends baseModel
           $vmResponce = $vmResponce['virtualmachine'];
 
           // Haal de vms er uit van de gebruiker die ingeloged is
-		
+
 	}
 
 	public function wijzigWachtwoord()
