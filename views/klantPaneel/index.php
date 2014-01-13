@@ -59,7 +59,7 @@ if (isset($_SESSION['loggedIn'])):?>
           }
 
           echo "<pre>";
-          $test = prefixSubnet("255.255.255.0");
+          $test = prefixSubnet("255.255.255.128");
           echo $test;
           var_dump($vmResponce);
           echo "</pre>";
