@@ -54,9 +54,11 @@ if (isset($_SESSION['loggedIn'])):?>
               $var3 = strlen(str_replace('0', '', $x));
               $subnet = $subnet + $var3;
               $subBinX++;
-              return $subnet;
             }
+            return $subnet;
           }
+
+
 
           echo "<pre>";
           $test = prefixSubnet("255,255,255,128");
