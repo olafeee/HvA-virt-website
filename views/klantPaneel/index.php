@@ -46,7 +46,7 @@ if (isset($_SESSION['loggedIn'])):?>
 
 
           function splitSubnet(){
-            $input1 = "255,255,255,0";
+            $input1 = "255,255";
             $input2 = "hello,there";
             var_dump( explode( ',', $input1 ) );
             var_dump( explode( ',', $input2 ) );
