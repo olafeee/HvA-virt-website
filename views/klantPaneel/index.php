@@ -45,14 +45,17 @@ if (isset($_SESSION['loggedIn'])):?>
           print_r(array_filter($vmResponce, "accountFilter"));
 
 
-          function splitSubnet($inpoetin){
-            $poetinout = explode( ',', $inpoetin );
-            return $poetinout;
+          function splitSubnet(){
+            $input1 = "255,255,255,0";
+            $input2 = "hello,there";
+            var_dump( explode( ',', $input1 ) );
+            var_dump( explode( ',', $input2 ) );
+            //return $poetinout;
           }
           
           echo "<pre>";
-          $john = splitSubnet("255,255,255,0");
-          print_r($john);
+          //$john = splitSubnet("255,255,255,0");
+          //print_r($john);
           var_dump($vmResponce);
           //$test = accountFilter();
           //print_r($vmResponce);
