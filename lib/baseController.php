@@ -50,10 +50,6 @@ class baseController {
 		$dir_file = 'models/'.$file.'.php';
 
 		if(file_exists($dir_file)){
-			print_r($dir_file);
-			echo "<br/>";
-			print_r($file);
-
 			require $dir_file;
 			$model = new $file();
 			return $model;
