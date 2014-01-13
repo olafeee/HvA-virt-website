@@ -17,9 +17,13 @@ $vmResponce = $this->vmResponce;
     }
     return $subnet;
   }
-    
-?>
 
+  echo "<pre>";
+  echo "<br/>";
+  var_dump($vmResponce);
+  echo "</pre>";
+
+?>
 <div class="row">
   <div class="col-md-2">
 <?php include $_SERVER['DOCUMENT_ROOT'].'/views/klantPaneel/klantpaneelHeader.php'; ?>
@@ -38,12 +42,7 @@ $vmResponce = $this->vmResponce;
             <th></th>
           </tr>
         </thead>
-        <?php
-          echo "<pre>";
-          echo "<br/>";
-          var_dump($vmResponce);
-          echo "</pre>";
-        ?><tbody><?php
+          <tbody><?php
             $xy = 0;
             $maxArray = count($vmResponce);
             echo $maxArray;
@@ -59,16 +58,10 @@ $vmResponce = $this->vmResponce;
 
                 <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
                 <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
-              </tr>
-             <? $xy++;
-            }
-
-
-
-          ?>
-
-
-        </tbody>
+              </tr><?
+              $xy++;
+            } 
+      ?></tbody>
       </table>
     </div>
 <?php else: 
