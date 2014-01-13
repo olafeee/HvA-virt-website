@@ -51,17 +51,18 @@ if (isset($_SESSION['loggedIn'])):?>
           //print_r($vmResponce);
            echo "</pre>";
 
+           $xy = 0;
 
         ?>
         <tbody>
           <tr class="success">
-            <td></td>
-            <td class="status"><?php echo $vmResponce[0]["displayname"];?></td>
-            <td class="CPU"></td>
-            <td class="CPUSPEED"></td>
-            <td class="memory"></td>
-            <td class="HHD"></td>
-            <td class="IPAdres"></td>
+            <td class"displayname"><?php echo $vmResponce[$xy]["displayname"];?></td>
+            <td class="status"><?php echo $vmResponce[$xy]["state"];?></td>
+            <td class="CPU"><?php echo $vmResponce[$xy]["cpunumber"];?></td>
+            <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?></td>
+            <td class="memory"><?php echo $vmResponce[$xy]["memory"];?></td>
+            <td class="HHD"><?php echo $vmResponce[$xy]["displayname"];?></td>
+            <td class="IPAdres"><?php echo $vmResponce[$xy]["displayname"];?></td>
             <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
           </tr>
 
