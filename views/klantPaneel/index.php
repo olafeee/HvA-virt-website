@@ -45,12 +45,13 @@ if (isset($_SESSION['loggedIn'])):?>
           print_r(array_filter($vmResponce, "accountFilter"));
 
 
-            $input1 = "255,255,255";
-            $input2 = "hello,there";
-            var_dump( explode( ',', $input1 ) );
-            var_dump( explode( ',', $input2 ) );
+            $input1 = "255,255,255,255";
+            $var1 = explode( ',', $input1 );
+            $var2 = $var1[0];
 
-          echo "<pre>";
+
+          echo "<pre>";\
+          print_r($var2)
           var_dump($vmResponce);
           //$test = accountFilter();
           //print_r($vmResponce);
@@ -70,8 +71,8 @@ if (isset($_SESSION['loggedIn'])):?>
                 <td class"displayname"><?php echo $vmResponce[$xy]["displayname"];?></td>
                 <td class="status"><?php echo $vmResponce[$xy]["state"];?></td>
                 <td class="CPU"><?php echo $vmResponce[$xy]["cpunumber"];?></td>
-                <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?></td>
-                <td class="memory"><?php echo $vmResponce[$xy]["memory"];?></td>
+                <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?> Mhz</td>
+                <td class="memory"><?php echo $vmResponce[$xy]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
                 <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"];?></td>
                 <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
