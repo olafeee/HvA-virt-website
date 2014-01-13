@@ -41,41 +41,27 @@ if (isset($_SESSION['loggedIn'])):?>
           {
               return (is_array($account) && $account['account'] == $_SESSION['account']);
           }
-
           //print_r(array_filter($vmResponce, "accountFilter"));
 
-            function prefixSubnet($input){
-              $subBin = explode( '.', $input );
-              $subBinX = 0;
-              $subnet = 0;
+          // maak van subnet een prifix
+          function prefixSubnet($input){
+            $subBin = explode( '.', $input );
+            $subBinX = 0;
+            $subnet = 0;
 
-              while ($subBinX <= 3) {
-                $x = decbin($subBin[$subBinX]);
-                $var3 = strlen(str_replace('0', '', $x));
-                $subnet = $subnet + $var3;
-                $subBinX++;
-                return $subnet;
-              }
+            while ($subBinX <= 3) {
+              $x = decbin($subBin[$subBinX]);
+              $var3 = strlen(str_replace('0', '', $x));
+              $subnet = $subnet + $var3;
+              $subBinX++;
+              return $subnet;
             }
+          }
 
-            //$var2 = decbin($subBin[0]." ".$subBin[1]." ".$subBin[2]." ".$subBin[3]);
-            
-
-
-
-          echo "<pre>";\
-          //print_r($subnet);
-          echo "</br>";
+          echo "<pre>";
           var_dump($vmResponce);
-          //$test = accountFilter();
-          //print_r($vmResponce);
-           echo "</pre>";
-
-           
-
-        ?>
-        <tbody>
-          <?php
+          echo "</pre>";
+        ?><tbody><?php
             $xy = 0;
             $maxArray = count($vmResponce);
             echo $maxArray;
