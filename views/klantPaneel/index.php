@@ -46,12 +46,12 @@ if (isset($_SESSION['loggedIn'])):?>
 
 
           function splitSubnet($inpoetin){
-            $poetinout = explode( '.', $inpoetin )
+            $poetinout = explode( ',', $inpoetin )
             return $poetinout;
           }
           
           echo "<pre>";
-          $john = splitSubnet("255.255.255.0");
+          $john = splitSubnet("255,255,255,0");
           print_r($john);
           var_dump($vmResponce);
           //$test = accountFilter();
