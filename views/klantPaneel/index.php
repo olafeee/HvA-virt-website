@@ -45,8 +45,6 @@ $vmResponce = $this->vmResponce;
           <tbody><?php
             $xy = 0;
             $maxArray = count($vmResponce);
-            echo $maxArray;
-
             while ($xy < $maxArray) {?>
               <tr class="success">
                 <td class"displayname"><?php echo $vmResponce[$xy]["displayname"];?></td>
