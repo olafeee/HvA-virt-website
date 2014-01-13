@@ -71,7 +71,7 @@ class baseController {
 
 	function logout(){
 		Session::destroy();
-		header('location: ../index');
+		header('location: ../');
 		exit;
 	}
 

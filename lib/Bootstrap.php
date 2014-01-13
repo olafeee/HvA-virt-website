@@ -2,6 +2,9 @@
 
 class Bootstrap {
 
+	#################################################
+	# Default settings
+	#################################################
 	function __construct() {
 		// laad url in 
 		$url = $this->urlfix1();
@@ -47,19 +50,21 @@ class Bootstrap {
 				$controller->index('index');
 			}
 		}
-	}// einde construtopr
+	}// end construtopr
 
-	//functie om error pagina niet gevonden te weergeven
+	#################################################
+	# error page
+	#################################################
 	function error() {
-		$url = isset($_GET['url']) ? $_GET['url'] : null;
-		$url = rtrim($url, '/');
-		$url = explode('/', $url);
 		require 'controllers/error.php';
 		$controller = new Error();
 		$controller->index('index');
 		return false;
 	}
 
+	#################################################
+	# strip url
+	#################################################
 	function urlfix1(){
 		$url = isset($_GET['url']) ? $_GET['url'] : null;
 		$url = rtrim($url, '/');
