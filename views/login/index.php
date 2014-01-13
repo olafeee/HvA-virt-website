@@ -6,9 +6,11 @@
       <form class="form-signin" action="../login/run" method="post">
         <input type="text" class="form-control" placeholder="Email address" required="" autofocus="" name="login">
         <input type="password" class="form-control" placeholder="Password" required="" name="password">
+        <br/>
         <label>
           <a href="register">Create an account</a>
         </label>
+        <br/>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
     </div>
