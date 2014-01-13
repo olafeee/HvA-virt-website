@@ -48,11 +48,11 @@ if (isset($_SESSION['loggedIn'])):?>
             $input1 = "255,255,255,255";
             $subBin = explode( ',', $input1 );
             $subBinX = 0;
-            $subnet;
+            $subnet = 0;
 
             while ($subBinX <= 3) {
               $x = decbin($subBin[$subBinX]);
-              $var3 = strlen(str_replace('0', '', $var2));
+              $var3 = strlen(str_replace('0', '', $x));
               $subnet = $subnet + $var3;
               $subBinX++;
             }
