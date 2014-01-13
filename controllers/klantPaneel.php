@@ -15,6 +15,7 @@ class klantPaneel extends baseController {
 		}
 		$model = $this->laadModel();
 		$this->baseView->vmResponce = $model->getVM();
+		$this->baseView->prefixSubnet() = $this->prefixSubnet();
 	}
 	
 	function os_installatie(){
