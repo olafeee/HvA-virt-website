@@ -42,20 +42,22 @@ if (isset($_SESSION['loggedIn'])):?>
               return (is_array($account) && $account['account'] == $_SESSION['account']);
           }
 
-          print_r(array_filter($vmResponce, "accountFilter"));
+          //print_r(array_filter($vmResponce, "accountFilter"));
 
+            function prefixSubnet($input){
+              $subBin = explode( '.', $input );
+              $subBinX = 0;
+              $subnet = 0;
 
-            $input1 = "255.255.255.240";
-            $subBin = explode( '.', $input1 );
-            $subBinX = 0;
-            $subnet = 0;
-
-            while ($subBinX <= 3) {
-              $x = decbin($subBin[$subBinX]);
-              $var3 = strlen(str_replace('0', '', $x));
-              $subnet = $subnet + $var3;
-              $subBinX++;
+              while ($subBinX <= 3) {
+                $x = decbin($subBin[$subBinX]);
+                $var3 = strlen(str_replace('0', '', $x));
+                $subnet = $subnet + $var3;
+                $subBinX++;
+                return $subnet;
+              }
             }
+
             //$var2 = decbin($subBin[0]." ".$subBin[1]." ".$subBin[2]." ".$subBin[3]);
             
 
@@ -86,7 +88,7 @@ if (isset($_SESSION['loggedIn'])):?>
                 <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?> Mhz</td>
                 <td class="memory"><?php echo $vmResponce[$xy]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
-                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"];?></td>
+                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]."/". $vmResponce[$xy]["nic"][0]["netmask"];?></td>
                 <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
               </tr>
              <? $xy++;
