@@ -45,8 +45,8 @@ if (isset($_SESSION['loggedIn'])):?>
           print_r(array_filter($vmResponce, "accountFilter"));
 
 
-            $input1 = "255,255,255,248";
-            $subBin = explode( ',', $input1 );
+            $input1 = "255.255.255.240";
+            $subBin = explode( '.', $input1 );
             $subBinX = 0;
             $subnet = 0;
 
