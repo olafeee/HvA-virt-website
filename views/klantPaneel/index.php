@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedIn'])):?>
 
           // maak van subnet een prifix
           function prefixSubnet($input){
-            $subBin = explode( ',', $input );
+            $subBin = explode( '.', $input );
             $subBinX = 0;
             $subnet = 0;
 
@@ -61,8 +61,6 @@ if (isset($_SESSION['loggedIn'])):?>
 
 
           echo "<pre>";
-          $test = prefixSubnet("255,255,255,128");
-          echo $test;
           echo "<br/>";
           var_dump($vmResponce);
           echo "</pre>";
@@ -79,7 +77,7 @@ if (isset($_SESSION['loggedIn'])):?>
                 <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?> Mhz</td>
                 <td class="memory"><?php echo $vmResponce[$xy]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
-                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]."/". $vmResponce[$xy]["nic"][0]["netmask"];?></td>
+                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /".prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
                 <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
               </tr>
              <? $xy++;
