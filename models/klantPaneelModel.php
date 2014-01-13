@@ -69,25 +69,10 @@ class klantPaneelModel extends baseModel
 	}
 	
 	function accountFilter($account)
-          {
-              return (is_array($account) && $account['account'] == $_SESSION['account']);
-          }
-          //print_r(array_filter($vmResponce, "accountFilter"));
-
-          // maak van subnet een prifix
-          function prefixSubnet($input){
-            $subBin = explode( '.', $input );
-            $subBinX = 0;
-            $subnet = 0;
-
-            while ($subBinX <= 3) {
-              $x = decbin($subBin[$subBinX]);
-              $var3 = strlen(str_replace('0', '', $x));
-              $subnet = $subnet + $var3;
-              $subBinX++;
-            }
-            return $subnet;
-          }
+      {
+          return (is_array($account) && $account['account'] == $_SESSION['account']);
+      }
+      //print_r(array_filter($vmResponce, "accountFilter"));
 }
 
 ?>
