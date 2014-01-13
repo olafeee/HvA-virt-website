@@ -61,10 +61,22 @@ if (isset($_SESSION['loggedIn'])):?>
           //print_r($vmResponce);
            echo "</pre>";
 
-           $xy = 0;
+           
 
         ?>
         <tbody>
+          <?php
+            $xy = 0;
+            $maxArray = count($vmResponce);
+            echo $maxArray;
+
+            //foreach ($xy as $x => $maxArray) {
+              # code...
+            //}
+
+
+
+          ?>
           <tr class="success">
             <td class"displayname"><?php echo $vmResponce[$xy]["displayname"];?></td>
             <td class="status"><?php echo $vmResponce[$xy]["state"];?></td>
