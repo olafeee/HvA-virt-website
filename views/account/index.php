@@ -25,8 +25,8 @@
   </tr>
 </table>
 
-<a href="/account/veranderWachtwoord" class="btn btn-default">verander wachtwoord</a>
-<a href="/account/veranderWachtwoord" class="btn btn-default">wijzig gegevens</a>
+<a href="/account/veranderWachtwoord" class="btn btn-default">Wijzig Wachtwoord</a>
+<a href="/account/veranderWachtwoord" class="btn btn-default">Wijzig Gegevens</a>
 </div>
 <?php else: 
 header('location: /login');

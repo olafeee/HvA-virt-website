@@ -11,7 +11,7 @@
             <input type="text" class="form-control" placeholder="Email address" required="" autofocus="" name="login">
             <input type="password" class="form-control" placeholder="Password" required="" name="password">
             <label class="checkbox">
-              <input type="checkbox" value="remember-me"> Remember me
+              <input type="checkbox" value="remember-me"> Onthoud mij
             </label>
             <label>
               <a href="register">Maak een account aan</a>
