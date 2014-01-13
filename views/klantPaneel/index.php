@@ -1,6 +1,8 @@
 <?php 
 
-if (isset($_SESSION['loggedIn'])):?>
+if (isset($_SESSION['loggedIn'])):
+$vmResponce = $this->vmResponce;
+?>
 
 <div class="row">
   <div class="col-md-2">
@@ -21,7 +23,6 @@ if (isset($_SESSION['loggedIn'])):?>
           </tr>
         </thead>
         <?php
-        $vmResponce = $this->vmResponce;
           echo "<pre>";
           echo "<br/>";
           var_dump($vmResponce);
