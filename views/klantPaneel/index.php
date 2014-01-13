@@ -44,8 +44,15 @@ if (isset($_SESSION['loggedIn'])):?>
 
           print_r(array_filter($vmResponce, "accountFilter"));
 
+
+          function splitSubnet($inpoetin){
+            $poetinout = explode( '.', $inpoetin )
+            return $poetinout;
+          }
           
           echo "<pre>";
+          $john = splitSubnet("255.255.255.0");
+          print_r($john);
           var_dump($vmResponce);
           //$test = accountFilter();
           //print_r($vmResponce);
@@ -62,7 +69,7 @@ if (isset($_SESSION['loggedIn'])):?>
             <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?></td>
             <td class="memory"><?php echo $vmResponce[$xy]["memory"];?></td>
             <td class="HHD"><?php echo $vmResponce[$xy]["displayname"];?></td>
-            <td class="IPAdres"><?php echo $vmResponce[$xy]["displayname"];?></td>
+            <td class="IPAdres"><?php echo $vmResponce[$xy]["ipaddress"];?></td>
             <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
           </tr>
 
