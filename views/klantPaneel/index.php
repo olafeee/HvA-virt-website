@@ -2,6 +2,22 @@
 
 if (isset($_SESSION['loggedIn'])):
 $vmResponce = $this->vmResponce;
+
+  // maak van subnet een prifix
+  function prefixSubnet($input){
+    $subBin = explode( '.', $input );
+    $subBinX = 0;
+    $subnet = 0;
+
+    while ($subBinX <= 3) {
+      $x = decbin($subBin[$subBinX]);
+      $var3 = strlen(str_replace('0', '', $x));
+      $subnet = $subnet + $var3;
+      $subBinX++;
+    }
+    return $subnet;
+  }
+    
 ?>
 
 <div class="row">
@@ -40,8 +56,8 @@ $vmResponce = $this->vmResponce;
                 <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?> Mhz</td>
                 <td class="memory"><?php echo $vmResponce[$xy]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
-                
-                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". $this->baseController->prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
+
+                <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
                 <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
               </tr>
              <? $xy++;
