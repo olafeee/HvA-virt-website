@@ -1,7 +1,5 @@
 <?php 
 
-require_once("lib/cloudstack.php");
-
 if (isset($_SESSION['loggedIn'])):?>
 
 <div class="row">
@@ -23,43 +21,6 @@ if (isset($_SESSION['loggedIn'])):?>
           </tr>
         </thead>
         <?php
-
-          $cloud = new cloudstack();
-          $cloud->responseType = 'json';
-
-          Session::init();
-          // Bouw een 3D array van de JSON responce
-          $vmResponce = $cloud->listVirtualMachines();
-          $vmResponce = json_decode($vmResponce, true);
-
-          // Bouw nu een array for elke VM
-          $vmResponce = $vmResponce['listvirtualmachinesresponse'];
-          $vmResponce = $vmResponce['virtualmachine'];
-
-          // Haal de vms er uit van de gebruiker die ingeloged is
-          function accountFilter($account)
-          {
-              return (is_array($account) && $account['account'] == $_SESSION['account']);
-          }
-          //print_r(array_filter($vmResponce, "accountFilter"));
-
-          // maak van subnet een prifix
-          function prefixSubnet($input){
-            $subBin = explode( '.', $input );
-            $subBinX = 0;
-            $subnet = 0;
-
-            while ($subBinX <= 3) {
-              $x = decbin($subBin[$subBinX]);
-              $var3 = strlen(str_replace('0', '', $x));
-              $subnet = $subnet + $var3;
-              $subBinX++;
-            }
-            return $subnet;
-          }
-
-
-
           echo "<pre>";
           echo "<br/>";
           var_dump($vmResponce);
