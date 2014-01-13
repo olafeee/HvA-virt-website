@@ -25,7 +25,7 @@ class klantPaneelModel extends baseModel
           $vmResponce = $vmResponce['virtualmachine'];
 
           // Haal de vms er uit van de gebruiker die ingeloged is
-
+          return $vmResponce;
 	}
 
 	public function wijzigWachtwoord()
