@@ -24,7 +24,7 @@ class loginModel extends baseModel
 		$sth = $this->cloudstack->login($username, $password);
 		$data = json_decode($sth,true);
 		$test = $data['loginresponse'];
-		echo"<br/>";
+		echo"<pre>";
 		print_r($test);
 
 		/*if (is_array($data) && array_key_exists("loginresponse", $data)) {
