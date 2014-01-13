@@ -45,7 +45,7 @@ if (isset($_SESSION['loggedIn'])):?>
 
           // maak van subnet een prifix
           function prefixSubnet($input){
-            $subBin = explode( '.', $input );
+            $subBin = explode( ',', $input );
             $subBinX = 0;
             $subnet = 0;
 
@@ -59,7 +59,7 @@ if (isset($_SESSION['loggedIn'])):?>
           }
 
           echo "<pre>";
-          $test = prefixSubnet("255.255.255.128");
+          $test = prefixSubnet("255,255,255,128");
           echo $test;
           var_dump($vmResponce);
           echo "</pre>";
