@@ -23,6 +23,9 @@ class loginModel extends baseModel
 		$password = $_POST['password'];
 		$sth = $this->cloudstack->login($username, $password);
 		$data = json_decode($sth,true);
+		$test = $data['loginresponse'];
+		echo"<br/>";
+		print_r($test);
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			Session::init();
@@ -30,7 +33,7 @@ class loginModel extends baseModel
 			foreach ($data['loginresponse'] as $k => $v) {
 		    	Session::set($k, $v);
 		    }
-			header('location: ../account');
+			//header('location: ../account');
 		} else {
 			header('location: ../login');
 		}
