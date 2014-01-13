@@ -10,9 +10,16 @@
 #################################################
 # Default settings
 #################################################
+// error reporting #USE ONLY FOR TEST PURPOSES!!!
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-date_default_timezone_set('UTC');
+
+//Memory limit
+ini_set('memory_limit', '100M');
+
+//Tijdzone
+date_default_timezone_set('Europe/Amsterdam');
+
 #################################################
 # includes
 #################################################
