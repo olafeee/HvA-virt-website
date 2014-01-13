@@ -102,7 +102,7 @@
           </div>
         </div>
         <div class="kp_hm_text_right">       
-          <b><?php echo ucfirst($_SESSION['logArr']['firstname']). " " ($_SESSION['logArr']['lastname']) ; ?></b>
+          <b><?php echo ucfirst($_SESSION['logArr']['firstname']). " ". ($_SESSION['logArr']['lastname']) ; ?></b>
           <p><?php echo ucfirst($_SESSION['logArr']['username']); ?></p>
 
       </div>
