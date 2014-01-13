@@ -13,7 +13,7 @@ class klantPaneel extends baseController {
 			header('location: ../login');
 			exit;
 		}
-		$this->view->vmResponce = $this->model->getVM();
+		$this->baseView->vmResponce = $this->baseModel->getVM();
 	}
 	
 	function os_installatie(){
