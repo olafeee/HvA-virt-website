@@ -49,9 +49,14 @@ $vmNumber = $this->vmNumber;
   </tr>
   <tr>
     <td>IP addres</td>
-    <td><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
+    <td><?php echo $vmResponce[$vmNumber]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$vmNumber]["nic"][0]["netmask"]);?></td>
+  </tr>
+  <tr>
+    <button type="button" class="btn btn-info"> Info </button><button type="button" class="btn btn-success"> Upgrade </button>
   </tr>
 </table>
+
+
     </div>
 <?php else: 
 header('location: ../login');
