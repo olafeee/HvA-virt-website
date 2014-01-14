@@ -15,7 +15,7 @@ class cloudstack
     protected $_targetApi = NULL;
     private $_curlEnabled = NULL;
     public $responseType = 'json';
-    public $return_signed_only = true;
+    public $return_signed_only = false;
     
     /* public function __construct($targetApi, $apiKey, $secretKey)
     {
