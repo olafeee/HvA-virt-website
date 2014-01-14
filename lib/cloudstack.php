@@ -588,7 +588,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             return null;
         }
         ksort($array);
-        echo"arrayyyy";
+        echo"array _handleArray";
         echo"<br/>";
         var_dump($array);
         $i = 1;
@@ -600,7 +600,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 $string .= '&' . $key . '=' . rawurlencode($val);
             }
         }
-        echo"arrayyyy";
+        echo"string _handleArray ";
         echo"<br/>";
 var_dump($string);
         echo"<br/>";
