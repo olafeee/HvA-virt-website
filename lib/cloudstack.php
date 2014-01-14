@@ -467,15 +467,16 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         //use 'strlen' as callback function ONLY  remove NULL, FALSE and Empty Strings, but leave values of 0 (zero)!
         //0 (zero) is needed for 
         $command_array = array_filter($command_array,  'strlen' );
-        echo "Command array na array filter";       
+        echo "Command array na array filter ";       
         echo "<br/>";
         var_dump($command_array);
-        
+
         $command = $this->_handleArray($command_array);
         echo "Command: " . $command . "<br><br>"; // DEBUG
         echo "Command";       
         echo "<br/>";
         var_dump($command);
+        echo "**************************************************************************************************************************************************";
         return $this->_apiRequest($command);
     }
 
@@ -557,7 +558,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             echo "curl!!!!!";
             var_dump($curl);
             echo "<br/>";
-            echo "respone!!!!";
+            echo "respone!!!! &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& ";
             echo "<br/>";
             var_dump($response);
                 return $response;
@@ -592,6 +593,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 $string .= '&' . $key . '=' . rawurlencode($val);
             }
         }
+        echo " ################################################################################################################ ";
         return $string;
     }
     /**
