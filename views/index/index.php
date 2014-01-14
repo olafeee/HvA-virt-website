@@ -52,7 +52,7 @@
 			<div class="index_block1">
   			<div class="div-align-span-center"><h2>Green IT</h2></span></div>
   			<br>
-  			<p><img src="/img/73.svg" class="fontpage-img">    Our servers are build and designed for Green IT</p>
+  			<p><<span class="glyphicon glyphicon-wrench bladeVPS_confi"></span>    Our servers are build and designed for Green IT</p>
   			<p><img src="/img/77.svg" class="fontpage-img">    The entire Plaintech infrastructure is designed for the enviroment</p>
 			</div>
 			</div>
