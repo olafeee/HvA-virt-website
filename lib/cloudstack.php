@@ -15,7 +15,7 @@ class cloudstack
     protected $_targetApi = NULL;
     private $_curlEnabled = NULL;
     public $responseType = 'json';
-    public $return_signed_only = true;
+    public $return_signed_only = false;
     
     /* public function __construct($targetApi, $apiKey, $secretKey)
     {
@@ -535,7 +535,6 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 $curl_error = curl_error($curl);
             }
             curl_close($curl);
-            
             if (!empty($curl_error)) {
                 throw new Exception('Error communicating with API, CURL error ' . $curl_error);
             } else {
@@ -544,6 +543,8 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 } else {
                     $response = $response;
                 }
+            var_dump($curl);
+            var_dump($response);
                 return $response;
             }
         }
