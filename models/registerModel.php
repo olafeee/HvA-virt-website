@@ -44,11 +44,13 @@ class registerModel extends baseModel
 			echo "$userPassw <br />";
 			echo "<br /><br />";
 
+			/*
 			$test = $this->cloudstack->listAccountsByName();
 			print_r($test);
 			echo "<br /><br />";
 
 			$accounttype = 0;
+			*/
 
 			$responce = $this->cloudstack->createAccount($userEmail,$userFname,$userLname,$userPassw,$userEmail);
 
