@@ -13,6 +13,7 @@ class klantPaneel extends baseController {
 			header('location: ../login');
 			exit;
 		}
+		$model = $this->laadModel();
 		$this->baseView->vmResponce = $model->getVM();
 	}
 	
@@ -29,8 +30,6 @@ class klantPaneel extends baseController {
 
 
 	function VM(){
-		$model = $this->laadModel();
-		$this->baseView->vmResponce = $model->getVM();
 		$this->baseView->vmNumber = $value;
 		$this->index('VM');	
 	}
