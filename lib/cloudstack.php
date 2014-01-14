@@ -474,6 +474,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         echo " ################################################################################################################ ";
         $command = $this->_handleArray($command_array);
          echo " ################################################################################################################ ";
+          echo"<br/>";
         echo "Command: " . $command . "<br><br>"; // DEBUG
         echo "Command";       
         echo "<br/>";
