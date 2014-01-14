@@ -54,9 +54,9 @@ $vmNumber = $this->vmNumber;
   <tr>
     <td>
     <?php
-    echo $vmResponce[$vmNumber]["state"];
-
-    if ($vmResponce[$vmNumber]["state"] != "Running") {
+    $var3 = $vmResponce[$vmNumber]["state"];
+    echo "&".$var3."&"
+    if ($var3 == "Running") {
        ?><a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-success"> Start </button></a><?php
     }else{?>
     <a href="/klantPaneel/VMstop/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-danger"> Stop </button></a>
