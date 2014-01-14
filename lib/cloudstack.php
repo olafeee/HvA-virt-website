@@ -448,16 +448,16 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Create an account
-    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype = 0)
+    public function createAccount()
     {
         $command_array = array(
             'command' => 'createAccount',
-            'accounttype' => $accounttype,
-            'email' => $email,
-            'firstname' => $firstname,
-            'lastname' => $lastname,
-            'password' => $password,
-            'username' => $username,
+            'accounttype' => '0',
+            'email' => 'o@g.nl',
+            'firstname' => 'hoi',
+            'lastname' => 'does',
+            'password' => 'henkjan',
+            'username' => 'armin',
             'response' => $this->responseType
         );
         //remove empty elements to prevent API error
