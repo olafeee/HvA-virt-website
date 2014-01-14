@@ -55,7 +55,7 @@ $vmResponce = $this->vmResponce;
                 <td class="HHD">20GB</td>
 
                 <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
-                <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
+                <td><a href="/klantPaneel/VM/<?php echo $xy; ?>"><button type="button" class="btn btn-info"> Info </button></a> <button type="button" class="btn btn-success"> Upgrade </button></td>
               </tr><?
               $xy++;
             } 
