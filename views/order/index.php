@@ -109,7 +109,7 @@
 		&euro; 64.99
 	</div>
 	<div class="bladeVPSindex_line">
-		<span class="right">CPU cores-geheugen</span>
+		<span class="right">CPU cores</span>
         <strong>8</strong>
 	</div>
 	<div class="bladeVPSindex_line">
