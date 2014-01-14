@@ -466,6 +466,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         $command_array = array_filter($command_array,  'strlen' );
         $command = $this->_handleArray($command_array);
         echo "Command: " . $command . "<br><br>"; // DEBUG
+        var_dump($command);
         return $this->_apiRequest($command);
     }
 
