@@ -544,7 +544,9 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 } else {
                     $response = $response;
                 }
+            echo "<br/>";
             var_dump($curl);
+            echo "<br/>";
             var_dump($response);
                 return $response;
             }

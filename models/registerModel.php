@@ -19,7 +19,7 @@ class registerModel extends baseModel
 	
 	public function register()
 	{
-		echo "Test!<br>";
+		echo "Test!<br><pre>";
 
 		// We controleren of alle velden gevuld zijn en vervolgens of de mail klopt
 		/*
