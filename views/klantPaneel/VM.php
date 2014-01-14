@@ -52,8 +52,8 @@ $vmNumber = $this->vmNumber;
     <td><?php echo $vmResponce[$vmNumber]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$vmNumber]["nic"][0]["netmask"]);?></td>
   </tr>
   <tr>
-    <td>
-      <a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Info </button></a> Upgrade </button></td>
+    <td><a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Start </button></a></td>
+    <td><a href="/klantPaneel/VMstop/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Stop </button></a></td>
   </tr>
 </table>
 

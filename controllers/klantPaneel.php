@@ -40,7 +40,21 @@ class klantPaneel extends baseController {
 
 	function VMstart($vmid , $vmpage){
 		$this->cloudstack->startVirtualMachine($vmid);
-		//header('location: /klantPaneel/VM/'.$vmpage);
+		header('location: /klantPaneel/VM/'.$vmpage);
+	}
+
+	function VMstop($vmid , $vmpage){
+		$this->cloudstack->stopVirtualMachine($vmid);
+		header('location: /klantPaneel/VM/'.$vmpage);
+	}
+	function VMrestart($vmid , $vmpage){
+		$this->cloudstack->rebootVirtualMachine($vmid);
+		header('location: /klantPaneel/VM/'.$vmpage);
+	}
+
+	function destroyVirtualMachine(){
+		$this->cloudstack->destroyVirtualMachine($vmid);
+		header('location: /klantPaneel/VM/'.$vmpage);		
 	}
 
 }
