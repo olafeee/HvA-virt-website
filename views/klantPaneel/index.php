@@ -63,14 +63,10 @@ $vmResponce = $this->vmResponce;
       ?></tbody>
       </table>
 
-<div id="progress_meter" >
-    <ul>
-        <li id="c1_r"><p><span class="pie_left"></span></p></li>
-        <li id="c1_l"><p><span class="pie_right"></span></p></li>
-    </ul>
-    <div id="center-circle">
-        <span>75%</span>
-    </div>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+    <span class="sr-only">40% Complete (success)</span>
+  </div>
 </div>
   
     </div>
