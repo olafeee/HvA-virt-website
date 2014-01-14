@@ -52,7 +52,8 @@ $vmNumber = $this->vmNumber;
     <td><?php echo $vmResponce[$vmNumber]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$vmNumber]["nic"][0]["netmask"]);?></td>
   </tr>
   <tr>
-    <button type="button" class="btn btn-info"> Info </button><button type="button" class="btn btn-success"> Upgrade </button>
+    <td><a href="">cloud</a>
+      <button type="button" class="btn btn-info"> Info </button><button type="button" class="btn btn-success"> Upgrade </button></td>
   </tr>
 </table>
 

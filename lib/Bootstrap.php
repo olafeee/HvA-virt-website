@@ -33,7 +33,13 @@ class Bootstrap {
 
 		//print_r($url);
 		// laad functie van class in en geef variable mee }else{ laad funtie
-		if (isset($url[2])) {
+		if (isset($url[3])) {
+			if (method_exists($controller, $url[1])) {
+				$controller->{$url[1]}($url[2],$url[3]);
+			} else {
+				$this->error();
+			}
+		}elseif(isset($url[2])) {
 			if (method_exists($controller, $url[1])) {
 				$controller->{$url[1]}($url[2]);
 			} else {
