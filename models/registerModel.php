@@ -32,7 +32,7 @@ class registerModel extends baseModel
 			
 		} else { */
 			// We knallen alle Post-variabelen PHP variabelen in, dit is voor overzichtelijkheid.
-			$userEmail = $_POST['inputEmail'];
+			/*$userEmail = $_POST['inputEmail'];
 			$userPassw = $_POST['inputPassword'];
 			$userFname = $_POST['inputFName'];
 			$userLname = $_POST['inputLName'];
@@ -44,7 +44,7 @@ class registerModel extends baseModel
 			echo "$userPassw <br />";
 			echo "<br /><br />";
 
-			/*
+			
 			$test = $this->cloudstack->listAccountsByName();
 			print_r($test);
 			echo "<br /><br />";
