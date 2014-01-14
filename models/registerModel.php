@@ -50,7 +50,7 @@ class registerModel extends baseModel
 
 			$accounttype = 0;
 
-			$responce = $this->cloudstack->createAccount($userEmail,$userFname,$userLname,$userPassw,$userEmail,$accounttype);
+			$responce = $this->cloudstack->createAccount($userEmail,$userFname,$userLname,$userPassw,$userEmail);
 
 			print($responce);
 		
