@@ -29,7 +29,7 @@ class klantPaneel extends baseController {
 	}
 
 
-	function VM(){
+	function VM($value){
 		$this->baseView->vmNumber = $value;
 		$this->index('VM');	
 	}
