@@ -32,7 +32,7 @@
 <div class="row">
 		<div class="col-md-4">
 			<div class="index_block1">
-			<div class="div-align-span-center"><h2>Onze systemen</h2></span></div>
+			<div class="div-align-span-center"><h2>Our systems</h2></span></div>
 			<br/>
   			<p><img src="/img/73.svg" class="fontpage-img">    Unlimited bandwidth</p>
   			<p><img src="/img/77.svg" class="fontpage-img">    Extremely scalable</p>
@@ -42,21 +42,22 @@
 		</div>
 		<div class="col-md-4">
 			<div class="index_block1">
-			<div class="div-align-span-center"><span class="glyphicon glyphicon-shopping-cart span-shopping-cart"></span></div>
 			<br/>
-  			<p><b>D</b>i<b>N</b>e<b>S</b>h is my DNA</p>
-  			<?php 
-  			session_start();
-  			echo "<pre>";
-			print_r($_SESSION);
-			echo "</pre>";
-
-  			 ?>
+  			<div class="div-align-span-center"><h2>Quality</h2></span></div>
+  			<br>
+  			<p><img src="/img/73.svg" class="fontpage-img">    We assure the best customer care!</p>
+  			<p><img src="/img/77.svg" class="fontpage-img">    We use the best quality blade servers for efficiency!</p>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="index_block1">
 			<div class="div-align-span-center"><span class="glyphicon glyphicon-shopping-cart span-shopping-cart"></span></div>
+			<br/>
+  			<div class="div-align-span-center"><h2>Quality</h2></span></div>
+  			<br>
+  			<p><img src="/img/73.svg" class="fontpage-img">    We assure the best customer care!</p>
+  			<p><img src="/img/77.svg" class="fontpage-img">    We use the best quality blade servers for efficiency!</p>
+			</div>
 <br/>
   			<p>so must engineering</p>
 			</div>

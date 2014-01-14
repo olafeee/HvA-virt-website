@@ -9,10 +9,10 @@
               <input type="checkbox" value="remember-me"> Remember me
             </label>
             <label>
-              <a href="register">Maak een account aan</a>
+              <a href="register">Create an account</a>
         </label>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">ga terug</button>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Verander</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Back</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Change</button>
       </form>
 
 

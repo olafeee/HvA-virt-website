@@ -4,10 +4,9 @@
 	<br/>
 	Inleiding:
 	<br/>
-	Plaintech houd zich alleen verantwoordelijk voor incidenten en storingen die betrekking hebben op de hardware en of het netwerk wat plaintech levert.
-	De klant is zelf verantwoordelijk voor het administratieve beheer van de server.Plaintech bied hiervoor daarom ook geen support.
-	Bij de server kan een ondersteuningspakket worden gekozen, deze pakketten kennen enkele voorwaardes waar Plaintech zich aan dient te houden.
-
+	Plaintech is responsible for all incidents and failures that are related to hardware and/or network issues in the range of Plaintech.
+	What the customer does on their server is their responsibility and the administration of their server. Thus, Plaintech does not offer support.
+	The customer is able to get additional support packages when chosen for. The terms and conditions of the packages can be found under Service Level Agreements.
 	<br/>
 	Schematische weergave Pakketten
 	<br/>
@@ -15,9 +14,9 @@
 	<div>
 		<table border="1">
 			<tr>
-				<td>Pakket</td>
-				<td>Uptime Garantie (In procenten)</td>
-				<td>Best effort response time in uren</td>
+				<td>Package</td>
+				<td>Uptime Guarentee (In percentage)</td>
+				<td>Best effort response time in hours</td>
 			</tr>
 			<tr>
 				<td>Bronze</td>
@@ -37,17 +36,17 @@
 		</table>
 	</div>
 	<br/>
-	Boeteclausule
+	Penalty Clause
 	<br/>
-	Als Plaintech niet aan deze voorwaardes voldoet en de response tijden + uptime niet haalt met een bepaald marge treed er een boetepercentage op.
-	Dit boetepercentage is een bedrag in euro's van het contractuele maandbedrag wat overeengekomen is bij de samenstelling van het pakket.
+	If Plaintech does not meet these conditions, response time and uptime, Plaintech will recieve a penalty as part of the agreement.
+	These penalty is a refund to the customer at a certain margin. The penalty is a fee in euro's of the agreed monthly fee which the customer chose with the selection of the package.
 	<br/>
 	<div>
 		<table border="1">
 			<tr>
-				<td>Foutmarge Uptime</td>
-				<td>Foutmarge Best Effort Response Time</td>
-				<td>Boetepercentage in procenten</td>
+				<td>Penalty margin uptime</td>
+				<td>Error margin best effort response time</td>
+				<td>Penalty percentage</td>
 			</tr>
 			<tr>
 				<td>5</td>

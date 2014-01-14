@@ -3,7 +3,7 @@
 <div class="navbar navbar-default navbar-fixed-bottom">
 	<div class="container">
 		<div class="row footerrow">
-			<div class="col-md-2"><a href="algemenevoorwaarden">Algemene voorwaarden</a></div>
+			<div class="col-md-2"><a href="algemenevoorwaarden">Terms and Conditions</a></div>
 			<div class="col-md-2"><a href="privacypolicy">Privacy policy</a></div>
 			<div class="col-md-2"></div>
 			<div class="col-md-4"></div>

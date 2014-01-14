@@ -4,7 +4,7 @@
 
 <table class="table">
   <tr>
-    <td>Naam:</td>
+    <td>Name:</td>
     <td>Sjon De boer</td>
   </tr>
   <tr>
@@ -12,21 +12,21 @@
     <td>s.de.boer@plaintech.nl</td>
   </tr>
   <tr>
-    <td>Adres:</td>
+    <td>Address:</td>
     <td>H.J.E. Wenckebachweg 100</td>
   </tr>
   <tr>
-    <td>Postode:</td>
+    <td>Postal Code:</td>
     <td>1096DL</td>
   </tr>
   <tr>
-    <td>Land:</td>
+    <td>Country:</td>
     <td>Nederland</td>
   </tr>
 </table>
 
-<a href="/account/veranderWachtwoord" class="btn btn-default">Wijzig Wachtwoord</a>
-<a href="/account/veranderWachtwoord" class="btn btn-default">Wijzig Gegevens</a>
+<a href="/account/veranderWachtwoord" class="btn btn-default">Change Password</a>
+<a href="/account/veranderWachtwoord" class="btn btn-default">Change Information</a>
 </div>
 <?php else: 
 header('location: /login');
