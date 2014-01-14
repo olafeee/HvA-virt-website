@@ -558,9 +558,10 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             echo "curl!!!!!";
             var_dump($curl);
             echo "<br/>";
-            echo "respone!!!! &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& ";
+            echo "respone!!!! ";
             echo "<br/>";
             var_dump($response);
+            echo "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&";
                 return $response;
             }
         }
@@ -584,6 +585,9 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             return null;
         }
         ksort($array);
+        echo"arrayyyy";
+        echo"<br/>";
+        var_dump($array)
         $i = 1;
         foreach ($array as $key => $val) {
             if ($i <= 1) {
@@ -593,6 +597,10 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 $string .= '&' . $key . '=' . rawurlencode($val);
             }
         }
+        echo"arrayyyy";
+        echo"<br/>";
+var_dump($string);
+        echo"<br/>";
         echo " ################################################################################################################ ";
         return $string;
     }
