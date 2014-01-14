@@ -18,11 +18,11 @@ $vmResponce = $this->vmResponce;
     return $subnet;
   }
   //alleen voor test doeleinden
-  echo "<pre>";
-  echo "<br/>";
-  print_r($_SESSION);
-  var_dump($vmResponce);
-  echo "</pre>";
+  #echo "<pre>";
+  #echo "<br/>";
+  #print_r($_SESSION);
+  #var_dump($vmResponce);
+  #echo "</pre>";
 
 ?>
 <div class="row">
