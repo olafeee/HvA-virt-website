@@ -40,7 +40,7 @@ class klantPaneel extends baseController {
 
 	function VMstart($vmid , $vmpage){
 		$this->cloudstack->startVirtualMachine($id);
-		header('location: /klantPaneel/VM/'$vmpage);
+		header('location: /klantPaneel/VM/'.$vmpage);
 	}
 
 }
