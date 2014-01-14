@@ -62,6 +62,12 @@ $vmNumber = $this->vmNumber;
     </td>
     <td><a href="/klantPaneel/VMrestart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber;?>"><button type="button" class="btn btn-info"> Restart </button></a></td>
   </tr>
+  <tr>
+    <td>
+      <?php echo '<a href="145.92.14.90:8080/client/console?cmd=access&sessionkey='.$_SESSION['logArr']['sessionkey'].'&vm='.$vmResponce[$vmNumber]["id"]'" target="_blank">Visit W3Schools.com!</a>';?>
+    </td>
+  </tr>
+  
 </table>
 
 
