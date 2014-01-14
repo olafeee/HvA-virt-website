@@ -24,7 +24,7 @@ $vmNumber = $this->vmNumber;
         <tbody>
           <tr class="success">
             <td>1</td>
-            <td class="status"></td>
+            <td class="status"><?php echo $vmResponce[$vmNumber]["displayname"];?></td>
             <td class="CPU"></td>
             <td class="CPUSPEED"></td>
             <td class="memory"></td>

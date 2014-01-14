@@ -22,8 +22,16 @@ class klantPaneel extends baseController {
 		$this->index('os_installatie');
 	}
 
-	function console(){
-
+	function console($value){
+		$this->baseView->vmResponce = $model->getVM();
+		$this->baseView->vmNumber = $value;
 		$this->index('console');
 	}
+
+	function VM(){
+		$this->baseView->vmResponce = $model->getVM();
+		$this->baseView->vmNumber = $value;
+		$this->index('VM');	
+	}
+
 }
