@@ -20,6 +20,7 @@ $vmResponce = $this->vmResponce;
   //alleen voor test doeleinden
   echo "<pre>";
   echo "<br/>";
+  print_r($_SESSION)
   var_dump($vmResponce);
   echo "</pre>";
 
