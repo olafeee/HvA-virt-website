@@ -448,38 +448,24 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         return $this->_apiRequest($command);
     }
     // Create an account
-    public function createAccount()
+    public function createAccount($email, $firstname, $lastname, $password, $username, $accounttype = 0)
     {
         $command_array = array(
             'command' => 'createAccount',
-            'accounttype' => '0',
-            'email' => 'o@g.nl',
-            'firstname' => 'hoi',
-            'lastname' => 'does',
-            'password' => 'henkjan',
-            'username' => 'armin',
+            'accounttype' => $accounttype,
+            'email' => $email,
+            'firstname' => $firstname,
+            'lastname' => $lastname,
+            'password' => $password,
+            'username' => $username,
             'response' => $this->responseType
         );
-        echo "Command array";       
-        echo "<br/>";
-        var_dump($command_array);
         //remove empty elements to prevent API error
         //use 'strlen' as callback function ONLY  remove NULL, FALSE and Empty Strings, but leave values of 0 (zero)!
         //0 (zero) is needed for 
         $command_array = array_filter($command_array,  'strlen' );
-        echo "Command array na array filter ";       
-        echo "<br/>";
-        var_dump($command_array);
-         echo "<br/>";
-        echo " ################################################################################################################ ";
         $command = $this->_handleArray($command_array);
-         echo " ################################################################################################################ ";
-          echo"<br/>";
         echo "Command: " . $command . "<br><br>"; // DEBUG
-        echo "Command";       
-        echo "<br/>";
-        var_dump($command);
-        echo "**************************************************************************************************************************************************";
         return $this->_apiRequest($command);
     }
 
@@ -549,6 +535,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 $curl_error = curl_error($curl);
             }
             curl_close($curl);
+            
             if (!empty($curl_error)) {
                 throw new Exception('Error communicating with API, CURL error ' . $curl_error);
             } else {
@@ -557,14 +544,6 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 } else {
                     $response = $response;
                 }
-            echo "<br/>";
-            echo "curl!!!!!";
-            var_dump($curl);
-            echo "<br/>";
-            echo "respone!!!! ";
-            echo "<br/>";
-            var_dump($response);
-            echo "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&";
                 return $response;
             }
         }
@@ -588,9 +567,6 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             return null;
         }
         ksort($array);
-        echo"array _handleArray";
-        echo"<br/>";
-        var_dump($array);
         $i = 1;
         foreach ($array as $key => $val) {
             if ($i <= 1) {
@@ -600,10 +576,6 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
                 $string .= '&' . $key . '=' . rawurlencode($val);
             }
         }
-        echo"string _handleArray ";
-        echo"<br/>";
-var_dump($string);
-        echo"<br/>";
         return $string;
     }
     /**

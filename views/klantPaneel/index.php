@@ -62,7 +62,8 @@ $vmResponce = $this->vmResponce;
             } 
       ?></tbody>
       </table>
-      <div class="progress-radial progress-25">
+
+<div class="progress-radial progress-25">
   <div class="overlay">25%</div>
 </div>
 
