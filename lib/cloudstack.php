@@ -588,7 +588,7 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         ksort($array);
         echo"arrayyyy";
         echo"<br/>";
-        var_dump($array)
+        var_dump($array);
         $i = 1;
         foreach ($array as $key => $val) {
             if ($i <= 1) {
