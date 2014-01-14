@@ -470,8 +470,9 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         echo "Command array na array filter ";       
         echo "<br/>";
         var_dump($command_array);
-
+        echo " ################################################################################################################ ";
         $command = $this->_handleArray($command_array);
+         echo " ################################################################################################################ ";
         echo "Command: " . $command . "<br><br>"; // DEBUG
         echo "Command";       
         echo "<br/>";
@@ -601,7 +602,6 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
         echo"<br/>";
 var_dump($string);
         echo"<br/>";
-        echo " ################################################################################################################ ";
         return $string;
     }
     /**
