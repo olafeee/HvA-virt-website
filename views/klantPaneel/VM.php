@@ -64,7 +64,7 @@ $vmNumber = $this->vmNumber;
   </tr>
   <tr>
     <td>
-      <a href="http://145.92.14.90:8080/client/console?cmd=access&sessionkey='$_SESSION["logArr"]["sessionkey"].'&vm='.$vmResponce[$vmNumber]['id'].'" target="_blank">Visit W3Schools.com!</a>
+      <a href="http://145.92.14.90:8080/client/console?cmd=access&sessionkey='$_SESSION["logArr"]["sessionkey"].'&vm='.$vmResponce[$vmNumber]['id'].'" target=""http://145.92.14.90:8080/client/console?cmd=access&sessionkey='$_SESSION["logArr"]["sessionkey"].'&vm='.$vmResponce[$vmNumber]['id'].'"">Visit W3Schools.com!</a>
     </td>
   </tr>
   
