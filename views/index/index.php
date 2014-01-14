@@ -42,7 +42,6 @@
 		</div>
 		<div class="col-md-4">
 			<div class="index_block1">
-			<br/>
   			<div class="div-align-span-center"><h2>Quality</h2></span></div>
   			<br>
   			<p><img src="/img/73.svg" class="fontpage-img">    We assure the best customer care!</p>
@@ -51,8 +50,6 @@
 		</div>
 		<div class="col-md-4">
 			<div class="index_block1">
-			<div class="div-align-span-center"></div>
-			<br/>
   			<div class="div-align-span-center"><h2>Green IT</h2></span></div>
   			<br>
   			<p><img src="/img/73.svg" class="fontpage-img">    Our servers are build and designed for Green IT</p>
