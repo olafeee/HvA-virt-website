@@ -7,8 +7,8 @@
 	Plaintech is responsible for all incidents and failures that are related to hardware and/or network issues in the range of Plaintech.
 	What the customer does on their server is their responsibility and the administration of their server. Thus, Plaintech does not offer support.
 	The customer is able to get additional support packages when chosen for. The terms and conditions of the packages can be found under Service Level Agreements.
-	<br/>
-	Schematische weergave Pakketten
+	<br/><br>
+	Packages
 	<br/>
 
 	<div>
