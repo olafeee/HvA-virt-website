@@ -52,8 +52,8 @@ $vmNumber = $this->vmNumber;
     <td><?php echo $vmResponce[$vmNumber]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$vmNumber]["nic"][0]["netmask"]);?></td>
   </tr>
   <tr>
-    <td><a href="">cloud</a>
-      <button type="button" class="btn btn-info"> Info </button><button type="button" class="btn btn-success"> Upgrade </button></td>
+    <td>
+      <a href="/klantPaneel/VMstart/<?php echo $blalblablal.'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Info </button></a> Upgrade </button></td>
   </tr>
 </table>
 
