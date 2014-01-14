@@ -62,9 +62,25 @@ $vmResponce = $this->vmResponce;
             } 
       ?></tbody>
       </table>
+      <div class="progress-radial progress-25">
+  <div class="overlay">25%</div>
+</div>
+
+<div class="progress-radial progress-50">
+  <div class="overlay">50%</div>
+</div>
+
+<div class="progress-radial progress-75">
+  <div class="overlay">75%</div>
+</div>
+
+<div class="progress-radial progress-90">
+  <div class="overlay">90%</div>
+</div>
+  
     </div>
 <?php else: 
-header('location: ../login');
+header('location: /login');
  endif; ?>
 
 
