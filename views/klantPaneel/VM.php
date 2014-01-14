@@ -53,7 +53,7 @@ $vmNumber = $this->vmNumber;
   </tr>
   <tr>
     <td>
-      <a href="/klantPaneel/VMstart/<?php echo $blalblablal.'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Info </button></a> Upgrade </button></td>
+      <a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Info </button></a> Upgrade </button></td>
   </tr>
 </table>
 
