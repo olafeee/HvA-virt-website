@@ -460,6 +460,9 @@ Either the snapshotid or the volumeid must be passed - if you pass the volumeid,
             'username' => 'armin',
             'response' => $this->responseType
         );
+        echo "Command array";       
+        echo "<br/>";
+        var_dump($command_array);
         //remove empty elements to prevent API error
         //use 'strlen' as callback function ONLY  remove NULL, FALSE and Empty Strings, but leave values of 0 (zero)!
         //0 (zero) is needed for 
