@@ -33,7 +33,7 @@ $vmNumber = $this->vmNumber;
   </tr>
   <tr>
     <td>CPU cores:</td>
-    <td><?php echo $vmResponce[$vmNumber]["cpunumber"];?>/td>
+    <td><?php echo $vmResponce[$vmNumber]["cpunumber"];?></td>
   </tr>
   <tr>
     <td>CPU speed:</td>
