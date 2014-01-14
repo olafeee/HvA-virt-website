@@ -19,7 +19,7 @@ class registerModel extends baseModel
 	
 	public function register()
 	{
-		echo "Test!<br><pre>";
+		echo "Test!<br>";
 
 		// We controleren of alle velden gevuld zijn en vervolgens of de mail klopt
 		/*
@@ -32,7 +32,7 @@ class registerModel extends baseModel
 			
 		} else { */
 			// We knallen alle Post-variabelen PHP variabelen in, dit is voor overzichtelijkheid.
-			/*$userEmail = $_POST['inputEmail'];
+			$userEmail = $_POST['inputEmail'];
 			$userPassw = $_POST['inputPassword'];
 			$userFname = $_POST['inputFName'];
 			$userLname = $_POST['inputLName'];
@@ -44,15 +44,13 @@ class registerModel extends baseModel
 			echo "$userPassw <br />";
 			echo "<br /><br />";
 
-			
 			$test = $this->cloudstack->listAccountsByName();
 			print_r($test);
 			echo "<br /><br />";
 
 			$accounttype = 0;
-			*/
 
-			$responce = $this->cloudstack->createAccount();
+			$responce = $this->cloudstack->createAccount($userEmail,$userFname,$userLname,$userPassw,$userEmail,$accounttype);
 
 			print($responce);
 		

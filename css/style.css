@@ -572,16 +572,6 @@ p.order_options_OS{
 }
 
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans);
-body {
-  padding: 30px 0;
-  background-color: #2f3439;
-  font-family: "Noto Sans", sans-serif;
-}
-
-.wrap {
-  width: 600px;
-  margin: 0 auto;
-}
 
 /* -------------------------------------
  * Bar container
