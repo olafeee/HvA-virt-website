@@ -67,7 +67,7 @@
 	</div>
 <!-- eind oscar-->
 </div>
-	<a href="javascript:hideSLAMenu()"><img src="/img/close-img.png" id="close-img"></a>
+	<!--<a href="javascript:hideSLAMenu()"><img src="/img/close-img.png" id="close-img"></a>-->
 </div>
 
 <div class="col-md-5 order_summery">

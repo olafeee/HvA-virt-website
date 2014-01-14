@@ -5,7 +5,7 @@
 <table class="table">
   <tr>
     <td>Name:</td>
-    <td>Sjon De boer</td>
+    <td>Admin Cloud</td>
   </tr>
   <tr>
     <td>Email:</td>
@@ -24,9 +24,6 @@
     <td>Nederland</td>
   </tr>
 </table>
-
-<a href="/account/veranderWachtwoord" class="btn btn-default">Change Password</a>
-<a href="/account/veranderWachtwoord" class="btn btn-default">Change Information</a>
 </div>
 <?php else: 
 header('location: /login');

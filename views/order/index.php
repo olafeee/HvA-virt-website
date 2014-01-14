@@ -3,7 +3,6 @@
 <div class="col-md-10">
 	<div class="bladeVPSintro">
 		<h2>Build your own Virtual Private Server!</h2>
-		<p>You can decide where you paid for!</p>
 		<span class="glyphicon glyphicon-wrench bladeVPS_confi"></span>
 	</div>
 </div>
@@ -44,7 +43,7 @@
 </div>
 <div class="bladeVPSindex">
 	<div>
-		<h4>Starter pakket</h4>
+		<h4>Medium pakket</h4>
 	</div>
 	<div class="bladeVPSindex_price">
 		&euro;19.99
@@ -74,7 +73,7 @@
 </div>
 <div class="bladeVPSindex">
 	<div>
-		<h4>Starter pakket</h4>
+		<h4>Large pakket</h4>
 	</div>
 	<div class="bladeVPSindex_price">
 		&euro;34.99

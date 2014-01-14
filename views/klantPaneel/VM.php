@@ -33,7 +33,7 @@ $vmNumber = $this->vmNumber;
   </tr>
   <tr>
     <td>CPU cores:</td>
-    <td><?php echo $vmResponce[$vmNumber]["cpunumber"];?>/td>
+    <td><?php echo $vmResponce[$vmNumber]["cpunumber"];?></td>
   </tr>
   <tr>
     <td>CPU speed:</td>
@@ -54,16 +54,20 @@ $vmNumber = $this->vmNumber;
   <tr>
     <td>
     <?php
-    $var3 = $vmResponce[$vmNumber]["state"];
-    echo "&".$var3."&";
-    if ("Running"==$var3) {
-       ?><a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-success"> Start </button></a><?php
-    }else{?>
-    <a href="/klantPaneel/VMstop/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-danger"> Stop </button></a>
+    if ($vmResponce[$vmNumber]["state"]=="Running") {?>
+    <a href="/klantPaneel/VMstop/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber; ?>"><button type="button" class="btn btn-danger"> Stop </button></a>
+    <?php }else{ ?>
+       <a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber;?>"><button type="button" class="btn btn-success"> Start </button></a>
     <?php } ?>
     </td>
-    <td><a href="/klantPaneel/VMrestart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Restart </button></a></td>
+    <td><a href="/klantPaneel/VMrestart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber;?>"><button type="button" class="btn btn-info"> Restart </button></a></td>
   </tr>
+  <tr>
+    <td>
+      <a href="http://145.92.14.90:8080/client/console?cmd=access&sessionkey='$_SESSION["logArr"]["sessionkey"].'&vm='.$vmResponce[$vmNumber]['id'].'" target=""http://145.92.14.90:8080/client/console?cmd=access&sessionkey='$_SESSION["logArr"]["sessionkey"].'&vm='.$vmResponce[$vmNumber]['id'].'"">Visit W3Schools.com!</a>
+    </td>
+  </tr>
+  
 </table>
 
 
