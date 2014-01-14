@@ -92,7 +92,7 @@
 					<hr />
 					<p>By clicking on "Create an account" below, you are agreeing to the <a href="algemenevoorwaarden">Terms of Service</a> and the <a href="privacypolicy">Privacy Policy</a>.</p>
 					<hr />
-					<button class="btn btn-lg btn-primary btn-block" type="submit" name="accInput">Create an account</button>
+					 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 				</form>
 				<br />
 				<br />
