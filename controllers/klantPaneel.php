@@ -52,9 +52,4 @@ class klantPaneel extends baseController {
 		header('location: /klantPaneel/VM/'.$vmpage);
 	}
 
-	function destroyVirtualMachine(){
-		$this->cloudstack->destroyVirtualMachine($vmid);
-		header('location: /klantPaneel/VM/'.$vmpage);		
-	}
-
 }

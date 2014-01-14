@@ -52,8 +52,13 @@ $vmNumber = $this->vmNumber;
     <td><?php echo $vmResponce[$vmNumber]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$vmNumber]["nic"][0]["netmask"]);?></td>
   </tr>
   <tr>
-    <td><a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Start </button></a></td>
-    <td><a href="/klantPaneel/VMstop/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Stop </button></a></td>
+    <?php
+    if ($vmResponce[$vmNumber]["state"] == 'Running') {
+       ?><td><a href="/klantPaneel/VMstart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-success"> Start </button></a></td><?php
+    }else{?>
+    <td><a href="/klantPaneel/VMstop/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-danger"> Stop </button></a></td>
+    <?php } ?>
+    <td><a href="/klantPaneel/VMrestart/<?php echo $vmResponce[$vmNumber]["id"].'/'.$vmNumber?>"><button type="button" class="btn btn-info"> Restart </button></a></td>
   </tr>
 </table>
 
