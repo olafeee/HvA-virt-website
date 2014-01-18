@@ -1,6 +1,6 @@
 <?php 
 
-if (isset($_SESSION['loggedIn'])):
+if (!isset($_SESSION['loggedIn'])):
 $vmResponce = $this->vmResponce;
 
   // maak van subnet een prifix
