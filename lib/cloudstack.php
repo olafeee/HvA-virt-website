@@ -106,6 +106,104 @@ class cloudstack
         );
         return $this->_apiRequest($command_array);
     }
+	
+	/******** Start VirtualMachine Methods ********/
+
+    // Starts a Virutal Machine
+	public function startVM($id)
+    {
+        $command_array = array(
+            'command' => 'startVirtualMachine',
+            'id' => $id, 
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // Stops a Virtual Machine
+    public function stopVM($id, $forced = 'false')
+    {
+        $command_array = array(
+            'command' => 'stopVirtualMachine',
+            'forced' => $forced,
+            'id' => $id, 
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // Reboot a Virtual Machine
+    public function rebootVM($id)
+    {
+        $command_array = array(
+            'command' => 'rebootVirtualMachine',
+            'id' => $id,
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // Creates and automatically starts a virtual machine based on a service offering, disk offering, and template.
+    public function deployVM($serviceofferingid, $templateid, $zoneid, $diskofferingid = null, $displayname = null, $name = null, $account = null, $domainid = null)
+    {
+        $command_array = array(
+            'commmand' => 'deployVirtualMachine',
+            'serviceofferingid' => $serviceofferingid,
+            'templateid' => $templateid,
+            'zoneid' => $zoneid,
+            'diskofferingid' => $diskofferingid,
+            'displayname' => $displayname,
+            'name' => $name,
+            'account' => $account,
+            'domainid' => $domainid,
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // Destroys a virtual machine. Once destroyed, only the administrator can recover it.
+    public function destroyVM($id)
+    {
+        $command_array = array(
+            'command' => 'destroyVirtualMachine',
+            'id' => $id,
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // Recovers a virtual machine that has been marked as destroyed
+    public function recoverVM($id)
+    {
+        $command_array = array(
+            'command' => 'recoverVirtualMachine',
+            'id' => $id,
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // Restore a VM to original template/ISO or new template/ISO
+    public function restoreVM($virtualmachineid, $templateid = null)
+    {
+        $command_array = array(
+            'command' => 'restoreVirtualMachine',
+            'virtualmachineid' => $virtualmachineid,
+            'templateid' => $templateid,
+        );
+        return $this->_apiRequest($command_array);
+    }
+
+    // List the virtual machines owned by the account.
+    public function listVM($id = null $account = null, $name = null, $state = null, $domainid = null, $templateid = null, $isoid =null, $listall = 'true')
+    {
+        $command_array = array(
+            'command' => 'listVirtualMachines',
+            'id' => $id,
+            'account' => $account,
+            'name' => $name,
+            'state' => $state,
+            'domainid' => $domainid,
+            'templateid' => $templateid,
+            'isoid' => $isoid,
+            'listall' => $listall,
+        );
+        return $this->_apiRequest($command_array);
+    }
 
 
 
