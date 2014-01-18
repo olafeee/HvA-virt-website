@@ -11,10 +11,11 @@ class indexModel extends baseModel
 	}
 
 	function getIndex(){
+		$page = "1";
 				$sql = $this->db->prepare("SELECT *
 										FROM CMS_website
 										WHERE page = $page");
-			    $st = $conn->prepare( $sql );
+			    $st = $db->prepare( $sql );
 			    $st->bindValue( ":numRows", $numRows, PDO::PARAM_INT );
 			    $st->execute();
 			    $list = array();
