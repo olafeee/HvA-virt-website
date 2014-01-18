@@ -1,3 +1,8 @@
+<?php 
+$cmstext = $this->cmstext;
+print_r($cmstext);
+
+?>
 <div class="row">
 	<div class="col-md-12">
 	<div class="introdiv">
