@@ -15,7 +15,7 @@ class indexModel extends baseModel
 				$sql = $this->db->prepare("SELECT *
 										FROM CMS_website
 										WHERE page = $page");
-			    $st = $db->prepare( $sql );
+			    $st = $this->$db->prepare( $sql );
 			    $st->bindValue( ":numRows", $numRows, PDO::PARAM_INT );
 			    $st->execute();
 			    $list = array();
