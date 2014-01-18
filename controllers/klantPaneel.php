@@ -15,6 +15,7 @@ class klantPaneel extends baseController {
 			exit;
 		}
 		$model = $this->laadModel();
+		var_dump($model);
 		$this->baseView->vmResponce = $model->getVM();
 		
 		//
