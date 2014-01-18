@@ -5,12 +5,13 @@ require_once("lib/cloudstack.php");
 class Login extends baseController {
 
 	function __construct() {
-		parent::__construct();	
+		parent::__construct();
+		$this->conDB();	
 	}
 	
 	function run(){
 		if (!isset($_SESSION['loggedIn'])) {
-			$this->conDB();
+
 			$model = $this->laadModel();
 			$model->run();
 		}
