@@ -23,7 +23,7 @@ class indexModel extends baseModel
 			     
 			    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) 
 			    { 
-			        var_dump($row);
+			         echo $row['text'].'<br>'; 
 			    } 
 
 	}
