@@ -11,7 +11,6 @@ class indexModel extends baseModel
 	}
 
 	function getIndex(){
-		$page = "1";
 				$sql "SELECT * FROM CMS_website WHERE page > :page";
 				//$sql = "SELECT naam FROM tabel WHERE leeftijd > :leeftijd"; 
 			     
