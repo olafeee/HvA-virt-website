@@ -30,6 +30,7 @@ require 'lib/baseView.php';
 
 require 'config.php';
 require 'lib/database.php';
+require 'lib/database1.php';
 require 'lib/session.php';
 
 #################################################

@@ -3,7 +3,7 @@
 /**
 * 
 */
-class Database extends PDO
+class Database1 extends PDO
 {
 	
 	public function __construct()
