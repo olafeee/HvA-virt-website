@@ -11,7 +11,6 @@ class indexModel extends baseModel
 	}
 
 	function getIndex(){
-				$sql = ;
 				//$sql = "SELECT naam FROM tabel WHERE leeftijd > :leeftijd"; 
 			     
 			    //$stmt = $this->$db->prepare($sql); 
