@@ -67,4 +67,8 @@ $totalprice = $totalprice + $TP;
   </div>
   <div class="col-md-2"></div>
 </div>
-   
+   <?php 
+		echo "<pre>";
+			var_dump($_SESSION);
+		echo "</pre>";	
+	?>
