@@ -12,6 +12,7 @@ class loginModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
+		$this->conDB();	
 	}
 
 	/*public function run()

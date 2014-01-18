@@ -6,7 +6,6 @@ class Login extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		$this->conDB();	
 	}
 	
 	function run(){
