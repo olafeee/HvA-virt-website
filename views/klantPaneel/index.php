@@ -1,6 +1,6 @@
 <?php 
 
-if (!isset($_SESSION['loggedIn'])):
+//if (!isset($_SESSION['loggedIn'])):
 $vmResponce = $this->vmResponce;
 
   // maak van subnet een prifix
@@ -64,8 +64,8 @@ $vmResponce = $this->vmResponce;
       </table>
   
     </div>
-<?php else: 
-header('location: /login');
- endif; ?>
+<?php //else: 
+//header('location: /login');
+ //endif; ?>
 
 
