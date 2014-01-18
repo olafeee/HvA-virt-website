@@ -2,8 +2,6 @@
 
 class indexModel extends baseModel
 {
-
-	public $cloudstack;
 	
 	function __construct()
 	{
