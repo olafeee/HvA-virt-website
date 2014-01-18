@@ -3,7 +3,6 @@
 class baseModel {
 
 	function __construct() {
-		
 	}
 
 	function conDB(){

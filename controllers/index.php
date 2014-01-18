@@ -7,7 +7,7 @@ class Index extends baseController {
 		// laad model in
 		$model = $this->laadModel();
 		//selecteer de database
-		$db = $model->conDB();
+		$db = $model->conDB1();
 		//test of var gedropt wordt
 		$test = $model->getIndex();
 		var_dump($test);
