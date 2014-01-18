@@ -2,9 +2,9 @@
 
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'test');
-define('DB_USER', 'root');
-define('DB_PASS', 'usbw');
+define('DB_NAME', 'user_db_plaintech');
+define('DB_USER', 'user_admin');
+define('DB_PASS', 'T=56(Wp23');
 
 define('CS_URL','http://145.92.14.90:5990/client/api');
 define('CS_APIKEY','xVhOvqIkJAG83lk0IM_RdFq7k4jzuPgSh7mIbf8chZaeldLp9qxz7fHsHgc7ou9P72lmzlUbgAzLlXvcvJzp9g');

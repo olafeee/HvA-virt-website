@@ -54,6 +54,7 @@
   			<br>
   			<p>    Our servers are build and designed for Green IT</p>
   			<p>    The entire Plaintech infrastructure is designed for the enviroment</p>
+  			<?php print_r($_SESSION);?>
 			</div>
 			</div>
 		</div>
