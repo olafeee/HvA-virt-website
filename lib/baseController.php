@@ -48,10 +48,11 @@ class baseController {
 		$url = $this->urlfix();
 		$file = $url[0].'Model';
 		$dir_file = 'models/'.$file.'.php';
-
+		print_r($dir_file);
 		if(file_exists($dir_file)){
 			require $dir_file;
 			$model = new $file();
+			echo "GVD";
 			return $model;
 		}
 	}

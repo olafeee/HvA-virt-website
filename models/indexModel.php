@@ -7,6 +7,7 @@ class indexModel extends baseModel
 	{
 		parent::__construct();
 		$this->conDB();
+		echo"text";
 	}
 
 	function getIndex(){
