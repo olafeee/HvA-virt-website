@@ -19,7 +19,7 @@ class registerModel extends baseModel
 	
 	public function register()
 	{
-		echo "Test!<br>";
+		/*echo "Test!<br>";
 
 		// We controleren of alle velden gevuld zijn en vervolgens of de mail klopt
 		/*
@@ -32,7 +32,7 @@ class registerModel extends baseModel
 			
 		} else { */
 			// We knallen alle Post-variabelen PHP variabelen in, dit is voor overzichtelijkheid.
-			$userEmail = $_POST['inputEmail'];
+			/*$userEmail = $_POST['inputEmail'];
 			$userPassw = $_POST['inputPassword'];
 			$userFname = $_POST['inputFName'];
 			$userLname = $_POST['inputLName'];
@@ -56,7 +56,7 @@ class registerModel extends baseModel
 		
 			echo "<br />Gebruiker is succesvol aangemaakt.<br />";
 		
-		//}		
+		//}		*/
 	}		
 }
 	

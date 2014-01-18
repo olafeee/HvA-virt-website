@@ -8,16 +8,13 @@ require_once("lib/cloudstack.php");
 
 class loginModel extends baseModel
 {
-
-	public $cloudstack;
 	
 	function __construct()
 	{
 		parent::__construct();
-		$this->cloudstack = new cloudstack();
 	}
 
-	public function run()
+	/*public function run()
 	{
 		$username = $_POST['login'];
 		$password = $_POST['password'];
@@ -34,6 +31,19 @@ class loginModel extends baseModel
 			header('location: ../login');
 		}
 		
+	}*/
+
+	public function run()
+	{
+		$username = $_POST['login'];
+		echo"ik ben een hondelul";
+		$sth = $this->db->prepare("SELECT id FROM users WHERE login = :login AND password = :password");
+		$sth->execute(array(
+			':login' => $_POST['login'],
+			':password' => $_POST['password']
+		));
+		$data = $sth->fetchAll();
+		//print_r($data);
 	}
 }
 
