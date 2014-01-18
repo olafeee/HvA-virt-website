@@ -12,7 +12,7 @@ class Database extends PDO
 	}
 
 	function conCS(){
-		DB_TYPE.':host='.DB_HOST.';port=3307;dbname='.DB_NAME, DB_USER, DB_PASS
+		$conn = new PDO(DB_TYPE.':host='.DB_HOST.';port=3307;dbname='.DB_NAME, DB_USER, DB_PASS);
 	}
 
 	function conDB(){
