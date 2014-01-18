@@ -6,8 +6,6 @@ class indexModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
-		//$this->conDB();
-		//echo"text";
 	}
 
 	function getIndex(){
@@ -34,18 +32,19 @@ class indexModel extends baseModel
 					':password' => $doei
 				));
 		
-		$data = $sth->fetchAll();
-		//print_r($data);
+				$data = $sth->fetchAll();
+				//print_r($data);
 
-		
-		$count =  $sth->rowCount();
-		if ($count > 0) {
-			echo "hij doettttt hetttttt";
-		} else {
-			echo "hij &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&";
-		}
+				
+				$count =  $sth->rowCount();
+				if ($count > 0) {
+					$pag="hij doettttt hetttttt";
+					return $pag;
+				} else {
+					echo "hij &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&";
+				}
 
-	}
+			}
 
 
 }
