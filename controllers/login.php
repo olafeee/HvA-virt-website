@@ -10,7 +10,10 @@ class Login extends baseController {
 	
 	function run(){
 		if (!isset($_SESSION['loggedIn'])) {
+			// laad model in
 			$model = $this->laadModel();
+			//selecteer de database
+			$db = $model->conDB();
 			$model->run();
 		}
 	}//eind run
