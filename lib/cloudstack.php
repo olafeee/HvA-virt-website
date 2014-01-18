@@ -110,7 +110,7 @@ class cloudstack
 	/******** Start VirtualMachine Methods ********/
 
     // Starts a Virutal Machine
-	public function startVM($id)
+	public function startVirtualMachine($id)
     {
         $command_array = array(
             'command' => 'startVirtualMachine',
@@ -120,7 +120,7 @@ class cloudstack
     }
 
     // Stops a Virtual Machine
-    public function stopVM($id, $forced = 'false')
+    public function stopVirtualMachine($id, $forced = 'false')
     {
         $command_array = array(
             'command' => 'stopVirtualMachine',
@@ -131,7 +131,7 @@ class cloudstack
     }
 
     // Reboot a Virtual Machine
-    public function rebootVM($id)
+    public function rebootVirtualMachine($id)
     {
         $command_array = array(
             'command' => 'rebootVirtualMachine',
@@ -141,7 +141,7 @@ class cloudstack
     }
 
     // Creates and automatically starts a virtual machine based on a service offering, disk offering, and template.
-    public function deployVM($serviceofferingid, $templateid, $zoneid, $diskofferingid = null, $displayname = null, $name = null, $account = null, $domainid = null)
+    public function deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid = null, $displayname = null, $name = null, $account = null, $domainid = null)
     {
         $command_array = array(
             'commmand' => 'deployVirtualMachine',
@@ -158,7 +158,7 @@ class cloudstack
     }
 
     // Destroys a virtual machine. Once destroyed, only the administrator can recover it.
-    public function destroyVM($id)
+    public function destroyVirtualMachine($id)
     {
         $command_array = array(
             'command' => 'destroyVirtualMachine',
@@ -168,7 +168,7 @@ class cloudstack
     }
 
     // Recovers a virtual machine that has been marked as destroyed
-    public function recoverVM($id)
+    public function recoverVirtualMachine($id)
     {
         $command_array = array(
             'command' => 'recoverVirtualMachine',
@@ -178,7 +178,7 @@ class cloudstack
     }
 
     // Restore a VM to original template/ISO or new template/ISO
-    public function restoreVM($virtualmachineid, $templateid = null)
+    public function restoreVirtualMachine($virtualmachineid, $templateid = null)
     {
         $command_array = array(
             'command' => 'restoreVirtualMachine',
@@ -189,7 +189,7 @@ class cloudstack
     }
 
     // List the virtual machines owned by the account.
-    public function listVM($id = null $account = null, $name = null, $state = null, $domainid = null, $templateid = null, $isoid =null, $listall = 'true')
+    public function listVirtualMachines($id = null $account = null, $name = null, $state = null, $domainid = null, $templateid = null, $isoid =null, $listall = 'true')
     {
         $command_array = array(
             'command' => 'listVirtualMachines',
