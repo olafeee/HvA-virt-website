@@ -3,10 +3,11 @@
 class baseModel {
 
 	function __construct() {
+		$this->db = new Database();
 	}
 
 	function conDB(){
-		$this->db = new Database();
+		
 	}
 
 	function conDB1(){

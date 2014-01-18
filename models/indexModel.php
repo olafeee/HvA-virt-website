@@ -14,7 +14,7 @@ class indexModel extends baseModel
 				$sql = "SELECT text FROM CMS_website WHERE page > :page";
 				//$sql = "SELECT naam FROM tabel WHERE leeftijd > :leeftijd"; 
 			     
-			    $stmt = $this->$conDB->prepare($sql); 
+			    $stmt = $this->$db->prepare($sql); 
 			    $stmt->bindParam(':page', $page, PDO::PARAM_INT); 
 			     
 			    $leeftijd = "test"; 
