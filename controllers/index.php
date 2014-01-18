@@ -6,8 +6,6 @@ class Index extends baseController {
 		parent::__construct();
 		$model = $this->laadModel();
 		var_dump($model);
-		$test = $model->getIndex();
-		var_dump($test);
 	}
 	
 }
