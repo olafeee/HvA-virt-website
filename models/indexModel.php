@@ -23,13 +23,11 @@ class indexModel extends baseModel
 			    { 
 			         echo $row['text'].'<br>'; 
 			    } */
-			    $hoi = "ol@f.nl";
-			    $doei = "klaas";
-				$sth = $this->db->prepare("SELECT id FROM users WHERE 
-						login = :login AND password = :password");
+			    $hoi = "test";
+				$sth = $this->db->prepare("SELECT id FROM CMS_website WHERE 
+						page = :page");
 				$sth->execute(array(
-					':login' => $hoi,
-					':password' => $doei
+					':page' => $hoi
 				));
 		
 				$data = $sth->fetchAll();
