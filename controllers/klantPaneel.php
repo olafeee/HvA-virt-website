@@ -7,13 +7,7 @@ class klantPaneel extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		Session::init();
-		$logged = Session::get('loggedIn');
-		if ($logged == false){
-			Session::destroy();
-			header('location: ../login');
-			exit;
-		}
+
 		$model = $this->laadModel();
 		var_dump($model);
 		$this->baseView->vmResponce = $model->getVM();
