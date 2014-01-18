@@ -55,7 +55,6 @@ class baseController {
 		if(file_exists($dir_file)){
 			require $dir_file;
 			$model = new $file();
-			echo "GVD";
 			return $model;
 		}
 	}
