@@ -37,6 +37,7 @@ class indexModel extends baseModel
 				
 				$count =  $sth->rowCount();
 				if ($count > 0) {
+					echo "</pre>";
 					$pag="hij doettttt hetttttt";
 					return $pag;
 				} else {
