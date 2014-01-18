@@ -7,7 +7,7 @@ class baseModel {
 
 	function conDB(){
 		$this->db = new Database();
-		$db->conDB();
+		$this->db->conDB();
 	}
 
 }
