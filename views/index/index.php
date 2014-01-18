@@ -58,12 +58,3 @@
 			</div>
 		</div>
 </div>
-
-<?php 
-	
-	require_once("lib/cloudstack.php");
-	$cloud = new cloudstack();
-	$cloud->return_signed_only = true;
-	var_dump($cloud->listAccounts('admin'));
-
-?>
