@@ -46,6 +46,9 @@ class baseController {
 
 	function laadModel(){
 		$url = $this->urlfix();
+		if(empty($url[0])){
+			$url[0] = "index";
+		}
 		$file = $url[0].'Model';
 		$dir_file = 'models/'.$file.'.php';
 		print_r($dir_file);
