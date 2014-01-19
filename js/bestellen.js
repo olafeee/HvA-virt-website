@@ -14,7 +14,7 @@ var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
-var DISKamount = DISKarr[standardValueDisk.toString()]['DiskAmount'];
+var DISKamount = DISKarr[standardValueDisk]['DiskAmount'];
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
@@ -35,32 +35,32 @@ onload=function() {
     if(path==1){
         standardValueCPU =0;
         standardValueRAM =0;
-        standardValueDisk=0;
+        standardValueDisk="0";
         standardValueNT=0;
         standardValueIPv4=0;
     }else if (path==2) {
         standardValueCPU =1;
         standardValueRAM =1;
-        standardValueDisk=4;
+        standardValueDisk="4";
         standardValueNT=1;
         standardValueIPv4=0;
     }else if (path==3) {
         standardValueCPU =3;
         standardValueRAM =2;
-        standardValueDisk=5;
+        standardValueDisk="5";
         standardValueNT=2;
         standardValueIPv4=0;
     }else if (path==4) {
         standardValueCPU =6;
         standardValueRAM =4;
-        standardValueDisk=6;
+        standardValueDisk="6";
         standardValueNT=3;
         standardValueIPv4=0;
     }
     else{
         standardValueCPU =2;
         standardValueRAM =2;
-        standardValueDisk=2;
+        standardValueDisk="2";
         standardValueNT=0;
         standardValueIPv4=0;
     }
@@ -152,7 +152,7 @@ function DISKslider() {
 
 function changeDISK(value){
     $('#hiddenChangeDISK').val(value);
-    standardValueDisk = value;
+    standardValueDisk = "0";
     DISKamount = DISKarr[standardValueDisk]['DiskAmount'];
     $(".changeDISK").text(DISKamount+"GB");
     orderPrice();
