@@ -6,8 +6,8 @@ class Login extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		Session::init();
-		if ($_SESSION['loggedIn'] === true) {
+		//Session::init();
+		if (isset($_SESSION['loggedIn'])) {
 			header('location: ../account');
 		}
 	}
