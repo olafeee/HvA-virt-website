@@ -118,7 +118,7 @@ $pdf->Output();
 }
 }
 
-createInvoice::doItNow();
+$this->doItNow();
 
 }
 ?>
