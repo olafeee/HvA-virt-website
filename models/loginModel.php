@@ -36,12 +36,11 @@ class loginModel extends baseModel
 
 	public function runLogin()
 	{
-		echo "<pre>";
+		echo "<pre>USERS:";
 		print_r($_POST);
 
 		$sth = $this->db->prepare("SELECT * FROM user");
-		$data = $sth->fetchAll();
-		print_r($data);
+		print_r($sth->fetchAll());
 
 		// ------------------------------------------------------------ //
 
