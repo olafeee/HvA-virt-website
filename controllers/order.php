@@ -15,15 +15,6 @@ class Order extends baseController {
 		echo "<pre>";
 	print_r(get_defined_vars());
 		echo "</pre>";
-
-		echo 
-		'<script type="text/javascript">
-			$(document).ready(function(){
-	    	var myArray = '.print(json_encode($this->DISK)).';
-	    	console.log(myArray)
-    		alert(myArray);
-			});
-		</script>';
 	}
 
 	function BladeVPS($value){
