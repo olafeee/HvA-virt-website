@@ -21,7 +21,8 @@ class indexModel extends baseModel
 			    	$arr = array($id['cwid'] => $id['cmstext'] );
 			    	$i++;
 			    }
-
+			    print_r($arr);
+			    echo "<br/>";
                 return $arr;
 
 			}
