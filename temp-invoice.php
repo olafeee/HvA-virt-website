@@ -46,7 +46,9 @@ $pdf->addKlantadres( $klantNaam,
                   $klantStraat."\n" .
                   $klantPostcode." ".$klantWoonplaats."\n" .
                   $klantLand);
-$pdf->Image("/var/www/img/paintech-logo.png", 135, 12, 60, 15);
+	$lalala = "/var/www/img/plaintech-logo.png";			  
+				  
+$pdf->Image($lalala, 135, 12, 60, 15);
 if($klantTaal == "NL"){$pdf->addFactuur("Factuur");}else{$pdf->addFactuur("Invoice");}
 $pdf->addCompanyAddress("Plaintechstraat 1, 1234 AB, Amsterdam");
 $pdf->addKvkInfo("12345678","NL123456789B01");
