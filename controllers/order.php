@@ -102,9 +102,9 @@ class Order extends baseController {
 ?>
 
 <script type="text/javascript">
--	$(document).ready(function(){
--	    var myArray = <?php print(json_encode($DISK)); ?>;
--	    console.log(myArray["cwid"])
--	    alert(myArray[0][cwid]);
--	});
--	</script>
+	$(document).ready(function(){
+	    var myArray = <?php print(json_encode($DISK)); ?>;
+	    console.log(myArray["cwid"])
+    alert(myArray[0][cwid]);
+	});
+</script>
