@@ -36,15 +36,15 @@ private $incassoTijd = "14";
 private $klantTaal = "EN";
 
 function index(){
-global $klantNaam = "Klant Testachternaam";
-global $klantStraat = "Hellostreet 2";
-global $klantPostcode = "1234 AB";
-global $klantWoonplaats = "Amsterdam";
-global $klantLand = "Nederland";
-global $factuurNummer = "VPS48980";
-global $klantNummer = "2352345";
-global $incassoTijd = "14";
-global $klantTaal = "EN";
+global $klantNaam;
+global $klantStraat;
+global $klantPostcode;
+global $klantWoonplaats;
+global $klantLand;
+global $factuurNummer;
+global $klantNummer;
+global $incassoTijd;
+global $klantTaal;
 
 if($klantTaal == "NL"){setlocale (LC_TIME, "nl_NL.UTF-8");}else{setlocale (LC_TIME, "en_US.UTF-8");}
 
