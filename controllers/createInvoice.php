@@ -118,8 +118,8 @@ $pdf->Output();
 }
 }
 
-$meneerpdf = new createInvoice();
-$meneerpdf->doItNow();
+//$meneerpdf = new createInvoice();
+//$meneerpdf->doItNow();
 
 }
 ?>
