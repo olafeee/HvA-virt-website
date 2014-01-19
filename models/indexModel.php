@@ -24,7 +24,7 @@ class indexModel extends baseModel
 			         echo $row['text'].'<br>'; 
 			    } */
 			    $hoi = "xxl";
-				$sth = $this->db->prepare("SELECT cmstext FROM CMS_website WHERE 
+				$sth = $this->db->prepare("SELECT * FROM CMS_website WHERE 
 						page = $hoi");
 				$sth->execute(array(
 					':page' => $hoi
