@@ -27,6 +27,15 @@ class cmsPlaintechModel extends baseModel
                 return $sqlArray;
 	}
 
+	function insertOneCmsItem($cwid, $pageid, $cmstext){
+        $postData = array(
+            'pageid' => $pageid,
+            'cmstext' => $cmstext
+        );
+        
+        $this->db->update('CMS_website', $postData, "`cwid` = $cwid ");
+    }
+
 	function getCmsIndex1($pageid){
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
 						pageid = :pageid', 

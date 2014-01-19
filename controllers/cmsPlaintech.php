@@ -3,6 +3,7 @@
 class cmsPlaintech extends baseController {
 
 	public $model;
+	public $db;
 
 	function __construct() {
 		parent::__construct();
@@ -35,7 +36,10 @@ class cmsPlaintech extends baseController {
 
 
 	function insertContent(){
-
+		$cwid = $_POST['cwid'];
+		$pageid = $_POST['pageid'];
+		$cmstext = $_POST['cmstext'];
+		insertOneCmsItem($cwid, $pageid, $cmstext);
 	}
 
 	

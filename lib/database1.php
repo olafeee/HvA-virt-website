@@ -28,7 +28,12 @@ class Database1 extends PDO
         $sth->execute();
         return $sth->fetchAll($fetchMode);
     }
-
+    /**
+     * update
+     * @param string $table A name of table to insert into
+     * @param string $data An associative array
+     * @param string $where the WHERE query part
+     */
     public function update($table, $data, $where)
     {
         ksort($data);
