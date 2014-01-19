@@ -6,7 +6,6 @@ class indexModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
-		$
 	}
 
 	function getIndex(){
