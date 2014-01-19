@@ -2,7 +2,7 @@
 
 class cmsPlaintech extends baseController {
 
-	$var1;
+	public $var1;
 
 	function __construct() {
 		parent::__construct();
