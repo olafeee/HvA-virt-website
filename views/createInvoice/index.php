@@ -11,10 +11,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
-
 // Initialize variables
-require('./views/createInvoice/invoice/invoice.php');
+require('./invoice/invoice.php');
 
 if (empty($_SESSION['cart'])){
 	header('location /order');
@@ -46,7 +44,7 @@ $pdf->addKlantadres( $klantNaam,
                   $klantStraat."\n" .
                   $klantPostcode." ".$klantWoonplaats."\n" .
                   $klantLand);
-//$pdf->Image("/var/www/img/logo.png", 135, 12, 60, 15);
+$pdf->Image("../../img/logo.png", 135, 12, 60, 15);
 if($klantTaal == "NL"){$pdf->addFactuur("Factuur");}else{$pdf->addFactuur("Invoice");}
 $pdf->addCompanyAddress("Plaintechstraat 1, 1234 AB, Amsterdam");
 $pdf->addKvkInfo("12345678","NL123456789B01");
