@@ -14,22 +14,22 @@ if (empty($_SESSION['cart'])){
 }
 
 // Initialize variables
-class createInvoice extends PDF_invoice {
+class createInvoice {
 //if (!empty($_SESSION['cart'])) {
-public $klantNaam = "Klant Testachternaam";
-public $klantStraat = "Hellostreet 2";
-public $klantPostcode = "1234 AB";
-public $klantWoonplaats = "Amsterdam";
-public $klantLand = "Nederland";
-public $factuurNummer = "VPS48980";
-public $klantNummer = "2352345";
-public $incassoTijd = "14";
+private $klantNaam = "Klant Testachternaam";
+private $klantStraat = "Hellostreet 2";
+private $klantPostcode = "1234 AB";
+private $klantWoonplaats = "Amsterdam";
+private $klantLand = "Nederland";
+private $factuurNummer = "VPS48980";
+private $klantNummer = "2352345";
+private $incassoTijd = "14";
 
 //session_start();
 //$_SESSION['klantTaal'] = "EN";
 //$klantTaal = $_SESSION['klantTaal'];
 
-public $klantTaal = "EN";
+private $klantTaal = "EN";
 
 function index(){
 global $klantNaam;
