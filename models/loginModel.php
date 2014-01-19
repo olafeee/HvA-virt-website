@@ -27,7 +27,7 @@ class loginModel extends baseModel
 
 		//Debug
 		echo "<pre>";
-		print_r($data)
+		print_r($data);
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			$loginArray = $data['loginresponse'];
