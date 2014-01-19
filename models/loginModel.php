@@ -9,13 +9,12 @@ require_once("lib/cloudstack_sign.php");
 class loginModel extends baseModel
 {
 	
-	public $cloudstack;
+	public $cloudstack = new cloudstack_sign();
 
 	function __construct()
 	{
 		parent::__construct();
 		$this->conDB();	
-		$cloudstack = new cloudstack_sign();
 	}
 
 	public function runLogin()
