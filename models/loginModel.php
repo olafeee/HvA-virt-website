@@ -39,6 +39,12 @@ class loginModel extends baseModel
 		echo "<pre>";
 		print_r($_POST);
 
+		$sth = $this->db->prepare("SELECT * FROM user");
+		$data = $sth->fetchAll();
+		print_r($data);
+
+		// ------------------------------------------------------------ //
+
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 
