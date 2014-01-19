@@ -4,13 +4,14 @@ class Order extends baseController {
 
 	public $model;
 	public $db;
+	public $DISK;
 	
 	function __construct() {
 		parent::__construct();
 		// laad model in & selecteer database
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
-		$DISK = $this->model->getValue('Disk_Array_Table');
+		$this->DISK = $this->model->getValue('Disk_Array_Table');
 		echo "<pre/>";
 		print_r(get_defined_vars());
 		echo "<pre/>";
