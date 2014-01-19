@@ -25,13 +25,7 @@ class cmsPlaintech extends baseController {
 		$this->index('viewPage');
 	}
 
-	function editContent($pid,$cwid){
-		$cmsPage = $this->model->getOneCmsItem($pid,$cwid);
-		$this->baseView->editContenVar = $cmsPage;
-		$this->index('editContent');
-		//print_r($this->getCMS[$id]);
-		
-	}
+
 
 
 	function insertContent(){
