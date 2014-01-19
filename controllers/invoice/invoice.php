@@ -33,7 +33,7 @@ function sizeOfText( $text, $grootte ) {
 			$loop  = FALSE;
 			$line = $text;
 		} else {
-			$ligne  = substr( $text, $index, $pos);
+			$lige  = substr( $text, $index, $pos);
 			$text = substr( $text, $pos+1 );
 		}
 		$length = floor( $this->GetStringWidth( $line ) );
@@ -54,7 +54,7 @@ function addKlantAdres( $naam, $adres ) {
 	$this->SetXY( $x1, $y1 + 4 );
 	$this->SetFont('Arial','',12);
 	$length = $this->GetStringWidth( $adres );
-	$lignes = $this->sizeOfText( $adres, $length) ;
+	$lines = $this->sizeOfText( $adres, $length) ;
 	$this->MultiCell($length, 4, $adres);
 }
 
@@ -236,11 +236,11 @@ function lineVert( $tab ){
 }
 
 // passen van tekst binnen kolom
-function addLine( $ligne, $tab ) {
+function addLine( $line, $tab ) {
 	global $kolom, $format;
 
 	$geb     = 10;
-	$maxSize      = $ligne;
+	$maxSize      = $line;
 
 	reset( $kolom );
 	while ( list( $lib, $pos ) = each ($kolom) ){
@@ -249,13 +249,13 @@ function addLine( $ligne, $tab ) {
 		$length    = $this->GetStringWidth( $text );
 		$textbreed = $this->sizeOfText( $text, $length );
 		$formText  = $format[ $lib ];
-		$this->SetXY( $geb, $ligne-1);
+		$this->SetXY( $geb, $line-1);
 		$this->MultiCell( $longCell, 4 , $text, 0, $formText);
 		if ( $maxSize < ($this->GetY()  ) )
 			$maxSize = $this->GetY() ;
 		$geb += $pos;
 	}
-	return ( $maxSize - $ligne );
+	return ( $maxSize - $line );
 }
 
 // evt opmerking onderaan de kolom
