@@ -19,7 +19,7 @@ if (empty($_SESSION['cart'])){
 
 
 class createInvoice {
-if (!empty($_SESSION['cart'])) {
+//if (!empty($_SESSION['cart'])) {
 private $klantNaam = "Klant Testachternaam";
 private $klantStraat = "Hellostreet 2";
 private $klantPostcode = "1234 AB";
@@ -116,7 +116,7 @@ $tot_calc = round($tot_calc, 2);
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 }
-}
+//}
 
 //$meneerpdf = new createInvoice();
 //$meneerpdf->doItNow();
