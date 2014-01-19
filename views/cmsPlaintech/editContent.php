@@ -7,7 +7,7 @@ $test = $value[0];
 $(document).ready(function(){
     var myArray = <?php print(json_encode($test)); ?>;
     console.log(myArray[0])
-    alert(myArray[0]);
+    alert(myArray[0][cwid]);
 });
 </script>
 <form name="input" action="/cmsPlaintech/insertContent/" method="post">
