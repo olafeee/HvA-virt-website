@@ -6,14 +6,10 @@ class Login extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		$this->index('BladeVPS');
-	}
-
-	function Login() {
-		if (isset($_SESSION['loggedIn'])) {
+		if ($_SESSION['loggedIn'] === true) {
 			header('location: ../account');
 		} else {
-			$this->runLogin();
+			header('location: ./login');
 		}
 	}
 	
