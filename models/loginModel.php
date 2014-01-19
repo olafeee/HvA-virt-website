@@ -30,9 +30,9 @@ class loginModel extends baseModel
 			Session::init();
 			Session::set('loggedIn', true);
 		    Session::set('logArr', $loginArray);
-			//header('location: ../account');
+			header('location: ../account');
 		} else {
-			//header('location: ../login');
+			header('location: ../login');
 		}
 		
 	}
