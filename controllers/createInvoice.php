@@ -9,14 +9,17 @@
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 require('invoice/invoice.php');
-
-class createInvoice {
-// Initialize variables
-
 if (empty($_SESSION['cart'])){
 	header('location /order');
 }
+
+// Initialize variables
+
+
 if (!empty($_SESSION['cart'])) {
+
+class createInvoice {
+
 $klantNaam = "Klant Testachternaam";
 $klantStraat = "Hellostreet 2";
 $klantPostcode = "1234 AB";
