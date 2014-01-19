@@ -13,7 +13,6 @@ class orderModel extends baseModel
 
 	function getValue($table){
 			    $sqlArray = $this->db->selectAll("SELECT * FROM $table");
-                print_r($sqlArray);
                 return $sqlArray;
 	}
 
