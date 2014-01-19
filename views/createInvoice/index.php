@@ -108,5 +108,5 @@ $tot_calc = round($tot_calc, 2);
 // $pdf->addOpmerking("Voorbeeldopmerking");
 
 $pdf->addTotaalBedrag($tot_calc);
-$pdf->Output("invoice.pdf",'D');
+$pdf->Output("/tmp/invoice.pdf",'F');
 ?>
