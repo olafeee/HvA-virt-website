@@ -92,15 +92,7 @@ class Order extends baseController {
 			}
 		}
 		//Session::get('cart')=array_values(Session::get('cart'));*/
-		
-
-
-
-
-		
-}
-?>
-
+?>		
 <script type="text/javascript">
 	$(document).ready(function(){
 	    var myArray = <?php print(json_encode($DISK)); ?>;
@@ -108,3 +100,9 @@ class Order extends baseController {
     alert(myArray[0][cwid]);
 	});
 </script>
+
+<?		
+}
+?>
+
+
