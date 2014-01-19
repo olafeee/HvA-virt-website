@@ -17,8 +17,8 @@ class indexModel extends baseModel
 			    while ($i < count($sqlArray)) {
 			    	echo $i;
 			    	echo "<br/>";
-			    	$id = $sqlArray[$i];
-			    	$arr[$id['cwid']] = $sqlArray[];
+			    	$id = $sqlArray[$i]['cwid'];
+			    	$arr[$id] = $sqlArray[];
 			    	$i++;
 			    }
 			    print_r($arr);
