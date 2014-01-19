@@ -69,6 +69,6 @@ $totalprice = $totalprice + $TP;
 </div>
 <?php 
 echo "<pre>";
-print_r($this->session);
+print_r($_SESSION);
 echo "</pre>"; 
 	?>
