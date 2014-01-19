@@ -3,13 +3,6 @@ $value = $this->editContenVar;
 print_r($value);
 $test = $value[0];
 ?>
-<script type="text/javascript">
-$(document).ready(function(){
-    var myArray = <?php print(json_encode($test)); ?>;
-    console.log(myArray["cwid"])
-    alert(myArray[0][cwid]);
-});
-</script>
 
 <form name="input" action="/cmsPlaintech/insertContent/" method="post">
 	<input type="text" name="cmstext" value="<?php echo $value[0]['cmstext']; ?>">
