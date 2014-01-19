@@ -9,10 +9,10 @@ class indexModel extends baseModel
 	}
 
 	function getIndex(){
-				$test = "index";
+				$test = "1";
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
-						page = :page', 
-                array('page' => $test));
+						pageid = :pageid', 
+                array('pageid' => $test));
                 $i = 0;
 			    while ($i < count($sqlArray)) {
 			    	$id = $sqlArray[$i]['cwid'];

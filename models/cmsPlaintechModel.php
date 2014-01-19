@@ -9,14 +9,14 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function getCmsIndex(){
-			    $sqlArray = $this->db->selectAll('SELECT page FROM CMS_website');
+			    $sqlArray = $this->db->selectAll('SELECT pageid FROM CMS_website');
                 return $sqlArray;
 	}
 
 	function getCmsIndex1($pageid){
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
-						page = :page', 
-                array('page' => $pageid));
+						pageid = :pageid', 
+                array('pageid' => $pageid));
                 $i = 0;
 			    while ($i < count($sqlArray)) {
 			    	$id = $sqlArray[$i]['cwid'];
