@@ -33,7 +33,7 @@ function sizeOfText( $text, $grootte ) {
 			$loop  = FALSE;
 			$line = $text;
 		} else {
-			$lige  = substr( $text, $index, $pos);
+			$line  = substr( $text, $index, $pos);
 			$text = substr( $text, $pos+1 );
 		}
 		$length = floor( $this->GetStringWidth( $line ) );
