@@ -46,7 +46,7 @@ $pdf->addKlantadres( $klantNaam,
                   $klantStraat."\n" .
                   $klantPostcode." ".$klantWoonplaats."\n" .
                   $klantLand);
-//$pdf->Image("/var/www/img/logo.png", 135, 12, 60, 15);
+$pdf->Image("../../img/logo.png", 135, 12, 60, 15);
 if($klantTaal == "NL"){$pdf->addFactuur("Factuur");}else{$pdf->addFactuur("Invoice");}
 $pdf->addCompanyAddress("Plaintechstraat 1, 1234 AB, Amsterdam");
 $pdf->addKvkInfo("12345678","NL123456789B01");
@@ -72,6 +72,7 @@ $cols=array( "ProductID"    => "L",
 $pdf->addLineFormat($cols);
 
 $y    = 109;
+if (!empty($_SESSION['cart'])) {
 $max = count($_SESSION['cart']);
 		$tot_calc = 0;
 	  
@@ -105,7 +106,7 @@ $max = count($_SESSION['cart']);
 		}
 
 $tot_calc = round($tot_calc, 2);
-
+}
 // je kan evt nog een opmerking onder de tabel zetten
 // gewoon volgende regel uncommenten en opmerking in
 // de " " plaatsen...
