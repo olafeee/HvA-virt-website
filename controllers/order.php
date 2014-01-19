@@ -101,7 +101,7 @@ class Order extends baseController {
 	});
 </script>
 
-<?		
+<?php	
 }
 ?>
 
