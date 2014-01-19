@@ -3,7 +3,7 @@
 /**
 * 
 */
-class loginModel extends baseModel
+class orderModel extends baseModel
 {
 	
 	function __construct()
