@@ -67,3 +67,8 @@ $totalprice = $totalprice + $TP;
   </div>
   <div class="col-md-2"></div>
 </div>
+<?php 
+foreach ($_SESSION as $key=>$val)
+    echo $key." ".$val."<br/>";
+	
+	?>
