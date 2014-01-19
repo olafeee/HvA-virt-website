@@ -8,9 +8,13 @@
 //									   							  //
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+
 
 // Initialize variables
-require('invoice/invoice.php');
+require('./views/createInvoice/invoice/invoice.php');
 
 if (empty($_SESSION['cart'])){
 	header('location /order');
