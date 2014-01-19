@@ -1,10 +1,11 @@
 <?php $DISKS = $this->DISK; ?>
 <script type="text/javascript">
-			$(document).ready(function(){
-	    	var myArray = <?print(json_encode($this->DISK));?>;
-	    	console.log(myArray)
-    		alert(myArray);
-			});
+			onload=function() { 
+				DISKarrayss();
+			}
+			function DISKarrayss(){
+				DISKarr = <?print(json_encode($this->DISK));?>;
+			}
 </script>
 <div class="row">
 	<div class="col-md-1"></div>
