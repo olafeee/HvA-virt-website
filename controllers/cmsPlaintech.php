@@ -13,6 +13,7 @@ class cmsPlaintech extends baseController {
 		$this->baseView->cmstext = $getCMS;
 		//var_dump($model);
 		//echo "<br/>";
+		$var1 = "2";
 
 	}
 
@@ -21,6 +22,7 @@ class cmsPlaintech extends baseController {
 		print_r($this->getCMS[$id]);
 	}
 	function viewPage($id){
+		$var = $this->var1;
 		echo "<pre>";
 		print_r(get_defined_vars());
 		echo "</pre>";
