@@ -16,11 +16,13 @@ class indexModel extends baseModel
                 print_r($sqlArray);
                 $i = 0;
 			    while ($i <= count($sqlArray)) {
-			    	$id = $sqlArray[0];
+			    	$id = $sqlArray[0]['cwid'];
+
 			    	$i++;
 			    }
 
-                return $id['cwid'];
+                return $id;
+
 			}
 
 
