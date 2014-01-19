@@ -7,7 +7,6 @@ var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 
 var standardValueCPU ;
 var standardValueRAM;
-var standardValueDisk;
 var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
