@@ -39,9 +39,9 @@ class loginModel extends baseModel
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 
-		$sth = $this->db->prepare("SELECT id FROM user WHERE username = :login AND password = :password");
+		$sth = $this->db->prepare("SELECT * FROM user WHERE username = :username AND password = :password");
 		$sth->execute(array(
-			':login' => $_POST['login'],
+			':username' => $_POST['login'],
 			':password' => $_POST['password'],
 		));
 		$data = $sth->fetchAll();
