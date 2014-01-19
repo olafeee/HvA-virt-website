@@ -11,7 +11,7 @@ class indexModel extends baseModel
 	function getIndex(){
 				$test = "2";
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
-						page = :cwid', 
+						page = :page', 
                 array('page' => $test));
                 $i = 0;
 			    while ($i <= count($sqlArray)) {
