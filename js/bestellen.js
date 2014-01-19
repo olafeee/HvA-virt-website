@@ -1,7 +1,3 @@
-var standardValueDisk;
-onload=function(){
-    standardValueDisk = "0";
-}
 var CPUarray=[1,2,3,4,5,6,8,10,12,16]
 var RAMarray=[512,1024,2048,3096,4096,6144,8192,12288,16384,24576,32768];
 var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
@@ -17,7 +13,6 @@ var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
-var DISKamount = DISKarr[standardValueDisk]['DiskAmount'];
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
@@ -38,32 +33,32 @@ onload=function() {
     if(path==1){
         standardValueCPU =0;
         standardValueRAM =0;
-        standardValueDisk="0";
+        standardValueDisk=0;
         standardValueNT=0;
         standardValueIPv4=0;
     }else if (path==2) {
         standardValueCPU =1;
         standardValueRAM =1;
-        standardValueDisk="4";
+        standardValueDisk=4;
         standardValueNT=1;
         standardValueIPv4=0;
     }else if (path==3) {
         standardValueCPU =3;
         standardValueRAM =2;
-        standardValueDisk="5";
+        standardValueDisk=5;
         standardValueNT=2;
         standardValueIPv4=0;
     }else if (path==4) {
         standardValueCPU =6;
         standardValueRAM =4;
-        standardValueDisk="6";
+        standardValueDisk=6;
         standardValueNT=3;
         standardValueIPv4=0;
     }
     else{
         standardValueCPU =2;
         standardValueRAM =2;
-        standardValueDisk="2";
+        standardValueDisk=2;
         standardValueNT=0;
         standardValueIPv4=0;
     }
@@ -88,6 +83,8 @@ servicePrice();
 totalPrice();
 } 
 
+alert(standardValueDisk);
+var DISKamount = DISKarr{standardValueDisk}['DiskAmount'];;
 
 function CPUslider() {
 
@@ -155,7 +152,7 @@ function DISKslider() {
 
 function changeDISK(value){
     $('#hiddenChangeDISK').val(value);
-    standardValueDisk = "0";
+    standardValueDisk = value;
     DISKamount = DISKarr[standardValueDisk]['DiskAmount'];
     $(".changeDISK").text(DISKamount+"GB");
     orderPrice();
