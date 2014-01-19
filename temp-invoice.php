@@ -20,13 +20,13 @@ if (empty($_SESSION['cart'])){
 	header('location /order');
 }
 
-$klantNaam = "Klant Testachternaam";
-$klantStraat = "Hellostreet 2";
-$klantPostcode = "1234 AB";
+$klantNaam = "Dhr K. LANT";
+$klantStraat = "Duivendrechtsekade 36-38";
+$klantPostcode = "1096 AH";
 $klantWoonplaats = "Amsterdam";
-$klantLand = "Nederland";
-$factuurNummer = "VPS48980";
-$klantNummer = "2352345";
+$klantLand = "Netherlands";
+$factuurNummer = "VPS".rand(10000,99999);
+$klantNummer = substr(base_convert(md5($klantNaam), 16, 10),0,7);
 $incassoTijd = "14";
 
 //session_start();
@@ -117,5 +117,5 @@ $tot_calc = round($tot_calc, 2);
 // $pdf->addOpmerking("Voorbeeldopmerking");
 
 $pdf->addTotaalBedrag($tot_calc);
-$pdf->Output();
+$pdf->Output('invoice.php', 'I');
 ?>
