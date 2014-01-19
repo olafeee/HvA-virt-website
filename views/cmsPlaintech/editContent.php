@@ -10,6 +10,7 @@ $(document).ready(function(){
     alert(myArray[0][cwid]);
 });
 </script>
+
 <form name="input" action="/cmsPlaintech/insertContent/" method="post">
 	<input type="text" name="cmstext" value="<?php echo $value[0]['cmstext']; ?>">
 	<input type="text" name="pageid" value="<?php echo $value[0]['pageid']; ?>">
