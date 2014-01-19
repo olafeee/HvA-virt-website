@@ -7,7 +7,7 @@ $(document).ready(function(){
     var myArray = <?php print(json_encode($value)); ?>;
     console.log(myArray)
     alert(myArray);
-)};
+});
 </script>
 <form name="input" action="/cmsPlaintech/insertContent/" method="post">
 	<input type="text" name="cmstext" value="<?php echo $value[0]['cmstext']; ?>">
