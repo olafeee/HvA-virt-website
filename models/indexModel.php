@@ -20,7 +20,7 @@ class indexModel extends baseModel
 			    	$i++;
 			    }
 
-                return $id;
+                return $id['cwid'];
 			}
 
 
