@@ -23,7 +23,7 @@ class indexModel extends baseModel
 			    { 
 			         echo $row['text'].'<br>'; 
 			    } */
-			    $hoi = "test";
+			    $hoi = "xxl";
 				$sth = $this->db->prepare("SELECT * FROM CMS_website WHERE 
 						page = :page");
 				$sth->execute(array(
@@ -33,7 +33,7 @@ class indexModel extends baseModel
 				$data = $sth->fetchAll();
 				//print_r($data);
 				
-				return $data;
+				return $data["text"];
 
 			}
 
