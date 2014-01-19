@@ -105,10 +105,10 @@ $max = count($_SESSION['cart']);
 		$y   += $size + 2;
 			
 		$tot_calc = $tot_calc + $TP;
-		return $tot_calc;
+		$_SESSION['totaalbedrag'] = $tot_calc;
 		}
-		return $tot_calc;
 }
+$tot_calc = $_SESSION['totaalbedrag'];
 $tot_calc = round($tot_calc, 2);
 
 // je kan evt nog een opmerking onder de tabel zetten
