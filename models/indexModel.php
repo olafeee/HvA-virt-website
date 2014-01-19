@@ -23,9 +23,10 @@ class indexModel extends baseModel
 			    { 
 			         echo $row['text'].'<br>'; 
 			    } */
+			    $test = "2";
 			    return $this->db->select('SELECT * FROM CMS_website WHERE 
 						cwid = :cwid', 
-                array('userid' => $_SESSION['userid']));
+                array('cwid' => $test));
 			}
 
 
