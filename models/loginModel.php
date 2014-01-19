@@ -39,7 +39,7 @@ class loginModel extends baseModel
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 
-		$sth = $this->db->prepare("SELECT * FROM user ");
+		$sth = $this->db->prepare("SELECT * FROM user WHERE username = :username AND password = :password");
 		$sth->execute(array(
 			':username' => $_POST['login'],
 			':password' => $_POST['password'],
