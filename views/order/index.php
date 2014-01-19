@@ -1,9 +1,9 @@
 <?php $DISKS = $this->DISK; ?>
 <script type="text/javascript">
 			onload=function() { 
-				DISKarray();
+				DISKarrayss();
 			}
-			public function DISKarray(){
+			function DISKarrayss(){
 				var myArray = <?print(json_encode($this->DISK));?>;
 		    	console.log(myArray[0][0])
 			}
