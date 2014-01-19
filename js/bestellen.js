@@ -3,6 +3,14 @@ var RAMarray=[512,1024,2048,3096,4096,6144,8192,12288,16384,24576,32768];
 var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
+var xx = [{"DiskAmount":"20","DiskPrice":"4"},{"DiskAmount":"30","DiskPrice":"4.4"},{"DiskAmount":"40","DiskPrice":"4.8"},{"DiskAmount":"60","DiskPrice":"5"},{"DiskAmount":"80","DiskPrice":"6"},{"DiskAmount":"120","DiskPrice":"7"},{"DiskAmount":"160","DiskPrice":"11"},{"DiskAmount":"320","DiskPrice":"13"},{"DiskAmount":"500","DiskPrice":"18"},{"DiskAmount":"640","DiskPrice":"23"},{"DiskAmount":"960","DiskPrice":"26"},{"DiskAmount":"1400","DiskPrice":"32"}];
+
+            onload=function() { 
+                DISKarrayss();
+            }
+            function DISKarrayss(){
+                
+            }
 
 
 var standardValueCPU ;
