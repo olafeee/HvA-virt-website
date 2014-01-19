@@ -1,8 +1,14 @@
 <?php
 
-$cmstext = $this->viewpage;
-print_r($cmstext);
+	$text = $this->viewpage;
+
+	$i = 0;
+	while ($i < count($text)) {
+		echo $text[$i]["cmstext"];
+		echo"<br/>";
+		$i++;
+	}
 
 ?>
 
-allah
+

@@ -25,7 +25,6 @@ class cmsPlaintech extends baseController {
 	}
 	function viewPage($id){
 		$cmsPage = $this->model->getPage($id);
-		print_r($cmsPage);
 		$this->baseView->viewpage = $cmsPage;
 		$this->index('viewPage');
 	}
