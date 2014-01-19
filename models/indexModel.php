@@ -24,8 +24,18 @@ class indexModel extends baseModel
 			         echo $row['text'].'<br>'; 
 			    } */
 			    $test = "2";
-			    $sqlArray = $this->db->select('SELECT * FROM CMS_website', 
+			    return $this->db->select('', 
                 array('cwid' => $test));
+
+                			    $test = "2";
+			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
+						cwid = :cwid', 
+                array('cwid' => $test));
+                $i = 0;
+			    while ($i <= count($sqlArray)) {
+			    	$swlArray[]=
+			    }
+
                 return $swlArray;
 			}
 
