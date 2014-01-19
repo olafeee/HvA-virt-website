@@ -21,7 +21,7 @@ class cmsPlaintech extends baseController {
 
 	function editContent($id){
 
-		print_r($this->getCMS[$id]);
+		//print_r($this->getCMS[$id]);
 	}
 	function viewPage($id){
 		$cmsPage = $this->model->getPage($id);
