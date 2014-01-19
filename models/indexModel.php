@@ -21,8 +21,6 @@ class indexModel extends baseModel
 			    	$arr[$id] = $sqlArray[$i];
 			    	$i++;
 			    }
-			    print_r($arr);
-			    echo "<br/>";
                 return $arr;
 
 			}
