@@ -9,15 +9,6 @@
 		    	echo"<br/>";
 		    	$i++;
 		    }
-
 		?>
-		<script type="text/javascript">
-		$(document).ready(function(){
-		    var myArray = <?php print(json_encode($pages)); ?>;
-		    console.log(myArray["cwid"])
-		    alert(myArray[0][cwid]);
-		});
-		</script>
-
 	</div>
 </div>

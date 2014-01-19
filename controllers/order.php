@@ -2,8 +2,16 @@
 
 class Order extends baseController {
 
+	public $model;
+	public $db;
+
 	function __construct() {
 		parent::__construct();
+		// laad model in & selecteer database
+		$this->model = $this->laadModel();
+		$this->db = $this->model->conDB1();
+		$DISK = $this->model->getValue('Disk_Array_Table');
+
 	}
 
 	function BladeVPS($value){
@@ -88,3 +96,11 @@ class Order extends baseController {
 
 		
 }
+?>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    var myArray = <?php print(json_encode($this->$DISK)); ?>;
+	    console.log(myArray["cwid"])
+	    alert(myArray[0][cwid]);
+	});
+	</script>
