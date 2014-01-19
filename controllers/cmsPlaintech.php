@@ -2,7 +2,7 @@
 
 class cmsPlaintech extends baseController {
 
-	public $var1;
+	public $var1 = "2";
 
 	function __construct() {
 		parent::__construct();
@@ -15,7 +15,7 @@ class cmsPlaintech extends baseController {
 		$this->baseView->cmstext = $getCMS;
 		//var_dump($model);
 		//echo "<br/>";
-		$this->$var1 = "2";
+		//$this->$var1 = "2";
 
 	}
 
