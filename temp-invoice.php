@@ -10,7 +10,7 @@
 ////////////////////////////////////////////////////////////////////
 
 // Initialize variables
-require('/views/createInvoice/invoice/invoice.php');
+require('invoice/invoice.php');
 
 if (empty($_SESSION['cart'])){
 	header('location /order');
