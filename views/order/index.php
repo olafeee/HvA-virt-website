@@ -5,7 +5,7 @@
 			}
 			function DISKarrayss(){
 				var myArray = <?print(json_encode($this->DISK));?>;
-		    	console.log(myArray[0][0])
+		    	console.log(myArray[0])
 			}
 </script>
 <div class="row">
