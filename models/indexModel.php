@@ -26,7 +26,9 @@ class indexModel extends baseModel
 			    $hoi = "xxl";
 				$sth = $this->db->prepare("SELECT cmstext FROM CMS_website WHERE 
 						page = $hoi");
-				$sth->execute();
+				$sth->execute(array(
+					':page' => $hoi
+				));
 		
 				$data = $sth->fetchAll();
 				//print_r($data);
