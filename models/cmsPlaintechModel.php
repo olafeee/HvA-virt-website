@@ -9,7 +9,7 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function getCmsIndex(){
-			    $sqlArray = $this->db->selectAll('SELECT pageid FROM CMS_website');
+			    $sqlArray = $this->db->selectAll('SELECT * FROM CMS_pages');
                 return $sqlArray;
 	}
 
