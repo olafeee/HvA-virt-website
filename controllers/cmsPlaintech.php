@@ -6,10 +6,10 @@ class cmsPlaintech extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		// laad model in
+		// laad model in & selecteer database
 		$this->model = $this->laadModel();
-		//selecteer de database
 		$this->db = $this->model->conDB1();
+		
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex();
 		$this->baseView->cmstext = $getCMS;
@@ -24,7 +24,7 @@ class cmsPlaintech extends baseController {
 		print_r($this->getCMS[$id]);
 	}
 	function viewPage($id){
-		$cmsPage = $this->model->getPage();
+		$cmsPage = $this->model->getPage($id);
 		$this->baseView->viewpage = $cmsPage;
 	}
 	
