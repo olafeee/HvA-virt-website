@@ -25,10 +25,8 @@ class indexModel extends baseModel
 			    } */
 			    $hoi = "xxl";
 				$sth = $this->db->prepare("SELECT * FROM CMS_website WHERE 
-						page = :page");
-				$sth->execute(array(
-					':page' => $hoi
-				));
+						page = $hoi");
+				$sth->execute();
 		
 				$data = $sth->fetchAll();
 				//print_r($data);
