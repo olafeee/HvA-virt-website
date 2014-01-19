@@ -1,17 +1,17 @@
 <?php $DISKS = $this->DISK; 
 	var_dump($DISKS);
 	?>
-
-<script type="text/javascript">
+<div class="row">
+	<div class="col-md-1">
+		<script type="text/javascript">
 			onload=function() { 
 				DISKarrayss();
 			}
 			function DISKarrayss(){
 				DISKarr = <?print(json_encode($this->DISK));?>;
 			}
-</script>
-<div class="row">
-	<div class="col-md-1"></div>
+		</script>
+	</div>
 <div class="col-md-10">
 	<div class="bladeVPSintro">
 		<h2>Build your own Virtual Private Server!</h2>
