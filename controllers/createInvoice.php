@@ -20,20 +20,20 @@ if (!empty($_SESSION['cart'])) {
 
 class createInvoice {
 
-$klantNaam = "Klant Testachternaam";
-$klantStraat = "Hellostreet 2";
-$klantPostcode = "1234 AB";
-$klantWoonplaats = "Amsterdam";
-$klantLand = "Nederland";
-$factuurNummer = "VPS48980";
-$klantNummer = "2352345";
-$incassoTijd = "14";
+private $klantNaam = "Klant Testachternaam";
+private $klantStraat = "Hellostreet 2";
+private $klantPostcode = "1234 AB";
+private $klantWoonplaats = "Amsterdam";
+private $klantLand = "Nederland";
+private $factuurNummer = "VPS48980";
+private $klantNummer = "2352345";
+private $incassoTijd = "14";
 
 //session_start();
 //$_SESSION['klantTaal'] = "EN";
 //$klantTaal = $_SESSION['klantTaal'];
 
-$klantTaal = "EN";
+private $klantTaal = "EN";
 
 if($klantTaal == "NL"){setlocale (LC_TIME, "nl_NL.UTF-8");}else{setlocale (LC_TIME, "en_US.UTF-8");}
 
