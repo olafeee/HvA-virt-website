@@ -8,7 +8,7 @@
 		echo"<br/>";
 		echo $text[$i]["cmstext"];
 		echo"<br/>";
-		echo '<a href="/cmsPlaintech/editContent/'.$text[$i]["cwid"].'">X</a>';
+		echo '<a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'">X</a>';
 		echo"<br/>";
 		$i++;
 	}
