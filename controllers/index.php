@@ -10,7 +10,7 @@ class Index extends baseController {
 		$db = $model->conDB1();
 		//test of var gedropt wordt
 		$test = $model->getIndex();
-		echo $test["cmstext"];
+		echo $test;
 		//var_dump($model);
 		//echo "<br/>";
 		
