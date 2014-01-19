@@ -55,7 +55,7 @@ class loginModel extends baseModel
 		    Session::set('logArr', $loginArray);
 			header('location: ../account');
 		} else {
-			header('location: ../login');
+			//header('location: ../login');
 		}
 	}
 
