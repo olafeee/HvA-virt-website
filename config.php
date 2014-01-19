@@ -13,5 +13,5 @@ define('DB_PASS1', 'T=56(Wp23');
 
 
 define('CS_URL','http://145.92.14.90:5990/client/api');
-define('CS_APIKEY','1OGJUlCDZuStbNu0GnPINhSvC0LNdWgBNGWWuaReY-VJMYZUP6B8zjF9yDculzIfeb30rKaGzCdzD2QQSJIn9w');
-define('CS_SECRECTKEY','ql6w-1N-_u34iUugsm8tONqmpHoI8l2zd6J7OMqIbVgiPgwbXqXdBChG3EaL-8Ivj1APwCdXm7EGee5NPPuPHg');
+//define('CS_APIKEY','1OGJUlCDZuStbNu0GnPINhSvC0LNdWgBNGWWuaReY-VJMYZUP6B8zjF9yDculzIfeb30rKaGzCdzD2QQSJIn9w');
+//define('CS_SECRECTKEY','ql6w-1N-_u34iUugsm8tONqmpHoI8l2zd6J7OMqIbVgiPgwbXqXdBChG3EaL-8Ivj1APwCdXm7EGee5NPPuPHg');
