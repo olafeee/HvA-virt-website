@@ -107,7 +107,7 @@ $max = count($_SESSION['cart']);
 		$tot_calc = $tot_calc + $TP;
 		return $tot_calc;
 		}
-		
+		return $tot_calc;
 }
 $tot_calc = round($tot_calc, 2);
 
