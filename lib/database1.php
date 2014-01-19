@@ -21,6 +21,25 @@ class Database1 extends PDO
         $sth->execute();
         return $sth->fetchAll($fetchMode);
     }
-}
+    public function update($table, $data, $where)
+    {
+        ksort($data);
+        
+        $fieldDetails = NULL;
+        foreach($data as $key=> $value) {
+            $fieldDetails .= "`$key`=:$key,";
+        }
+        $fieldDetails = rtrim($fieldDetails, ',');
+        
+        $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE $where");
+        
+        foreach ($data as $key => $value) {
+            $sth->bindValue(":$key", $value);
+        }
+        
+        $sth->execute();
+    }
+    
+}// einde class
 
 ?>

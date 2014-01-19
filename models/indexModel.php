@@ -20,8 +20,7 @@ class indexModel extends baseModel
 			    	$i++;
 			    }
                 return $arr;
-
-			}
+	}
 
 
 }
