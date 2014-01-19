@@ -9,6 +9,8 @@ require_once("lib/cloudstack_sign.php");
 class loginModel extends baseModel
 {
 	
+	public cloudstack = new cloudstack_sign();
+
 	function __construct()
 	{
 		parent::__construct();
