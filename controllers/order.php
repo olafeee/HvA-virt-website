@@ -12,9 +12,9 @@ class Order extends baseController {
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
 		$this->DISK = $this->model->getValue('Disk_Array_Table');
-		echo "<pre/>";
+		echo "<pre>";
 		print_r(get_defined_vars());
-		echo "<pre/>";
+		echo "</pre>";
 	}
 
 	function BladeVPS($value){
@@ -103,7 +103,7 @@ class Order extends baseController {
 
 <script type="text/javascript">
 -	$(document).ready(function(){
--	    var myArray = <?php print(json_encode($this->DISK)); ?>;
+-	    var myArray = <?php print(json_encode($DISK)); ?>;
 -	    console.log(myArray["cwid"])
 -	    alert(myArray[0][cwid]);
 -	});
