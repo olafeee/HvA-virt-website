@@ -39,7 +39,7 @@ class loginModel extends baseModel
 		echo "<pre>USERS:<br />";
 		print_r($_POST);
 
-		$sth = $this->db->prepare("SELECT * FROM user");
+		$sth = $this->db->prepare("SELECT * FROM 'user'");
 		print_r($sth->fetchAll());
 
 		// ------------------------------------------------------------ //
@@ -54,6 +54,21 @@ class loginModel extends baseModel
 		));
 		$data = $sth->fetchAll();
 		print_r($data);
+
+		$Blowfish_Pre = '$2y$11$';
+		$Blowfish_End = '$';
+  
+		$sql = "SELECT Salt, Password FROM Login WHERE Email='$email'";
+		$result = mysql_query($sql) or die( mysql_error() );
+		$row = mysql_fetch_assoc($result);
+		  
+		$hashed_pass = crypt($password, $Blowfish_Pre . $row['Salt'] . $Blowfish_End);
+		  
+		if ($hashed_pass == $row['Password']) {
+		    echo("Login successful");
+		} else {
+		    echo("Failed to login");
+		}
 
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
