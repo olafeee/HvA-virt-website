@@ -19,7 +19,7 @@ class Order extends baseController {
 		echo 
 		'<script type="text/javascript">
 			$(document).ready(function(){
-	    	var myArray = '.print(json_encode($DISK)).';
+	    	var myArray = '.print(json_encode($this->DISK)).';
 	    	console.log(myArray["cwid"])
     		alert(myArray[0][cwid]);
 			});
