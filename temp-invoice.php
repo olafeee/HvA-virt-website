@@ -106,9 +106,9 @@ $max = count($_SESSION['cart']);
 			
 		$tot_calc = $tot_calc + $TP;
 		}
-
-$tot_calc = round($tot_calc, 2);
 }
+$tot_calc = round($tot_calc, 2);
+
 // je kan evt nog een opmerking onder de tabel zetten
 // gewoon volgende regel uncommenten en opmerking in
 // de " " plaatsen...
