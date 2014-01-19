@@ -15,6 +15,14 @@ class Order extends baseController {
 		echo "<pre>";
 	print_r(get_defined_vars());
 		echo "</pre>";
+
+		echo '<script type="text/javascript">
+	$(document).ready(function(){
+	    var myArray = '.print(json_encode($DISK)).'
+	    console.log(myArray["cwid"])
+    alert(myArray[0][cwid]);
+	});
+</script>';
 	}
 
 	function BladeVPS($value){
@@ -93,13 +101,7 @@ class Order extends baseController {
 		}
 		//Session::get('cart')=array_values(Session::get('cart'));*/
 	
-echo '<script type="text/javascript">
-	$(document).ready(function(){
-	    var myArray = '.print(json_encode($DISK)).'
-	    console.log(myArray["cwid"])
-    alert(myArray[0][cwid]);
-	});
-</script>';
+
 }
 ?>
 
