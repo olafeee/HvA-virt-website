@@ -28,13 +28,13 @@ function sizeOfText( $text, $grootte ) {
 	$nb_lines = 0;
 	$loop     = TRUE;
 	while ( $loop )	{
-		$pos = strpos($texte, "\n");
+		$pos = strpos($text, "\n");
 		if (!$pos) {
 			$loop  = FALSE;
 			$line = $text;
 		} else {
 			$ligne  = substr( $text, $index, $pos);
-			$texte = substr( $text, $pos+1 );
+			$text = substr( $text, $pos+1 );
 		}
 		$length = floor( $this->GetStringWidth( $line ) );
 		$res = 1 + floor( $length / $grootte) ;
@@ -226,9 +226,9 @@ function lineVert( $tab ){
 	reset( $kolom );
 	$maxSize=0;
 	while ( list( $lib, $pos ) = each ($kolom) ){
-		$texte = $tab[ $lib ];
+		$text = $tab[ $lib ];
 		$longCell  = $pos -2;
-		$size = $this->sizeOfText( $texte, $longCell );
+		$size = $this->sizeOfText( $text, $longCell );
 		if ($size > $maxSize)
 			$maxSize = $size;
 	}
@@ -245,12 +245,12 @@ function addLine( $ligne, $tab ) {
 	reset( $kolom );
 	while ( list( $lib, $pos ) = each ($kolom) ){
 		$longCell  = $pos -2;
-		$texte     = $tab[ $lib ];
-		$length    = $this->GetStringWidth( $texte );
-		$textbreed = $this->sizeOfText( $texte, $length );
+		$text     = $tab[ $lib ];
+		$length    = $this->GetStringWidth( $text );
+		$textbreed = $this->sizeOfText( $text, $length );
 		$formText  = $format[ $lib ];
 		$this->SetXY( $geb, $ligne-1);
-		$this->MultiCell( $longCell, 4 , $texte, 0, $formText);
+		$this->MultiCell( $longCell, 4 , $text, 0, $formText);
 		if ( $maxSize < ($this->GetY()  ) )
 			$maxSize = $this->GetY() ;
 		$geb += $pos;
