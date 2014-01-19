@@ -37,6 +37,7 @@ class loginModel extends baseModel
 	public function run()
 	{
 		$username = $_POST['login'];
+		$password = $_POST['password'];
 
 		echo"ik ben een hondelul";
 		$sth = $this->db->prepare("SELECT id FROM acounts WHERE login = :login AND password = :password");
@@ -46,6 +47,17 @@ class loginModel extends baseModel
 		));
 		$data = $sth->fetchAll();
 		print_r($data);
+
+		
+		if (is_array($data) && array_key_exists("loginresponse", $data)) {
+			$loginArray = $data['loginresponse'];
+			Session::init();
+			Session::set('loggedIn', true);
+		    Session::set('logArr', $loginArray);
+			header('location: ../account');
+		} else {
+			header('location: ../login');
+		}
 	}
 }
 

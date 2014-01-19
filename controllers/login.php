@@ -6,9 +6,18 @@ class Login extends baseController {
 
 	function __construct() {
 		parent::__construct();
+		$this->index('BladeVPS');
+	}
+
+	function Login() {
+		if (isset($_SESSION['loggedIn'])) {
+			header('location: ../account');
+		} else {
+			$this->runLogin();
+		}
 	}
 	
-	function run(){
+	function runLogin() {
 		if (!isset($_SESSION['loggedIn'])) {
 			// laad model in
 			$model = $this->laadModel();
@@ -17,5 +26,9 @@ class Login extends baseController {
 			$model->run();
 		}
 	}//eind run
+
+	function runLogout() {
+
+	}
 
 }//eind class
