@@ -25,6 +25,10 @@ class loginModel extends baseModel
 		$sth = $this->cloudstack->login($username, $password);
 		$data = json_decode($sth,true);
 
+		//Debug
+		echo "<pre>";
+		print_r($data)
+
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			$loginArray = $data['loginresponse'];
 			Session::init();
