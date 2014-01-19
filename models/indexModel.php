@@ -15,7 +15,7 @@ class indexModel extends baseModel
                 array('page' => $test));
                 $i = 0;
 			    while ($i <= count($sqlArray)) {
-			    	$id = $sqlArray[$i];
+			    	$id = $sqlArray[0];
 			    	$arr = array($id['cwid'] => $id['cmstext'] );
 			    	$i++;
 			    }
