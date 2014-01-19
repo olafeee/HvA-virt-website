@@ -16,10 +16,10 @@ if (empty($_SESSION['cart'])){
 // Initialize variables
 
 
-if (!empty($_SESSION['cart'])) {
+
 
 class createInvoice {
-
+if (!empty($_SESSION['cart'])) {
 private $klantNaam = "Klant Testachternaam";
 private $klantStraat = "Hellostreet 2";
 private $klantPostcode = "1234 AB";
