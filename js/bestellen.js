@@ -7,14 +7,14 @@ var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 
 var standardValueCPU ;
 var standardValueRAM;
-var standardValueDisk = "0";
+var standardValueDisk =;
 var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
-var DISKamount = DISKarr[standardValueDisk]['DiskAmount'];
+var DISKamount = DISKarr[num.toString(standardValueDisk)]['DiskAmount'];
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
