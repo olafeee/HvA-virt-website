@@ -21,6 +21,7 @@ class Database1 extends PDO
         $sth->execute();
         return $sth->fetchAll($fetchMode);
     }
+    
     public function update($table, $data, $where)
     {
         ksort($data);
@@ -39,7 +40,7 @@ class Database1 extends PDO
         
         $sth->execute();
     }
-    
+
 }// einde class
 
 ?>

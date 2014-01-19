@@ -9,10 +9,15 @@ class cmsPlaintech extends baseController {
 		//selecteer de database
 		$db = $model->conDB1();
 		//test of var gedropt wordt
-		$this->baseView->cmstext = $model->getCmsIndex();
+		$getCMS = $model->getCmsIndex();
+		$this->baseView->cmstext = $getCMS;
 		//var_dump($model);
 		//echo "<br/>";
 		
+	}
+
+	function editContent($id){
+		print_r($this->getCMS[$id]);
 	}
 	
 }
