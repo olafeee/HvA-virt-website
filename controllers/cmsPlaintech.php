@@ -21,10 +21,6 @@ class cmsPlaintech extends baseController {
 		print_r($this->getCMS[$id]);
 	}
 	function viewPage($id){
-		// laad model in
-		$model = $this->laadModel();
-		//selecteer de database
-		$db = $model->conDB1();
 		$cmsPage = $model->getPage();
 		$this->baseView->viewpage = $cmsPage;
 	}
