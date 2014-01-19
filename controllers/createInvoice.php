@@ -14,11 +14,7 @@ if (empty($_SESSION['cart'])){
 }
 
 // Initialize variables
-
-
-
-
-class createInvoice {
+class createInvoice extends PDF_invoice {
 //if (!empty($_SESSION['cart'])) {
 private $klantNaam = "Klant Testachternaam";
 private $klantStraat = "Hellostreet 2";
@@ -128,9 +124,6 @@ $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 }
 }
-
-$meneerpdf = new createInvoice();
-$meneerpdf->doItNow();
 
 }
 ?>
