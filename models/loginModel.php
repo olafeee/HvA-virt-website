@@ -9,19 +9,20 @@ require_once("lib/cloudstack_sign.php");
 class loginModel extends baseModel
 {
 	
-	public cloudstack = new cloudstack_sign();
+	public $cloudstack;
 
 	function __construct()
 	{
 		parent::__construct();
-		$this->conDB();	
+		$this->conDB();
+		$this->cloudstack = new cloudstack_sign();
 	}
 
 	public function runLogin()
 	{
 		$username = $_POST['login'];
 		$password = $_POST['password'];
-		$sth = $cloudstack->login($username, $password);
+		$sth = $this->cloudstack->login($username, $password);
 		$data = json_decode($sth,true);
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
