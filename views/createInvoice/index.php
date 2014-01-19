@@ -33,7 +33,6 @@ $klantTaal = "EN";
 
 if($klantTaal == "NL"){setlocale (LC_TIME, "nl_NL.UTF-8");}else{setlocale (LC_TIME, "en_US.UTF-8");}
 
-$filePath = "./test.pdf"; 
 $pdf = new PDF_Invoice( 'P', 'mm', 'A4', $klantTaal );
 // niet de spatie weghalen! dan doet ie t niet meer, dunno y..
 $pdf->SetAuthor("Plaintech ");
@@ -109,5 +108,5 @@ $tot_calc = round($tot_calc, 2);
 // $pdf->addOpmerking("Voorbeeldopmerking");
 
 $pdf->addTotaalBedrag($tot_calc);
-$pdf->Output($filePath,'D');
+$pdf->Output("test.pdf",'D');
 ?>
