@@ -100,7 +100,6 @@ class Order extends baseController {
     alert(myArray[0][cwid]);
 	});
 </script>
-
 <?php	
 }
 ?>
