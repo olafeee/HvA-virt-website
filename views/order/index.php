@@ -1,5 +1,5 @@
 <?php $DISKS = $this->DISK; 
-	var_dump($DISKS);
+	print_r($DISKS);
 	?>
 <div class="row">
 	<div class="col-md-1">
