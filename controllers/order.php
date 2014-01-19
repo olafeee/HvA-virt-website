@@ -13,7 +13,7 @@ class Order extends baseController {
 		$this->db = $this->model->conDB1();
 		$this->DISK = $this->model->getValue('Disk_Array_Table');
 		echo "<pre>";
-		print_r(get_defined_vars());
+	get_defined_vars();
 		echo "</pre>";
 	}
 
