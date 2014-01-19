@@ -1,5 +1,4 @@
 <?php $DISKS = $this->DISK; 
-	//print_r($DISKS);
 	?>
 <div class="row">
 	<div class="col-md-1">
