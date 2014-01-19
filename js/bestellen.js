@@ -84,7 +84,7 @@ totalPrice();
 } 
 
 alert(standardValueDisk);
-var DISKamount = DISKarr{standardValueDisk}['DiskAmount'];;
+var DISKamount = DISKarr['DiskAmount'];;
 
 function CPUslider() {
 
