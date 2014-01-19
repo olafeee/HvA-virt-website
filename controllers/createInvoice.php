@@ -8,10 +8,10 @@
 //									   							  //
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
+require('invoice/invoice.php');
 
 class createInvoice {
 // Initialize variables
-require('invoice/invoice.php');
 
 if (empty($_SESSION['cart'])){
 	header('location /order');
