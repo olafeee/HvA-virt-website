@@ -8,7 +8,7 @@
 //									   							  //
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-
+if (!empty($_SESSION['cart'])) {
 // Initialize variables
 require('invoice/invoice.php');
 
@@ -68,6 +68,7 @@ $cols=array( "ProductID"    => "L",
 $pdf->addLineFormat($cols);
 
 $y    = 109;
+
 $max = count($_SESSION['cart']);
 		$tot_calc = 0;
 	  
@@ -109,4 +110,6 @@ $tot_calc = round($tot_calc, 2);
 
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
+
+}
 ?>
