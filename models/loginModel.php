@@ -47,7 +47,7 @@ class loginModel extends baseModel
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 
-		$sth = $this->db->prepare("SELECT * FROM user WHERE username = :username AND password = :password");
+		$sth = $this->db->prepare("SELECT password FROM user WHERE username = :username AND password = :password");
 		$sth->execute(array(
 			':username' => $_POST['login'],
 			':password' => $_POST['password'],
@@ -55,7 +55,7 @@ class loginModel extends baseModel
 		$data = $sth->fetchAll();
 		print_r($data);
 
-		$Blowfish_Pre = '$2y$11$';
+		/*$Blowfish_Pre = '$2y$11$';
 		$Blowfish_End = '$';
   
 		$sql = "SELECT Salt, Password FROM Login WHERE Email='$email'";
@@ -68,7 +68,7 @@ class loginModel extends baseModel
 		    echo("Login successful");
 		} else {
 		    echo("Failed to login");
-		}
+		}*/
 
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
