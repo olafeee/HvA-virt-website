@@ -14,7 +14,7 @@ class indexModel extends baseModel
 						page = :page', 
                 array('page' => $test));
                 $i = 0;
-			    while ($i <= count($sqlArray)) {
+			    while ($i < count($sqlArray)) {
 			    	echo $i;
 			    	echo "<br/>";
 			    	$id = $sqlArray[0];
