@@ -2,12 +2,12 @@
 
 class cmsPlaintech extends baseController {
 
-	public $var1 = "2";
+	public $model;
 
 	function __construct() {
 		parent::__construct();
 		// laad model in
-		$model = $this->laadModel();
+		$this->model = $this->laadModel();
 		//selecteer de database
 		$db = $model->conDB1();
 		//test of var gedropt wordt
@@ -24,7 +24,7 @@ class cmsPlaintech extends baseController {
 		print_r($this->getCMS[$id]);
 	}
 	function viewPage($id){
-		$var = $this->var1;
+		$var = $this->model;
 		echo "<pre>";
 		print_r(get_defined_vars());
 		echo "</pre>";
