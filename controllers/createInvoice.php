@@ -32,7 +32,7 @@ private $incassoTijd = "14";
 private $klantTaal = "EN";
 
 function index(){
-	return $nothing = "hahhha";
+	$this->work();
 }
 
 function work(){
@@ -128,6 +128,6 @@ $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 }
 }
-	$this->work();
+	
 }
 ?>
