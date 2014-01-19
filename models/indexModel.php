@@ -23,18 +23,9 @@ class indexModel extends baseModel
 			    { 
 			         echo $row['text'].'<br>'; 
 			    } */
-			    $hoi = "2";
-				$sth = $this->db->prepare("SELECT * FROM CMS_website WHERE 
-						cwid = :cwid");
-				$sth->execute(array(
-					':cwid' => $hoi
-				));
-		
-				$data = $sth->fetchAll();
-				//print_r($data);
-				
-				return $sth;
-
+			    return $this->db->select('SELECT * FROM CMS_website WHERE 
+						cwid = :cwid', 
+                array('userid' => $_SESSION['userid']));
 			}
 
 
