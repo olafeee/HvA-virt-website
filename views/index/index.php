@@ -40,7 +40,7 @@ $cmstext = $this->cmstext;
 			<div class="div-align-span-center"><h2>Our systems</h2></span></div>
 			<br/>
   			<p><img src="/img/73.svg" class="fontpage-img">    <?php echo $cmstext[3]['cmstext']; ?></p>
-  			<p><img src="/img/77.svg" class="fontpage-img">    <?php echo $cmstext[3]['cmstext']; ?></p>
+  			<p><img src="/img/77.svg" class="fontpage-img">    <?php echo $cmstext[4]['cmstext']; ?></p>
   			<p><img src="/img/76.svg" class="fontpage-img">    User friendly environment</p>
   			<p><img src="/img/21.svg" class="fontpage-img">    Engineering is in our DNA</p>
 			</div>
