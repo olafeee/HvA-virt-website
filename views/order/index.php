@@ -8,7 +8,7 @@
 				DISKarrayss();
 			}
 			function DISKarrayss(){
-				DISKarr = <?print(json_encode($this->DISK));?>;
+				DISKarr = <?json_encode($this->DISK);?>;
 			}
 		</script>
 	</div>
