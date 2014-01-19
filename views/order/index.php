@@ -1,5 +1,5 @@
 <?php $DISKS = $this->DISK; 
-	var_dump($DISKS);
+	//print_r($DISKS);
 	?>
 <div class="row">
 	<div class="col-md-1">
@@ -8,7 +8,7 @@
 				DISKarrayss();
 			}
 			function DISKarrayss(){
-				DISKarr = <?json_encode($this->DISK);?>;
+				DISKarr = <?print(json_encode($this->DISK));?>;
 			}
 		</script>
 	</div>
