@@ -11,7 +11,9 @@ class Order extends baseController {
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
 		$DISK = $this->model->getValue('Disk_Array_Table');
+		echo "<br/>";
 		print_r(get_defined_vars());
+		echo "<br/>";
 	}
 
 	function BladeVPS($value){
