@@ -24,12 +24,8 @@ class cmsPlaintech extends baseController {
 		print_r($this->getCMS[$id]);
 	}
 	function viewPage($id){
-		$var = $this->model;
-		echo "<pre>";
-		print_r(get_defined_vars());
-		echo "</pre>";
-		//$cmsPage = $model->getPage();
-		//$this->baseView->viewpage = $cmsPage;
+		$cmsPage = $this->model->getPage();
+		$this->baseView->viewpage = $cmsPage;
 	}
 	
 }
