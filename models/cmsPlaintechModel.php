@@ -8,7 +8,7 @@ class cmsPlaintechModel extends baseModel
 		parent::__construct();
 	}
 
-	function getIndex(){
+	function getCmsIndex(){
 				$test = "index";
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
 						page = :page', 
