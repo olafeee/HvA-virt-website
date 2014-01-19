@@ -13,6 +13,7 @@ class cmsPlaintech extends baseController {
 		$this->baseView->cmstext = $getCMS;
 		//var_dump($model);
 		//echo "<br/>";
+		print_r(get_defined_functions());
 		
 	}
 
