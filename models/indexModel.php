@@ -33,7 +33,7 @@ class indexModel extends baseModel
 				$data = $sth->fetchAll();
 				//print_r($data);
 				
-				return $data["text"];
+				return $data;
 
 			}
 
