@@ -35,6 +35,7 @@ private $incassoTijd = "14";
 
 private $klantTaal = "EN";
 
+function doItNow(){
 if($klantTaal == "NL"){setlocale (LC_TIME, "nl_NL.UTF-8");}else{setlocale (LC_TIME, "en_US.UTF-8");}
 
 $pdf = new PDF_Invoice( 'P', 'mm', 'A4', $klantTaal );
@@ -114,7 +115,10 @@ $tot_calc = round($tot_calc, 2);
 
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
-
 }
+}
+
+createInvoice::doItNow();
+
 }
 ?>
