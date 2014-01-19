@@ -14,7 +14,9 @@ class Database1 extends PDO
 	public function select($sql, $array, $fetchMode = PDO::FETCH_ASSOC)
     {
         $sth = $this->prepare($sql);
-
+        foreach ($array as $key => $value) {
+            $sth->bindValue($, $value);
+        }
         
         $sth->execute();
         return $sth->fetchAll($fetchMode);
