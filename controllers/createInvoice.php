@@ -32,6 +32,10 @@ private $incassoTijd = "14";
 private $klantTaal = "EN";
 
 function index(){
+	return $nothing = "hahhha";
+}
+
+function work(){
 global $klantNaam;
 global $klantStraat;
 global $klantPostcode;
@@ -124,6 +128,6 @@ $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 }
 }
-
+	$this->work();
 }
 ?>
