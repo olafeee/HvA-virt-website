@@ -15,7 +15,7 @@ class Database1 extends PDO
     {
         $sth = $this->prepare($sql);
         foreach ($array as $key => $value) {
-            $sth->bindValue("$key", $value);
+            $sth->bindValue($key['cwid'], $value);
         }
         
         $sth->execute();
