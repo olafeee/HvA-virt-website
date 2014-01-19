@@ -20,7 +20,7 @@ class cmsPlaintechModel extends baseModel
                 return $sqlArray;
 	}
 
-	function getPage($pageid, $cwid){
+	function getOneCmsItem($pageid, $cwid){
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
 						pageid = :pageid AND cwid = :cwid', 
                 array('pageid' => $pageid, 'cwid' => $cwid));
