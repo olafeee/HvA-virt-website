@@ -36,6 +36,9 @@ class loginModel extends baseModel
 
 	public function runLogin()
 	{
+		echo "<pre>";
+		echo $_POST[];;
+
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 
@@ -45,7 +48,6 @@ class loginModel extends baseModel
 			':password' => $_POST['password'],
 		));
 		$data = $sth->fetchAll();
-		echo "<pre>";
 		print_r($data);
 
 
