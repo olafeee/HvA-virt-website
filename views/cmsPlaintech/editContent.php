@@ -5,8 +5,8 @@ $test = $value[0];
 ?>
 <script type="text/javascript">
 $(document).ready(function(){
-    var myArray = <?php print(json_encode($value)); ?>;
-    console.log(myArray)
+    var myArray = <?php print(json_encode($test)); ?>;
+    console.log(myArray[cwid])
     alert(myArray);
 });
 </script>
