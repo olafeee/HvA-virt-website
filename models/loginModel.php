@@ -40,7 +40,7 @@ class loginModel extends baseModel
 		print_r($_POST);
 
 		$sth = $this->db->prepare("SELECT * FROM user");
-		var_dump($sth->fetchAll());
+		print_r($sth->fetchAll());
 
 		// ------------------------------------------------------------ //
 

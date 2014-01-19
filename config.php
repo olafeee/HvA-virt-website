@@ -3,7 +3,7 @@
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '145.92.14.90');
 define('DB_NAME', 'cloud');
-define('DB_USER', 'cloud');
+define('DB_USER', 'root');
 define('DB_PASS', 'R_47*Qp12');
 
 define('DB_HOST1', 'localhost');
