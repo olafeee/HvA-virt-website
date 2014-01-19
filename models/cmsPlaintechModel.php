@@ -20,6 +20,13 @@ class cmsPlaintechModel extends baseModel
                 return $sqlArray;
 	}
 
+	function getPage($pageid, $cwid){
+			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
+						pageid = :pageid AND cwid = :cwid', 
+                array('pageid' => $pageid, 'cwid' => $cwid));
+                return $sqlArray;
+	}
+
 	function getCmsIndex1($pageid){
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
 						pageid = :pageid', 
