@@ -9,6 +9,7 @@
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
 
+class createInvoice {
 // Initialize variables
 require('invoice/invoice.php');
 
@@ -111,5 +112,6 @@ $tot_calc = round($tot_calc, 2);
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 
+}
 }
 ?>
