@@ -16,7 +16,7 @@ class indexModel extends baseModel
                 $i = 0;
 			    while ($i <= count($sqlArray)) {
 			    	$id = $sqlArray[$i]["swid"];
-			    	$i++
+			    	$i++;
 			    }
 
                 return $i;
