@@ -45,6 +45,7 @@ class loginModel extends baseModel
 			':password' => $_POST['password'],
 		));
 		$data = $sth->fetchAll();
+		echo "<pre>";
 		print_r($data);
 
 
