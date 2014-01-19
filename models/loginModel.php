@@ -34,13 +34,12 @@ class loginModel extends baseModel
 		
 	}*/
 
-	public function run()
+	public function runLogin()
 	{
 		$username = $_POST['login'];
 		$password = $_POST['password'];
 
-		echo"ik ben een hondelul";
-		$sth = $this->db->prepare("SELECT id FROM acounts WHERE login = :login AND password = :password");
+		$sth = $this->db->prepare("SELECT id FROM user WHERE username = :login AND password = :password");
 		$sth->execute(array(
 			':login' => $_POST['login'],
 			':password' => $_POST['password'],
@@ -48,7 +47,7 @@ class loginModel extends baseModel
 		$data = $sth->fetchAll();
 		print_r($data);
 
-		
+
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			$loginArray = $data['loginresponse'];
 			Session::init();
@@ -58,6 +57,14 @@ class loginModel extends baseModel
 		} else {
 			header('location: ../login');
 		}
+	}
+
+	public function craetePage() {
+
+	}
+
+	public function createAccount() {
+
 	}
 }
 

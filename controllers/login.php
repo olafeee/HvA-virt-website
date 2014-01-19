@@ -18,7 +18,7 @@ class Login extends baseController {
 			$model = $this->laadModel();
 			//selecteer de database
 			$db = $model->conDB();
-			$model->run();
+			$model->runLogin();
 		}
 	}//eind run
 
