@@ -9,7 +9,7 @@ class indexModel extends baseModel
 	}
 
 	function getIndex(){
-				$test = "2";
+				$test = "test";
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
 						page = :page', 
                 array('page' => $test));
