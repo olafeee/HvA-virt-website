@@ -14,12 +14,11 @@ class indexModel extends baseModel
 						page = :page', 
                 array('page' => $test));
                 $i = 0;
-                $arr=[];
 			    while ($i < count($sqlArray)) {
 			    	echo $i;
 			    	echo "<br/>";
 			    	$id = $sqlArray[$i];
-			    	$arr = array($id['cwid'] => $id['cmstext'] );
+			    	$arr[$id['cwid']] = $sqlArray[];
 			    	$i++;
 			    }
 			    print_r($arr);
