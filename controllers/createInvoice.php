@@ -84,6 +84,7 @@ $pdf->addLineFormat($cols);
 
 $y    = 109;
 
+if (!empty($_SESSION['cart'])) {
 $max = count($_SESSION['cart']);
 		$tot_calc = 0;
 	  
@@ -126,7 +127,7 @@ $tot_calc = round($tot_calc, 2);
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 }
-//}
+}
 
 //$meneerpdf = new createInvoice();
 //$meneerpdf->doItNow();
