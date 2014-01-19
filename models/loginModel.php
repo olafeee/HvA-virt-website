@@ -4,7 +4,7 @@
 * 
 */
 
-require_once("lib/cloudstack.php");
+require_once("lib/cloudstack_sign.php");
 
 class loginModel extends baseModel
 {
@@ -15,7 +15,7 @@ class loginModel extends baseModel
 		$this->conDB();	
 	}
 
-	/*public function run()
+	public function runLogin()
 	{
 		$username = $_POST['login'];
 		$password = $_POST['password'];
@@ -32,9 +32,9 @@ class loginModel extends baseModel
 			header('location: ../login');
 		}
 		
-	}*/
+	}
 
-	public function runLogin()
+	/*public function runLogin()
 	{
 		echo "<pre>USERS:<br />";
 		print_r($_POST);
@@ -64,7 +64,7 @@ class loginModel extends baseModel
 		} else {
 			//header('location: ../login');
 		}
-	}
+	}*/
 
 	public function craetePage() {
 
