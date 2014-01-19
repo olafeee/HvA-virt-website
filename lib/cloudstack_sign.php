@@ -35,7 +35,7 @@ class cloudstack_sign
     {
         $this->_apiKey = CS_APIKEY;
         $this->_secretKey = CS_SECRECTKEY;
-        $this->_targetApi = CS_URL;
+        $this->_targetApi = 'http://145.92.14.90:8080/client/api';
         
         if ($this->_checkCurl() == false) {
             $this->_curlEnabled = 0;
