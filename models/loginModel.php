@@ -9,7 +9,7 @@ require_once("lib/cloudstack_sign.php");
 class loginModel extends baseModel
 {
 	
-	public $cloudstack = new cloudstack_sign();
+	public cloudstack = new cloudstack_sign();
 
 	function __construct()
 	{
@@ -29,9 +29,9 @@ class loginModel extends baseModel
 			Session::init();
 			Session::set('loggedIn', true);
 		    Session::set('logArr', $loginArray);
-			header('location: ../account');
+			//header('location: ../account');
 		} else {
-			header('location: ../login');
+			//header('location: ../login');
 		}
 		
 	}
