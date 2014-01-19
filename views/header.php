@@ -16,7 +16,6 @@
   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script type="text/javascript" src="/js/loginmenu.js"></script>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
-   <script type="text/javascript" src="/js/bestellen.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

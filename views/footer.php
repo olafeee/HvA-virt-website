@@ -12,9 +12,6 @@
 	</div>
 </div>
 </div>
-
-
-
- 
+ <script type="text/javascript" src="/js/bestellen.js"></script>
   </body>
 </html>
