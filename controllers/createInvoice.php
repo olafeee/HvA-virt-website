@@ -8,14 +8,14 @@
 //									   							  //
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-if (!empty($_SESSION['cart'])) {
+
 // Initialize variables
 require('invoice/invoice.php');
 
 if (empty($_SESSION['cart'])){
 	header('location /order');
 }
-
+if (!empty($_SESSION['cart'])) {
 $klantNaam = "Klant Testachternaam";
 $klantStraat = "Hellostreet 2";
 $klantPostcode = "1234 AB";
