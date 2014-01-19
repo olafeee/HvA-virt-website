@@ -35,7 +35,7 @@ private $incassoTijd = "14";
 
 private $klantTaal = "EN";
 
-function doItNow(){
+function index(){
 if($klantTaal == "NL"){setlocale (LC_TIME, "nl_NL.UTF-8");}else{setlocale (LC_TIME, "en_US.UTF-8");}
 
 $pdf = new PDF_Invoice( 'P', 'mm', 'A4', $klantTaal );
