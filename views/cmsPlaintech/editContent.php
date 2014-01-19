@@ -1,6 +1,7 @@
 <?php
 $value = $this->editContenVar;
 print_r($value);
+$test = $value[0];
 ?>
 <script type="text/javascript">
 $(document).ready(function(){
