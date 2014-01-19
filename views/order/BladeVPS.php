@@ -1,3 +1,12 @@
+<?php $DISKS = $this->DISK; ?>
+<script type="text/javascript">
+			onload=function() { 
+				DISKarrayss();
+			}
+			function DISKarrayss(){
+				DISKarr = <?print(json_encode($this->DISK));?>;
+			}
+</script>
 <div class="row">
 <div class="SLAdiv"> 
 	<!-- gedaan door oscar /////tabs gedaan door olaf(y) en design-->
