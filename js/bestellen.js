@@ -1,3 +1,7 @@
+var standardValueDisk;
+onload=function(){
+    standardValueDisk = "0";
+}
 var CPUarray=[1,2,3,4,5,6,8,10,12,16]
 var RAMarray=[512,1024,2048,3096,4096,6144,8192,12288,16384,24576,32768];
 var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
@@ -7,7 +11,6 @@ var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 
 var standardValueCPU ;
 var standardValueRAM;
-var standardValueDisk = "0";
 var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
