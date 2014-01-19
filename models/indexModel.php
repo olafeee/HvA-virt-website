@@ -15,11 +15,11 @@ class indexModel extends baseModel
                 array('page' => $test));
                 $i = 0;
 			    while ($i <= count($sqlArray)) {
-			    	$id = $sqlArray[$i]["swid"];
+			    	$id = $sqlArray[0]["cwid"];
 			    	$i++;
 			    }
 
-                return $i;
+                return $id;
 			}
 
 
