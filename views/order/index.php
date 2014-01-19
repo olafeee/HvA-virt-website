@@ -1,4 +1,7 @@
-<?php $DISKS = $this->DISK; ?>
+<?php $DISKS = $this->DISK; 
+	var_dump($DISKS);
+	?>
+
 <script type="text/javascript">
 			onload=function() { 
 				DISKarrayss();
