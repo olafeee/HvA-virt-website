@@ -116,9 +116,9 @@ $tot_calc = round($tot_calc, 2);
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output();
 }
+
+$this->doItNow();
+
 }
-
-$createInvoice->$this->doItNow();
-
 }
 ?>
