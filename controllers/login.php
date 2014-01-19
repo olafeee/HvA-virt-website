@@ -9,7 +9,7 @@ class Login extends baseController {
 		if ($_SESSION['loggedIn'] === true) {
 			header('location: ../account');
 		} else {
-			header('location: ./login');
+			//header('location: ./login');
 		}
 	}
 	
