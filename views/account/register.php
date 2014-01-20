@@ -113,13 +113,13 @@
 			    };
 
 			    $('input[id="password"]').displayPasswordStrength(optionalConfig);
-			  }
+			}
 		    
 		});
 
-		$(document).ready({
+		$( document ).ready(function() {
 			// Show tooltip
-			$("#resellerCheckbox").tooltip(); 
+			$('#resellerCheckbox').tooltip(); 
 		});
 		
 	</script>
