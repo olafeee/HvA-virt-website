@@ -4,16 +4,17 @@ var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 
-//var DISKamount = DISKarr['DiskAmount'];;
 
 var standardValueCPU ;
 var standardValueRAM;
+var standardValueDisk;
 var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
+var DISKamount = DISKarr[standardValueDisk]['DiskAmount '];
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
@@ -84,6 +85,7 @@ servicePrice();
 totalPrice();
 } 
 
+
 function CPUslider() {
 
     $( "#cpuslider" ).slider({
@@ -151,7 +153,7 @@ function DISKslider() {
 function changeDISK(value){
     $('#hiddenChangeDISK').val(value);
     standardValueDisk = value;
-    DISKamount = DISKarr[standardValueDisk]['DiskAmount'];
+    DISKamount = DISKarr[standardValueDisk]['DiskAmount '];
     $(".changeDISK").text(DISKamount+"GB");
     orderPrice();
 }
@@ -259,7 +261,7 @@ function SLAradio(value){
 function orderPrice(){
    costCPU =  CPUamount*5;
    costRam = RAMShorter(RAMamount)*2.00;
-   costDisk = DISKPriceArray[standardValueDisk]['DiskAmount'];
+   costDisk = DISKPriceArray[standardValueDisk];
    costNT = standardValueNT * 2;
    costIPv4 = IPv4amount-1;
    totalOrderPrice = costCPU+costRam+costDisk+costNT+costIPv4;
