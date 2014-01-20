@@ -38,7 +38,7 @@
 				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-						<input type="text" class="form-control" id="adzip" placeholder="Zip Code" required>
+						<input type="text" class="form-control" id="adzip" placeholder="Zip Code">
 						<input type="number" class="form-control bfh-number" data-min="1" id="adnr" placeholder="Street Number" >
 						<select id="country" class="form-control bfh-countries" data-country="NL"></select>
 						
@@ -66,7 +66,6 @@
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 		<script> $.validate({
-			errorMessagePosition : 'top'
 			modules : 'security',
 			onModulesLoaded : function() {
 			    var optionalConfig = {
