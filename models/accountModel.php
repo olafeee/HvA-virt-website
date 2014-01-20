@@ -48,25 +48,26 @@ class accountModel extends baseModel
 	public function checkUser($user)
 	{
 
+		$user = 'raouldijksman@gmail.com';
+
 		$response = array(
 			'valid' => false,
 			'message' => 'Post argument "user" is missing.'
 		);
-		
-		if( isset($user) ) {
-			$sth = $this->cloudstack->listAccounts($user);
-			$data = json_decode($sth,true);
 
-			print_r($data);
+		$sth = $this->cloudstack->listAccounts($user);
+		$data = json_decode($sth,true);
 
-			if( $data[0]['Account']['name']==$user ) {
-		    	// User name is registered on another account
-		    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
-			} else {
-		    	// User name is available
-		    	$response = array('valid' => true, 'message' => 'No user but AJAX worked!');
-			}
+		print_r($data);
+
+		if( $data[0]['Account']['name']==$user ) {
+	    	// User name is registered on another account
+	    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
+		} else {
+	    	// User name is available
+	    	$response = array('valid' => true, 'message' => 'No user but AJAX worked!');
 		}
+
 		echo json_encode($response);
 	}
 
