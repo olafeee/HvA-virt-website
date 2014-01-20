@@ -3,7 +3,7 @@
 		<h2>Login Information</h2>
 		<br />
 		<!-- New style test -->
-		<form class="form-horizontal" role="form" action="../account/runRegister" method="post" required>
+		<form class="form-horizontal" role="form" action="../account/runRegister" method="post" autocomplete="on">
 			<div class="form-group">
 				<div class="col-sm-12">
 					<div class="input-group">
@@ -16,8 +16,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required>
+						<input type="password" class="form-control" id="inputPassword" placeholder="Password" autocomplete="off" required>
+						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" autocomplete="off" required>
 					</div>
 				</div>
 			</div>
