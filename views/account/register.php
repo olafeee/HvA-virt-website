@@ -72,6 +72,17 @@
 	    </div>
 	  </div>
 
+	  <br />
+
+	  <div class="form-group">
+	    <div class="col-sm-offset-2 col-sm-10">
+	      <div class="checkbox">
+	        <label>
+	          <input type="checkbox" name="reseller" data-validation-help="Select this if your a reseller.">Reseller?</label>
+	      </div>
+	    </div>
+	  </div>
+
 	  <div class="form-group">
 	    <label for="submit" class="col-sm-2 control-label"></label>
 	    <div class="col-sm-10">
@@ -92,10 +103,10 @@
 			    var optionalConfig = {
 			      fontSize: '8pt',
 			      padding: '4px',
-			      bad : 'Very bad',
-			      weak : 'Weak',
-			      good : 'Good',
-			      strong : 'Strong'
+			      bad : ' Very bad ',
+			      weak : ' Weak ',
+			      good : ' Good ',
+			      strong : ' Strong '
 			    };
 
 			    $('input[id="password"]').displayPasswordStrength(optionalConfig);
