@@ -77,9 +77,9 @@
 	  <div class="form-group">
 	    <label for="reseller" class="col-sm-2 control-label">Reseller :</label>
 	    <div class="col-sm-10">
-	      <div class="checkbox">
+	      <div class="checkbox" id="resellerCheckbox" title="Select this if your a reseller.">
 	        <label>
-	          <input type="checkbox" id="reseller" name="reseller" title="Select this if your a reseller.">I would like a reseller's account.</label>
+	          <input type="checkbox" id="reseller" name="reseller">I would like a reseller's account.</label>
 	      </div>
 	    </div>
 	  </div>
@@ -119,7 +119,7 @@
 
 		$(document).ready({
 			// Show tooltip
-			$("#reseller img[title]").tooltip(); 
+			$("#resellerCheckbox").tooltip(); 
 		});
 		
 	</script>
