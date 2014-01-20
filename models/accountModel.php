@@ -74,7 +74,7 @@ class accountModel extends baseModel
 		// Send to cloudstack DB
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		echo "<pre>";
-		print_r($response);
+		var_dump($response);
 
 		if (array_key_exists('account', $response['createaccountresponse'])) {
 			$this->runLogin($data['email'],$data['password']);
