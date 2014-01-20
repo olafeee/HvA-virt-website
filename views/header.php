@@ -15,7 +15,16 @@
 </script>
 <?php
 if($this->url0=='order'){
-echo"oscar is bamibal";
+?>
+    <script type="text/javascript">
+      onload=function() { 
+        tarr();
+      }
+      function tarr(){
+        pets = <?print(json_encode($this->DISK));?>;
+      }
+    </script>
+  <?php
 }
 ?>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>

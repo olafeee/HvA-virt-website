@@ -2,14 +2,6 @@
 	?>
 <div class="row">
 	<div class="col-md-1">
-		<script type="text/javascript">
-			onload=function() { 
-				//DISKarrayss();
-				function tarr(){
-					pets = <?print(json_encode($this->DISK));?>;
-				}
-			}
-		</script>
 	</div>
 <div class="col-md-10">
 	<div class="bladeVPSintro">
