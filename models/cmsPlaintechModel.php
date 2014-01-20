@@ -38,6 +38,7 @@ class cmsPlaintechModel extends baseModel
   	function insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $id){
         $arr = $id.'_Array_Table';
         $x = $id[0]."ID";
+        echo $x;
         $postData = array(
             'DiskAmount' => $AmountMVP,
             'DiskPrice' => $PriceMVP

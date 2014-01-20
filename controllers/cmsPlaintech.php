@@ -68,6 +68,6 @@ class cmsPlaintech extends baseController {
         $AmountMVP = $_POST['AmountMVP'];
         $PriceMVP = $_POST['PriceMVP'];
         $this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $pageMVP);
-        header('location: /cmsPlaintech/manangeVpsParts/'.$pageMVP);
+        //header('location: /cmsPlaintech/manangeVpsParts/'.$pageMVP);
     }
 }
