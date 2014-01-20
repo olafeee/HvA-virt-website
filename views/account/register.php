@@ -47,9 +47,7 @@
 						<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
 						<input type="text" class="form-control" id="adzip" placeholder="Zip Code">
 						<input type="number" class="form-control" id="adnr" placeholder="Street Number">
-						<select class="form-control" id="country" placeholder="Country">
-							<?php include('register_countries.php'); ?>
-						</select>
+						
 					</div>
 				</div>
 			</div>
