@@ -6,7 +6,7 @@
 
 require_once("lib/cloudstack_sign.php");
 
-class loginModel extends baseModel
+class accountModel extends baseModel
 {
 	
 	public $cloudstack;
@@ -72,10 +72,6 @@ class loginModel extends baseModel
 			//header('location: ../login');
 		}
 	}*/
-
-	public function register() {
-
-	}
 
 	public function createAccount() {
 
