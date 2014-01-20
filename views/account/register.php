@@ -21,19 +21,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="form-group">
-				<div class="col-sm-12">
-					<div class="input-group">
-						<span class="input-group-addon"><span class="glyphicon glyphicon-check"></span></span>
-						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password">
-					</div>
-				</div>
-			</div>
 			  
 			<h2>Customer Information</h2>
 			<br />
 			<div class="form-group">
-				<div class="col-sm-13">
+				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
 					  <input type="text" class="form-control" id="fname" placeholder="First Name">
