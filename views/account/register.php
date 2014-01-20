@@ -18,7 +18,7 @@
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="2">
+	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="1">
 	    </div>
 	  </div>
 
@@ -49,21 +49,6 @@
 
 
 	</form>
-
-
-
-
-
-
-		<div class="form-group">
-			<div class="col-sm-12">
-				<div class="input-group">
-				  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-				  <input type="text" class="form-control" id="fname" placeholder="First Name" data-validation="required" >
-				  <input type="text" class="form-control" id="lname" placeholder="Last Name" data-validation="required" >
-				</div>
-			</div>
-		</div>
 		
 		<div class="form-group">
 			<div class="col-xs-12">
@@ -85,11 +70,7 @@
 				</div>
 			</div>
 		</div>
-		
-		
-			
-		<h2>Payment Information</h2>
-		<br />
+	
 		
 		<input type='hidden' name='submit' />
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
@@ -112,7 +93,7 @@
 			      strong : 'Strong'
 			    };
 
-			    $('input[name="password"]').displayPasswordStrength(optionalConfig);
+			    $('input[id="password"]').displayPasswordStrength(optionalConfig);
 			  }
 		    
 		}); 
