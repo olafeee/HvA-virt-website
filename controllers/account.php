@@ -21,7 +21,7 @@ class Account extends baseController {
 
 	function logout() {
 		session_destroy();
-		header('location: ../account');
+		header('location: /account');
 	}
 
 	function register() {
@@ -47,7 +47,7 @@ class Account extends baseController {
 				$this->index('register_success');
 			}
 		} else {
-			header('location: ./register');
+			header('location: /account/register');
 		}
 	}
 
