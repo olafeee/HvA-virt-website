@@ -43,7 +43,7 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$model->createAccount($_POST);
 		} else {
-			header('location: ./register');
+			header('location: ../register');
 		}
 	}
 
