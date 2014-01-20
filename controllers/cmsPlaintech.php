@@ -17,7 +17,7 @@ class cmsPlaintech extends baseController {
 		//var_dump($model);
 		//echo "<br/>";
 		//$this->$var1 = "2";
-		$this->cleanString(9'');
+		$this->cleanString();
 
 	}
 
@@ -52,18 +52,16 @@ class cmsPlaintech extends baseController {
 	}
 
 	function insertMVP(){
-		$idMVP = $_POST['idMVP'];
-		$AmountMVP = $_POST['AmountMVP'];
-		$PriceMVP = $_POST['PriceMVP'];
-		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP);
+		$idMVP = matchInt(mysql_real_escape_string($_POST['idMVP']));
+		$AmountMVP = matchInt(mysql_real_escape_string($_POST['AmountMVP']));
+		$PriceMVP = matchInt(mysql_real_escape_string($_POST['PriceMVP']));
+		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP));
 		header('location: /cmsPlaintech/manangeVpsParts/Disk');
 	}
 
-	function cleanString($number){
+	function matchInt($number){
 	    if (preg_match('/^[0-9]{1,}$/', $number)) {
-	    	echo $number . " is numeric";
-	    }else{
-			echo $number . " is NOT numeric";
-	   	}
+	    	return $number
+	    }
 	}
 }
