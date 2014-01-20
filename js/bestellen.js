@@ -18,7 +18,7 @@ var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
-var DISKamount = tarr(standardValueDisk, "DiskPrice");
+var DISKamount = tarr(standardValueDisk, "DiskAmount");
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
@@ -157,7 +157,7 @@ function DISKslider() {
 function changeDISK(value){
     $('#hiddenChangeDISK').val(value);
     standardValueDisk = value;
-    DISKamount = tarr(standardValueDisk, "DiskPrice");
+    DISKamount = tarr(standardValueDisk, "DiskAmount");
     $(".changeDISK").text(DISKamount+"GB");
     orderPrice();
 }
