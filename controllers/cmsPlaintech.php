@@ -17,20 +17,30 @@ class cmsPlaintech extends baseController {
 		echo $this->matchInt(9);
 	}
 
+	/**
+     * viewPage
+     * @param string $id 
+     */
 	function viewPage($id){
 		$cmsPage = $this->model->getPage($id);
 		$this->baseView->viewpage = $cmsPage;
 		$this->index('viewPage');
 	}
-
+	 /**
+     * manangeVpsParts = laad hardware onderdeel krijgt id-amount+prijs
+     * @param string $id welke hardware onderdeel gelanden moet worden
+     */
 	function manangeVpsParts($id){
 		$table = $id.'_Array_Table';
 		$cmsMVP = $this->model->getCmsIndex($table, "*");
 		$this->baseView->cmsMVP = $cmsMVP;
 		$this->index('manangeVpsParts');
 	}
-
-
+	 /**
+     * Edit content laad een bepaald onderdeel voor te editen
+     * @param string $pid op welke pagina het is
+     * @param string $cwid het id van de text
+     */
 	function editContent($pid,$cwid){
 		$cmsPage = $this->model->getOneCmsItem($pid,$cwid);
 		$this->baseView->editContenVar = $cmsPage;
@@ -38,7 +48,11 @@ class cmsPlaintech extends baseController {
 		//print_r($this->getCMS[$id]);
 		
 	}
-
+	 /**
+     * Edit content laad een bepaald onderdeel voor te editen
+     * @param string $pid op welke pagina het is
+     * @param string $cwid het id van de text
+     */
 	function insertContent(){
 		$cwid = $_POST['cwid'];
 		$pageid = $_POST['pageid'];
@@ -48,9 +62,9 @@ class cmsPlaintech extends baseController {
 	}
 
 	function insertMVP(){
-		$idMVP = matchInt(mysql_real_escape_string($_POST['idMVP']));
-		$AmountMVP = matchInt(mysql_real_escape_string($_POST['AmountMVP']));
-		$PriceMVP = matchInt(mysql_real_escape_string($_POST['PriceMVP']));
+		$idMVP = $this->matchInt(mysql_real_escape_string($_POST['idMVP']));
+		$AmountMVP = $this->matchInt(mysql_real_escape_string($_POST['AmountMVP']));
+		$PriceMVP = $this->matchInt(mysql_real_escape_string($_POST['PriceMVP']));
 		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP);
 		header('location: /cmsPlaintech/manangeVpsParts/Disk');
 	}
