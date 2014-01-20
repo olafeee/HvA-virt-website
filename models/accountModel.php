@@ -56,7 +56,7 @@ class accountModel extends baseModel
 		$sth = $this->cloudstack->listAccounts($user);
 		$data = json_decode($sth,true);
 
-		if(is_array($data) && array_key_exists('account', $data['listaccountsresponse'])) {
+		if(is_array($data) && array_key_exists('account', $data['createaccountresponse'])) {
 			if( $data['listaccountsresponse']['account'][0]['name']==$user ) {
 		    	// User name is registered on another account
 		    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
@@ -77,9 +77,17 @@ class accountModel extends baseModel
 		echo "CreateAccount() Running!<br><br>";
 		print_r($data);
 
+		// SQL Injection prefection TODO HERE ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!
+
 		// Send to cloudstack DB
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		print_r($response);
+
+		if (array_key_exists('account', $data['listaccountsresponse'])) {
+			return true;
+		} else {
+			return false;
+		}
 		
 	}
 
