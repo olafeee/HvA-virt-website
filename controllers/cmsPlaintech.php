@@ -17,6 +17,7 @@ class cmsPlaintech extends baseController {
 		//var_dump($model);
 		//echo "<br/>";
 		//$this->$var1 = "2";
+		$this->cleanString(9);
 
 	}
 
@@ -58,5 +59,11 @@ class cmsPlaintech extends baseController {
 		header('location: /cmsPlaintech/manangeVpsParts/Disk');
 	}
 
-	
+	function cleanString($number){
+	    if (preg_match('/^[0-9]{1,}$/', $number)) {
+	    	echo $number . " is numeric";
+	    }else{
+			echo $number . " is NOT numeric";
+	   	}
+	}
 }
