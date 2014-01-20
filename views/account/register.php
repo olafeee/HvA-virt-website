@@ -3,7 +3,7 @@
 		<h2>Login Information</h2>
 		<br />
 		<!-- New style test -->
-		<form class="form-horizontal" role="form">
+		<form class="form-horizontal" role="form" action="../account/runRegister" method="post">
 			<div class="form-group">
 				<div class="col-sm-12">
 					<div class="input-group">

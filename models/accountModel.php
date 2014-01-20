@@ -75,6 +75,8 @@ class accountModel extends baseModel
 
 	public function createAccount() {
 
+		http://145.92.14.90:5990/client/api?command=createAccount&accounttype=0&email=test&firstname=test&lastname=testlast&password=test&username=test
+		
 	}
 
 		public function register()
