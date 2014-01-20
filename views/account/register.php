@@ -18,7 +18,7 @@
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="1">
+	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="1" data-validation-help="Please pick a strong password!">
 	    </div>
 	  </div>
 
@@ -35,14 +35,14 @@
 	  <div class="form-group">
 	    <label for="fName" class="col-sm-2 control-label">First Name</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="fName" placeholder="First Name" data-validation="required">
+	      <input type="text" class="form-control" id="fName" placeholder="First Name" data-validation="alphanumeric">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="lName" class="col-sm-2 control-label">Last Name</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="lName" placeholder="Last Name" data-validation="required">
+	      <input type="text" class="form-control" id="lName" placeholder="Last Name" data-validation="alphanumeric">
 	    </div>
 	  </div>
 
