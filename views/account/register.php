@@ -65,22 +65,24 @@
 		</form>
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
-		<script> $.validate({
-			modules : 'security',
-			onModulesLoaded : function() {
-			    var optionalConfig = {
-			      fontSize: '8pt',
-			      padding: '4px',
-			      bad : 'Very bad',
-			      weak : 'Weak',
-			      good : 'Good',
-			      strong : 'Strong'
-			    };
+		<script> 
+			$.validate({
+				modules : 'security',
+				onModulesLoaded : function() {
+				    var optionalConfig = {
+				      fontSize: '6pt',
+				      padding: '4px',
+				      bad : 'Very bad',
+				      weak : 'Weak',
+				      good : 'Good',
+				      strong : 'Strong'
+				    };
 
-			    $('input[name="inputPassword"]').displayPasswordStrength();
-			  }
-		    
-		}); </script>
+				    $('input[name="inputPassword"]').displayPasswordStrength(optionalConfig);
+				  }
+			    
+			}); 
+	</script>
 		<br />
 	</div>
 </div>
