@@ -53,7 +53,7 @@ class accountModel extends baseModel
 		$sth = $this->cloudstack->listAccounts($user);
 		$data = json_decode($sth,true);
 
-		if( array_key_exists('account', $data['createaccountresponse'])) {
+		if(is_array($data) && array_key_exists('account', $data['listaccountsresponse'])) {
 			if( $data['listaccountsresponse']['account'][0]['name']==$user ) {
 		    	// User name is registered on another account
 		    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
@@ -78,7 +78,7 @@ class accountModel extends baseModel
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		print_r($response);
 
-		if (array_key_exists('account', $data['listaccountsresponse'])) {
+		if (array_key_exists('account', $data['createaccountresponse'])) {
 			$this->runLogin($data['email'],$data['password']);
 		} else {
 			return 'false';
