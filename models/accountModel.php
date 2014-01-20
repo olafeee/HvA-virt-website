@@ -79,7 +79,7 @@ class accountModel extends baseModel
 		print_r($response);
 
 		if (array_key_exists('account', $data['listaccountsresponse'])) {
-			$this->
+			$this->runLogin($data['email'],$data['password']);
 		} else {
 			return 'false';
 		}
