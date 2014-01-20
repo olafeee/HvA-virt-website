@@ -33,7 +33,7 @@ if($this->url0=='order'){
 }
 ?>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <!--<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
   <script type="text/javascript" src="/js/loginmenu.js"></script>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
   <!-- Bootstrap Form Helpers -->
