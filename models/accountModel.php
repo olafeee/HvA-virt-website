@@ -26,10 +26,6 @@ class accountModel extends baseModel
 		$sth = $this->cloudstack_sign->login($username, $password);
 		$data = json_decode($sth,true);
 
-		//Debug
-		echo "<pre>";
-		print_r($data);
-
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			$loginArray = $data['loginresponse'];
 			Session::init();
@@ -74,8 +70,6 @@ class accountModel extends baseModel
 		// Send to cloudstack DB
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		$response = json_decode($response,true);
-		echo "<pre>";
-		var_dump($response);
 
 		if (array_key_exists('account', $response['createaccountresponse'])) {
 			$this->runLogin($data['email'],$data['password']);
