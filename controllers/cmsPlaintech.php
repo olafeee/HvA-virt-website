@@ -33,11 +33,6 @@ class cmsPlaintech extends baseController {
 		$this->index('manangeVpsParts');
 	}
 
-	function insertMVP(){
-		$cwid = $_POST['cwid'];
-		$pageid = $_POST['pageid'];
-
-	}
 
 	function editContent($pid,$cwid){
 		$cmsPage = $this->model->getOneCmsItem($pid,$cwid);
@@ -53,6 +48,14 @@ class cmsPlaintech extends baseController {
 		$cmstext = $_POST['cmstext'];
 		$this->model->insertOneCmsItem($cwid, $pageid, $cmstext);
 		header('location: /cmsPlaintech/viewPage/'.$pageid);
+	}
+
+	function insertMVP(){
+		$idMVP = $_POST['idMVP'];
+		$AmountMVP = $_POST['AmountMVP'];
+		$PriceMVP = $_POST['PriceMVP'];
+		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP);
+
 	}
 
 	
