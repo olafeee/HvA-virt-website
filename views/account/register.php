@@ -17,7 +17,7 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<p><input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" data-validation="strength" data-validation-strength="1" ></p>
+						<p><input type="password" class="form-control" id="inputPassword" name="pass_confirmation" placeholder="Password" data-validation="strength" data-validation-strength="1" ></p>
 					</div>
 				</div>
 			</div>
@@ -90,7 +90,7 @@
 				      strong : 'Strong'
 				    };
 
-				    $('input[name="inputPassword"]').displayPasswordStrength(optionalConfig);
+				    $('input[name="pass_confirmation"]').displayPasswordStrength(optionalConfig);
 				  }
 			    
 			}); 
