@@ -76,6 +76,14 @@ function hideMVP() {
     $(".MVPdiv").css("display", "none");
     $(".opacitySLAdiv").css("display", "none");  
 }
+function checkInp(){
+    var x=document.forms["MVPdiv"]["idMVP"].value;
+    alert(x);
+}
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
 
 // 
 $(function () {
