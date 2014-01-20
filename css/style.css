@@ -594,6 +594,6 @@ p.order_options_OS{
 }
 
 .validating_server_side input.server {
-	background: url(img/ajax-preloader.gif) no-repeat center right;
+	background: url(/img/ajax-preloader.gif) no-repeat center right;
 	opacity: 0.6
 }
