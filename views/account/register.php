@@ -38,9 +38,9 @@
 				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
-						<input type="text" class="form-control" id="adzip" placeholder="Zip Code">
-						<input type="number" class="form-control bfh-number" data-min="1" id="adnr" placeholder="Street Number" >
-						<select id="country" class="form-control bfh-countries" data-country="NL"></select>
+						<input type="text" class="form-control" id="adzip" placeholder="Zip Code" data-validation="required">
+						<input type="number" class="form-control bfh-number" data-min="1" id="adnr" placeholder="Street Number" data-validation="required">
+						<select id="country" class="form-control bfh-countries" data-country="NL" data-validation="country"></select>
 						
 					</div>
 				</div>
