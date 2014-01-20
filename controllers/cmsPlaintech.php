@@ -33,7 +33,7 @@ class cmsPlaintech extends baseController {
 		$table = $id.'_Array_Table';
 		$cmsMVP = $this->model->getCmsIndex($table, "*");
 		$this->baseView->cmsMVP = $cmsMVP;
-		$this->baseView->kindMVP = strtoupper($id);
+		$this->baseView->kindMVP = $id;
 		$this->index('manangeVpsParts');
 	}
 	 /**

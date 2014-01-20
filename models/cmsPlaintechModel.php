@@ -35,13 +35,14 @@ class cmsPlaintechModel extends baseModel
         
         $this->db->update('CMS_website', $postData, "`cwid` = $cwid ");
     }
-  	function insertMVPitem($idMVP, $AmountMVP, $PriceMVP){
+  	function insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $id){
+        $arr = $id.'_Array_Table';
         $postData = array(
             'DiskAmount' => $AmountMVP,
             'DiskPrice' => $PriceMVP
         );
         
-        $this->db->update('Disk_Array_Table', $postData, "`DID` = $idMVP ");
+        $this->db->update($arr, $postData, "`$id` = $idMVP ");
     }
 
 	function getCmsIndex1($pageid){
