@@ -76,18 +76,19 @@ function hideMVP() {
     $(".MVPdiv").css("display", "none");
     $(".opacitySLAdiv").css("display", "none");  
 }
+
+          
+
 function checkInp(){
     var x=document.forms["input"]["AmountMVP"].value;
     var y=document.forms["input"]["PriceMVP"].value;
       if (isNaN(x)) 
       {
-        alert("Must input numbers");
-        return false;
+        $(".faultMVP").text(x+" is geen cijfer");
       }
     if (isNaN(y)) 
       {
-        alert("Must input numbers");
-        return false;
+         $(".faultMVP").text(y+" is geen cijfer");
       }
         
 }
