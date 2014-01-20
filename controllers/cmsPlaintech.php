@@ -17,7 +17,7 @@ class cmsPlaintech extends baseController {
 		//var_dump($model);
 		//echo "<br/>";
 		//$this->$var1 = "2";
-		$this->cleanString(9);
+		$this->cleanString(9'');
 
 	}
 
