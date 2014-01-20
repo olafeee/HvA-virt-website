@@ -119,9 +119,9 @@
 
 		$( document ).ready(function() {
 			// Show tooltip
-			$('#resellerCheckbox').tooltip(
+			$('#resellerCheckbox').tooltip({
 				position: { my: "left+15 center", at: "right center" }
-			); 
+			}); 
 		});
 		
 	</script>
