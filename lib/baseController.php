@@ -3,6 +3,8 @@ class baseController {
 
 	function __construct() {
 		$this->baseView = new baseView();
+		$url = $this->urlfix();
+		$this->baseView->url0 = $url[0];
 	}
 
 	function index($value) {
