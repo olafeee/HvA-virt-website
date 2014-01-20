@@ -13,6 +13,9 @@
   var pets;
   var standardValueDisk = 0; 
 </script>
+<?php
+print_r($this->url0);
+?>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   <script type="text/javascript" src="/js/loginmenu.js"></script>
