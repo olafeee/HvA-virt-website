@@ -79,17 +79,17 @@ function hideMVP() {
 function checkInp(){
     var x=document.forms["input"]["AmountMVP"].value;
     var y=document.forms["input"]["PriceMVP"].value;
-        x = isNumber(x);
-        alert(x);
-        y = isNumber(y);
-        if (x == true) {
-             document.form.submit();
-        }else{
-            $(".faultMVP").text("fail whale");
-            alert("sterf");
-            return false;
-        }
-        ;
+      if (isNaN(x)) 
+      {
+        alert("Must input numbers");
+        return false;
+      }
+    if (isNaN(y)) 
+      {
+        alert("Must input numbers");
+        return false;
+      }
+        
 }
 
 function isNumber(n) {
