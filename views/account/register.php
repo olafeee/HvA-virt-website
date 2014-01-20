@@ -16,8 +16,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<input type="password" class="form-control" id="inputPassword" placeholder="Password" autocomplete="off" required>
-						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" autocomplete="off" required>
+						<input type="password" class="form-control" id="inputPassword" placeholder="Password" data-validation="length" data-validation-length="min6" autocomplete="off" required>
+						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" data-validation="length" data-validation-length="min6" autocomplete="off" required>
 					</div>
 				</div>
 			</div>
@@ -63,6 +63,9 @@
 			<input type='hidden' name='submit' />
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 		</form>
+
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
+		<script> $.validate(); </script>
 		<br />
 	</div>
 </div>
