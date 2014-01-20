@@ -6,7 +6,6 @@
 			onload=function() { 
 				//DISKarrayss();
 				pets = <?print(json_encode($this->DISK));?>;
-				var arr = JSON.parse(pets);
 			}
 		</script>
 	</div>
