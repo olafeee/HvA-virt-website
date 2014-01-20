@@ -1,7 +1,7 @@
 
 <div class="row">
 
-	<form class="form-horizontal" role="form" action="./register/create" method="post">
+	<form class="form-horizontal" role="form" action="./runRegister" method="post">
 
 	  <h3>Login Information</h3>
 	  <br />
@@ -9,7 +9,7 @@
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email :</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  data-validation="email server" data-validation-url="./register/email">
+	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  data-validation="email server" data-validation-url="./runRegister/email">
 	    </div>
 	  </div>
 

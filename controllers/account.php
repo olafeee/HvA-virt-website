@@ -24,31 +24,22 @@ class Account extends baseController {
 		header('location: ../account');
 	}
 
-	function register($input) {
-		if (!isset($input)){
-			$this->index('register');
-		}
-		// Validate Email
-		if ($input == 'email') 
-		{
+	function register() {
+		$this->index('register');
+	}
+
+	function registerValidate($input) {
+		if ($input == 'email') {
 			$model = $this->laadModel();
 			$model->checkUser($_POST['email']);
-		} 
-		else if ($input == 'create' && isset($_POST['submit'])) // Create Account
-		{ 
-
-			echo "<pre>";
-			print_r($_POST);
-
-			$model = $this->laadModel();
-			$model->createAccount($_POST);
-		} else {
-			header('location: ../register');
 		}
 	}
 
 	function runRegister() {
-		if(isset($_POST['submit'])) {
+		if ($input == 'email') {
+			$model = $this->laadModel();
+			$model->checkUser($_POST['email']);
+		} else if(isset($_POST['submit'])) {
 
 			echo "<pre>";
 			print_r($_POST);
