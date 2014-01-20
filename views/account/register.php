@@ -1,6 +1,4 @@
 <div class="row">
-	<h2>Login Information</h2>
-    <br />
 	<div class="row">
 		<h2>Login Information</h2>
 		<br />
@@ -19,6 +17,7 @@
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
 						<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password">
 					</div>
 				</div>
 			</div>
