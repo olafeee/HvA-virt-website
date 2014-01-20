@@ -7,7 +7,6 @@
 				//DISKarrayss();
 				pets = <?print(json_encode($this->DISK));?>;
 				var arr = JSON.parse(pets);
-				alert(arr.pets[0].DiskAmount);
 			}
 		</script>
 	</div>
