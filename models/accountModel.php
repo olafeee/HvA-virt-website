@@ -69,13 +69,11 @@ class accountModel extends baseModel
 	}
 
 	public function createAccount($data) {
-
-		echo "CreateAccount() Running!<br><br>";
-		print_r($data);
-
 		// SQL Injection prefection TODO HERE ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!
+
 		// Send to cloudstack DB
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
+		echo "<pre>";
 		print_r($response);
 
 		if (array_key_exists('account', $response['createaccountresponse'])) {
