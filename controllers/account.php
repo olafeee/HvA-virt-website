@@ -33,11 +33,8 @@ class Account extends baseController {
 
 			print_r($_POST)
 
-			// Put all posted variables into a array and send it to the model
-			$postData = $_POST;
-
 			$model = $this->laadModel();
-			$model->createAccount($postData);
+			$model->createAccount($_POST);
 		} else {
 			header('location: ./register');
 		}
