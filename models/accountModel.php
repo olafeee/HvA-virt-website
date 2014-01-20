@@ -11,7 +11,7 @@ class accountModel extends baseModel
 {
 	
 	public $cloudstack;
-	public $cloudstack_sign();
+	public $cloudstack_sign;
 
 	function __construct()
 	{
