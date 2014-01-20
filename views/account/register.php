@@ -46,6 +46,27 @@
 	    </div>
 	  </div>
 
+	  <div class="form-group">
+	    <label for="adzip" class="col-sm-2 control-label">Zip Code</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="adzip" placeholder="Zip Code" data-validation="required">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="adnr" class="col-sm-2 control-label">Street Number</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="adnr" placeholder="Street Number" data-validation="number" data-validation-allowing="float">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="country" class="col-sm-2 control-label">Country</label>
+	    <div class="col-sm-10">
+	      <select id="country" class="form-control bfh-countries" data-country="NL" data-validation="country"></select>
+	    </div>
+	  </div>
+
 
 
 	</form>
@@ -56,7 +77,7 @@
 					<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
 					<input type="text" class="form-control" id="adzip" placeholder="Zip Code" data-validation="required">
 					<input type="number" class="form-control bfh-number" data-min="1" id="adnr" placeholder="Street Number" data-validation="required">
-					<select id="country" class="form-control bfh-countries" data-country="NL" data-validation="country"></select>
+					
 					
 				</div>
 			</div>
