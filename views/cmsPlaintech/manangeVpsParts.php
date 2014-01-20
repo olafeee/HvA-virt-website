@@ -13,12 +13,12 @@
 	<tbody>
 	<?php
 		$text = $this->cmsMVP;
-
+		$kindMVP = $this->kindMVP;
 		$i = 0;
 		while ($i < count($text)) {
 			echo '<tr>';
-			echo '<td>'.$text[$i]["DiskAmount"].'</td>';
-			echo '<td>'.$text[$i]["DiskPrice"].'</td>';
+			echo '<td>'.$text[$i][$kindMVP."Amount"].'</td>';
+			echo '<td>'.$text[$i][$kindMVP"DiskPrice"].'</td>';
 			echo '<td><a href="javascript:showMVP('.$i.', '.$text[$i]["DiskAmount"].', '.$text[$i]["DiskPrice"].')" class="sla_ms">more info</a></td>';	
 			echo"<tr/>";
 			$i++;
