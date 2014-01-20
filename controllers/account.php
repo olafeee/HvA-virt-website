@@ -31,7 +31,7 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$model->checkUser($_POST['email']);
 		} 
-		if ($input == 'create' && isset($_POST['submit'])) // Create Account
+		else if ($input == 'create' && isset($_POST['submit'])) // Create Account
 		{ 
 
 			echo "<pre>";
