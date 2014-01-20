@@ -66,7 +66,7 @@ function showMVP(id, Amount, Price) {
     $('html').click(function() {
     hideMVP()
     });
-    $('.SLAdiv').click(function(event){
+    $('.MVPdiv').click(function(event){
     event.stopPropagation();
     });
 }
