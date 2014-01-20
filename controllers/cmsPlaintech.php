@@ -14,11 +14,6 @@ class cmsPlaintech extends baseController {
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
 		$this->baseView->cmstext = $getCMS;
-		//var_dump($model);
-		//echo "<br/>";
-		//$this->$var1 = "2";
-		$this->cleanString();
-
 	}
 
 	function viewPage($id){
