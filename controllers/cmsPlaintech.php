@@ -14,6 +14,7 @@ class cmsPlaintech extends baseController {
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
 		$this->baseView->cmstext = $getCMS;
+		echo $this->matchInt(9);
 	}
 
 	function viewPage($id){
@@ -52,11 +53,5 @@ class cmsPlaintech extends baseController {
 		$PriceMVP = matchInt(mysql_real_escape_string($_POST['PriceMVP']));
 		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP);
 		header('location: /cmsPlaintech/manangeVpsParts/Disk');
-	}
-
-	function matchInt($number){
-	    if (preg_match('/^[0-9]{1,}$/', $number)) {
-	    	return $number;
-	    }
 	}
 }
