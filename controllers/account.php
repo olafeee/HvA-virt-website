@@ -26,7 +26,7 @@ class Account extends baseController {
 
 	function register() {
 		echo "FIRED";
-		$this->index('register');
+		$this->index('../account/register');
 	}
 
 	function runRegister() {

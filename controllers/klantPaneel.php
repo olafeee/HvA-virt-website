@@ -9,7 +9,7 @@ class klantPaneel extends baseController {
 		parent::__construct();
 
 		$model = $this->laadModel();
-		//var_dump($model);
+		var_dump($model);
 		$this->baseView->vmResponce = $model->getVM();
 		
 		//
