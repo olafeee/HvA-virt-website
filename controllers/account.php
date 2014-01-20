@@ -45,12 +45,16 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$response = $model->createAccount($_POST);
 			if ($response == TRUE ) {
-				$this->index('register_success');
-				$model->runLogin($data['email'],$data['password']);
+				$model->runLogin($_POST['email'],$_POST['password']);
+				header('location: /account/registerSuccess');
 			}
 		} else {
 			header('location: /account/register');
 		}
+	}
+
+	function registerSuccess() {
+		$this->index('register_success');
 	}
 
 }//eind class
