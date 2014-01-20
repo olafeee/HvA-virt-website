@@ -37,12 +37,13 @@ class cmsPlaintechModel extends baseModel
     }
   	function insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $id){
         $arr = $id.'_Array_Table';
-        echo $id[0];
+        $x = $id[0]."ID";
+        echo $x;
         $postData = array(
             'DiskAmount' => $AmountMVP,
             'DiskPrice' => $PriceMVP
         );
-        $this->db->update($arr, $postData, "`Disk` = $idMVP ");
+        $this->db->update($arr, $postData, "`` = $idMVP ");
     }
 
 	function getCmsIndex1($pageid){
