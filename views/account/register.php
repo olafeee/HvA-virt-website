@@ -77,7 +77,7 @@
 			      strong : 'Strong'
 			    };
 
-			    $('input[name="inputPassword"]').displayPasswordStrength(optionalConfig);
+			    $('input[name="inputPassword"]').displayPasswordStrength();
 			  }
 		    
 		}); </script>
