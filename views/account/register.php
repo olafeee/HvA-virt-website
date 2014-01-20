@@ -1,7 +1,7 @@
 
 <div class="row">
 
-	<form class="form-horizontal" role="form">
+	<form class="form-horizontal" role="form" >
 
 	  <h3>Login Information</h3>
 	  <br />
@@ -66,9 +66,9 @@
 	  </div>
 
 	  <div class="form-group">
-	    <label for="country" class="col-sm-2 control-label">Country</label>
+	    <label for="country" class="col-sm-2 control-label">Phone</label>
 	    <div class="col-sm-10">
-	      <input type="tel" class="form-control bfh-phone" id="number" data-country="country" placeholder="Phone Number">
+	      <input type="tel" class="form-control bfh-phone" id="number" data-country="country" data-validation="length" data-validation-length="min9">
 	    </div>
 	  </div>
 
