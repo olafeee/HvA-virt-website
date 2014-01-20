@@ -48,7 +48,7 @@ class accountModel extends baseModel
 	public function checkUser($user)
 	{
 
-		$user = 'raoul';
+		$user = 'raouldijksman@gmail.com';
 
 		$response = array(
 			'valid' => false,
