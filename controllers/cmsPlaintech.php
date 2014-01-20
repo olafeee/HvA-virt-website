@@ -12,7 +12,7 @@ class cmsPlaintech extends baseController {
 		$this->db = $this->model->conDB1();
 		
 		//test of var gedropt wordt
-		$getCMS = $this->model->getCmsIndex();
+		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
 		$this->baseView->cmstext = $getCMS;
 		//var_dump($model);
 		//echo "<br/>";
@@ -23,6 +23,12 @@ class cmsPlaintech extends baseController {
 	function viewPage($id){
 		$cmsPage = $this->model->getPage($id);
 		$this->baseView->viewpage = $cmsPage;
+		$this->index('viewPage');
+	}
+
+	function manangeVpsParts($id){
+		$cmsMVP = $this->model->getCmsIndex("CMS_pages", "*");
+		$this->baseView->cmsMVP = $cmsMVP;
 		$this->index('viewPage');
 	}
 
