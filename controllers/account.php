@@ -4,8 +4,10 @@ class Account extends baseController {
 
 	function __construct() {
 		parent::__construct();
+		echo "TEST";
 		if (isset($_SESSION['loggedIn']) && ($_SESSION['loggedIn'] === true)) {
 			header('location: ../');
+			echo "FIRED!!!!!!!!!!!!!!!!!";
 		}
 	}
 	
