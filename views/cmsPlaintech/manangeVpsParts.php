@@ -2,7 +2,7 @@
 	$text = $this->cmsMVP;
 
 	$i = 0;
-	echo'<table>';
+	echo'<table class="table">';
 	while ($i < count($text)) {
 		echo '<tr>';
 		echo '<td>'.$text[$i]["DiskAmount"].'</td>';
