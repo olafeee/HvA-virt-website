@@ -74,5 +74,10 @@ class baseController {
 		exit;
 	}
 
+	function matchInt($number){
+	    if (preg_match('/^[0-9]{1,}$/', $number)) {
+	    	return $number;
+	    }
+
 	
 }
