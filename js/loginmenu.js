@@ -82,7 +82,7 @@ function checkInp(){
         x = isNumber(x);
         alert("halppy");
         y = isNumber(y);
-        if (x && y == true) {
+        if (x == true) {
              document.form.submit();
         }else{
             $(".faultMVP").text("fail whale");
