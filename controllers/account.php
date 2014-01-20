@@ -29,7 +29,7 @@ class Account extends baseController {
 	}
 
 	function registerValidate($input) {
-		if ($input == 'email' && isset($_POST['submit'])) {
+		if ($input == 'email') {
 			$model = $this->laadModel();
 			$model->checkUser($_POST['email']);
 		}
