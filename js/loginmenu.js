@@ -80,11 +80,13 @@ function checkInp(){
     var x=document.forms["input"]["AmountMVP"].value;
     var y=document.forms["input"]["PriceMVP"].value;
         x = isNumber(x);
+        alert("halppy");
         y = isNumber(y);
         if (x && y == true) {
-            return true;
+             document.form.submit();
         }else{
             $(".faultMVP").text("fail whale");
+            alert("sterf");
             return false;
         }
         ;
