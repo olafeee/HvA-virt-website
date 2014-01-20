@@ -7,7 +7,7 @@ class Account extends baseController {
 	function __construct() {
 		parent::__construct();
 		if (isset($_SESSION['loggedIn'])) {
-			header('location: ../account');
+			header('location: ../account_detail');
 		}
 	}
 	
@@ -19,7 +19,8 @@ class Account extends baseController {
 	}//eind run
 
 	function logout() {
-
+		session_destroy();
+		header('location: ../account')
 	}
 
 	function register() {
