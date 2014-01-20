@@ -4,7 +4,7 @@ class Account extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		if (isset($_SESSION['loggedIn'])) {
+		if (isset($_SESSION['loggedIn']) && ($_SESSION['loggedIn'] === true)) {
 			header('location: ../');
 		}
 	}
