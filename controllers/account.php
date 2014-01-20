@@ -25,6 +25,9 @@ class Account extends baseController {
 	}
 
 	function register($input) {
+		if (!isset($input)){
+			$this->index('register');
+		}
 		// Validate Email
 		if ($input == 'email') 
 		{
@@ -40,7 +43,7 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$model->createAccount($_POST);
 		} else {
-			$this->index('register');
+			header('location: ./register');
 		}
 	}
 
