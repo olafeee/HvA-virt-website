@@ -4,7 +4,7 @@ class Account extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		echo "TEST2";
+		echo "TEST3";
 
 		session_start();
 		if ($_SESSION['loggedIn'] === true) {
@@ -21,7 +21,7 @@ class Account extends baseController {
 	}//eind run
 
 	function logout() {
-		@session_start();
+		//@session_start();
 		session_destroy();
 		header('location: ../account');
 	}
