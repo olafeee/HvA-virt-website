@@ -47,9 +47,6 @@ class accountModel extends baseModel
 	// Check if user exist. Sends a JSON responce for AJAX use
 	public function checkUser($user)
 	{
-
-		$user = 'raouldijksman@gmail.com';
-
 		$response = array(
 			'valid' => false,
 			'message' => 'Post argument "user" is missing.'
@@ -57,9 +54,6 @@ class accountModel extends baseModel
 
 		$sth = $this->cloudstack->listAccounts($user);
 		$data = json_decode($sth,true);
-
-		echo "<pre>";
-		print_r($data);
 
 		if( $data['listaccountsresponse']['account'][0]['name']==$user ) {
 	    	// User name is registered on another account
