@@ -60,12 +60,12 @@ class accountModel extends baseModel
 
 		print_r($data);
 
-		if( $data[0]['Account']['name']==$user ) {
+		if( $data['listaccountsresponse']['Account']['name']==$user ) {
 	    	// User name is registered on another account
 	    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
 		} else {
 	    	// User name is available
-	    	$response = array('valid' => true, 'message' => 'No user but AJAX worked!');
+	    	$response = array('valid' => true, 'message' => 'No user but AJAX worked!!!');
 		}
 
 		echo json_encode($response);
