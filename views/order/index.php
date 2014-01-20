@@ -5,8 +5,6 @@
 		<script type="text/javascript">
 			onload=function() { 
 				DISKarrayss();
-			}
-			function DISKarrayss(){
 				DISKarr = <?print(json_encode($this->DISK));?>;
 				var testtt = JSON.parse(DISKarr);
 			}
