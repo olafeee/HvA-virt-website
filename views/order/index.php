@@ -7,7 +7,10 @@
 				DISKarrayss();
 			}
 			function DISKarrayss(){
-				DISKarr = JSON.parse(<?print(json_encode($this->DISK));?>);
+				DISKarr = <?print(json_encode($this->DISK));?>;
+				obj = JSON.parse(json);
+
+			alert(obj.count);
 			}
 		</script>
 	</div>
