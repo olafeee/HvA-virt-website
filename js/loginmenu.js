@@ -58,9 +58,9 @@ function showMVP(id, Amount, Price) {
     $(".MVPdiv").css("display", "block");
     $(".opacitySLAdiv").css("display", "block");
 
-    $('#idMVP').val(id);
-    $('#AmountMVP').val(Amount);
-    $('#PriceMVP').val(Price);
+    $('.idMVP').val(id);
+    $('.AmountMVP').val(Amount);
+    $('.PriceMVP').val(Price);
     // when clicked outside 
     // call the funtion 
     $('html').click(function() {
