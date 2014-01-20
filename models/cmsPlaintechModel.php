@@ -37,8 +37,8 @@ class cmsPlaintechModel extends baseModel
     }
   	function insertMVPitem($idMVP, $AmountMVP, $cmstext){
         $postData = array(
-            'pageid' => $AmountMVP,
-            'cmstext' => $PriceMVP
+            'DiskAmount' => $AmountMVP,
+            'DiskPrice' => $PriceMVP
         );
         
         $this->db->update('Disk_Array_Table', $postData, "`DID` = $idMVP ");
