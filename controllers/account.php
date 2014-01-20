@@ -28,6 +28,12 @@ class Account extends baseController {
 		$this->index('register');
 	}
 
+	function registerValidate($input) {
+		if ($input === 'email') {
+			
+		}
+	}
+
 	function runRegister() {
 		if(isset($_POST['submit'])) {
 

@@ -44,37 +44,29 @@ class accountModel extends baseModel
 		
 	}
 
-	/*public function runLogin()
+	// Check if user exist. Sends a JSON responce for AJAX use
+	public function checkUser($user)
 	{
-		echo "<pre>USERS:<br />";
-		print_r($_POST);
 
-		$sth = $this->db->prepare("SELECT * FROM user");
-		print_r($sth->fetchAll());
+		$response = array(
+			'valid' => false,
+			'message' => 'Post argument "user" is missing.'
+		);
+		
+		if( isset($user) ) {
+			$sth = $this->cloudstack->listAccounts($user);
+			$sth = json_decode($sth,true);
 
-		// ------------------------------------------------------------ //
-
-		$username = $_POST['login'];
-		$password = $_POST['password'];
-
-		$sth = $this->db->prepare("SELECT password FROM user WHERE username = :username AND password = :password");
-		$sth->execute(array(
-			':username' => $_POST['login'],
-			':password' => $_POST['password'],
-		));
-		$data = $sth->fetchAll();
-		print_r($data);
-
-		if (is_array($data) && array_key_exists("loginresponse", $data)) {
-			$loginArray = $data['loginresponse'];
-			Session::init();
-			Session::set('loggedIn', true);
-		    Session::set('logArr', $loginArray);
-			header('location: ../account');
-		} else {
-			//header('location: ../login');
+			if( $data[0]['Account']['name']==$user ) {
+		    	// User name is registered on another account
+		    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
+			} else {
+		    	// User name is available
+		    	$response = array('valid' => true);
+			}
 		}
-	}*/
+		echo json_encode($response);
+	}
 
 	public function createAccount($data) {
 
@@ -87,47 +79,6 @@ class accountModel extends baseModel
 		
 	}
 
-		public function register()
-	{
-		/*echo "Test!<br>";
-
-		// We controleren of alle velden gevuld zijn en vervolgens of de mail klopt
-		/*
-		if(empty($_POST['inputEmail']) || empty($_POST['inputPassword']) || empty($_POST['fname']) ||
-                empty($_POST['lname']) || empty($_POST['number']) || empty($_POST['adzip']) || empty($_POST['adnr']) ||
-                empty($_POST['country']) || !filter_var($_POST['inputEmail'],FILTER_VALIDATE_EMAIL)) {
-			//header('location: ../register');
-			echo "<br />Er is een fout in het formulier gevonden. Controleer alle velden nogmaals.<br />";
-			echo "<a href=\"javascript:history.go(-1);\">Ga terug naar het formulier</a><br />";
-			
-		} else { */
-			// We knallen alle Post-variabelen PHP variabelen in, dit is voor overzichtelijkheid.
-			/*$userEmail = $_POST['inputEmail'];
-			$userPassw = $_POST['inputPassword'];
-			$userFname = $_POST['inputFName'];
-			$userLname = $_POST['inputLName'];
-			
-
-			echo "$userFname <br />";
-			echo "$userLname <br />";
-			echo "$userEmail <br />";
-			echo "$userPassw <br />";
-			echo "<br /><br />";
-
-			$test = $this->cloudstack->listAccountsByName();
-			print_r($test);
-			echo "<br /><br />";
-
-			$accounttype = 0;
-
-			$responce = $this->cloudstack->createAccount($userEmail,$userFname,$userLname,$userPassw,$userEmail,$accounttype);
-
-			print($responce);
-		
-			echo "<br />Gebruiker is succesvol aangemaakt.<br />";
-		
-		//}		*/
-	}	
 }
 
 ?>
