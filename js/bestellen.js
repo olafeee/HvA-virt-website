@@ -265,7 +265,7 @@ function SLAradio(value){
 function orderPrice(){
    costCPU =  CPUamount*5;
    costRam = RAMShorter(RAMamount)*2.00;
-   costDisk = DISKPriceArray[standardValueDisk];
+   costDisk = tarr(standardValueDisk, "DiskPrice");
    costNT = standardValueNT * 2;
    costIPv4 = IPv4amount-1;
    totalOrderPrice = costCPU+costRam+costDisk+costNT+costIPv4;
