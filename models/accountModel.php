@@ -47,6 +47,9 @@ class accountModel extends baseModel
 	// Check if user exist. Sends a JSON responce for AJAX use
 	public function checkUser($user)
 	{
+
+		$user = 'raoul';
+
 		$response = array(
 			'valid' => false,
 			'message' => 'Post argument "user" is missing.'
