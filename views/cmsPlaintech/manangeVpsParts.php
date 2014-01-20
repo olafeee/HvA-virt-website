@@ -39,19 +39,6 @@
 <div class="col-md-3"></div>	
 </div>
 
-<script type="text/javascript">
-	onload=function(){
-alert(regIsNumber(9));
-}
-
-function regIsNumber(fData)
-{
-    var reg = new RegExp(”^[-]?[0-9]+[\.]?[0-9]+$”);
-    return reg.test(fData);
-}
-
-	
-</script>
 
 
 	
