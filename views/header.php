@@ -22,7 +22,8 @@ if($this->url0=='order'){
       }
       function tarr(x, y){
         pets = <?print(json_encode($this->DISK));?>;
-        alert(pets[x][y]);
+        var rvar = pets[x][y];
+        return rvar;
       }
     </script>
   <?php
