@@ -65,7 +65,9 @@
 		</form>
 
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
-		<script> $.validate(); </script>
+		<script> $.validate({
+			errorMessagePosition : 'top'
+		}); </script>
 		<br />
 	</div>
 </div>
