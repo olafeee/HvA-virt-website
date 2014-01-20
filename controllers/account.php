@@ -54,7 +54,7 @@ class Account extends baseController {
 	}
 
 	function registerSuccess() {
-		$this->index('register_success');
+		$this->index('registerSuccess');
 	}
 
 }//eind class
