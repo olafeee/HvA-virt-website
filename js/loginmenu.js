@@ -85,10 +85,12 @@ function checkInp(){
       if (isNaN(x)) 
       {
         $(".faultMVP").text(x+" is geen cijfer");
+        return false;
       }
     if (isNaN(y)) 
       {
          $(".faultMVP").text(y+" is geen cijfer");
+          return false;
       }
         
 }
