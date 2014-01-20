@@ -36,7 +36,7 @@ class Account extends baseController {
 	}
 
 	function runRegister($input) {
-		if ($input == 'email' && !$_POST['email']) {
+		if ($input == 'email' && isset($_POST['email'])) {
 			$model = $this->laadModel();
 			$model->checkUser($_POST['email']);
 		} else if(isset($_POST['submit'])) {
