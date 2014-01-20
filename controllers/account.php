@@ -5,6 +5,7 @@ class Account extends baseController {
 	function __construct() {
 		parent::__construct();
 
+		// Check if already logged in.
 		session_start();
 		if (isset($_SESSION['loggedIn'])) {
 			header('location: ../');
@@ -25,6 +26,7 @@ class Account extends baseController {
 	}
 
 	function register() {
+		echo "FIRED";
 		$this->index('register');
 	}
 
