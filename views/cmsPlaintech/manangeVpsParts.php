@@ -1,6 +1,6 @@
 <?php
 	$text = $this->cmsMVP;
-
+	print_r($text);
 	$i = 0;
 	echo'<form name="input" action="/cmsPlaintech/insertContent/" method="post">';
 	while ($i < count($text)) {
