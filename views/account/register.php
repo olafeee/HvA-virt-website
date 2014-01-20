@@ -9,21 +9,21 @@
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" placeholder="Email">
+	      <input type="email" class="form-control" id="email" placeholder="Email" data-validation="email">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" placeholder="Password">
+	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="1">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="passwordConfirm" class="col-sm-2 control-label">Confirm Password</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="passwordConfirm" placeholder="Password">
+	      <input type="password" class="form-control" id="passwordConfirm" placeholder="Password" data-validation="confirmation">
 	    </div>
 	  </div>
 
@@ -33,7 +33,7 @@
 	  <div class="form-group">
 	    <label for="fName" class="col-sm-2 control-label">First Name</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="fName" placeholder="Password">
+	      <input type="text" class="form-control" id="fName" placeholder="First Name" data-validation="required">
 	    </div>
 	  </div>
 
