@@ -17,7 +17,7 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<p><input type="password" class="form-control" id="inputPassword" name="pass_confirmation" placeholder="Password" data-validation="strength" data-validation-strength="1" ></p>
+						<input type="password" class="form-control" id="inputPassword" name="pass_confirmation" placeholder="Password" data-validation="strength" data-validation-strength="1" >
 					</div>
 				</div>
 			</div>
@@ -26,7 +26,7 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<p><input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation"></p>
+						<input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation">
 					</div>
 				</div>
 			</div>
