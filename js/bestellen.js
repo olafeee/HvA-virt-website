@@ -4,8 +4,8 @@ var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 //alert(pets);
-var QYI = tarr(0, "DiskPrice");
-alert(QYI);
+//var QYI = tarr(0, "DiskPrice");
+//alert(QYI);
 //alert(QYI.toString());
 //var obj = jQuery.parseJSON(jsonString);
 
@@ -18,7 +18,7 @@ var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
-var DISKamount = QYI[0]["DiskAmount"];
+var DISKamount = tarr(standardValueDisk, "DiskPrice");
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
@@ -157,7 +157,7 @@ function DISKslider() {
 function changeDISK(value){
     $('#hiddenChangeDISK').val(value);
     standardValueDisk = value;
-    DISKamount = DISKarr[standardValueDisk]['DiskAmount '];
+    DISKamount = tarr(standardValueDisk, "DiskPrice");
     $(".changeDISK").text(DISKamount+"GB");
     orderPrice();
 }
