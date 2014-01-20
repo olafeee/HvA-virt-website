@@ -56,7 +56,7 @@ class cmsPlaintech extends baseController {
 		$pageid = $_POST['pageid'];
 		$cmstext = $_POST['cmstext'];
 		$this->model->insertOneCmsItem($cwid, $pageid, $cmstext);
-		//header('location: /cmsPlaintech/viewPage/'.$pageid);
+		header('location: /cmsPlaintech/viewPage/'.$pageid);
 	}
 
 	 /**
@@ -68,6 +68,6 @@ class cmsPlaintech extends baseController {
                 $AmountMVP = $_POST['AmountMVP'];
                 $PriceMVP = $_POST['PriceMVP'];
                 $this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $pageMVP);
-                header('location: /cmsPlaintech/manangeVpsParts/Disk');
+                //header('location: /cmsPlaintech/manangeVpsParts/Disk');
         }
 }
