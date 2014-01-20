@@ -42,7 +42,7 @@
 				</div>
 			</div>
 			<div class="form-group">
-				<div class="col-xs-14">
+				<div class="col-xs-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
 						<input type="text" class="form-control" id="adzip" placeholder="Zip Code">
@@ -56,7 +56,8 @@
 				
 			<h2>Payment Information</h2>
 			<br />
-				
+			
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 		</form>
 		<br />
 	</div>
