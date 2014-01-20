@@ -79,7 +79,13 @@ function hideMVP() {
 function checkInp(){
     var x=document.forms["MVPdiv"]["AmountMVP"].value;
         x = isNumber(x);
-    alert(x);
+        if (x == true) {
+            return true;
+        }else{
+            $(".faultMVP").text("fail whale");
+            return false;
+        }
+        ;
 }
 
 function isNumber(n) {
