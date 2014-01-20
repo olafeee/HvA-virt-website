@@ -29,14 +29,14 @@ class Login extends baseController {
 	function runRegister() {
 		if(isset($_POST['submit'])) {
 
-			$data = new array {(
+			$data = array(
 				'' => '',
 				'' => '',
 				'' => '',
 				'' => '',
 				'' => '',
 				'' => '',
-			)};
+			);
 
 			$model = $this->laadModel();
 			$model->create_account($data);

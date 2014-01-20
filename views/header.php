@@ -47,7 +47,7 @@
               echo' <a href="javascript:showLoginMenu()" class="btn btn-default login-boton-pull-right kp_hm_ms">Account</a>';
               echo' <a href="javascript:hideLoginMenu()" class="btn btn-default login-boton-pull-right kp_hm_mh">Account</a>';
             }else{
-              echo'<a href="/login" class="btn btn-default login-boton-pull-right">Login</a>';
+              echo'<a href="/account" class="btn btn-default login-boton-pull-right">Login</a>';
             }?>      
           </div>
         </div>
