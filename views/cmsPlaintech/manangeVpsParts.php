@@ -18,8 +18,8 @@
 		while ($i < count($text)) {
 			echo '<tr>';
 			echo '<td>'.$text[$i][$kindMVP."Amount"].'</td>';
-			echo '<td>'.$text[$i][$kindMVP."DiskPrice"].'</td>';
-			echo '<td><a href="javascript:showMVP('.$i.', '.$text[$i]["DiskAmount"].', '.$text[$i]["DiskPrice"].')" class="sla_ms">more info</a></td>';	
+			echo '<td>'.$text[$i][$kindMVP."Price"].'</td>';
+			echo '<td><a href="javascript:showMVP('.$i.', '.$text[$i][$kindMVP."Amount"].', '.$text[$i][$kindMVP."Price"].')" class="sla_ms">more info</a></td>';	
 			echo"<tr/>";
 			$i++;
 		}?>
