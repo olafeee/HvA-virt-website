@@ -3,12 +3,12 @@
 		<h2>Login Information</h2>
 		<br />
 		<!-- New style test -->
-		<form class="form-horizontal" role="form" action="../account/runRegister" method="post" autocomplete="on">
+		<form class="form-horizontal" role="form" action="../account/runRegister" method="POST" autocomplete="on">
 			<div class="form-group">
 				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon">@</span>
-					  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+					  <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-validation="required">
 					</div>
 				</div>
 			</div>
