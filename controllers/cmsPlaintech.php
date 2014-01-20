@@ -55,7 +55,7 @@ class cmsPlaintech extends baseController {
 		$idMVP = matchInt(mysql_real_escape_string($_POST['idMVP']));
 		$AmountMVP = matchInt(mysql_real_escape_string($_POST['AmountMVP']));
 		$PriceMVP = matchInt(mysql_real_escape_string($_POST['PriceMVP']));
-		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP));
+		$this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP);
 		header('location: /cmsPlaintech/manangeVpsParts/Disk');
 	}
 
