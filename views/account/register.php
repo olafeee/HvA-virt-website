@@ -9,7 +9,7 @@
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email :</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  data-validation="server" data-validation-url="./registerValidate/email">
+	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  data-validation="email server" data-validation-url="./registerValidate/email">
 	    </div>
 	  </div>
 
@@ -33,21 +33,21 @@
 	  <div class="form-group">
 	    <label for="fname" class="col-sm-2 control-label">First Name :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" data-validation="alphanumeric">
+	      <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" data-validation="alphanumeric" data-validation-error-msg="Please enter your first name correctly.">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="lname" class="col-sm-2 control-label">Last Name :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" data-validation="alphanumeric">
+	      <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" data-validation="alphanumeric" data-validation-error-msg="Please enter your last name correctly.">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="adzip" class="col-sm-2 control-label">Zip Code :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="adzip" name="adzip" placeholder="Zip Code" data-validation="required">
+	      <input type="text" class="form-control" id="adzip" name="adzip" placeholder="Zip Code" data-validation="required" data-validation-error-msg="Please enter your zip code.">
 	    </div>
 	  </div>
 
