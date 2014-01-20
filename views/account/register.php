@@ -23,7 +23,7 @@
 	  </div>
 
 	  <div class="form-group">
-	    <label for="passwordConfirm" class="col-sm-2 control-label">Confirm Password</label>
+	    <label for="passwordConfirm" class="col-sm-2 control-label">Confirm</label>
 	    <div class="col-sm-10">
 	      <input type="password" class="form-control" id="passwordConfirm" placeholder="Password" data-validation="confirmation">
 	    </div>
@@ -74,8 +74,16 @@
 	    </div>
 	  </div>
 
-	  <input type='hidden' name='submit' />
-	  <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+	  <div class="form-group">
+	    <label for="submit" class="col-sm-2 control-label">Country</label>
+	    <div class="col-sm-10">
+	      <input type='hidden' name='submit' />
+	      <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Create Account</button>
+	    </div>
+	  </div>
+
+
+	  
 
 	</form>
 
