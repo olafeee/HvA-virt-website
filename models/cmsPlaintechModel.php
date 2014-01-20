@@ -35,6 +35,14 @@ class cmsPlaintechModel extends baseModel
         
         $this->db->update('CMS_website', $postData, "`cwid` = $cwid ");
     }
+  	function insertMVPitem($cwid, $pageid, $cmstext){
+        $postData = array(
+            'pageid' => $pageid,
+            'cmstext' => $cmstext
+        );
+        
+        $this->db->update('Disk_Array_Table', $postData, "`cwid` = $cwid ");
+    }
 
 	function getCmsIndex1($pageid){
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 

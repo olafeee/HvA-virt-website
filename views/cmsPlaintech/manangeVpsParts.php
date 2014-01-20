@@ -14,8 +14,8 @@
 ?>
 </form>
 
-<div class="MVPdiv"> 
-	<input type="text" id="AmountMVP" name="idMVP" value="idMVP">
+<div class="MVPdiv" action="/cmsPlaintech/" method="post"> 
+	<input type="text" id="idMVP" name="idMVP" value="idMVP">
 	<input type="text" id="AmountMVP" name="AmountMVP" value="AmountMVP">
 	<input type="text" id="PriceMVP" name="PriceMVP" value="PriceMVP">
 	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
