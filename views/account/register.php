@@ -3,12 +3,12 @@
 		<h2>Login Information</h2>
 		<br />
 		<!-- New style test -->
-		<form class="form-horizontal" role="form" action="../account/runRegister" method="post">
+		<form class="form-horizontal" role="form" action="../account/runRegister" method="post" required>
 			<div class="form-group">
 				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon">@</span>
-					  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+					  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
 					</div>
 				</div>
 			</div>
@@ -16,8 +16,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<input type="password" class="form-control" id="inputPassword" placeholder="Password">
-						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password">
+						<input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+						<input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required>
 					</div>
 				</div>
 			</div>
@@ -28,8 +28,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-					  <input type="text" class="form-control" id="fname" placeholder="First Name">
-					  <input type="text" class="form-control" id="lname" placeholder="Last Name">
+					  <input type="text" class="form-control" id="fname" placeholder="First Name" required>
+					  <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
 					</div>
 				</div>
 			</div>
