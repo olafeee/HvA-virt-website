@@ -72,6 +72,8 @@
 	    </div>
 	  </div>
 
+	  <br />
+
 	  <div class="form-group">
 	    <label for="reseller" class="col-sm-2 control-label">Reseller :</label>
 	    <div class="col-sm-10">
@@ -99,7 +101,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 	<script> 
 		$.validate({
-			modules : 'security','security',
+			modules : 'security',
 			onModulesLoaded : function() {
 			    var optionalConfig = {
 			      fontSize: '8pt',
