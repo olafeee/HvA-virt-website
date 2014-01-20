@@ -77,8 +77,8 @@ function hideMVP() {
     $(".opacitySLAdiv").css("display", "none");  
 }
 function checkInp(){
-    var x=document.forms["MVPdiv"]["AmountMVP"].value;
-    var y=document.forms["MVPdiv"]["PriceMVP"].value;
+    var x=document.forms["input"]["AmountMVP"].value;
+    var y=document.forms["input"]["PriceMVP"].value;
         x = isNumber(x);
         y = isNumber(y);
         if (x && y == true) {
