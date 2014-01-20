@@ -42,7 +42,7 @@ class cmsPlaintechModel extends baseModel
             'DiskPrice' => $PriceMVP
         );
         
-        $this->db->update($arr, $postData, "`$id` = $idMVP ");
+        $this->db->update($arr, $postData, "`Disk` = $idMVP ");
     }
 
 	function getCmsIndex1($pageid){
