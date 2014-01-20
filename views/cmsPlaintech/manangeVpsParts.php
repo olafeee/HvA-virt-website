@@ -2,7 +2,7 @@
 	$text = $this->cmsMVP;
 
 	$i = 0;
-	echo'<form name="input" action="/cmsPlaintech/insertContent/" method="post">';
+	echo'<table>';
 	while ($i < count($text)) {
 		echo '<tr>';
 		echo '<td>'.$text[$i]["DiskAmount"].'</td>';
@@ -11,15 +11,17 @@
 		echo"<tr/>";
 		$i++;
 	}
+	echo'</table>';
 ?>
-</form>
 
-<div class="MVPdiv" action="/cmsPlaintech/" method="post"> 
-	<input type="text" id="idMVP" name="idMVP" value="idMVP">
-	<input type="text" id="AmountMVP" name="AmountMVP" value="AmountMVP">
-	<input type="text" id="PriceMVP" name="PriceMVP" value="PriceMVP">
-	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 
+<div class="MVPdiv"> 
+	<form name="input" action="/cmsPlaintech/insertContent/" method="post">
+		<input type="text" id="idMVP" name="idMVP" value="idMVP">
+		<input type="text" id="AmountMVP" name="AmountMVP" value="AmountMVP">
+		<input type="text" id="PriceMVP" name="PriceMVP" value="PriceMVP">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+	</form>
 </div>
 
 
