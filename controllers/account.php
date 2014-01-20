@@ -44,7 +44,7 @@ class Account extends baseController {
 		if(isset($_POST['submit'])) {
 			$model = $this->laadModel();
 			$response = $model->createAccount($_POST);
-			if ($response == true ) {
+			if ($response == TRUE ) {
 				$this->index('register_success');
 			}
 		} else {
