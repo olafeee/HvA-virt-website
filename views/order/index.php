@@ -5,8 +5,9 @@
 		<script type="text/javascript">
 			onload=function() { 
 				DISKarrayss();
-				DISKarr = <?print(json_encode($this->DISK));?>;
-				var testtt = JSON.parse(DISKarr);
+				pets = <?print(json_encode($this->DISK));?>;
+				var arr = JSON.parse(pets);
+				alert(arr.pets[0].name);
 			}
 		</script>
 	</div>
