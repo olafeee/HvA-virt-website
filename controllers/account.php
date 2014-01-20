@@ -1,13 +1,11 @@
 <?php
 
-require_once("lib/cloudstack.php");
-
 class Account extends baseController {
 
 	function __construct() {
 		parent::__construct();
 		if (isset($_SESSION['loggedIn'])) {
-			header('location: ../account_detail');
+			header('location: ../');
 		}
 	}
 	
@@ -19,7 +17,7 @@ class Account extends baseController {
 	}//eind run
 
 	function logout() {
-		@session_start();
+		//@session_start();
 		session_destroy();
 		header('location: ../account');
 	}
