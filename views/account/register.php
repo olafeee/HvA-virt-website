@@ -55,10 +55,12 @@
 			</div>
 
 									<div class="bfh-selectbox" data-name="selectbox3" data-value="12" data-filter="true">
-						<select class="form-control bfh-countries" data-country="NL"></select>
+						
 						</div>
 
-						<div class="bfh-selectbox bfh-countries" data-country="NL" data-flags="true">
+						<select class="form-control bfh-countries" data-country="NL"></select>
+
+						<div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
 						</div>
 				
 			<h2>Payment Information</h2>
