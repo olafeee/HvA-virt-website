@@ -72,7 +72,6 @@ class accountModel extends baseModel
 		$response = json_decode($response,true);
 
 		if (array_key_exists('account', $response['createaccountresponse'])) {
-			$this->runLogin($data['email'],$data['password']);
 			return TRUE;
 		} else {
 			print_r($response);

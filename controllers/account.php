@@ -46,6 +46,7 @@ class Account extends baseController {
 			$response = $model->createAccount($_POST);
 			if ($response == TRUE ) {
 				$this->index('register_success');
+				$model->runLogin($data['email'],$data['password']);
 			}
 		} else {
 			header('location: /account/register');
