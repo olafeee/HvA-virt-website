@@ -78,7 +78,7 @@ class accountModel extends baseModel
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		print_r($response);
 
-		if (array_key_exists('account', $data['createaccountresponse'])) {
+		if (array_key_exists('account', $response['createaccountresponse'])) {
 			$this->runLogin($data['email'],$data['password']);
 		} else {
 			return 'false';
