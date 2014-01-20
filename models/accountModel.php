@@ -34,7 +34,7 @@ class accountModel extends baseModel
 			Session::init();
 			Session::set('loggedIn', true);
 		    Session::set('logArr', $loginArray);
-			header('location: ../');
+			header('location: ../managementApp');
 		} else {
 			header('location: ../account');
 		}
