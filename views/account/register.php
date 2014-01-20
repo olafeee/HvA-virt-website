@@ -8,7 +8,7 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon">@</span>
-					  <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-validation="required">
+					  <input type="email" class="form-control" id="inputEmail" placeholder="Email" data-validation="email">
 					</div>
 				</div>
 			</div>
@@ -16,8 +16,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<p><input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" data-validation="strength" data-validation-strength="2" autocomplete="off" ></p>
-						<p><input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation" autocomplete="off" ></p>
+						<p><input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" data-validation="strength" data-validation-strength="1" ></p>
+						<p><input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation"></p>
 					</div>
 				</div>
 			</div>
@@ -28,8 +28,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-					  <input type="text" class="form-control" id="fname" placeholder="First Name" >
-					  <input type="text" class="form-control" id="lname" placeholder="Last Name" >
+					  <input type="text" class="form-control" id="fname" placeholder="First Name" data-validation="required" >
+					  <input type="text" class="form-control" id="lname" placeholder="Last Name" data-validation="required" >
 					</div>
 				</div>
 			</div>
