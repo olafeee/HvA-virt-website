@@ -75,6 +75,7 @@ class accountModel extends baseModel
 			$this->runLogin($data['email'],$data['password']);
 			return TRUE;
 		} else {
+			print_r($response);
 			return FALSE;
 		}
 		
