@@ -16,14 +16,14 @@
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password :</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" name="password" placeholder="Password" data-validation="strength" data-validation-strength="2" data-validation-help="Please pick a strong password!">
+	      <input type="password" class="form-control" id="password" name="pass_confirmation" placeholder="Password" data-validation="strength" data-validation-strength="2" data-validation-help="Please pick a strong password!">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="passwordConfirm" class="col-sm-2 control-label">Confirm :</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password" data-validation="confirmation">
+	      <input type="password" class="form-control" id="passwordConfirm" name="pass" placeholder="Confirm Password" data-validation="confirmation">
 	    </div>
 	  </div>
 
@@ -119,9 +119,7 @@
 
 		$( document ).ready(function() {
 			// Show tooltip
-			$('#reseller').tooltip({
-				position: { my: "left+1 ", at: " center" }
-			}); 
+			$('#reseller').tooltip(); 
 		});
 		
 	</script>
