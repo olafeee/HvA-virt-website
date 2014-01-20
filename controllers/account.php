@@ -19,6 +19,7 @@ class Account extends baseController {
 	}//eind run
 
 	function logout() {
+		@session_start();
 		session_destroy();
 		header('location: ../account');
 	}
