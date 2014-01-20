@@ -73,10 +73,11 @@
 	  </div>
 
 	  <div class="form-group">
+	    <label for="reseller" class="col-sm-2 control-label">Reseller :</label>
 	    <div class="col-sm-offset-2 col-sm-10">
 	      <div class="checkbox">
 	        <label>
-	          <input type="checkbox" name="reseller" data-validation-help="Select this if your a reseller.">Reseller?</label>
+	          <input type="checkbox" name="reseller" data-validation-help="Select this if your a reseller.">I would like a reseller's account.</label>
 	      </div>
 	    </div>
 	  </div>
