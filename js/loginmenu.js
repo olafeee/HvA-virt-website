@@ -53,11 +53,12 @@ function hideSLAMenu() {
 }
  
 
-function showMVP(Amount, Price) {
+function showMVP(id, Amount, Price) {
     //change display to block
     $(".MVPdiv").css("display", "block");
     $(".opacitySLAdiv").css("display", "block");
 
+    $('#idMVP').val(id);
     $('#AmountMVP').val(Amount);
     $('#PriceMVP').val(Price);
     // when clicked outside 

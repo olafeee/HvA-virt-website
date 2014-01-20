@@ -3,7 +3,7 @@
   <div class="col-md-6">
     <div class="login-class">
       <img src="/img/plaintech-logo.png" id="img-login-logo">
-      <form class="form-signin" action="../account/login" method="post">
+      <form class="form-signin" action="/account/login" method="post">
         <input type="text" class="form-control" placeholder="Email address" required="" autofocus="" name="login">
         <input type="password" class="form-control" placeholder="Password" required="" name="password">
         <br/>
