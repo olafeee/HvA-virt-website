@@ -35,17 +35,14 @@ class Account extends baseController {
 		}
 	}
 
-	function runRegister($input) {
-		if(!empty($input) && isset($_POST['submit'])) {
+	function runRegister() {
+		if(isset($_POST['submit'])) {
 			echo "<pre>";
 			$model = $this->laadModel();
 			$response = $model->createAccount($_POST);
 			if ($response == true ) {
 				$this->index('register_success');
 			}
-		} else if ($input == 'email' && isset($_POST['email'])) {
-			$model = $this->laadModel();
-			$model->checkUser($_POST['email']);
 		} else {
 			header('location: /account/register');
 		}
