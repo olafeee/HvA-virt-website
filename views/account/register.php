@@ -87,7 +87,7 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 	<script> 
 		$.validate({
-			modules : 'security',
+			modules : 'security','security',
 			onModulesLoaded : function() {
 			    var optionalConfig = {
 			      fontSize: '8pt',
