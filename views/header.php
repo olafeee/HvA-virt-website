@@ -37,7 +37,7 @@ if($this->url0=='order'){
   <script type="text/javascript" src="/js/loginmenu.js"></script>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
   <!-- Bootstrap Form Helpers -->
-  <script src="js/bootstrap-formhelpers.min.js"></script>
+  <script src="/js/bootstrap-formhelpers.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
