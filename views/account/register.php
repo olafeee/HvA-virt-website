@@ -26,7 +26,7 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation">
+						<input type="password" class="form-control" name="pass" id="inputPassword2" placeholder="Confirm Password" data-validation="confirmation">
 					</div>
 				</div>
 			</div>
