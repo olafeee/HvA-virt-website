@@ -78,8 +78,10 @@ function hideMVP() {
 }
 function checkInp(){
     var x=document.forms["MVPdiv"]["AmountMVP"].value;
+    var y=document.forms["MVPdiv"]["PriceMVP"].value;
         x = isNumber(x);
-        if (x == true) {
+        y = isNumber(x);
+        if (x && y == true) {
             return true;
         }else{
             $(".faultMVP").text("fail whale");
