@@ -3,8 +3,8 @@ var RAMarray=[512,1024,2048,3096,4096,6144,8192,12288,16384,24576,32768];
 var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
-var QYI[][] = pets;
-
+var QYI = pets;
+alert(pets[0]["DiskPrice"]);
 var standardValueCPU ;
 var standardValueRAM;
 var standardValueDisk;
