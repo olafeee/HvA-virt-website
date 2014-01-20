@@ -36,8 +36,6 @@ if($this->url0=='order'){
   <!--<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>-->
   <script type="text/javascript" src="/js/loginmenu.js"></script>
   <script type="text/javascript" src="/js/bootstrap.js"></script>
-  <!-- Bootstrap Form Helpers -->
-  <script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->

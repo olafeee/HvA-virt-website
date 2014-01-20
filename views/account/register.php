@@ -64,6 +64,8 @@
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 		</form>
 
+		<!-- Bootstrap Form Helpers -->
+		<script type="text/javascript" src="/js/bootstrap-formhelpers.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 		<script> 
 			$.validate({
