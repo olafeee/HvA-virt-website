@@ -16,8 +16,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-						<p><input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" data-validation="strength" data-validation-strength="2" autocomplete="off" required></p>
-						<p><input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation" autocomplete="off" required></p>
+						<p><input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password" data-validation="strength" data-validation-strength="2" autocomplete="off" ></p>
+						<p><input type="password" class="form-control" id="inputPassword2" name="inputPassword2" placeholder="Confirm Password" data-validation="confirmation" autocomplete="off" ></p>
 					</div>
 				</div>
 			</div>
@@ -28,8 +28,8 @@
 				<div class="col-sm-12">
 					<div class="input-group">
 					  <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-					  <input type="text" class="form-control" id="fname" placeholder="First Name" required>
-					  <input type="text" class="form-control" id="lname" placeholder="Last Name" required>
+					  <input type="text" class="form-control" id="fname" placeholder="First Name" >
+					  <input type="text" class="form-control" id="lname" placeholder="Last Name" >
 					</div>
 				</div>
 			</div>
@@ -39,7 +39,7 @@
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span>
 						<input type="text" class="form-control" id="adzip" placeholder="Zip Code" required>
-						<input type="number" class="form-control bfh-number" data-min="1" id="adnr" placeholder="Street Number" required>
+						<input type="number" class="form-control bfh-number" data-min="1" id="adnr" placeholder="Street Number" >
 						<select id="country" class="form-control bfh-countries" data-country="NL"></select>
 						
 					</div>
