@@ -6,7 +6,7 @@ define('DB_NAME', 'cloud');
 define('DB_USER', 'root');
 define('DB_PASS', 'R_47*Qp12');
 
-define('DB_HOST1', 'config');
+define('DB_HOST1', '145.92.14.96');
 define('DB_NAME1', 'user_db_plaintech');
 define('DB_USER1', 'user_admin');
 define('DB_PASS1', 'T=56(Wp23');
