@@ -4,25 +4,28 @@
 * 
 */
 
+require_once("lib/cloudstack.php");
 require_once("lib/cloudstack_sign.php");
 
 class accountModel extends baseModel
 {
 	
 	public $cloudstack;
+	public $cloudstack_sign();
 
 	function __construct()
 	{
 		parent::__construct();
 		$this->conDB();
-		$this->cloudstack = new cloudstack_sign();
+		$this->cloudstack = new cloudstack();
+		$this->cloudstack_sign = new cloudstack_sign();
 	}
 
 	public function runLogin()
 	{
 		$username = $_POST['login'];
 		$password = $_POST['password'];
-		$sth = $this->cloudstack->login($username, $password);
+		$sth = $this->cloudstack_sign->login($username, $password);
 		$data = json_decode($sth,true);
 
 		//Debug
@@ -75,18 +78,8 @@ class accountModel extends baseModel
 
 	public function createAccount($data) {
 
-		$data = array(
-			'email' => $_POST['email'],
-			'password' => $_POST['password'],
-			'passwordConfirm' => $_POST['passwordConfirm'],
-			'firstname' => $_POST['fname'],
-			'lastname' => $_POST['lname'],
-			'' => $_POST[''],
-			'' => $_POST[''],
-		);
-
-
-		http://145.92.14.90:5990/client/api?command=createAccount&accounttype=0&email=test&firstname=test&lastname=testlast&password=test&username=test
+		// Send to cloudstack DB
+		$this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email'], $data['reseller']);
 		
 	}
 
