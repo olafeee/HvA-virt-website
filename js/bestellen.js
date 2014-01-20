@@ -4,7 +4,7 @@ var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 //alert(pets);
-var QYI = tarr();
+var QYI = tarr(0, "DiskPrice");
 alert(QYI);
 //alert(QYI.toString());
 //var obj = jQuery.parseJSON(jsonString);

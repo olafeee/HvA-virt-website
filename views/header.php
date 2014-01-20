@@ -18,11 +18,11 @@ if($this->url0=='order'){
 ?>
     <script type="text/javascript">
       onload=function() { 
-        tarr();
+        tarr(0, "DiskPrice");
       }
-      function tarr(){
+      function tarr(x, y){
         pets = <?print(json_encode($this->DISK));?>;
-        alert(pets[0]["DiskPrice"]);
+        alert(pets[x][y]);
       }
     </script>
   <?php
