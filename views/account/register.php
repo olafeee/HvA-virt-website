@@ -17,7 +17,7 @@
 					<div class="input-group">
 						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
 						<p><input type="password" class="form-control" id="inputPassword" placeholder="Password" data-validation="length" data-validation-length="min6" autocomplete="off" required></p>
-						<p><input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" data-validation="length" data-validation-length="min6" autocomplete="off" required></p>
+						<p><input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" data-validation="confirmation" autocomplete="off" required></p>
 					</div>
 				</div>
 			</div>
@@ -67,6 +67,16 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 		<script> $.validate({
 			errorMessagePosition : 'top'
+			var optionalConfig = {
+		      fontSize: '12pt',
+		      padding: '4px',
+		      bad : 'Very bad',
+		      weak : 'Weak',
+		      good : 'Good',
+		      strong : 'Strong'
+		    };
+
+		    $('input[name="inputPassword"]').displayPasswordStrength(optionalConfig);
 		}); </script>
 		<br />
 	</div>
