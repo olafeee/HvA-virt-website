@@ -31,12 +31,6 @@ function showLoginMenu() {
 	});
 }
 
-function hideSLAMenu() {
-    //change display to none
-    $(".SLAdiv").css("display", "none");
-    $(".opacitySLAdiv").css("display", "none");  
-}
-
 function showSLAMenu() {
     //change display to block
     $(".SLAdiv").css("display", "block");
@@ -50,6 +44,36 @@ function showSLAMenu() {
     $('.SLAdiv').click(function(event){
     event.stopPropagation();
     });
+}
+
+function hideSLAMenu() {
+    //change display to none
+    $(".SLAdiv").css("display", "none");
+    $(".opacitySLAdiv").css("display", "none");  
+}
+ 
+
+function showMVP(Amount, Price) {
+    //change display to block
+    $(".MVPdiv").css("display", "block");
+    $(".opacitySLAdiv").css("display", "block");
+
+    $('#AmountMVP').val(Amount);
+    $('#PriceMVP').val(Price);
+    // when clicked outside 
+    // call the funtion 
+    $('html').click(function() {
+    hideMVP()
+    });
+    $('.SLAdiv').click(function(event){
+    event.stopPropagation();
+    });
+}
+
+function hideMVP() {
+    //change display to none
+    $(".MVPdiv").css("display", "none");
+    $(".opacitySLAdiv").css("display", "none");  
 }
 
 // 
