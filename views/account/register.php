@@ -51,7 +51,8 @@
 							<?php include('register_countries.php'); ?>
 						</select>
 
-						<div class="bfh-selectbox bfh-countries" data-country="US" data-flags="true">
+						<div class="bfh-selectbox bfh-countries" data-country="NL" data-flags="true">
+							<select class="form-control bfh-countries" data-country="NL"></select>
 						</div>
 					</div>
 				</div>
@@ -60,7 +61,7 @@
 			<h2>Payment Information</h2>
 			<br />
 			
-			<input type="hiden" id="submit">
+			<input type='hidden' name='submit' />
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
 		</form>
 		<br />
