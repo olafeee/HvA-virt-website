@@ -16,7 +16,7 @@
 
 
 <div class="MVPdiv"> 
-	<form name="input" action="/cmsPlaintech/insertContent/" method="post">
+	<form name="input" action="/cmsPlaintech/insertMVP" method="post">
 		<input type="text" id="idMVP" name="idMVP" value="idMVP">
 		<input type="text" id="AmountMVP" name="AmountMVP" value="AmountMVP">
 		<input type="text" id="PriceMVP" name="PriceMVP" value="PriceMVP">
