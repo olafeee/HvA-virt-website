@@ -78,7 +78,7 @@ function hideMVP() {
 }
 function checkInp(){
     var x=document.forms["MVPdiv"]["AmountMVP"].value;
-       // x = isNumber(x);
+        x = isNumber(x);
     alert(x);
 }
 
