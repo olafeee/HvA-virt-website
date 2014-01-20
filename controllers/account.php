@@ -31,6 +31,7 @@ class Account extends baseController {
 	function runRegister() {
 		if(isset($_POST['submit'])) {
 
+			echo "<pre>";
 			print_r($_POST);
 
 			$model = $this->laadModel();
