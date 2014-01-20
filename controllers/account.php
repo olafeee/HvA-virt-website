@@ -17,10 +17,9 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$model->runLogin();
 		}
-	}//eind run
+	}
 
 	function logout() {
-		//@session_start();
 		session_destroy();
 		header('location: ../account');
 	}
