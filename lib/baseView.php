@@ -4,7 +4,8 @@ class baseView {
 
 	function __construct() {
 		$url = $this->urlfix();
-		$this->baseView->url0 = $url[0];
+		print_r($url);
+		//$this->baseView->url0 = $url[0];
 	}
 
 	public function render($name)
