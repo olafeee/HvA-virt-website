@@ -53,7 +53,8 @@
 					</div>
 				</div>
 			</div>
-			<select class="form-control bfh-countries" data-country="NL"></select>
+			<select id="country" class="form-control bfh-countries" data-country="NL"></select>
+			<input type="text" class="form-control bfh-phone" data-country="country">
 				
 			<h2>Payment Information</h2>
 			<br />
