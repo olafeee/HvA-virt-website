@@ -21,10 +21,8 @@ class accountModel extends baseModel
 		$this->cloudstack_sign = new cloudstack_sign();
 	}
 
-	public function runLogin()
+	public function runLogin($username, $password)
 	{
-		$username = $_POST['login'];
-		$password = $_POST['password'];
 		$sth = $this->cloudstack_sign->login($username, $password);
 		$data = json_decode($sth,true);
 
@@ -47,7 +45,6 @@ class accountModel extends baseModel
 	// Check if user exist. Sends a JSON responce for AJAX use
 	public function checkUser($user)
 	{
-
 		$response = array(
 			'valid' => false,
 			'message' => 'Post argument "user" is missing.'
@@ -68,7 +65,6 @@ class accountModel extends baseModel
 			// User name is available
 		    $response = array('valid' => true);
 		}
-
 		echo json_encode($response);
 	}
 
@@ -78,15 +74,14 @@ class accountModel extends baseModel
 		print_r($data);
 
 		// SQL Injection prefection TODO HERE ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!
-
 		// Send to cloudstack DB
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		print_r($response);
 
 		if (array_key_exists('account', $data['listaccountsresponse'])) {
-			return true;
+			$this->
 		} else {
-			return false;
+			return 'false';
 		}
 		
 	}

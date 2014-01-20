@@ -15,7 +15,7 @@ class Account extends baseController {
 	function login() {
 		if (!isset($_SESSION['loggedIn'])) {
 			$model = $this->laadModel();
-			$model->runLogin();
+			$model->runLogin($_POST['login'], $_POST['password']);
 		}
 	}
 
