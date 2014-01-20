@@ -20,7 +20,7 @@
 			echo '<tr>';
 			echo '<td>'.$text[$i][$kindMVP."Amount"].'</td>';
 			echo '<td>'.$text[$i][$kindMVP."Price"].'</td>';
-?><td><a href="javascript:showMVP(<?php echo $i; ?>,  <?php echo $text[$i][$kindMVP."Amount"]; ?>, <?php echo $text[$i][$kindMVP."Price"]; ?>,  <?php echo $kindMVP; ?> )" class="sla_ms">more info</a></td>';	<?php			
+?><td><a href='javascript:showMVP(<?php echo $i; ?>,  <?php echo $text[$i][$kindMVP."Amount"]; ?>, <?php echo $text[$i][$kindMVP."Price"]; ?>,  <?php echo $kindMVP; ?> )' class="sla_ms">more info</a></td>';	<?php			
 			//echo '<td><a href="javascript:showMVP('.$i.', '.$text[$i][$kindMVP."Amount"].', '.$text[$i][$kindMVP."Price"].', '.$kindMVP.')" class="sla_ms">more info</a></td>';	
 			echo"<tr/>";
 			$i++;
