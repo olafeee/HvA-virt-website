@@ -51,7 +51,9 @@
 							<?php include('register_countries.php'); ?>
 						</select>
 
+						<div class="bfh-selectbox" data-name="selectbox3" data-value="12" data-filter="true">
 						<select class="form-control bfh-countries" data-country="NL"></select>
+						</div>
 
 						<div class="bfh-selectbox bfh-countries" data-country="NL" data-flags="true">
 						</div>
