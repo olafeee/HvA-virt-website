@@ -27,9 +27,10 @@ class cmsPlaintech extends baseController {
 	}
 
 	function manangeVpsParts($id){
-		$cmsMVP = $this->model->getCmsIndex("CMS_pages", "*");
+		$table = $id.'_Array_Table';
+		$cmsMVP = $this->model->getCmsIndex($table, "*");
 		$this->baseView->cmsMVP = $cmsMVP;
-		$this->index('viewPage');
+		$this->index('manangeVpsParts');
 	}
 
 	function editContent($pid,$cwid){
