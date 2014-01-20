@@ -22,6 +22,7 @@ if($this->url0=='order'){
       }
       function tarr(){
         pets = <?print(json_encode($this->DISK));?>;
+        alert(pets[0]["DiskPrice"]);
       }
     </script>
   <?php
