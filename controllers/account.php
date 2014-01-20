@@ -41,7 +41,7 @@ class Account extends baseController {
 			);
 
 			$model = $this->laadModel();
-			$model->create_account($data);
+			$model->createAccount($data);
 		} else {
 			echo "NO POST!";
 		}
