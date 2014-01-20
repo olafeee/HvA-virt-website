@@ -78,8 +78,12 @@ class accountModel extends baseModel
 
 	public function createAccount($data) {
 
+		echo "CreateAccount() Running!<br><br>";
+		print_r($data);
+
 		// Send to cloudstack DB
-		$this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
+		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
+		print_r($response);
 		
 	}
 
