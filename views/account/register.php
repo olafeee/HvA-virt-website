@@ -16,7 +16,7 @@
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password :</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" name="password" placeholder="Password" data-validation="strength" data-validation-strength="1" data-validation-help="Please pick a strong password!">
+	      <input type="password" class="form-control" id="password" name="password" placeholder="Password" data-validation="strength" data-validation-strength="2" data-validation-help="Please pick a strong password!">
 	    </div>
 	  </div>
 
@@ -119,7 +119,9 @@
 
 		$( document ).ready(function() {
 			// Show tooltip
-			$('#resellerCheckbox').tooltip(); 
+			$('#resellerCheckbox').tooltip(
+				position: { my: "left+15 center", at: "right center" }
+			); 
 		});
 		
 	</script>
