@@ -29,14 +29,6 @@
 
 <div class="MVPdiv"> 
 	<form name="input" action="/cmsPlaintech/insertMVP" method="post">
-		<input type="hidden" name="idMVP" value="idMVP">
-		<input type="text" class="form-control bfh-number AmountMVP" name="AmountMVP" value="AmountMVP">
-		<input type="text" class="form-control bfh-number PriceMVP" name="PriceMVP" value="PriceMVP">
-		
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-	</form>
-
-	<form name="input" action="/cmsPlaintech/insertMVP" method="post">
         <input type="hidden" class="idMVP" name="idMVP" value="idMVP">
         <input type="text" class="form-control bfh-number AmountMVP" name="AmountMVP" value="AmountMVP">
         <input type="text" class="form-control bfh-number PriceMVP" name="PriceMVP" value="PriceMVP">
