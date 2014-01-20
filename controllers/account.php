@@ -32,8 +32,6 @@ class Account extends baseController {
 		if ($input === 'email') {
 			$model = $this->laadModel();
 			$model->checkUser($input);
-		} else {
-			echo "fail";
 		}
 	}
 
