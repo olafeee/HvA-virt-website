@@ -8,7 +8,7 @@ class Account extends baseController {
 		// Check if already logged in.
 		session_start();
 		if (isset($_SESSION['loggedIn'])) {
-			header('location: ../');
+			header('location: /KANKERMAAREENSOP');
 		}
 	}
 	
