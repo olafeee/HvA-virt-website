@@ -9,7 +9,7 @@
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email :</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  data-validation-url="./registerValidate/email">
+	      <input type="email" class="form-control" id="email" name="email" placeholder="Email"  data-validation="server" data-validation-url="./registerValidate/email">
 	    </div>
 	  </div>
 
