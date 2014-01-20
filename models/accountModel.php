@@ -62,7 +62,7 @@ class accountModel extends baseModel
 		    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
 			} else {
 		    	// User name is available
-		    	$response = array('valid' => true);
+		    	$response = array('valid' => true, 'message' => 'No user but AJAX worked!');
 			}
 		}
 		echo json_encode($response);
