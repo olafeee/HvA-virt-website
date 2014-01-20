@@ -40,8 +40,8 @@ class cmsPlaintechModel extends baseModel
         $x = $id[0]."ID";
         echo $x;
         $postData = array(
-            'DiskAmount' => $AmountMVP,
-            'DiskPrice' => $PriceMVP
+            $id.'Amount' => $AmountMVP,
+            $id.'Price' => $PriceMVP
         );
  		echo "<br/>";
 		echo $arr;
