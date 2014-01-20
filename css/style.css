@@ -592,3 +592,8 @@ p.order_options_OS{
 	width: 20px;
 	height:20px;
 }
+
+.validating_server_side input.server {
+	background: url(img/ajax-preloader.gif) no-repeat center right;
+	opacity: 0.6
+}
