@@ -15,7 +15,12 @@ class Account extends baseController {
 	function login() {
 		if (!isset($_SESSION['loggedIn'])) {
 			$model = $this->laadModel();
-			$model->runLogin($_POST['login'], $_POST['password']);
+			$response = $model->runLogin($_POST['login'], $_POST['password']);
+			if ($response == true) {
+				header('location: /management');
+			} else {
+				header('location: /account');
+			}
 		}
 	}
 

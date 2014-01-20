@@ -35,9 +35,9 @@ class accountModel extends baseModel
 			Session::init();
 			Session::set('loggedIn', true);
 		    Session::set('logArr', $loginArray);
-			header('location: ../managementApp');
+			return true;
 		} else {
-			header('location: ../account');
+			return false;
 		}
 		
 	}
@@ -79,6 +79,7 @@ class accountModel extends baseModel
 
 		if (array_key_exists('account', $response['createaccountresponse'])) {
 			$this->runLogin($data['email'],$data['password']);
+			return 'true';
 		} else {
 			return 'false';
 		}
