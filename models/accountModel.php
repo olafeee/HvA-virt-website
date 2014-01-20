@@ -73,6 +73,7 @@ class accountModel extends baseModel
 
 		// Send to cloudstack DB
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
+		$response = json_decode($response,true);
 		echo "<pre>";
 		var_dump($response);
 
