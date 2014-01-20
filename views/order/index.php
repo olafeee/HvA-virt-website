@@ -4,10 +4,10 @@
 	<div class="col-md-1">
 		<script type="text/javascript">
 			onload=function() { 
-				DISKarrayss();
+				//DISKarrayss();
 				pets = <?print(json_encode($this->DISK));?>;
 				var arr = JSON.parse(pets);
-				alert(arr.pets[0].name);
+				alert(arr.pets[0].DiskAmount);
 			}
 		</script>
 	</div>
