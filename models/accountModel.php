@@ -73,7 +73,18 @@ class accountModel extends baseModel
 		}
 	}*/
 
-	public function createAccount() {
+	public function createAccount($data) {
+
+		$data = array(
+			'email' => $_POST['email'],
+			'password' => $_POST['password'],
+			'passwordConfirm' => $_POST['passwordConfirm'],
+			'firstname' => $_POST['fname'],
+			'lastname' => $_POST['lname'],
+			'' => $_POST[''],
+			'' => $_POST[''],
+		);
+
 
 		http://145.92.14.90:5990/client/api?command=createAccount&accounttype=0&email=test&firstname=test&lastname=testlast&password=test&username=test
 		

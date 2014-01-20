@@ -1,7 +1,7 @@
 
 <div class="row">
 
-	<form class="form-horizontal" role="form" >
+	<form class="form-horizontal" role="form" action="../account/runRegister" method="post">
 
 	  <h3>Login Information</h3>
 	  <br />
@@ -31,16 +31,16 @@
 	  <br />
 
 	  <div class="form-group">
-	    <label for="fName" class="col-sm-2 control-label">First Name :</label>
+	    <label for="fname" class="col-sm-2 control-label">First Name :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="fName" placeholder="First Name" data-validation="alphanumeric">
+	      <input type="text" class="form-control" id="fname" placeholder="First Name" data-validation="alphanumeric">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
-	    <label for="lName" class="col-sm-2 control-label">Last Name :</label>
+	    <label for="lname" class="col-sm-2 control-label">Last Name :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="lName" placeholder="Last Name" data-validation="alphanumeric">
+	      <input type="text" class="form-control" id="lname" placeholder="Last Name" data-validation="alphanumeric">
 	    </div>
 	  </div>
 

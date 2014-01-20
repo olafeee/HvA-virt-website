@@ -31,19 +31,15 @@ class Account extends baseController {
 	function runRegister() {
 		if(isset($_POST['submit'])) {
 
-			$data = array(
-				'' => '',
-				'' => '',
-				'' => '',
-				'' => '',
-				'' => '',
-				'' => '',
-			);
+			print_r($_POST)
+
+			// Put all posted variables into a array and send it to the model
+			$postData = $_POST;
 
 			$model = $this->laadModel();
-			$model->createAccount($data);
+			$model->createAccount($postData);
 		} else {
-			echo "NO POST!";
+			header('location: ./register');
 		}
 	}
 
