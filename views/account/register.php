@@ -120,7 +120,7 @@
 		$( document ).ready(function() {
 			// Show tooltip
 			$('#resellerCheckbox').tooltip({
-				position: { my: "left+15 center", at: "right center" }
+				position: { my: "left+1 center", at: "right center" }
 			}); 
 		});
 		
