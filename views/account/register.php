@@ -69,7 +69,7 @@
 			modules : 'security',
 			onModulesLoaded : function() {
 			    var optionalConfig = {
-			      fontSize: '12pt',
+			      fontSize: '8pt',
 			      padding: '4px',
 			      bad : 'Very bad',
 			      weak : 'Weak',
