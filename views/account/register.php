@@ -72,8 +72,6 @@
 	    </div>
 	  </div>
 
-	  <br />
-
 	  <div class="form-group">
 	    <div class="col-sm-offset-2 col-sm-10">
 	      <div class="checkbox">
@@ -82,6 +80,8 @@
 	      </div>
 	    </div>
 	  </div>
+
+	  <br />
 
 	  <div class="form-group">
 	    <label for="submit" class="col-sm-2 control-label"></label>
