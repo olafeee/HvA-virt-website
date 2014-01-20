@@ -50,16 +50,16 @@
 						<select class="form-control" id="country" placeholder="Country">
 							<?php include('register_countries.php'); ?>
 						</select>
+					</div>
+				</div>
+			</div>
 
-						<div class="bfh-selectbox" data-name="selectbox3" data-value="12" data-filter="true">
+									<div class="bfh-selectbox" data-name="selectbox3" data-value="12" data-filter="true">
 						<select class="form-control bfh-countries" data-country="NL"></select>
 						</div>
 
 						<div class="bfh-selectbox bfh-countries" data-country="NL" data-flags="true">
 						</div>
-					</div>
-				</div>
-			</div>
 				
 			<h2>Payment Information</h2>
 			<br />
