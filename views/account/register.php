@@ -67,10 +67,11 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 		<script> 
 			$.validate({
+				errorMessagePosition : 'class'
 				modules : 'security',
 				onModulesLoaded : function() {
 				    var optionalConfig = {
-				      fontSize: '6pt',
+				      fontSize: '8pt',
 				      padding: '4px',
 				      bad : 'Very bad',
 				      weak : 'Weak',
@@ -82,7 +83,7 @@
 				  }
 			    
 			}); 
-	</script>
+		</script>
 		<br />
 	</div>
 </div>
