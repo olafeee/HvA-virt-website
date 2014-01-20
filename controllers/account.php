@@ -1,27 +1,48 @@
 <?php
 
-class Account extends baseController {
+require_once("lib/cloudstack.php");
+
+class Login extends baseController {
 
 	function __construct() {
 		parent::__construct();
-		Session::init();
-		$logged = Session::get('loggedIn');
-		if ($logged == false){
-			Session::destroy();
-			header('location: ../login');
-			exit;
+		if (isset($_SESSION['loggedIn'])) {
+			header('location: ../account');
+		}
+	}
+	
+	function login() {
+		if (!isset($_SESSION['loggedIn'])) {
+			$model = $this->laadModel();
+			$model->runLogin();
+		}
+	}//eind run
+
+	function logout() {
+
+	}
+
+	function register() {
+		$this->index('register');
+	}
+
+	function runRegister() {
+		if(isset($_POST['submit'])) {
+
+			$data = new array {(
+				'' => '',
+				'' => '',
+				'' => '',
+				'' => '',
+				'' => '',
+				'' => '',
+			)};
+
+			$model = $this->laadModel();
+			$model->create_account($data);
+		} else {
+			echo "NO POST!";
 		}
 	}
 
-	function veranderWachtwoord(){
-		$this->index('veranderWachtwoord');
-	}
-
-	function wijzigWachtwoord(){
-		$model = $this->loadModel();
-		if (isset($model)) {
-			$model->wijzigWachtwoord();
-		}
-
-	}
-}
+}//eind class

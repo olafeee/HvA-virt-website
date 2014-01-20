@@ -1,30 +1,20 @@
-<?php if (isset($_SESSION['loggedIn'])):?>
-<?php require'klantpaneelHeader.php'; ?>
-<div class="acountTable">
-
-<table class="table">
-  <tr>
-    <td>Name:</td>
-    <td>Admin Cloud</td>
-  </tr>
-  <tr>
-    <td>Email:</td>
-    <td>s.de.boer@plaintech.nl</td>
-  </tr>
-  <tr>
-    <td>Address:</td>
-    <td>H.J.E. Wenckebachweg 100</td>
-  </tr>
-  <tr>
-    <td>Postal Code:</td>
-    <td>1096DL</td>
-  </tr>
-  <tr>
-    <td>Country:</td>
-    <td>Nederland</td>
-  </tr>
-</table>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="login-class">
+      <img src="/img/plaintech-logo.png" id="img-login-logo">
+      <form class="form-signin" action="../login/runLogin" method="post">
+        <input type="text" class="form-control" placeholder="Email address" required="" autofocus="" name="login">
+        <input type="password" class="form-control" placeholder="Password" required="" name="password">
+        <br/>
+        <label>
+          <a href="register">Create an account</a>
+        </label>
+        <br/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
 </div>
-<?php else: 
-header('location: /login');
- endif; ?>
+
