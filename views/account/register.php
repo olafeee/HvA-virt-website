@@ -79,7 +79,7 @@
 	    <div class="col-sm-10">
 	      <div class="checkbox">
 	        <label>
-	          <input type="checkbox" name="reseller" data-validation-help="Select this if your a reseller.">I would like a reseller's account.</label>
+	          <input type="checkbox" id="reseller" name="reseller" title="Select this if your a reseller.">I would like a reseller's account.</label>
 	      </div>
 	    </div>
 	  </div>
@@ -115,7 +115,13 @@
 			    $('input[id="password"]').displayPasswordStrength(optionalConfig);
 			  }
 		    
-		}); 
+		});
+
+		$(document).ready({
+			// Show tooltip
+			$("#reseller img[title]").tooltip(); 
+		});
+		
 	</script>
 	<br />
 </div>
