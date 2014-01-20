@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="/img/plaintech-tab-logo.png">
     <link href="/css/redmond/jquery-ui-1.10.3.custom.css" rel="stylesheet">
   <script type='text/javascript' > 
-  var DISKarr;
+  var pets;
   var standardValueDisk = 0; 
 </script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
