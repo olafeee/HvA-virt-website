@@ -1,18 +1,21 @@
-<?php
-	$text = $this->cmsMVP;
 
-	$i = 0;
-	echo'<table class="table">';
-	while ($i < count($text)) {
-		echo '<tr>';
-		echo '<td>'.$text[$i]["DiskAmount"].'</td>';
-		echo '<td>'.$text[$i]["DiskPrice"].'</td>';
-		echo '<td><a href="javascript:showMVP('.$i.', '.$text[$i]["DiskAmount"].', '.$text[$i]["DiskPrice"].')" class="sla_ms">more info</a></td>';	
-		echo"<tr/>";
-		$i++;
-	}
-	echo'</table>';
-?>
+<div"row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<?php
+$text = $this->cmsMVP;
+
+$i = 0;
+echo'<table class="table">';
+while ($i < count($text)) {
+	echo '<tr>';
+	echo '<td>'.$text[$i]["DiskAmount"].'</td>';
+	echo '<td>'.$text[$i]["DiskPrice"].'</td>';
+	echo '<td><a href="javascript:showMVP('.$i.', '.$text[$i]["DiskAmount"].', '.$text[$i]["DiskPrice"].')" class="sla_ms">more info</a></td>';	
+	echo"<tr/>";
+	$i++;
+}?>
+</table>
 
 
 <div class="MVPdiv"> 
@@ -23,6 +26,10 @@
 		<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 	</form>
 </div>
+</div>
+<div class="col-md-3"></div>	
+</div>
+
 
 
 	
