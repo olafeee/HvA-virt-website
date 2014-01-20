@@ -58,7 +58,7 @@ function showMVP(id, Amount, Price, kind) {
     $(".MVPdiv").css("display", "block");
     $(".opacitySLAdiv").css("display", "block");
 
-    $(".pageMVP").text(kind);
+    $(".pageMVP").val(kind);
     $('.idMVP').val(id);
     $('.AmountMVP').val(Amount);
     $('.PriceMVP').val(Price);
