@@ -1,7 +1,7 @@
 
 <div class="row">
 
-	<form class="form-horizontal" role="form" action="./runRegister" method="post">
+	<form class="form-horizontal" role="form" action="./register/create" method="post">
 
 	  <h3>Login Information</h3>
 	  <br />
