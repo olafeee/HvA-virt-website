@@ -9,14 +9,14 @@
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email :</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" name="email" placeholder="Email" data-validation="email" data-validation-help="Vailed email needed to login!" data-validation-url="./registerValidate/email">
+	      <input type="email" class="form-control" id="email" name="email" placeholder="Email" data-validation="email" data-validation-url="./registerValidate/email">
 	    </div>
 	  </div>
 
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password :</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" name="password_confirmation" placeholder="Password" data-validation="strength" data-validation-strength="2" data-validation-help="Please pick a strong password!">
+	      <input type="password" class="form-control" id="password" name="password_confirmation" placeholder="Password" data-validation="strength" data-validation-strength="2">
 	    </div>
 	  </div>
 
