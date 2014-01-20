@@ -6,6 +6,7 @@
 			onload=function() { 
 				//DISKarrayss();
 				pets = <?print(json_encode($this->DISK));?>;
+				alert(pets);
 			}
 		</script>
 	</div>
