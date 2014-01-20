@@ -75,7 +75,7 @@
 	  </div>
 
 	  <div class="form-group">
-	    <label for="submit" class="col-sm-2 control-label">Country</label>
+	    <label for="submit" class="col-sm-2 control-label"></label>
 	    <div class="col-sm-10">
 	      <input type='hidden' name='submit' />
 	      <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Create Account</button>
