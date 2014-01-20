@@ -62,12 +62,12 @@ class cmsPlaintech extends baseController {
 	 /**
      * insertMVP = verander prijs en hoeveelheid hardware
      */
-        function insertMVP(){
-        		$pageMVP = $_POST['pageMVP'];
-                $idMVP = $_POST['idMVP'];
-                $AmountMVP = $_POST['AmountMVP'];
-                $PriceMVP = $_POST['PriceMVP'];
-                $this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $pageMVP);
-                //header('location: /cmsPlaintech/manangeVpsParts/Disk');
-        }
+    function insertMVP(){
+		$pageMVP = $_POST['pageMVP'];
+        $idMVP = $_POST['idMVP'];
+        $AmountMVP = $_POST['AmountMVP'];
+        $PriceMVP = $_POST['PriceMVP'];
+        $this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $pageMVP);
+        header('location: /cmsPlaintech/manangeVpsParts/Disk');
+    }
 }
