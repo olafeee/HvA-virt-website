@@ -2,7 +2,7 @@
 
 require_once("lib/cloudstack.php");
 
-class Login extends baseController {
+class Account extends baseController {
 
 	function __construct() {
 		parent::__construct();
