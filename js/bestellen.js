@@ -14,7 +14,7 @@ var SLAprice = SLAarray[0][1];
 
 var CPUamount = CPUarray[standardValueCPU];
 var RAMamount = RAMarray[standardValueRAM];
-var DISKamount = JSON.parse(pets);
+var DISKamount = QYI[0]["DISKamount"];
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
 var SLApacket = SLAarray[0];
