@@ -61,6 +61,9 @@ class accountModel extends baseModel
 		echo "<pre>";
 		print_r($data);
 
+		if(is_array($data) && array_key_exists('account', $data['listaccountsresponse'])) {
+
+		}
 		if( $data['listaccountsresponse']['account'][0]['name']==$user ) {
 	    	// User name is registered on another account
 	    	$response = array('valid' => false, 'message' => 'This user name is already registered.');
