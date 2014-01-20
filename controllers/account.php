@@ -29,7 +29,7 @@ class Account extends baseController {
 	}
 
 	function registerValidate($input) {
-		if ($input == 'email') {
+		if ($input == 'email' && isset($_POST['submit'])) {
 			$model = $this->laadModel();
 			$model->checkUser($_POST['email']);
 		}
@@ -43,7 +43,7 @@ class Account extends baseController {
 			if ($response == true ) {
 				$this->index('register_success');
 			}
-		} else if ($input == 'email' && !isset($_POST['email'])) {
+		} else if ($input == 'email' && isset($_POST['email'])) {
 			$model = $this->laadModel();
 			$model->checkUser($_POST['email']);
 		} else {
