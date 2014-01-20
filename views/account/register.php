@@ -1,10 +1,12 @@
 
 <div class="row">
-	<h2>Login Information</h2>
-	<br />
+
 
 
 	<form class="form-horizontal" role="form">
+
+	  <h3>Login Information</h3>
+	  <br />
 
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email</label>
@@ -16,7 +18,7 @@
 	  <div class="form-group">
 	    <label for="password" class="col-sm-2 control-label">Password</label>
 	    <div class="col-sm-10">
-	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="1">
+	      <input type="password" class="form-control" id="password" placeholder="Password" data-validation="strength" data-validation-strength="2">
 	    </div>
 	  </div>
 
@@ -27,13 +29,20 @@
 	    </div>
 	  </div>
 
-	  <h2>Customer Information</h2>
+	  <h3>Customer Information</h3>
 	  <br />
 
 	  <div class="form-group">
 	    <label for="fName" class="col-sm-2 control-label">First Name</label>
 	    <div class="col-sm-10">
 	      <input type="text" class="form-control" id="fName" placeholder="First Name" data-validation="required">
+	    </div>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="lName" class="col-sm-2 control-label">Last Name</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="lName" placeholder="Last Name" data-validation="required">
 	    </div>
 	  </div>
 
@@ -103,7 +112,7 @@
 			      strong : 'Strong'
 			    };
 
-			    $('input[name="pass_confirmation"]').displayPasswordStrength(optionalConfig);
+			    $('input[name="password"]').displayPasswordStrength(optionalConfig);
 			  }
 		    
 		}); 
