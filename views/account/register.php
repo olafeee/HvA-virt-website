@@ -1,8 +1,6 @@
 
 <div class="row">
 
-
-
 	<form class="form-horizontal" role="form">
 
 	  <h3>Login Information</h3>
@@ -11,7 +9,7 @@
 	  <div class="form-group">
 	    <label for="email" class="col-sm-2 control-label">Email</label>
 	    <div class="col-sm-10">
-	      <input type="email" class="form-control" id="email" placeholder="Email" data-validation="email">
+	      <input type="email" class="form-control" id="email" placeholder="Email" data-validation="email" data-validation-help="Vailed email needed to login!">
 	    </div>
 	  </div>
 
@@ -82,9 +80,6 @@
 	    </div>
 	  </div>
 
-
-	  
-
 	</form>
 
 	<!-- Bootstrap Form Helpers -->
@@ -92,7 +87,6 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.38/jquery.form-validator.min.js"></script>
 	<script> 
 		$.validate({
-			errorMessagePosition : 'element',
 			modules : 'security',
 			onModulesLoaded : function() {
 			    var optionalConfig = {
