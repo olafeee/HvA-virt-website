@@ -7,6 +7,10 @@ class baseController {
 		$this->baseView->url0 = $url[0];
 	}
 
+	/**
+     * index
+     * @param string $value welke pagina geladen moet worden 
+     */
 	function index($value) {
 
 		$url = $this->urlfix();
@@ -39,13 +43,9 @@ class baseController {
 
 	}
 
-	/*
-
-	hij doet het weer
-
-	*/
-
-
+	/**
+     * laadModel laad model in
+     */
 	function laadModel(){
 		$url = $this->urlfix();
 		if(empty($url[0])){
@@ -60,7 +60,9 @@ class baseController {
 			return $model;
 		}
 	}
-
+	/**
+     * zorgt dat url schoon is
+     */
 	function urlfix(){
 		$url = isset($_GET['url']) ? $_GET['url'] : null;
 		$url = rtrim($url, '/');
@@ -74,6 +76,10 @@ class baseController {
 		exit;
 	}
 
+	/**
+     * matchInt kijk of alleen cijfers is 
+     * @param string $number is cijfer dat gechecked wordt
+     */
 	function matchInt($number){
 	    if (preg_match('/^[0-9]{1,}$/', $number)) {
 	    	return $number;

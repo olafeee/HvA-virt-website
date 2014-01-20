@@ -49,9 +49,7 @@ class cmsPlaintech extends baseController {
 		
 	}
 	 /**
-     * Edit content laad een bepaald onderdeel voor te editen
-     * @param string $pid op welke pagina het is
-     * @param string $cwid het id van de text
+     * insertContent veranderd text van bepaalde content
      */
 	function insertContent(){
 		$cwid = $_POST['cwid'];
@@ -61,6 +59,9 @@ class cmsPlaintech extends baseController {
 		header('location: /cmsPlaintech/viewPage/'.$pageid);
 	}
 
+	 /**
+     * insertMVP = verander prijs en hoeveelheid hardware
+     */
 	function insertMVP(){
 		$idMVP = $this->matchInt(mysql_real_escape_string($_POST['idMVP']));
 		$AmountMVP = $this->matchInt(mysql_real_escape_string($_POST['AmountMVP']));
