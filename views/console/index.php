@@ -33,7 +33,8 @@
 
     </script>
 
-    <iframe name="window" frameborder="0" width="640" height="420" src=""></iframe>
-    <iframe name="logon" style="display:none;" src=""></iframe>
+    <a href="http://facebook.com/" target="window">Click me</a>
+    <iframe name="window" frameborder="0" width="640" height="420" src="http://google.com/"></iframe>
+    <iframe name="logon" style="display:none;"></iframe>
 
 </center>
