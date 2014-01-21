@@ -3,29 +3,7 @@ $cmstext = $this->cmstext;
 //print_r($cmstext);
 
 ?>
-<div class="row">
-	<div class="col-md-11">
-	<div class="introdiv">
-		<div class="introdiv_text">
-			<h4 class="introdiv_text_h4">Plaintech</h4>
-			<h1 class="introdiv_text_h1">Blade VPS</h1>
-			<p class="introdiv_text_p">powered by Cloudstack</p>
-			<br/>
-			<p><a class="btn btn-primary btn-lg" role="button" href="/order">More info & order</a></p>
-		</div>
 
-		
-
-		<div class="introdiv_text_price">
-				<p class="introdiv_text_price_p">starting at</p>
-				<p class="introdiv_text_price_pp">&euro;9.99/Mo</p>	
-		</div>
-
-
-		<img src="/img/data-center-px-png.png" class="cloud_img">
-	</div>
-	</div>
-</div>
 
 <div class="row">
 <!-- einde van head + nav + login bij alles het zelfde-->
