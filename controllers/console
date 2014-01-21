@@ -4,8 +4,6 @@ require_once("lib/cloudstack.php");
 
 class Management extends baseController {
 
-	public 
-
 	function __construct() {
 		// Check if already logged in.
 		//session_start();
@@ -16,10 +14,14 @@ class Management extends baseController {
 		parent::__construct();
 	}
 
-	function refresh() {
-		$refreshed = '1';
-		$this->baseView->refresh = $refreshed;
-		$this->index('index');
+	function refresh($view) {
+		$model = $this->laadModel();
+
+		if ($view == null) {
+			$model->consoleSession();
+		} else {
+			$model->consoleWindow();
+		}
 	}
 
 	

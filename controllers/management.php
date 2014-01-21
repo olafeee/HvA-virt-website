@@ -20,7 +20,7 @@ class Management extends baseController {
 
 		if ($display == null) {
 			$model->consoleSession();
-		//} else {
+		} else {
 			$model->consoleWindow();
 		}
 
