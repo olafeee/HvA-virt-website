@@ -55,8 +55,12 @@ class Account extends baseController {
 	}
 
 	function registerSuccess() {
-		$this->index('registerSuccess');
-		Session::set('successPage', FALSE);
+		if ($_SESSION['successPage'] == TRUE) {
+			$this->index('registerSuccess');
+			Session::set('successPage', FALSE);
+		} else {
+			header('location: /account');
+		}
 	}
 
 }//eind class
