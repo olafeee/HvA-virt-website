@@ -21,6 +21,7 @@
         var vmurl='<?php echo $vmurl; ?>';
         
         $( document ).ready(function() {
+            window.open(logonurl, "logon");
             $.ajax({
                 url: logonurl,
                 context: document.body
