@@ -65,7 +65,7 @@ function showMVP(id, Amount, Price) {
         alert("int");   
      }else{
          alert(Amount); 
-        $('.AmountMVP').append(Amount);
+        $('.AmountMVP1').append(Amount);
      }
         
     $('.PriceMVP').val(Price);
