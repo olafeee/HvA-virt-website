@@ -10,12 +10,12 @@
 			//print_r($text);
 			$i = 0;
 			while ($i < count($text)) {
-				echo 'number = '.$text[$i]["cwid"];
-				echo"<br/>";
-				echo $text[$i]["cmstext"];
-				echo"<br/>";
-				echo '<a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a>';
-				echo"<br/>";
+				echo '<table><tr>';
+				echo '<td>page id = '.$text[$i]["cwid"].'</td>';
+				echo '<td><a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a></td>';
+				echo '</tr><tr>'
+				echo '<td>'.$text[$i]["cmstext"].'</td>';
+				echo '</tr></table>'
 				$i++;
 			}
 
