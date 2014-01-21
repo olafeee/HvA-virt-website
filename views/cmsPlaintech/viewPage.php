@@ -10,7 +10,7 @@
 			//print_r($text);
 			$i = 0;
 			while ($i < count($text)) {
-				echo '<table><tr>';
+				echo '<table><tr class="CMStitle-table">';
 				echo '<td>page id = '.$text[$i]["cwid"].'</td>';
 				echo '<td><a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a></td>';
 				echo '</tr><tr>';
