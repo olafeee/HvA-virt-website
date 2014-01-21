@@ -106,6 +106,7 @@ function changeCPU(value){
     }else{
         CPUcore =' core';
     } 
+    alert(CPUamount);
     $(".changeCPU").text(CPUamount + CPUcore);
     orderPrice();
 }
