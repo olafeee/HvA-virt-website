@@ -7,7 +7,7 @@ class Account extends baseController {
 
 		// Check if already logged in.
 		session_start();
-		if (isset($_SESSION['loggedIn'])) {
+		if (isset($_SESSION['loggedIn']) && $_SESSION['successPage'] == FALSE ) {
 			header('location: /');
 		}
 	}
@@ -45,6 +45,7 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$response = $model->createAccount($_POST);
 			if ($response == TRUE ) {
+				Session::set('successPage', TRUE);
 				$model->runLogin($_POST['email'],$_POST['password']);
 				header('location: /account/registerSuccess');
 			}
@@ -55,6 +56,7 @@ class Account extends baseController {
 
 	function registerSuccess() {
 		$this->index('registerSuccess');
+		Session::set('successPage', FALSE);
 	}
 
 }//eind class
