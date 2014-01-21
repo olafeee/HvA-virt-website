@@ -111,7 +111,7 @@ function RAMslider1() {
         animate: true,
         change: function(event, ui) {
             alert("boos");
-            standardValueCPU1 = value;
+            changeCPU(ui.value);
         }
     });
 }
