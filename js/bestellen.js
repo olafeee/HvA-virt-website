@@ -11,7 +11,7 @@ var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
 
-var CPUamount = CPUarray[standardValueCPU];
+var CPUamount = CPUarr(standardValueCPU, "CPUAmount");
 var RAMamount = RAMarray[standardValueRAM];
 var DISKamount = tarr(standardValueDisk, "DiskAmount");
 var NTamount = NTarray[standardValueNT];
@@ -102,7 +102,7 @@ function CPUslider() {
 
 function changeCPU(value){
     $('#hiddenChangeCPU').val(value);
-    CPUamount = CPUarray[value];
+    CPUamount = CPUarr(value, "CPUAmount");
     if (CPUamount>1) {
         CPUcore =' cores';
     }else{
@@ -258,7 +258,7 @@ function SLAradio(value){
 }
 
 function orderPrice(){
-   costCPU =  CPUamount*5;
+   costCPU =   CPUarr(standardValueCPU, "CPUPrice");
    costRam = RAMShorter(RAMamount)*2.00;
    costDisk = parseInt(tarr(standardValueDisk, "DiskPrice"));
    costNT = standardValueNT * 2;
