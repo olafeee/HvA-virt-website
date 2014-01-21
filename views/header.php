@@ -125,7 +125,7 @@ if($this->url0=='order'){
 
 <div class="container">
   <!-- users menu -->
-<div class="kp_hm_div">
+  <div class="kp_hm_div">
     <div class="kp_hm_top"></div>
     <div class="kp_hm_border">
       <div class="kp_hm_text">
@@ -137,13 +137,10 @@ if($this->url0=='order'){
         <div class="kp_hm_text_right">       
           <b><?php echo ucfirst($_SESSION['logArr']['firstname']). " ". ucfirst($_SESSION['logArr']['lastname']) ; ?></b>
           <p><?php echo $_SESSION['logArr']['username']; ?></p>
-
-      </div>
- 
+        </div>
       </div>
       <div class="kp_hm_logout">
         <a href="../account/logout" class="btn btn-default kp_hm_logoutbtn">Uitloggen</a>
       </div>
     </div>
-
-</div>
+  </div>
