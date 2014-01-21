@@ -264,6 +264,7 @@ function orderPrice(){
    costCPU =   parseInt(CPUarr(standardValueCPU, "CPUPrice"));
    costRam = parseInt(RAMarr(standardValueRAM, "RAMPrice"));
    costDisk = parseInt(tarr(standardValueDisk, "DiskPrice"));
+   alert(costDisk);
    costNT = standardValueNT * 2;
    costIPv4 = IPv4amount-1;
    totalOrderPrice = costCPU+costRam+costDisk+costNT+costIPv4;
