@@ -613,10 +613,22 @@ p.order_options_OS{
          display:block;
          padding-bottom:5px;
 }
-.divColumn
+.divColumn-ID
 {
          float: left;
-         width: 24%;
+         width: 90%;
+         display:block;
+}
+.divColumn-Text
+{
+         float: left;
+         width: 100%;
+         display:block;
+}
+.divColumn-Button
+{
+         float: left;
+         width: 10%;
          display:block;
 }
 

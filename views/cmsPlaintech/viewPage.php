@@ -11,10 +11,10 @@
 			$i = 0;
 			while ($i < count($text)) {
 				echo '<div class="divTable"><div class="divRow">';
-				echo '<div class="divColumn">page id = '.$text[$i]["cwid"].'</div>';
-				echo '<div class="divColumn"><a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a></div>';
+				echo '<div class="divColumn-ID">page id = '.$text[$i]["cwid"].'</div>';
+				echo '<div class="divColumn-Button"><a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a></div>';
 				echo '</div><div <div class="divRow">>';
-				echo '<div class="divColumn">'.$text[$i]["cmstext"].'</div>';
+				echo '<div class="divColumn-Text">'.$text[$i]["cmstext"].'</div>';
 				echo '</div></div>';
 				$i++;
 			}
