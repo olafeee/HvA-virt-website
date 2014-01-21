@@ -23,7 +23,7 @@
 			echo '<tr>';
 			echo '<td>'.$text[$i][$kindMVP."Amount"].'</td>';
 			echo '<td>'.$text[$i][$kindMVP."Price"].'</td>';
-			echo '<td><a href="javascript:showMVP('.$text[$i][$kindMVP[0]."ID"].',xyz , '.$text[$i][$kindMVP."Price"].')" class="sla_ms">more info</a></td>';	
+			echo '<td><a href="javascript:showMVP('.$text[$i][$kindMVP[0]."ID"].', xyz, '.$text[$i][$kindMVP."Price"].')" class="sla_ms">more info</a></td>';	
 			echo"<tr/>";
 			$i++;
 		}?>
