@@ -55,6 +55,7 @@ function hideSLAMenu() {
 
 function showMVP(id, Amount, Price) {
     //change display to block
+    alert(typeof Amount)
     $(".MVPdiv").css("display", "block");
     $(".opacitySLAdiv").css("display", "block");
 
