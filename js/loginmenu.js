@@ -60,7 +60,7 @@ function showMVP(id, Amount, Price) {
     $(".opacitySLAdiv").css("display", "block");
 
     $('.idMVP').val(id);
-     if (Amount === parseFloat(Amount)){
+     if (Amount === parseInt(Amount)){
         $('.AmountMVP').val(Amount);
         alert("int");   
      }else{
