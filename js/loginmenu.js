@@ -124,7 +124,8 @@ function setNavigation() {
 
     $(".navCM a").each(function () {
         var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
+         if (path === href) {
+        //if (path.substring(0, href.length) === href) {
             $(this).closest('li').addClass('active');
         }
     });
