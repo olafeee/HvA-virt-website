@@ -64,7 +64,7 @@ function showMVP(id, Amount, Price) {
         $('.AmountMVP').val(Amount);
         alert("int");   
      }else{
-        $('.AmountMVP').val(Amount);
+        $('.AmountMVP').append(Amount);
         alert("tex");
      }
         
@@ -90,17 +90,26 @@ function hideMVP() {
 function checkInp(){
     var x=document.forms["input"]["AmountMVP"].value;
     var y=document.forms["input"]["PriceMVP"].value;
-      if (isNaN(x)) 
-      {
-        $(".faultMVP").text(x+" is geen cijfer");
-        return false;
-      }
-    if (isNaN(y)) 
-      {
-         $(".faultMVP").text(y+" is geen cijfer");
-          return false;
-      }
-        
+    var page=document.forms["input"]["pageMVP"].value;
+
+    if (page == "SLA") {
+        if (isNaN(y)) 
+          {
+             $(".faultMVP").text(y+" is geen cijfer");
+              return false;
+          }
+    }else{
+        if (isNaN(x)) 
+          {
+            $(".faultMVP").text(x+" is geen cijfer");
+            return false;
+          }
+        if (isNaN(y)) 
+          {
+             $(".faultMVP").text(y+" is geen cijfer");
+              return false;
+          }
+    }  
 }
 
 function isNumber(n) {
