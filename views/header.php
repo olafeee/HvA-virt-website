@@ -26,13 +26,13 @@ if($this->url0=='order'){
 
       }
       function tarr(x, y){
-        alert(x);
-        alert(y);
         pets = <?print(json_encode($this->DISK));?>;
         var rvar = pets[x][y];
         return rvar;
       }
       function CPUarr(x, y){
+        alert(x);
+        alert(y);
         pets = <?print(json_encode($this->CPU));?>;
         var rvar = pets[x][y];
         return rvar;
