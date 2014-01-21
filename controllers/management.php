@@ -14,6 +14,18 @@ class Management extends baseController {
 		parent::__construct();
 	}
 
+	function console($vmid, $display = null) {
+
+		$model = $this->laadModel();
+
+		if ($display == null) {
+			$model->consoleSession();
+		//} else {
+			$model->consoleWindow();
+		}
+
+	}
+
 	
 
 }
