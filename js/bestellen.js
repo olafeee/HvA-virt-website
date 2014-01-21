@@ -131,6 +131,7 @@ function RAMslider() {
 
 function changeRAM(value){
     $('#hiddenChangeRAM').val(value);
+    standardValueRAM = value;
     RAMamount = RAMarr(standardValueRAM,"RAMAmount");
     $(".changeRAM").text(RAMamount+"MB");
     orderPrice();
