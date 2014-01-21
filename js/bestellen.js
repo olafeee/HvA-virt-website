@@ -92,6 +92,7 @@ function CPUslider() {
         animate: true,
         change: function(event, ui) {
             changeCPU(ui.value);
+            alert(val)
         }
 
     });    
