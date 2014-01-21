@@ -64,8 +64,8 @@ function showMVP(id, Amount, Price) {
         $('.AmountMVP').val(Amount);
         alert("int");   
      }else{
+         alert(Amount); 
         $('.AmountMVP').append(Amount);
-        alert("tex");
      }
         
     $('.PriceMVP').val(Price);
