@@ -33,8 +33,6 @@ if($this->url0=='order'){
         return rvar;
       }
       function CPUarr(x, y){
-        alert(x);
-        alert(y);
         pets = <?print(json_encode($this->CPU));?>;
         var rvar = pets[x][y];
         return rvar;
