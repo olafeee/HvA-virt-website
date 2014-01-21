@@ -14,7 +14,7 @@ class Management extends baseController {
 		parent::__construct();
 	}
 
-	function console($vmid, $display = null) {
+	function consoletest($vmid, $display = null) {
 
 		$model = $this->laadModel();
 
