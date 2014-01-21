@@ -23,20 +23,22 @@ if($this->url0=='order'){
       onload=function() { 
         tarr(0, "DiskPrice");
         tarr(0, "CPUPrice");
-        tarr(0, "RAMPrice");
+
       }
       function tarr(x, y){
+        alert(x);
+        alert(y);
         pets = <?print(json_encode($this->DISK));?>;
         var rvar = pets[x][y];
         return rvar;
       }
       function CPUarr(x, y){
-        pets = <?print(json_encode($this->DISK));?>;
+        pets = <?print(json_encode($this->CPU));?>;
         var rvar = pets[x][y];
         return rvar;
       }
       function RAMarr(x, y){
-        pets = <?print(json_encode($this->DISK));?>;
+        pets = <?print(json_encode($this->RAM));?>;
         var rvar = pets[x][y];
         return rvar;
       }
