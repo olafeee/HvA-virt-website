@@ -4,15 +4,15 @@ class Order extends baseController {
 
 	public $model;
 	public $db;
-	public $DISK;
 	
 	function __construct() {
 		parent::__construct();
 		// laad model in & selecteer database
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
-		$this->DISK = $this->model->getValue('Disk_Array_Table');
-		$this->baseView->DISK = $this->DISK;
+		$this->baseView->CPU == $this->model->getValue('CPU_Array_Table');
+		$this->baseView->RAM = = $this->model->getValue('RAM_Array_Table');
+		$this->baseView->DISK = $this->model->getValue('Disk_Array_Table');
 	}
 
 	function BladeVPS($value){
