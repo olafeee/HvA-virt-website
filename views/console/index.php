@@ -27,6 +27,9 @@
                 context: document.body
             }).done(function() {
                 $( this ).window.open(vmurl, "window");
+            })
+            .fail(function() {
+                alert( "error" );
             });
             
         });
