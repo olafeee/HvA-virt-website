@@ -32,7 +32,6 @@ class cmsPlaintech extends baseController {
 	function manangeVpsParts($id){
 		$table = $id.'_Array_Table';
 		$cmsMVP = $this->model->getCmsIndex($table, "*");
-		print_r($cmsMVP);
 		$this->baseView->cmsMVP = $cmsMVP;
 		$this->baseView->kindMVP = $id;
 		$this->index('manangeVpsParts');
@@ -68,7 +67,9 @@ class cmsPlaintech extends baseController {
         $idMVP = $_POST['idMVP'];
         $AmountMVP = $_POST['AmountMVP'];
         $PriceMVP = $_POST['PriceMVP'];
+        echo $AmountMVP;
         $this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $pageMVP);
-        header('location: /cmsPlaintech/manangeVpsParts/'.$pageMVP);
+        
+        //header('location: /cmsPlaintech/manangeVpsParts/'.$pageMVP);
     }
 }
