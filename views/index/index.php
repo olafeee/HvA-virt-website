@@ -37,7 +37,7 @@ $cmstext = $this->cmstext;
 <div class="row">
 		<div class="col-md-4">
 			<div class="index_block1">
-			<div class="div-align-span-center"><h2><?php echo $cmstext[2]['cmstext'];</h2></span></div>
+			<div class="div-align-span-center"><h2><?php echo $cmstext[2]['cmstext'];?></h2></span></div>
 			<br/>
   			<p><img src="/img/73.svg" class="fontpage-img">    <?php echo $cmstext[3]['cmstext']; ?></p>
   			<p><img src="/img/77.svg" class="fontpage-img">    <?php echo $cmstext[4]['cmstext']; ?></p>
