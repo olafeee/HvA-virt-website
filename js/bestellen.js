@@ -90,7 +90,7 @@ function CPUslider() {
 
     $( "#cpuslider" ).slider({
         value: standardValueCPU1,
-        max: 9,
+        max: 8,
         orientation: "horizontal",
         range: "min",
         animate: true,
