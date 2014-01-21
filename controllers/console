@@ -16,7 +16,7 @@ class Management extends baseController {
 		parent::__construct();
 	}
 
-	function console($id) {
+	function console() {
 		$model = $this->laadModel();
 		include('views/management/consoleWindow.php');
 	}
