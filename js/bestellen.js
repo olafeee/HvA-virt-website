@@ -86,21 +86,6 @@ totalPrice();
 } 
 
 
-function CPUslider1() {
-
-    $( "#cpuslider" ).slider({
-        value: standardValueCPU,
-        max: 9,
-        orientation: "horizontal",
-        range: "min",
-        animate: true,
-        change: function(event, ui) {
-            changeCPU(ui.value);
-        }
-
-    });    
-}
-
 function CPUslider() {
 
     $( "#cpuslider" ).slider({
@@ -110,13 +95,14 @@ function CPUslider() {
         range: "min",
         animate: true,
         change: function(event, ui) {
-            alert(ui.value);
+            //alert(ui.value);
             changeCPU(ui.value);
         }
     });
 }
 
 function changeCPU(value){
+    alert(value);
     $('#hiddenChangeCPU').val(value);
     CPUamount = CPUarr(standardValueCPU,"CPUAmount");
     if (CPUamount>1) {
