@@ -5,7 +5,7 @@
     // Generate a login API request
     $cmdline = "?command=login&username=admin&password=R_47*Qp12&response=json";
     $cmdline = str_replace(" ", "%20", $cmdline);
-    $logonurl = CS_URL.$cmdline;
+    $logonurl = 'http://145.92.14.90:8080/client/api'.$cmdline;
 
     // Generate the URL to the console of the selected VM
     $console_uuid = '163a66dc-1df6-4c75-b16f-2db34d91d026';
