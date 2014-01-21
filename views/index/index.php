@@ -57,7 +57,7 @@ $cmstext = $this->cmstext;
 			<div class="index_block1">
   			<div class="div-align-span-center"><h2>Green IT</h2></span></div>
   			<br>	
-  			<p>    yolo Our servers are build and designed for Green IT</p>
+  			<p>    Our servers are build and designed for Green IT</p>
   			<p>    The entire Plaintech infrastructure is designed for the enviroment</p>
   			<?php print_r($_SESSION);?>
 			</div>
