@@ -63,7 +63,7 @@ onload=function() {
         standardValueIPv4=0;
     }
 
-//CPUslider(); 
+CPUslider(); 
 RAMslider();
 DISKslider();
 NTslider();
@@ -71,7 +71,7 @@ IPv4slider();
 changeOSselected();
 SLAradio(1);
 
-RAMslider1()
+//RAMslider1()
 
 changeCPU(standardValueCPU);
 changeRAM(standardValueRAM);
