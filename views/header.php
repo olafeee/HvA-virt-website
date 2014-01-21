@@ -14,6 +14,8 @@
     <link href="/css/redmond/jquery-ui-1.10.3.custom.css" rel="stylesheet">
   <script type='text/javascript' > 
   var pets;
+  var pets1;
+  var pets2;    
   var standardValueDisk = 0; 
   var standardValueCPU = 0;
   var standardValueRAM = 0;
@@ -33,13 +35,13 @@ if($this->url0=='order'){
         return rvar;
       }
       function CPUarr(x, y){
-        pets = <?print(json_encode($this->CPU));?>;
-        var rvar = pets[x][y];
+        pets1 = <?print(json_encode($this->CPU));?>;
+        var rvar = pets1[x][y];
         return rvar;
       }
       function RAMarr(x, y){
-        pets = <?print(json_encode($this->RAM));?>;
-        var rvar = pets[x][y];
+        pets2 = <?print(json_encode($this->RAM));?>;
+        var rvar = pets2[x][y];
         return rvar;
       }
     </script>

@@ -4,9 +4,11 @@ var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 
+var standardValueCPU1;
 var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
+
 
 var CPUamount = CPUarr(standardValueCPU, "CPUAmount");
 var RAMamount = RAMarray[standardValueRAM];
@@ -69,6 +71,8 @@ IPv4slider();
 changeOSselected();
 SLAradio(1);
 
+RAMslider1()
+
 changeCPU(standardValueCPU);
 changeRAM(standardValueRAM);
 changeDISK(standardValueDisk)
@@ -92,10 +96,24 @@ function CPUslider() {
         animate: true,
         change: function(event, ui) {
             changeCPU(ui.value);
-            alert(value);
         }
 
     });    
+}
+
+function RAMslider1() {
+
+    $( "#ramslider1" ).slider({
+        value: standardValueRAM,
+        max: 10,
+        orientation: "horizontal",
+        range: "min",
+        animate: true,
+        change: function(event, ui) {
+            alert("boos");
+            
+        }
+    });
 }
 
 function changeCPU(value){
