@@ -58,13 +58,13 @@ function showMVP(id, Amount, Price) {
     alert(Amount);
     $(".MVPdiv").css("display", "block");
     $(".opacitySLAdiv").css("display", "block");
-
+    $('.AmountMVP1').val(Amount);
     $('.idMVP').val(id);
      if (Amount == parseInt(Amount)){
         $('.AmountMVP1').val(Amount);
         alert("int");   
      }else{
-         $('.AmountMVP1').val("hoi");
+         $('.AmountMVP1').val(Amount);
      }
         
     $('.PriceMVP').val(Price);
