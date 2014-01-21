@@ -1,8 +1,8 @@
 <div class="row">
-	<div class="col-md-4">
+	<div class="col-md-2">
 		<?php require 'inc/header.php'; ?>
 	</div>
-	<div class="col-md-8">
+	<div class="col-md-7">
 		<?php 
 		$pages = $this->cmstext;
 
@@ -18,3 +18,4 @@
 		<a href="/cmsPlaintech/manangeVpsParts/Disk"><button type="button" class="btn btn-info">DISK</button></a>
 	</div>
 </div>
+	<div class="col-md-3"></div>

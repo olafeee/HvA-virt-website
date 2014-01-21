@@ -1,7 +1,9 @@
 
 <div"row">
-<div class="col-md-3"></div>
-<div class="col-md-6">
+	<div class="col-md-2">
+		<?php require 'inc/header.php'; ?>
+	</div>
+<div class="col-md-7">
 <table class="table">
 	<thead>
 		<tr>
