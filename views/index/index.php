@@ -18,7 +18,7 @@ $cmstext = $this->cmstext;
 			<br/>
 		</div>
 </div>
-<div class="row">
+<div class="row introColid-push">
 		<div class="col-md-4">
 			<div class="index_block1">
 			<div class="div-align-span-center"><h2><?php echo $cmstext[2]['cmstext'];?></h2></span></div>
