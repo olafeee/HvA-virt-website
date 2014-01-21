@@ -59,7 +59,12 @@ function showMVP(id, Amount, Price) {
     $(".opacitySLAdiv").css("display", "block");
 
     $('.idMVP').val(id);
-    $('.AmountMVP').val(Amount);
+     if (Amount === parseFloat(Amount)){
+        $('.AmountMVP').val(Amount);   
+     }else{
+        $('.AmountMVP').text(Amount);
+     }
+        
     $('.PriceMVP').val(Price);
     // when clicked outside 
     // call the funtion 
