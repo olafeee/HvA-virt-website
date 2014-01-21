@@ -52,6 +52,10 @@ margin-top: 24px;
 
 .introdiv{
 	background: url('/img/bannerbg.png') #e9e9e9 repeat-x center top;
+	min-height: 100%;
+}
+
+.introColid{
 	height: 222px;
 }
 
