@@ -72,7 +72,7 @@
 
 <div class="col-md-5 order_summery">
 	<div class="orderslider">
-		<div class="order_slider"><div id="cpuslider"></div></div>
+		<div class="order_slider"><div id="ramslider1"></div></div>
 		<div class="order_slider"><div id="ramslider"></div></div>
 		<div class="order_slider"><div id="DISKslider"></div></div>
 		<div class="order_slider"><div id="NTslider"></div></div>

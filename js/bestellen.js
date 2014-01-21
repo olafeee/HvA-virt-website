@@ -63,7 +63,7 @@ onload=function() {
         standardValueIPv4=0;
     }
 
-CPUslider(); 
+//CPUslider(); 
 RAMslider();
 DISKslider();
 NTslider();
