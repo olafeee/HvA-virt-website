@@ -15,7 +15,7 @@
 				echo '<td><a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a></td>';
 				echo '</tr><tr>'
 				echo '<td>'.$text[$i]["cmstext"].'</td>';
-				echo '</tr></table>'
+				echo '</tr></table>';
 				$i++;
 			}
 
