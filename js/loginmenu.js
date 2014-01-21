@@ -89,13 +89,7 @@ function checkInp(){
     var y=document.forms["input"]["PriceMVP"].value;
     var page=document.forms["input"]["pageMVP"].value;
 
-    if (page == "SLA") {
-        if (isNaN(y)) 
-          {
-             $(".faultMVP").text(y+" is geen cijfer");
-              return false;
-          }
-    }else{
+
         if (isNaN(x)) 
           {
             $(".faultMVP").text(x+" is geen cijfer");
@@ -106,7 +100,7 @@ function checkInp(){
              $(".faultMVP").text(y+" is geen cijfer");
               return false;
           }
-    }  
+    
 }
 
 function isNumber(n) {
