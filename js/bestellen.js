@@ -103,13 +103,13 @@ function CPUslider() {
 
 function changeCPU(value){
     $('#hiddenChangeCPU').val(value);
+    standardValueCPU = value;
     CPUamount = CPUarr(standardValueCPU,"CPUAmount");
     if (CPUamount>1) {
         CPUcore =' cores';
     }else{
         CPUcore =' core';
     } 
-    alert(CPUamount);
     $(".changeCPU").text(CPUamount + CPUcore);
     orderPrice();
 }
