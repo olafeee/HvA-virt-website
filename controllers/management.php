@@ -2,7 +2,7 @@
 
 require_once("lib/cloudstack.php");
 
-class ManagementApp extends baseController {
+class Management extends baseController {
 
 	function __construct() {
 		parent::__construct();
