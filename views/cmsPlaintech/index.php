@@ -1,5 +1,8 @@
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-4">
+		<?php require 'inc/header.php'; ?>
+	</div>
+	<div class="col-md-8">
 		<?php 
 		$pages = $this->cmstext;
 
