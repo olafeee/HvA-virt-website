@@ -33,8 +33,8 @@
 
     </script>
 
-    <a href="http://docs.mongodb.org/ecosystem/drivers/javascript/" target="window">Click me</a>
-    <iframe name="window" frameborder="0" width="640" height="420" src="http://raphaeljs.com/"></iframe>
+    <a href="<?php echo $vmurl; ?>" target="window">Click me</a>
+    <iframe name="window" frameborder="0" width="640" height="420" src="<?php echo $vmurl; ?>"></iframe>
     <iframe name="logon" style="display:none;"></iframe>
 
 </center>
