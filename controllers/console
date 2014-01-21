@@ -11,14 +11,14 @@ class Management extends baseController {
 		//	header('location: /account');
 		//}
 
-		include('views/management/consoleWindow.php');
+		include('/views/management/consoleWindow.php');
 
 		parent::__construct();
 	}
 
 	function viewconsole() {
-		$model = $this->laadModel();
-		include('views/management/consoleWindow.php');
+		//$model = $this->laadModel();
+		include('/views/management/consoleWindow.php');
 	}
 
 	

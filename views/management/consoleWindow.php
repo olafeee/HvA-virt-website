@@ -3,7 +3,7 @@
 <?php
 
 	// Generate a login API request
-	$cmdline = "command=login&username=admin&password=R_47*Qp12&response=json";
+	$cmdline = "?command=login&username=admin&password=R_47*Qp12&response=json";
     $cmdline = str_replace(" ", "%20", $cmdline);
     $logonurl = CS_URL.$cmdline;
 
