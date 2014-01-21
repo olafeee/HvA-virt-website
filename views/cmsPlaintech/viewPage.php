@@ -9,7 +9,7 @@
 			//print_r($text);
 			$i = 0;
 			while ($i < count($text)) {
-				echo '<div class="divTable"><div class="divRow">';
+				echo '<div class="divTable"><div class="divRow divRow-ID-Button">';
 				echo '<div class="divColumn-ID">page id = '.$text[$i]["cwid"].'</div>';
 				echo '<div class="divColumn-Button"><a href="/cmsPlaintech/editContent/'.$text[$i]["pageid"].'/'.$text[$i]["cwid"].'"><button type="button" class="btn btn-info">Edit</button></a></div>';
 				echo '</div><div <div class="divRow">>';
