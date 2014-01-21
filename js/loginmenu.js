@@ -61,7 +61,7 @@ function showMVP(id, Amount, Price) {
 
     $('.idMVP').val(id);
      if (Amount == parseInt(Amount)){
-        $('.AmountMVP').val(Amount);
+        $('.AmountMVP1').val(Amount);
         alert("int");   
      }else{
          alert(Amount); 
