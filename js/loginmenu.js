@@ -93,6 +93,7 @@ function checkInp(){
         if (isNaN(x)) 
           {
             $(".faultMVP").text(x+" is geen cijfer");
+             alert(x);
             return false;
           }
         if (isNaN(y)) 
@@ -100,7 +101,7 @@ function checkInp(){
              $(".faultMVP").text(y+" is geen cijfer");
               return false;
           }
-    
+    alert(x);
 }
 
 function isNumber(n) {
