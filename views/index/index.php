@@ -4,7 +4,7 @@ $cmstext = $this->cmstext;
 
 ?>
 <div class="row">
-	<div class="col-md-12">
+	<div class="col-md-11">
 	<div class="introdiv">
 		<div class="introdiv_text">
 			<h4 class="introdiv_text_h4">Plaintech</h4>
