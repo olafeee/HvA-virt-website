@@ -23,7 +23,7 @@ if($this->url0=='order'){
       onload=function() { 
         tarr(0, "DiskPrice");
         tarr(0, "CPUPrice");
-        tarr(0, "RAMPrice");
+        alert(CPUarr(0,"CPUAmount"));
       }
       function tarr(x, y){
         pets = <?print(json_encode($this->DISK));?>;
