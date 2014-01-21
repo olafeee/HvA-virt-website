@@ -15,6 +15,8 @@
   <script type='text/javascript' > 
   var pets;
   var standardValueDisk = 0; 
+  var standardValueCPU = 0;
+  var standardValueRAM = 0;
 </script>
 <?php
 if($this->url0=='order'){

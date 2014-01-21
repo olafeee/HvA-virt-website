@@ -4,14 +4,11 @@ var DISKPriceArray = [4,4.4,4.8,5,6,7,11,13,18,23,26,32];
 var NTarray = ["2000 GB", "4000 GB", "8000 GB","unlimited"];
 var SLAarray =[["bronze",0],["silver",10],["gold",20]];
 
-var standardValueCPU =0;
-var standardValueRAM;
-var standardValueDisk;
 var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
 
-var CPUamount = CPUarr(standardValueDisk, "CPUAmount");
+var CPUamount = CPUarr(standardValueCPU, "CPUAmount");
 var RAMamount = RAMarray[standardValueRAM];
 var DISKamount = tarr(standardValueDisk, "DiskAmount");
 var NTamount = NTarray[standardValueNT];
@@ -258,7 +255,7 @@ function SLAradio(value){
 }
 
 function orderPrice(){
-   costCPU =   CPUarr(standardValueCPU, "CPUPrice");
+   costCPU =   parseInt(CPUarr(standardValueCPU, "CPUPrice"));
    costRam = RAMShorter(RAMamount)*2.00;
    costDisk = parseInt(tarr(standardValueDisk, "DiskPrice"));
    costNT = standardValueNT * 2;
