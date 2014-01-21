@@ -57,6 +57,11 @@ margin-top: 24px;
 
 .introColid{
 	height: 222px;
+	position: absolute;
+}
+
+.introColid-push{
+	margin-top: 200px;
 }
 
 .cloud_img{
