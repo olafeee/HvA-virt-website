@@ -1,3 +1,4 @@
+<div class="row">
 <?php
 $value = $this->editContenVar;
 print_r($value);
@@ -9,3 +10,4 @@ $test = $value[0];
 	<input type="hidden" name="cwid" value="<?php echo $value[0]['cwid']; ?>">
 	<input type="submit" value="Submit">
 </form>
+</div>
