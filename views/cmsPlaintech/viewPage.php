@@ -1,4 +1,3 @@
-
 <div class="row">
 	<div class="col-md-2">
 		<?php require 'inc/header.php'; ?>
@@ -24,5 +23,6 @@
 	<div class="col-md-3"></div>
 </div>
 	
+
 
 
