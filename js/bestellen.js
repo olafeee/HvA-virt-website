@@ -86,7 +86,7 @@ totalPrice();
 } 
 
 
-function CPUslider() {
+function CPUslider1() {
 
     $( "#cpuslider" ).slider({
         value: standardValueCPU,
@@ -101,16 +101,16 @@ function CPUslider() {
     });    
 }
 
-function RAMslider1() {
+function CPUslider() {
 
-    $( "#ramslider1" ).slider({
+    $( "#cpuslider" ).slider({
         value: standardValueCPU1,
-        max: 10,
+        max: 9,
         orientation: "horizontal",
         range: "min",
         animate: true,
         change: function(event, ui) {
-            alert("boos");
+            alert(ui.value);
             changeCPU(ui.value);
         }
     });
