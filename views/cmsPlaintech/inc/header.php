@@ -5,7 +5,6 @@
 	        $i = 0;
 		    while ($i < count($pages)) {
 		    	echo '<li><a href="/cmsPlaintech/viewPage/'. $pages[$i]["pageid"] .'">'.$pages[$i]["page"].'</a></li>';
-		    	echo"<br/>";
 		    	$i++;
 		    }
 		?>

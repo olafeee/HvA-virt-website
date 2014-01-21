@@ -597,3 +597,7 @@ p.order_options_OS{
 	background: url(/img/ajax-preloader.gif) no-repeat center right;
 	opacity: 0.6
 }
+
+.navCM{
+	width: 120px;
+}

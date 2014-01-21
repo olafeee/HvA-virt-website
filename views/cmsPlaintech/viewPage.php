@@ -1,3 +1,9 @@
+
+<div class="row">
+	<div class="col-md-2">
+		<?php require 'inc/header.php'; ?>
+	</div>
+	<div class="col-md-7">
 <?php
 
 	$text = $this->viewpage;
@@ -14,3 +20,8 @@
 	}
 
 ?>
+	</div>
+</div>
+	<div class="col-md-3"></div>
+
+
