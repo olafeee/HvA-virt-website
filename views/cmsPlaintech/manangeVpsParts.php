@@ -14,13 +14,14 @@
 	<?php
 		$text = $this->cmsMVP;
 		$kindMVP = $this->kindMVP;
-		print_r($text[$i][$kindMVP."Amount"]);
+		
 		$i = 0;
 		while ($i < count($text)) {
+			echo ' <script type="text/javascript">var xyz = '.$text[$i][$kindMVP."Amount"];.';</script>';
 			echo '<tr>';
 			echo '<td>'.$text[$i][$kindMVP."Amount"].'</td>';
 			echo '<td>'.$text[$i][$kindMVP."Price"].'</td>';
-			echo '<td><a href="javascript:showMVP('.$text[$i][$kindMVP[0]."ID"].', '.$text[$i][$kindMVP."Amount"].', '.$text[$i][$kindMVP."Price"].')" class="sla_ms">more info</a></td>';	
+			echo '<td><a href="javascript:showMVP('.$text[$i][$kindMVP[0]."ID"].',xyz , '.$text[$i][$kindMVP."Price"].')" class="sla_ms">more info</a></td>';	
 			echo"<tr/>";
 			$i++;
 		}?>

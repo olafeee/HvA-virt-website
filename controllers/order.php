@@ -19,7 +19,7 @@ class Order extends baseController {
 		$this->index('BladeVPS');
 	}
 
-	public $shoppingcart = [];
+	public $shoppingcart = array();
 
 
 	function addToShoppingCart(){
