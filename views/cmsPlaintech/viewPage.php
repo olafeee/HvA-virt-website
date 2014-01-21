@@ -3,6 +3,7 @@
 		<?php require 'inc/header.php'; ?>
 	</div>
 	<div class="col-md-7">
+		<div class="viewPageTable">
 		<?php
 
 			$text = $this->viewpage;
@@ -19,6 +20,7 @@
 			}
 
 		?>
+	</div>
 	</div>
 	<div class="col-md-3"></div>
 </div>

@@ -602,6 +602,7 @@ p.order_options_OS{
 {
             width: 100%;
             display:block;
+            margin: 20px;
 }
 .divRow
 {
@@ -642,6 +643,9 @@ p.order_options_OS{
 	width: 120px;
 }
 
+.viewPageTable{
+	width: 90%;
+}
 
 .CMStitle-table{
 
