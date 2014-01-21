@@ -37,6 +37,7 @@ class baseController {
 			$map = $url[0];
 		}else{
 			$map = 'error';
+			$pagina ='index';
 		}
 
 		$this->baseView->render($map.'/'.$pagina);
