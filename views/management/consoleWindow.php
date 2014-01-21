@@ -14,6 +14,7 @@
 
 ?>
 
+<!-- IS THIS WORKING?????? -->
 	<script type="text/javascript">
 
 		var logonurl=<?php echo $logonurl; ?>;
