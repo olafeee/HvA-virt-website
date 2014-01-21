@@ -598,9 +598,32 @@ p.order_options_OS{
 	opacity: 0.6
 }
 
+.divTable
+{
+            width: 100%;
+            display:block;
+            padding-top:10px;
+            padding-bottom:10px;
+            padding-right:10px;
+            padding-left:10px; 
+}
+.divRow
+{
+         width: 99%; 
+         display:block;
+         padding-bottom:5px;
+}
+.divColumn
+{
+         float: left;
+         width: 24%;
+         display:block;
+}
+
 .navCM{
 	width: 120px;
 }
+
 
 .CMStitle-table{
 	background: #f5f5f5;
