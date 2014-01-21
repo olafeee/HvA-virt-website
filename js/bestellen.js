@@ -11,7 +11,7 @@ var SLAprice = SLAarray[0][1];
 
 
 var CPUamount = CPUarr(standardValueCPU, "CPUAmount");
-var RAMamount = RAMarray[standardValueRAM];
+var RAMamount =  RAMarr(standardValueRAM,"RAMAmount");
 var DISKamount = tarr(standardValueDisk, "DiskAmount");
 var NTamount = NTarray[standardValueNT];
 var IPv4amount = standardValueIPv4;
@@ -131,7 +131,7 @@ function RAMslider() {
 
 function changeRAM(value){
     $('#hiddenChangeRAM').val(value);
-    RAMamount = RAMarray[value];
+    RAMamount = RAMarr(standardValueRAM,"RAMAmount");
     $(".changeRAM").text(RAMamount+"MB");
     orderPrice();
 }
@@ -261,7 +261,7 @@ function SLAradio(value){
 
 function orderPrice(){
    costCPU =   parseInt(CPUarr(standardValueCPU, "CPUPrice"));
-   costRam = RAMShorter(RAMamount)*2.00;
+   costRam = parseInt(RAMarr(standardValueRAM, "RAMPrice"));
    costDisk = parseInt(tarr(standardValueDisk, "DiskPrice"));
    costNT = standardValueNT * 2;
    costIPv4 = IPv4amount-1;

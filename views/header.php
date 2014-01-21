@@ -24,11 +24,6 @@
 if($this->url0=='order'){
 ?>
     <script type="text/javascript">
-      onload=function() { 
-        tarr(0, "DiskPrice");
-        tarr(0, "CPUPrice");
-
-      }
       function tarr(x, y){
         pets = <?print(json_encode($this->DISK));?>;
         var rvar = pets[x][y];
