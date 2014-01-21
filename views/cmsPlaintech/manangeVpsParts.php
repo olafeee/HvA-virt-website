@@ -17,7 +17,9 @@
 		
 		$i = 0;
 		while ($i < count($text)) {
-			echo ' <script type="text/javascript">var xyz = '.$text[$i][$kindMVP."Amount"].';</script>';
+			?>
+			<script type="text/javascript">var xyz = <?php echo '"'.$text[$i][$kindMVP."Amount"].'"'; ?>;</script>
+			<?php
 			echo '<tr>';
 			echo '<td>'.$text[$i][$kindMVP."Amount"].'</td>';
 			echo '<td>'.$text[$i][$kindMVP."Price"].'</td>';
