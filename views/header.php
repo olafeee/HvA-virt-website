@@ -119,7 +119,7 @@ if($this->url0=='order'){
    <div class="container">
     <ul class="nav navbar-nav">
       <li><a href="/">Home</a></li>
-      <li><a href="/order">Webshop</a></li>
+      <li><a href="/order">Order</a></li>
       <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; echo '<li><a href="/account">Mijn Account</a></li>'; }?>
     </ul>
     </div>
