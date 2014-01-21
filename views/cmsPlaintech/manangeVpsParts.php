@@ -14,7 +14,7 @@
 	<?php
 		$text = $this->cmsMVP;
 		$kindMVP = $this->kindMVP;
-		print_r($kindMVP);
+		print_r($text[$i][$kindMVP."Amount"]);
 		$i = 0;
 		while ($i < count($text)) {
 			echo '<tr>';
