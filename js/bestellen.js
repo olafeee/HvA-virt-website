@@ -104,14 +104,14 @@ function CPUslider() {
 function RAMslider1() {
 
     $( "#ramslider1" ).slider({
-        value: standardValueRAM,
+        value: standardValueCPU1,
         max: 10,
         orientation: "horizontal",
         range: "min",
         animate: true,
         change: function(event, ui) {
             alert("boos");
-            
+            standardValueCPU1 = value;
         }
     });
 }
