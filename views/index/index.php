@@ -42,23 +42,23 @@ $cmstext = $this->cmstext;
   			<p><img src="/img/73.svg" class="fontpage-img">    <?php echo $cmstext[3]['cmstext']; ?></p>
   			<p><img src="/img/77.svg" class="fontpage-img">    <?php echo $cmstext[4]['cmstext']; ?></p>
   			<p><img src="/img/76.svg" class="fontpage-img">    <?php echo $cmstext[5]['cmstext']; ?></p>
-  			<p><img src="/img/21.svg" class="fontpage-img">    <?php echo $cmstext[6]['cmstext']; ?>A</p>
+  			<p><img src="/img/21.svg" class="fontpage-img">    <?php echo $cmstext[6]['cmstext']; ?></p>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="index_block1">
-  			<div class="div-align-span-center"><h2>Quality</h2></span></div>
+  			<div class="div-align-span-center"><h2><?php echo $cmstext[7]['cmstext']; ?></h2></span></div>
   			<br>
-  			<p><img src="/img/73.svg" class="fontpage-img">    We assure the best customer care!</p>
-  			<p><img src="/img/77.svg" class="fontpage-img">    We use the best quality blade servers for efficiency!</p>
+  			<p><img src="/img/73.svg" class="fontpage-img">    <?php echo $cmstext[8]['cmstext']; ?></p>
+  			<p><img src="/img/77.svg" class="fontpage-img">    <?php echo $cmstext[9]['cmstext']; ?></p>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="index_block1">
-  			<div class="div-align-span-center"><h2>Green IT</h2></span></div>
+  			<div class="div-align-span-center"><h2><?php echo $cmstext[10]['cmstext']; ?></h2></span></div>
   			<br>	
-  			<p>    Our servers are build and designed for Green IT</p>
-  			<p>    The entire Plaintech infrastructure is designed for the enviroment</p>
+  			<p>    <?php echo $cmstext[11]['cmstext']; ?></p>
+  			<p>    <?php echo $cmstext[12]['cmstext']; ?></p>
   			<?php print_r($_SESSION);?>
 			</div>
 			</div>
