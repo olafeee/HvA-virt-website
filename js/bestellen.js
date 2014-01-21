@@ -11,7 +11,7 @@ var standardValueNT;
 var standardValueIPv4;
 var SLAprice = SLAarray[0][1];
 
-var CPUamount = CPUarr(standardValueCPU, "CPUAmount");
+var CPUamount = CPUarr(0, "CPUAmount");
 var RAMamount = RAMarray[standardValueRAM];
 var DISKamount = tarr(standardValueDisk, "DiskAmount");
 var NTamount = NTarray[standardValueNT];
