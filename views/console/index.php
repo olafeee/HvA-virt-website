@@ -17,8 +17,8 @@
 <!-- IS THIS WORKING?????? -->
     <script type="text/javascript">
 
-        var logonurl=<?php echo $logonurl; ?>;
-        var vmurl=<?php echo $vmurl; ?>;
+        var logonurl='<?php echo $logonurl; ?>';
+        var vmurl='<?php echo $vmurl; ?>';
         
         $( document ).ready(function() {
             $.ajax({
