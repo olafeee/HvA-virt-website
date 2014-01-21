@@ -71,12 +71,6 @@ class baseController {
 		return $url;
 	}
 
-	function logout(){
-		Session::destroy();
-		header('location: ../');
-		exit;
-	}
-
 	/**
      * matchInt kijk of alleen cijfers is 
      * @param string $number is cijfer dat gechecked wordt

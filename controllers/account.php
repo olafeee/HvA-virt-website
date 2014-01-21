@@ -26,7 +26,7 @@ class Account extends baseController {
 
 	function logout() {
 		session_destroy();
-		header('location: /account');
+		header('location: /');
 	}
 
 	function register() {
