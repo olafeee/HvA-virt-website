@@ -19,11 +19,11 @@
         <h3 class="panel-title">Panel title</h3>
       </div>
       <div class="panel-body">
-        <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a><br />
+        <a href="<?php echo $vmurl; ?>" target="window" type="button">Refresh Console</a><br />
       </div>
       <div class="panel-body">
         <center>
-            <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="660" height="440" ></iframe>
+            <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="700" height="450" ></iframe>
             <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
         </center>
       </div>
