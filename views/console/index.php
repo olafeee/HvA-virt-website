@@ -5,10 +5,10 @@
     // Generate a login API request
     $cmdline = "?command=login&username=admin&password=R_47*Qp12&response=json";
     $cmdline = str_replace(" ", "%20", $cmdline);
-    $logonurl = 'http://145.92.14.90:8080/client/api';
+    $logonurl = 'http://145.92.14.90:8080/client/api'.$cmdline;
 
     // Generate the URL to the console of the selected VM
-    $console_uuid = '163a66dc-1df6-4c75-b16f-2db34d91d026';
+    $console_uuid = 'e86a8cce-af66-42a9-9e94-695aa6ece678';
     $console_vps_name = 'ConsoleTest';                             
     $vmurl = "http://145.92.14.90:8080/client/console?cmd=access&vm=".$console_uuid."";
 
@@ -25,7 +25,7 @@
             //location.reload();
             // hackishly force iframe to reload
             var iframe = document.getElementById('window');
-            iframe.src = iframe.src;
+            iframe.src = vmurl;
             /*$.ajax({
                 type: "POST",
                 url: logonurl,
