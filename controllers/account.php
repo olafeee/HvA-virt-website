@@ -2,7 +2,6 @@
 
 class Account extends baseController {
 
-	public $model;
 	public $db;
 
 	function __construct() {
@@ -23,10 +22,10 @@ class Account extends baseController {
 			if ($response == true) {
 				//laad db waar role staat
 				$this->db = $model->conDB1();
+				$responseRole = $model->getRole($_SESSION['logArr']['userid']);
+				print_r($responseRole);
+				if (1 == 1) {
 
-				$responseRole = TRUE;
-				if ($responseRole == true) {
-					print_r($_SESSION['logArr']['userid']);
 				 }else{
 				 	header('location: /management');
 				 }
