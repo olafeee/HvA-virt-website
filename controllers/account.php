@@ -24,6 +24,9 @@ class Account extends baseController {
 				$this->db = $model->conDB1();
 				$responseRole = $model->getRole($_SESSION['logArr']['userid']);
 				print_r($responseRole);
+				if(empty($responseRole)){
+					echo "empty";
+				}
 				if (1 == 1) {
 
 				 }else{
