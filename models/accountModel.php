@@ -10,7 +10,13 @@ class accountModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
+<<<<<<< HEAD
 		$this->conDB();
+=======
+		//$this->conDB();
+		$this->cloudstack = new cloudstack();
+		$this->cloudstack_sign = new cloudstack_sign();
+>>>>>>> 4708b1987826f7131df821251497ccdd7101d1de
 	}
 
 	public function runLogin($username, $password)

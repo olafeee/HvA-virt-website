@@ -19,7 +19,7 @@ class managementModel extends baseModel
         $cmdline = str_replace(" ", "%20", $cmdline);
         $url = "http://145.92.14.90:8080/client/api?".$cmdline;
         echo "<iframe  style='display:none;' src='".$url."'></iframe>
-        <meta url=/console />";
+        <meta url=/console/view />";
 	}
 
 	function consoleWindow($vmid) {
