@@ -24,9 +24,10 @@ class Shoppingbasket extends baseController {
 			$name="centos65minimal";
 			$account= null;
 			$domainid= null;
+			$securitygroupids= "e8ec5e1f-c237-4ad6-802f-4f138ffd34c4";
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
-			$model->createVM($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid);		
+			$model->createVM($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
 		}else{
 			header('location: /account');
 		}
