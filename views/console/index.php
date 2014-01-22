@@ -26,13 +26,18 @@
                 type: "POST",
                 url: logonurl,
                 crossDomain: true,
-                data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json", domain: "/"}
+                data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json", domain: "/"},
+                beforeSend: setHeader
             }).done(function() {
                 $( this ).window.open(vmurl, "window");
             })
             .fail(function() {
                 alert( "Error in logon" );
             });
+
+            function setHeader(xhr) {
+              xhr.setRequestHeader('Authorization', token);
+            }
             
         });
 
