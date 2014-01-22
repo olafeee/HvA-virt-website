@@ -23,11 +23,13 @@ class Account extends baseController {
 				//laad db waar role staat
 				$this->db = $model->conDB1();
 				$responseRole = $model->getRole($_SESSION['logArr']['userid']);
+				print_r($responseRole);
 				if(empty($responseRole)) {
 					$model->insertRole();
-					Session::set('logArr', '6');
+					Session::set('userRole', '6');
 					print_r($_SESSION);
 				 }else{
+				 	echo"het werkt":
 				 	print_r($responseRole);
 				 	//header('location: /management');
 				 }
