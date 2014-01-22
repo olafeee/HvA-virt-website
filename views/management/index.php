@@ -4,7 +4,7 @@
 
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
+        <h3 class="panel-title">Management Panel</h3>
       </div>
       <div class="list-group">
         <a href="#tab1" class="list-group-item" data-toggle="tab">Systems Panel</a>
