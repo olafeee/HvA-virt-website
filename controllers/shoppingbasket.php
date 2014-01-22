@@ -26,7 +26,7 @@ class Shoppingbasket extends baseController {
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
 			$this->cloudstack->deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid );
-
+			header('location: /order');			
 		}else{
 			header('location: /account');
 		}
