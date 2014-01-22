@@ -29,7 +29,7 @@ class Account extends baseController {
 					Session::set('userRole', '6');
 					print_r($_SESSION);
 				 }else{
-				 	echo"het werkt":
+				 	echo"het werkt";
 				 	print_r($responseRole);
 				 	//header('location: /management');
 				 }
