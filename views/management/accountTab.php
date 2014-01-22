@@ -6,7 +6,7 @@
 
 ?>
 
-<span class="glyphicon glyphicon-user"></span><h4>Account Information</h4><br />
+<span class="glyphicon glyphicon-user"><h4>Account Information</h4></span><br />
 
 <label for="fname" class="col-sm-2 control-label">First Name :</label>
 <div class="col-sm-10">
