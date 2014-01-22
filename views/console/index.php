@@ -23,6 +23,7 @@
         $( document ).ready(function() {
             window.open(logonurl, "logon");
             $.ajax({
+                type: "POST",
                 url: logonurl,
                 context: document.body
             }).done(function() {
