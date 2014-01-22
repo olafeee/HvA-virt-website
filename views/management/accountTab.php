@@ -27,7 +27,6 @@
 <div class="col-sm-10">
 	<p id="type"><?php
 		$accountType = $_SESSION['logArr']['type'];
-		echo $accountType;
 
 		if($accountType == '0'){
 			echo 'User';
