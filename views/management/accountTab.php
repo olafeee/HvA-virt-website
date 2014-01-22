@@ -10,7 +10,7 @@ $accountType = $_SESSION['logArr']['lastname'];
 
 <label for="fname" class="col-sm-2 control-label">First Name :</label>
 <div class="col-sm-10" id="fname">
-	<?php echo $_SESSION['logArr']['firstname']; ?>
+	<?php echo $_SESSION['logArr']['firstname']; ?><br />
 </div>
 
 <label for="lname" class="col-sm-2 control-label">Last Name :</label>
@@ -38,13 +38,4 @@ $accountType = $_SESSION['logArr']['lastname'];
 	?>
 </div>
 
-
 <br />
-
-<?php 
-
-	echo "<pre>";
-	print_r($_SESSION);
-
-?>
-
