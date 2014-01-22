@@ -4,8 +4,6 @@
 ** Account Tab on Management Page
 ** ******************************/
 
-$accountDetials = 
-
 
 echo "<pre>";
 print_r($_SESSION);
