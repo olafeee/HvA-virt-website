@@ -2,7 +2,7 @@
 
   <div class="col-md-3">
 
-    <div class="panel panel-info">
+    <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Panel title</h3>
       </div>
@@ -10,7 +10,7 @@
         <a href="#tab1" class="list-group-item" data-toggle="tab">Systems Panel</a>
         <a href="#tab2" class="list-group-item" data-toggle="tab">Account Info</a>
         <a href="#tab3" class="list-group-item" data-toggle="tab">Invoice Overview</a>
-        <a href="#" class="list-group-item" data-toggle="tab">Admin Page</a>
+        <a href="/cmsPlaintech/" class="list-group-item" data-toggle="tab">Admin Page</a>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
 
     <div class="tab-pane active" id="tab1">
       <div class="col-md-9" role="main">
-        <div class="panel panel-info">
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">System Panel</h3>
           </div>
@@ -34,7 +34,7 @@
 
     <div class="tab-pane" id="tab2">
       <div class="col-md-9" role="main">
-        <div class="panel panel-info">
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Account Information</h3>
           </div>
@@ -48,7 +48,7 @@
 
     <div class="tab-pane" id="tab3">
       <div class="col-md-9" role="main">
-        <div class="panel panel-info">
+        <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Invoice Overview</h3>
           </div>

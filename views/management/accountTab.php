@@ -39,3 +39,7 @@
 </div>
 
 <br />
+
+<h3>Payment Information</h3>
+
+BLABLABLA<br />
