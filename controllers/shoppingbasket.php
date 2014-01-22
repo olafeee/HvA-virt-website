@@ -14,7 +14,7 @@ class Shoppingbasket extends baseController {
 	* @param string $diskofferingid 
 	*/
 	function createVM() {
-		if (Session::get('loggedIn') == true) {
+		if (1 == 1) {
 			$model = $this->laadModel();
 			$serviceofferingid ="eaacfa01-6e2f-4a5a-a789-03f259c8a644";
 			$templateid="7fd68000-5783-47f0-b0f1-4bae45946b4e";
