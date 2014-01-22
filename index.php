@@ -29,9 +29,13 @@ require 'lib/baseModel.php';
 require 'lib/baseView.php';
 
 require 'config.php';
+require 'lib/session.php';
+
+//database
 require 'lib/database.php';
 require 'lib/database1.php';
-require 'lib/session.php';
+require 'lib/databaseRole.php';
+
 
 #################################################
 # Bootstrap inladen a.k.a Router jwz

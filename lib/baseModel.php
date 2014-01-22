@@ -12,5 +12,7 @@ class baseModel {
 	function conDB1(){
 		$this->db = new Database1();
 	}
-
+	function conDBRole(){
+		$this->dbRole = new databaseRole();
+	}
 }
