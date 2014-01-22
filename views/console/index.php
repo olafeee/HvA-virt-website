@@ -13,38 +13,25 @@
     $vmurl = "http://145.92.14.90:8080/client/console?cmd=access&vm=".$console_uuid."";
 
 ?>
-
-<!-- IS THIS WORKING?????? -->
     <script type="text/javascript">
 
+        // URLs for the Login and Console API request
         var logonurl='<?php echo $logonurl; ?>';
         var vmurl='<?php echo $vmurl; ?>';
-        
+
+        // Use Iframes to send the API request to prevent Cross-Domain request.
         $( document ).ready(function() {
+            // On page open send a login request
             window.open(logonurl, "logon");
-            //location.reload();
-            // hackishly force iframe to reload
+            // Hackishly force iframe to reload
             var iframe = document.getElementById('window');
             iframe.src = vmurl;
-            /*$.ajax({
-                type: "POST",
-                url: logonurl,
-                crossDomain: true,
-                data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json", domain: "/"},
-                headers: { 'Access-Control-Allow-Origin': '*' },
-            }).done(function() {
-                $( this ).window.open(vmurl, "window");
-            })
-            .fail(function() {
-                alert( "Error in logon" );
-            });*/
-            
         });
 
     </script>
 
-    <a href="<?php echo $vmurl; ?>" target="window">Click me</a>
+    <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a>
     <iframe name="window" id="window" frameborder="0" width="640" height="420" ></iframe>
-    <iframe name="logon" id="logon" style="display:none;"></iframe>
+    <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
 
 </center>
