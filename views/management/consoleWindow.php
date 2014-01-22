@@ -23,6 +23,7 @@
 		$( document ).ready(function() {
 			$.ajax({
 				url: logonurl,
+				crossDomain: true,
 				context: document.body
 			}).done(function() {
 				$( this ).window.open(vmurl, "window");
