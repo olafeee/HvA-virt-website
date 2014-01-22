@@ -8,12 +8,12 @@
 
 <label for="fname" class="col-sm-2 control-label">First Name :</label>
 <div class="col-sm-10">
-	<p id="fname"><?php echo $_SESSION['logArr']['firstname']; ?></p>
+	<p id="fname" name="fname"><?php echo $_SESSION['logArr']['firstname']; ?></p>
 </div>
 
 <label for="lname" class="col-sm-2 control-label">Last Name :</label>
 <div class="col-sm-10" id="lname">
-	<?php echo $_SESSION['logArr']['lastname']; ?><br />
+	<p id="lname"><?php echo $_SESSION['logArr']['lastname']; ?></p><br />
 </div>
 
 <label for="email" class="col-sm-2 control-label">Email :</label>
