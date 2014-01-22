@@ -23,6 +23,7 @@ class shoppingbasketModel extends baseModel
 
 	function createVM($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid){
 		$this->cloudstack->deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid);
+		$this->cloudstack->listAsyncJobs();
 	}
 
 }
