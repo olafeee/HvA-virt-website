@@ -16,7 +16,7 @@ class accountModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
-		$this->conDB();
+		//$this->conDB();
 		$this->cloudstack = new cloudstack();
 		$this->cloudstack_sign = new cloudstack_sign();
 	}
