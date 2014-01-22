@@ -15,10 +15,10 @@
 </ul>
 
 <div class="tab-content">
-  <div class="tab-pane active" id="home">...</div>
-  <div class="tab-pane" id="profile">...</div>
-  <div class="tab-pane" id="messages">...</div>
-  <div class="tab-pane" id="settings">...</div>
+  <div class="tab-pane active" id="home"> home</div>
+  <div class="tab-pane" id="profile"> profile</div>
+  <div class="tab-pane" id="messages"> messages</div>
+  <div class="tab-pane" id="settings"> settings</div>
 </div>
 
 <script>
@@ -27,7 +27,7 @@
   })
 </script>
 
-  
+
 </div>
 
 
@@ -42,10 +42,10 @@
           <h3 class="panel-title">Panel title</h3>
         </div>
         <div class="list-group">
-          <a href="#tabs-1" class="list-group-item">Machine Pannel</a>
-          <a href="#tabs-2" class="list-group-item">Account Settings</a>
-          <a href="#tabs-3" class="list-group-item">Invoice Overview</a>
-          <a href="#" class="list-group-item">Admin Page</a>
+          <a href="#profile" class="list-group-item" data-toggle="tab">Machine Pannel</a>
+          <a href="#messages" class="list-group-item" data-toggle="tab">Account Settings</a>
+          <a href="#settings" class="list-group-item" data-toggle="tab">Invoice Overview</a>
+          <a href="#" class="list-group-item" data-toggle="tab">Admin Page</a>
         </div>
       </div>
 
