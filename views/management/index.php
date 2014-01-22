@@ -1,11 +1,3 @@
-<!--<script>
-  $('#tabs a').click(function (e) {
-    e.preventDefault()
-    $(this).tab('show')
-  })
-</script>-->
-
-
 <div class="row">
 
   <div class="col-md-3">
@@ -15,8 +7,8 @@
         <h3 class="panel-title">Panel title</h3>
       </div>
       <div class="list-group">
-        <a href="#tab1" class="list-group-item" data-toggle="tab">Machine Pannel</a>
-        <a href="#tab2" class="list-group-item" data-toggle="tab">Account Settings</a>
+        <a href="#tab1" class="list-group-item" data-toggle="tab">Systems Panel</a>
+        <a href="#tab2" class="list-group-item" data-toggle="tab">Account Info</a>
         <a href="#tab3" class="list-group-item" data-toggle="tab">Invoice Overview</a>
         <a href="#" class="list-group-item" data-toggle="tab">Admin Page</a>
       </div>
@@ -30,10 +22,10 @@
       <div class="col-md-9" role="main">
         <div class="panel panel-info">
           <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">System Panel</h3>
           </div>
           <div class="panel-body">
-            <a href="javascript:window.open('/management/console','VM NAME HERE','width=800,height=500')">Open window 1111111111</a>
+            <?php include('/views/management/'); ?>
             <br />
           </div>
         </div>
@@ -44,10 +36,10 @@
       <div class="col-md-9" role="main">
         <div class="panel panel-info">
           <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">Account Information</h3>
           </div>
           <div class="panel-body">
-            <a href="javascript:window.open('/management/console','VM NAME HERE','width=800,height=500')">Open window 22222222222222 </a>
+            <?php include('/views/management/'); ?>
             <br />
           </div>
         </div>
@@ -58,9 +50,10 @@
       <div class="col-md-9" role="main">
         <div class="panel panel-info">
           <div class="panel-heading">
-            <h3 class="panel-title">Panel title</h3>
+            <h3 class="panel-title">Invoice Overview</h3>
           </div>
           <div class="panel-body">
+            <?php include('/views/management/'); ?>
             <a href="javascript:window.open('/management/console','VM NAME HERE','width=800,height=500')">Open window333333333333333333</a>
             <br />
           </div>
