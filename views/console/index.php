@@ -26,12 +26,13 @@
             // Hackishly force iframe to reload
             var iframe = document.getElementById('window');
             iframe.src = vmurl;
+            $('#window').css('display', 'inline-block');
         });
 
     </script>
 
     <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a>
-    <iframe name="window" id="window" frameborder="0" width="640" height="420" ></iframe>
+    <iframe name="window" id="window" style="display:none;" frameborder="0" width="640" height="420" ></iframe>
     <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
 
 </center>
