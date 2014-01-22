@@ -19,7 +19,7 @@ class Shoppingbasket extends baseController {
 			$serviceofferingid ="eaacfa01-6e2f-4a5a-a789-03f259c8a644";
 			$templateid="7fd68000-5783-47f0-b0f1-4bae45946b4e";
 			$zoneid="bc1354a3-58b4-4f98-ab51-7d4406260e15";
-			$diskofferingid= null;
+			$diskofferingid= "d97978f6-4ef4-40d0-b62d-eba02e45318e";
 			$displayname= "centos65";
 			$name="centos65minimal";
 			$account= null;
