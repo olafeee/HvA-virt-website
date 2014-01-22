@@ -80,11 +80,20 @@ class accountModel extends baseModel
 	}
 
 	function getRole($CSID){
-			    $sqlArray = $this->db->select('SELECT rol_id FROM privileges WHERE 
-						CSID = :CSID ', 
-                array('CSID' => $CSID));
-                return $sqlArray;
+		$sqlArray = $this->db->select('SELECT rol_id FROM privileges WHERE 
+				CSID = :CSID ', 
+		array('CSID' => $CSID));
+		return $sqlArray;
 	}
+
+
+	public function insertRole($data){
+        $this->db->insert('privileges', array(
+            'rol_id' => "6"
+            'username' => $_SESSION['logArr']['username'],
+            'CSID' => $_SESSION['logArr']['userid']
+        ));
+    }
 }
 
 ?>
