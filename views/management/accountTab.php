@@ -8,8 +8,8 @@ $accountType = $_SESSION['logArr']['lastname'];
 
 ?>
 
-<label for="lname" class="col-sm-2 control-label">First Name :</label>
-<div class="col-sm-10" id="lname">
+<label for="fname" class="col-sm-2 control-label">First Name :</label>
+<div class="col-sm-10" id="fname">
 	<?php echo $_SESSION['logArr']['firstname']; ?>
 </div>
 
@@ -18,13 +18,13 @@ $accountType = $_SESSION['logArr']['lastname'];
 	<?php echo $_SESSION['logArr']['lastname']; ?>
 </div>
 
-<label for="lname" class="col-sm-2 control-label">Email :</label>
-<div class="col-sm-10" id="lname">
+<label for="email" class="col-sm-2 control-label">Email :</label>
+<div class="col-sm-10" id="email">
 	<?php echo $_SESSION['logArr']['account']; ?>
 </div>
 
-<label for="lname" class="col-sm-2 control-label">Account Type :</label>
-<div class="col-sm-10" id="lname">
+<label for="type" class="col-sm-2 control-label">Account Type :</label>
+<div class="col-sm-10" id="type">
 	<?php
 		if($accountType == '0'){
 			echo "User";
