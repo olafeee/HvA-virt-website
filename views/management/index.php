@@ -14,18 +14,12 @@
   <li><a href="#settings" data-toggle="tab">Settings</a></li>
 </ul>
 
-<div class="tab-content">
+<!--<div class="tab-content">
   <div class="tab-pane active" id="home"> home</div>
   <div class="tab-pane" id="profile"> profile</div>
   <div class="tab-pane" id="messages"> messages</div>
   <div class="tab-pane" id="settings"> settings</div>
-</div>
-
-<script>
-  $(function () {
-    $('#myTab a:last').tab('show')
-  })
-</script>
+</div>-->
 
 
 </div>
@@ -102,3 +96,9 @@
   </div><!-- End Div tabs -->
 
 </div>
+
+<script>
+  $(function () {
+    $('#myTab a:last').tab('show')
+  })
+</script>
