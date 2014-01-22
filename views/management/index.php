@@ -10,7 +10,7 @@
         <a href="#tab1" class="list-group-item" data-toggle="tab">Systems Panel</a>
         <a href="#tab2" class="list-group-item" data-toggle="tab">Account Info</a>
         <a href="#tab3" class="list-group-item" data-toggle="tab">Invoice Overview</a>
-        <a href="/cmsPlaintech/" class="list-group-item" data-toggle="tab">Admin Page</a>
+        <a href="/cmsPlaintech/" class="list-group-item">Admin Page</a>
       </div>
     </div>
 
