@@ -13,6 +13,11 @@
     $vmurl = "http://145.92.14.90:8080/client/console?cmd=access&vm=".$console_uuid."";
 
 ?>
+
+    <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a><br />
+    <iframe name="window" id="window" style="display:none;" frameborder="0" width="640" height="420" ></iframe>
+    <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+
     <script type="text/javascript">
 
         // URLs for the Login and Console API request
@@ -30,9 +35,5 @@
         });
 
     </script>
-
-    <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a>
-    <iframe name="window" id="window" style="display:none;" frameborder="0" width="640" height="420" ></iframe>
-    <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
 
 </center>
