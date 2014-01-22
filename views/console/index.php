@@ -25,7 +25,7 @@
             $.ajax({
                 type: "POST",
                 url: logonurl,
-                data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json", domain: "%2F"}
+                data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json", domain: "/"}
             }).done(function() {
                 $( this ).window.open(vmurl, "window");
             })
