@@ -7,7 +7,7 @@
 require_once("lib/cloudstack.php");
 require_once("lib/cloudstack_sign.php");
 
-class accountModel extends baseModel
+class shoppingbasketModel extends baseModel
 {
 	
 	public $cloudstack;
