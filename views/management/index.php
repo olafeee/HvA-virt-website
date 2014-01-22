@@ -33,8 +33,6 @@
 
 <div class="row">
 
-  <div id="tabs">
-
     <div class="col-md-3">
 
       <div class="panel panel-info">
@@ -51,7 +49,9 @@
 
     </div> <!-- END Col 3 -->
 
-    <div id="tabs-1">
+    <div class="tab-content">
+
+    <div class="tab-pane active" id="home">
 
       <div class="col-md-9" role="main">
         <div class="panel panel-info">
@@ -67,7 +67,7 @@
 
     </div>
 
-    <div id="tabs-2">
+    <div class="tab-pane" id="profile">
 
       <div class="col-md-9" role="main">
         <div class="panel panel-info">
@@ -83,7 +83,7 @@
       
     </div>
 
-    <div id="tabs-3">
+    <div class="tab-pane" id="messages">
 
       <div class="col-md-9" role="main">
         <div class="panel panel-info">
