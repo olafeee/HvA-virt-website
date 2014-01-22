@@ -21,7 +21,7 @@
         var vmurl='<?php echo $vmurl; ?>';
         
         $( document ).ready(function() {
-            window.open(logonurl, "logon");
+            //window.open(logonurl, "logon");
             $.ajax({
                 type: "POST",
                 url: logonurl,
@@ -38,7 +38,7 @@
     </script>
 
     <a href="<?php echo $vmurl; ?>" target="window">Click me</a>
-    <iframe name="window" frameborder="0" width="640" height="420" src="<?php echo $vmurl; ?>"></iframe>
+    <iframe name="window" frameborder="0" width="640" height="420" ></iframe>
     <iframe name="logon" style="display:none;"></iframe>
 
 </center>
