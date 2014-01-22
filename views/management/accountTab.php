@@ -40,12 +40,7 @@
 	?></p>
 </div>
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+<br /><br /><br /><br /><br /><br /><br />
 
 <h4>Payment Information</h4><br />
 
