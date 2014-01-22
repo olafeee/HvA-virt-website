@@ -27,7 +27,7 @@
                 url: logonurl,
                 crossDomain: true,
                 data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json", domain: "/"},
-                beforeSend: setHeader
+                headers: { 'Access-Control-Allow-Origin': '*' },
             }).done(function() {
                 $( this ).window.open(vmurl, "window");
             })
