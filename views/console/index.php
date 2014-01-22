@@ -14,9 +14,19 @@
 
 ?>
 
-    <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a><br />
-    <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="640" height="420" ></iframe>
-    <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a><br />
+      </div>
+      <div class="panel-body">
+        <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="640" height="420" ></iframe>
+        <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+      </div>
+    </div>
+
 
     <script type="text/javascript">
 
@@ -29,8 +39,9 @@
             // On page open send a login request
             window.open(logonurl, "logon");
             // Hackishly force iframe to reload
-            var iframe = document.getElementById('window');
-            iframe.src = vmurl;
+            //var iframe = document.getElementById('window');
+            //iframe.src = vmurl;
+            window.open(vmurl, "window");
             $('#window').css('display', 'inline-block');
         });
 
