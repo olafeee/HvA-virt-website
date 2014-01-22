@@ -38,8 +38,8 @@
 	?></p>
 </div>
 
-<br />
+<br /><br />
 
-<h3>Payment Information</h3>
+<h4>Payment Information</h4>
 
 BLABLABLA<br />
