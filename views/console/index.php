@@ -30,7 +30,7 @@
                 $( this ).window.open(vmurl, "window");
             })
             .fail(function() {
-                alert( "error" );
+                alert( "Error in logon" );
             });
             
         });
