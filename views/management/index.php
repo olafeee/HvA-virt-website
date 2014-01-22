@@ -21,8 +21,15 @@
     </div>
   </div>
   <div class="col-md-9" role="main">
-    
-  <a href="javascript:window.open('/management/console','VM NAME HERE','width=500,height=150')">Open window</a>
 
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Panel title</h3>
+    </div>
+    <div class="panel-body">
+      <a href="javascript:window.open('/management/console','VM NAME HERE','width=500,height=150')">Open window</a>
+      <br />
+    </div>
+    
   </div>
 </div>
