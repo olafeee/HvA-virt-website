@@ -6,7 +6,7 @@
 
 ?>
 
-<h4>Account Information</h4><br />
+<span class="glyphicon glyphicon-user"></span><h4>Account Information</h4><br />
 
 <label for="fname" class="col-sm-2 control-label">First Name :</label>
 <div class="col-sm-10">
@@ -42,6 +42,6 @@
 
 <br /><br /><br /><br /><br /><br /><br />
 
-<h4>Payment Information</h4><br />
+<span class="glyphicon glyphicon-euro"></span><h4>Payment Information</h4><br />
 
 Filler here<br />
