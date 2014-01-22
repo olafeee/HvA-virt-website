@@ -141,7 +141,7 @@ class cloudstack
     }
 
     // Creates and automatically starts a virtual machine based on a service offering, disk offering, and template.
-    public function deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid = null, $displayname = null, $name = null, $account = null, $domainid = null)
+    public function deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid = null, $displayname = null, $name = null, $account = null, $domainid = null, $securitygroupids = null)
     {
         $command_array = array(
             'command' => 'deployVirtualMachine',
@@ -153,6 +153,7 @@ class cloudstack
             'name' => $name,
             'account' => $account,
             'domainid' => $domainid,
+            'securitygroupids' => $securitygroupids,
         );
         return $this->_apiRequest($command_array);
     }
