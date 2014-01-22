@@ -36,7 +36,7 @@
       <div class="col-md-9" role="main">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">Account Information</h3>
+            <h3 class="panel-title">Account Panel</h3>
           </div>
           <div class="panel-body">
             <?php include('accountTab.php'); ?>

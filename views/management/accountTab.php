@@ -6,6 +6,8 @@
 
 ?>
 
+<h4>Account Information</h4>
+
 <label for="fname" class="col-sm-2 control-label">First Name :</label>
 <div class="col-sm-10">
 	<p id="fname" name="fname"><?php echo $_SESSION['logArr']['firstname']; ?></p>
@@ -38,13 +40,12 @@
 	?></p>
 </div>
 
-<br /><br /><br /><br />
 <br />
 <br />
 <br />
 <br />
 <br />
-
+<br />
 
 <h4>Payment Information</h4><br />
 
