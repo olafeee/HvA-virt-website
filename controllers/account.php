@@ -22,7 +22,7 @@ class Account extends baseController {
 			$response = $model->runLogin($_POST['login'], $_POST['password']);
 			if ($response == true) {
 				//laad db waar role staat
-				$this->db = $this->model->conDB1();
+				$this->db = $model->conDB1();
 
 				$responseRole = TRUE;
 				if ($responseRole == true) {
