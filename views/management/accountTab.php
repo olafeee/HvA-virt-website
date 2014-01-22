@@ -26,7 +26,7 @@
 <label for="type" class="col-sm-2 control-label">Account Type :</label>
 <div class="col-sm-10">
 	<p id="type"><?php
-		$accountType = $_SESSION['logArr']['lastname'];
+		$accountType = $_SESSION['logArr']['type'];
 		echo $accountType;
 
 		if($accountType == 0){
