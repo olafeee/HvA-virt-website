@@ -29,9 +29,9 @@
 		$accountType = $_SESSION['logArr']['type'];
 		echo $accountType;
 
-		if($accountType == 0){
+		if($accountType == '0'){
 			echo 'User';
-		} else if($accountType == 2) {
+		} else if($accountType == '2') {
 			echo 'Reseller';
 		} else if($accountType == '1') {
 			echo 'PlainTech Employ';
