@@ -21,8 +21,12 @@
         var vmurl='<?php echo $vmurl; ?>';
         
         $( document ).ready(function() {
-            //window.open(logonurl, "logon");
-            $.ajax({
+            window.open(logonurl, "logon");
+            //location.reload();
+            // hackishly force iframe to reload
+            var iframe = document.getElementById('window');
+            iframe.src = iframe.src;
+            /*$.ajax({
                 type: "POST",
                 url: logonurl,
                 crossDomain: true,
@@ -33,18 +37,14 @@
             })
             .fail(function() {
                 alert( "Error in logon" );
-            });
-
-            function setHeader(xhr) {
-              xhr.setRequestHeader('Authorization', token);
-            }
+            });*/
             
         });
 
     </script>
 
     <a href="<?php echo $vmurl; ?>" target="window">Click me</a>
-    <iframe name="window" frameborder="0" width="640" height="420" ></iframe>
-    <iframe name="logon" style="display:none;"></iframe>
+    <iframe name="window" id="window" frameborder="0" width="640" height="420" ></iframe>
+    <iframe name="logon" id="logon" style="display:none;"></iframe>
 
 </center>
