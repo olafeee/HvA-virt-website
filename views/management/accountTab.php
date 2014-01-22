@@ -26,14 +26,14 @@
 	<p id="type"><?php
 		$accountType = $_SESSION['logArr']['lastname'];
 
-		if($accountType == '0'){
-			echo "User";
-		} else if($accountType == '2') {
-			echo "Reseller";
-		} else if($accountType == '1') {
-			echo "PlainTech Employ";
+		if($accountType == 0){
+			echo 'User';
+		} else if($accountType == 2) {
+			echo 'Reseller';
+		} else if($accountType == 1) {
+			echo 'PlainTech Employ';
 		} else {
-			echo "Unknown";
+			echo 'Unknown';
 		}
 	?></p>
 </div>
