@@ -21,6 +21,7 @@ class Database1 extends PDO
         $sth->execute();
         return $sth->fetchAll($fetchMode);
     }
+
 	public function selectAll($sql, $fetchMode = PDO::FETCH_ASSOC)
     {
         $sth = $this->prepare($sql);
@@ -52,6 +53,7 @@ class Database1 extends PDO
         
         $sth->execute();
     }
+
 
 }// einde class
 

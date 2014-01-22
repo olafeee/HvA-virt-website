@@ -2,8 +2,12 @@
 
 class Account extends baseController {
 
+	public $model;
+	public $db;
+
 	function __construct() {
 		parent::__construct();
+		
 
 		// Check if already logged in.
 		session_start();
@@ -17,7 +21,15 @@ class Account extends baseController {
 			$model = $this->laadModel();
 			$response = $model->runLogin($_POST['login'], $_POST['password']);
 			if ($response == true) {
-				header('location: /management');
+				//laad db waar role staat
+				$this->db = $this->model->conDB1();
+
+				$responseRole = TRUE;
+				if ($responseRole == true) {
+					print_r($_SESSION);
+				 }else{
+				 	header('location: /management');
+				 }
 			} else {
 				header('location: /account');
 			}

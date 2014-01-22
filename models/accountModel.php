@@ -16,7 +16,6 @@ class accountModel extends baseModel
 	function __construct()
 	{
 		parent::__construct();
-		//$this->conDB();
 		$this->cloudstack = new cloudstack();
 		$this->cloudstack_sign = new cloudstack_sign();
 	}
@@ -80,6 +79,12 @@ class accountModel extends baseModel
 		
 	}
 
+	function getRole($CSID){
+			    $sqlArray = $this->db->select('SELECT rol_id FROM privileges WHERE 
+						CSID = :CSID ', 
+                array('CSID' => $CSID));
+                return $sqlArray;
+	}
 }
 
 ?>
