@@ -5,7 +5,7 @@
     // Generate a login API request
     $cmdline = "?command=login&username=admin&password=R_47*Qp12&response=json";
     $cmdline = str_replace(" ", "%20", $cmdline);
-    $logonurl = 'http://145.92.14.90:8080/client/api'.$cmdline;
+    $logonurl = 'http://145.92.14.90:8080/client/api';
 
     // Generate the URL to the console of the selected VM
     $console_uuid = '163a66dc-1df6-4c75-b16f-2db34d91d026';
@@ -25,7 +25,7 @@
             $.ajax({
                 type: "POST",
                 url: logonurl,
-                context: document.body
+                data: { command: "login", username: "admin", password: "R_47*Qp12", response: "json" }
             }).done(function() {
                 $( this ).window.open(vmurl, "window");
             })
