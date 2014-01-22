@@ -25,7 +25,7 @@
             <h3 class="panel-title">System Panel</h3>
           </div>
           <div class="panel-body">
-            <?php include('/views/management/systemsTab.php'); ?>
+            <?php include('systemsTab.php'); ?>
             <br />
           </div>
         </div>
@@ -39,7 +39,7 @@
             <h3 class="panel-title">Account Information</h3>
           </div>
           <div class="panel-body">
-            <?php include('/views/management/accountTab.php'); ?>
+            <?php include('accountTab.php'); ?>
             <br />
           </div>
         </div>
@@ -53,7 +53,7 @@
             <h3 class="panel-title">Invoice Overview</h3>
           </div>
           <div class="panel-body">
-            <?php include('/views/management/'); ?>
+            <?php include(''); ?>
             <a href="javascript:window.open('/management/console','VM NAME HERE','width=800,height=500')">Open window333333333333333333</a>
             <br />
           </div>
