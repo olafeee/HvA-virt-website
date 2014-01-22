@@ -1,4 +1,4 @@
-<center>
+
     
 <?php
 
@@ -22,8 +22,10 @@
         <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a><br />
       </div>
       <div class="panel-body">
-        <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="640" height="420" ></iframe>
-        <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+        <center>
+            <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" ></iframe>
+            <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+        </center>
       </div>
     </div>
 
@@ -47,4 +49,3 @@
 
     </script>
 
-</center>
