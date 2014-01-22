@@ -70,4 +70,12 @@ class cmsPlaintech extends baseController {
         $this->model->insertMVPitem($idMVP, $AmountMVP, $PriceMVP, $pageMVP);
         header('location: /cmsPlaintech/manangeVpsParts/'.$pageMVP);
     }
+	 /**
+     * manangeRoles show alle rows
+     */
+	function manangeRoles(){
+		$rolesMR = $this->model->getCmsIndex("CMS_pages_rollen", "*");
+		$this->baseView->rolesMR = $rolesMR;
+		$this->index('manangeRoles');
+	}
 }
