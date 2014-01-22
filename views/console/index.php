@@ -23,8 +23,8 @@
       </div>
       <div class="panel-body">
         <center>
-            <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="720" height="440" ></iframe>
-            <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+            <iframe name="window" id="window" style="display:none;" seamless src="#" frameborder="0" width="720" height="440" ></iframe>
+            <iframe name="logon" id="logon" style="display:none;" seamless src="<?php echo $logonurl; ?>"></iframe>
         </center>
       </div>
     </div>
