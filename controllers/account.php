@@ -26,7 +26,7 @@ class Account extends baseController {
 
 				$responseRole = TRUE;
 				if ($responseRole == true) {
-					print_r($_SESSION);
+					print_r($_SESSION['logArr']['userid']);
 				 }else{
 				 	header('location: /management');
 				 }
