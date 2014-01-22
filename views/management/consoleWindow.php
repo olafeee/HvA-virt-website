@@ -1,4 +1,4 @@
-<center>
+
     
 <?php
 
@@ -13,6 +13,23 @@
     $vmurl = "http://145.92.14.90:8080/client/console?cmd=access&vm=".$console_uuid."";
 
 ?>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel title</h3>
+      </div>
+      <div class="panel-body">
+        <a href="<?php echo $vmurl; ?>" target="window" type="button">Refresh Console</a><br />
+      </div>
+      <div class="panel-body">
+        <center>
+            <iframe name="window" id="window" style="display:none;" src="#" frameborder="0" width="720" height="440" ></iframe>
+            <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
+        </center>
+      </div>
+    </div>
+
+
     <script type="text/javascript">
 
         // URLs for the Login and Console API request
@@ -24,14 +41,11 @@
             // On page open send a login request
             window.open(logonurl, "logon");
             // Hackishly force iframe to reload
-            var iframe = document.getElementById('window');
-            iframe.src = vmurl;
+            //var iframe = document.getElementById('window');
+            //iframe.src = vmurl;
+            window.open(vmurl, "window");
+            $('#window').css('display', 'inline-block');
         });
 
     </script>
 
-    <a href="<?php echo $vmurl; ?>" target="window">Refresh Console</a>
-    <iframe name="window" id="window" frameborder="0" width="640" height="420" ></iframe>
-    <iframe name="logon" id="logon" style="display:none;" src="<?php echo $logonurl; ?>"></iframe>
-
-</center>

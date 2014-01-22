@@ -144,7 +144,7 @@ class cloudstack
     public function deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid = null, $displayname = null, $name = null, $account = null, $domainid = null)
     {
         $command_array = array(
-            'commmand' => 'deployVirtualMachine',
+            'command' => 'deployVirtualMachine',
             'serviceofferingid' => $serviceofferingid,
             'templateid' => $templateid,
             'zoneid' => $zoneid,
