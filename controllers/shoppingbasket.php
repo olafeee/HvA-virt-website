@@ -15,6 +15,7 @@ class Shoppingbasket extends baseController {
 	*/
 	function createVM() {
 		if (Session::get('loggedIn') == true) {
+			$model = $this->laadModel();
 			$serviceofferingid ="eaacfa01-6e2f-4a5a-a789-03f259c8a644";
 			$templateid="7fd68000-5783-47f0-b0f1-4bae45946b4e";
 			$zoneid="bc1354a3-58b4-4f98-ab51-7d4406260e15";
@@ -25,8 +26,7 @@ class Shoppingbasket extends baseController {
 			$domainid= null;
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
-			$this->cloudstack->deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid );
-			header('location: /order');			
+			$model->createVM($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid);		
 		}else{
 			header('location: /account');
 		}
