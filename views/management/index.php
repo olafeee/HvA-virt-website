@@ -25,7 +25,7 @@
             <h3 class="panel-title">System Panel</h3>
           </div>
           <div class="panel-body">
-            <?php include('/views/management/'); ?>
+            <?php include('/views/management/systemsTab.php'); ?>
             <br />
           </div>
         </div>
@@ -39,7 +39,7 @@
             <h3 class="panel-title">Account Information</h3>
           </div>
           <div class="panel-body">
-            <?php include('/views/management/'); ?>
+            <?php include('/views/management/accountTab.php'); ?>
             <br />
           </div>
         </div>
