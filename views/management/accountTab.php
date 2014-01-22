@@ -6,7 +6,7 @@
 
 ?>
 
-<h4>Account Information</h4>
+<h4>Account Information</h4><br />
 
 <label for="fname" class="col-sm-2 control-label">First Name :</label>
 <div class="col-sm-10">
@@ -49,4 +49,4 @@
 
 <h4>Payment Information</h4><br />
 
-BLABLABLA<br />
+Filler here<br />
