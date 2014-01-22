@@ -7,22 +7,23 @@
 
 <div class="row">
 
-  <div class="col-md-3">
-
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">Panel title</h3>
-      </div>
-      <div class="list-group">
-        <a href="#tabs-1" class="list-group-item">Machine Pannel</a>
-        <a href="#tabs-2" class="list-group-item">Account Settings</a>
-        <a href="#tabs-3" class="list-group-item">Invoice Overview</a>
-        <a href="#" class="list-group-item">Admin Page</a>
-      </div>
-    </div>
-
-  </div> <!-- END Col 3 -->
   <div id="tabs">
+
+    <div class="col-md-3">
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel title</h3>
+        </div>
+        <div class="list-group">
+          <a href="#tabs-1" class="list-group-item">Machine Pannel</a>
+          <a href="#tabs-2" class="list-group-item">Account Settings</a>
+          <a href="#tabs-3" class="list-group-item">Invoice Overview</a>
+          <a href="#" class="list-group-item">Admin Page</a>
+        </div>
+      </div>
+
+    </div> <!-- END Col 3 -->
 
     <div id="tabs-1">
 
@@ -72,6 +73,6 @@
       
     </div>
 
-  </div>
+  </div><!-- End Div tabs -->
 
 </div>
