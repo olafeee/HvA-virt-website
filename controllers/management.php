@@ -23,6 +23,7 @@ class Management extends baseController {
 	}
 
 	function accountTab() {
+		$this->index('accountTab');
 
 
 	}
