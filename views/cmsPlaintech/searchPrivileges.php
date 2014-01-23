@@ -3,7 +3,13 @@
 $nameFound = $this->nameFound;
 
 
-print_r($nameFound);
+while ($i < count($nameFound)) {
+	echo $nameFound[$i]['username'];
+	echo "</br>";
+	echo '<a href="/cmsPlaintech/managePrivileges/.'$nameFound[$i]['CSID']'."></a>';
+	echo "</br>";
+	$i++;
+}
 ?>
 
 <div class="row">
@@ -19,3 +25,4 @@ print_r($nameFound);
 
   <div class="col-md-3"></div>
 </div>
+
