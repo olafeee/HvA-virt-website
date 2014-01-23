@@ -98,6 +98,6 @@ class cmsPlaintech extends baseController {
 	 	$name = $_POST['name'];
 	 	$nameFound = $this->model->getUserByName($name);
 	 	$this->baseView->nameFound = $nameFound;
-	 	header('location: /cmsPlaintech/manangeRoles');
+	 	header('location: /cmsPlaintech/managePrivileges');
 	}
 }
