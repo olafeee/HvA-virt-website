@@ -68,8 +68,11 @@ class cmsPlaintechModel extends baseModel
                 return $arr;
 	}
 
-	function editContent($id){
-
+	function loadRole($pageid){
+			    $sqlArray = $this->db->select('SELECT rol_id FROM CMS_pages_rollen WHERE 
+						pageid = :pageid', 
+                array('pageid' => $pageid));
+                return $sqlArray;
 	}
 
 
