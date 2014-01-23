@@ -41,7 +41,7 @@ $klantWoonplaats = "Amsterdam";
 $klantLand = "Netherlands";
 $factuurNummer = "VPS".rand(10000,99999);
 $klantNummer = substr(base_convert(md5($klantNaam), 16, 10),0,7);
-$incassoTijd = "14";
+$incassoTijd = "21";
 
 //session_start();
 //$_SESSION['klantTaal'] = "EN";
