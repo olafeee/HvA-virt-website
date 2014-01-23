@@ -81,14 +81,16 @@ class baseController {
 		}
 	}
 
-	function in_array_r($needle, $haystack, $strict = false) {
-    foreach ($haystack as $item) {
-        if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
-            return true;
-        }
+	function in_array_r($roleArray) {
+    
+    $i;
+    while ($i < count($roleArray)) {
+    	if (in_array("3", $roleArray['0'])) {
+    		return true;
+    	}
     }
-
     return false;
+
 }
 
 	
