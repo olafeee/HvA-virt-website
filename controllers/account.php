@@ -28,10 +28,11 @@ class Account extends baseController {
 					$model->insertRole();
 					$model->insertUser();
 					Session::set('userRole', '6');
-					header('location: /management');
+					//header('location: /management');
 				 }else{
-				 	Session::set('userRole', $responseRole[0]['rol_id']);
-				 	header('location: /management');
+				 	print_r($responseRole);
+				 	Session::set('userRole', $responseRole);
+				 	//header('location: /management');
 				 }
 			} else {
 				header('location: /account');
