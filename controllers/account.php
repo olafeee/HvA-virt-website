@@ -29,9 +29,8 @@ class Account extends baseController {
 					Session::set('userRole', '6');
 					header('location: /management');
 				 }else{
-				 	print_r($responseRole[0]['rol_id']);
-				 	Session::set('userRole', $responseRole);
-				 	//header('location: /management');
+				 	Session::set('userRole', $responseRole[0]['rol_id']);
+				 	header('location: /management');
 				 }
 			} else {
 				header('location: /account');
