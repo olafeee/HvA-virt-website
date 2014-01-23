@@ -12,8 +12,9 @@ class cmsPlaintech extends baseController {
 		$this->db = $this->model->conDB1();
 		
 		$role = $this->model->getRoleByPage();
+		echo "<pre>";
 		print_r($role);
-
+		echo "</pre>";
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
 		$this->baseView->cmstext = $getCMS;
