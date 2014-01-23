@@ -83,7 +83,7 @@ class baseController {
 
 	function in_array_r($roleArray) {
     
-    $i;
+    $i=0;
     while ($i < count($roleArray)) {
     	if (in_array("3", $roleArray[$i])) {
     		return true;
