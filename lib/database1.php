@@ -74,10 +74,12 @@ class Database1 extends PDO
     {
                 $x = 3;
                 $y = "33e89114-7f70-11e3-9e69-0015c5eaa2fd";
-                $this->exec("DELETE FROM privileges WHERE rol_id='$x' AND CSID='$y'");
+                $sth = $this->prepare("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = 3 
+         AND `privileges`.`CSID` = '33e89114-7f70-11e3-9e69-0015c5eaa2fd'");
+                $sth->execute();
+
         // $this->exec("DELETE FROM SET session_expires='$newExp', session_data='$p_sessData' WHERE session_id='$p_sessID'");
-         //DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = 2 
-         //AND `privileges`.`CSID` = \'33e89114-7f70-11e3-9e69-0015c5eaa2fd\'
+
     }
 
 
