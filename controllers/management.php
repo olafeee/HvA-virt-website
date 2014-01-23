@@ -16,7 +16,7 @@ class Management extends baseController {
 	}
 
 	function vmTab($vmid) {
-		if
+		
 	}
 
 	function console($vmid) {
