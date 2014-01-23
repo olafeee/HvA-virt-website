@@ -84,7 +84,11 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function deletePrivileges($CSID, $rol_id){
-		$this->db->delete('privileges', "`CSID` = $CSID AND rol_id = '$rol_id'");
+						$sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
+						pageid = :pageid AND cwid = :cwid', 
+                		array('pageid' => $pageid, 'cwid' => $cwid));
+                		
+		$this->db->delete('privileges', "`CSID` = $CSID AND `rol_id` = $rol_id ");
 	}
 
 }
