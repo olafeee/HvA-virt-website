@@ -3,10 +3,10 @@
 class createInvoice extends baseController {
 
 function index(){
-	$this->createInvoice();
+	$this->makeInvoice();
 }
 
-function createInvoice(){
+function makeInvoice(){
 	error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
