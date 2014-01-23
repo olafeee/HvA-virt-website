@@ -82,7 +82,7 @@ class baseController {
 	}
 
 	function in_array_r($roleArray) {
-    
+    session_start();
     $i=0;
     while ($i < count($roleArray)) {
     	if ("3" == $roleArray[$i]['rol_id']) {
