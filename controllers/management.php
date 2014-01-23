@@ -2,9 +2,9 @@
 
 require_once("lib/cloudstack.php");
 
-public $model;
-
 class Management extends baseController {
+
+	public $model;
 
 	function __construct() {
 		// Check if logged in.
