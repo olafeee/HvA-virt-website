@@ -84,7 +84,7 @@ class baseController {
 	function in_array_r($roleArray) {
 	    session_start();
 	    $x=0;
-	    while ($x < count($roleArray) {
+	    while ($x < count($roleArray)) {
 	    	$i=0;
 		    while ($i < count($roleArray)) {
 		    	
