@@ -3,7 +3,7 @@
 class createInvoice extends baseController {
 
 function index(){
-	$this->makeInvoice();
+	self::makeInvoice();
 }
 
 function makeInvoice(){
