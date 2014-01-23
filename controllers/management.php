@@ -14,17 +14,20 @@ class Management extends baseController {
 		parent::__construct();
 	}
 
-	function vmTab() {
+	function vmInfo($vmid) {
+		$this->baseView->vmid = $vmid;
+		$this->index('vminfo');
 		
 	}
 
 	function console() {
+		$this->baseView->vmid = $vmid;
+		$this->index('console');
 
 	}
 
 	function accountTab() {
 		$this->index('accountTab');
-
 
 	}
 

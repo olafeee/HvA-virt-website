@@ -12,6 +12,8 @@
     $console_vps_name = 'ConsoleTest';                             
     $vmurl = "http://145.92.14.90:8080/client/console?cmd=access&vm=".$console_uuid."";
 
+include('template.php');
+
 ?>
 
     <div class="panel panel-info">
