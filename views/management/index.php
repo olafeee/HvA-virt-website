@@ -1,7 +1,7 @@
 <?php 
 include('template.php'); 
 
-public $vmResponce;
+$vmResponce;
 ?>
 
 
