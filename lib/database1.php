@@ -72,11 +72,11 @@ class Database1 extends PDO
 
     public function delete()
     {
-                $x = 3;
-                $y = "33e89114-7f70-11e3-9e69-0015c5eaa2fd";
-                $sth = $this->prepare('DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = "3" 
+//$x = 3;
+             //   $y = "33e89114-7f70-11e3-9e69-0015c5eaa2fd";
+                return $this->exec('DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = 3 
          AND `privileges`.`CSID` = "33e89114-7f70-11e3-9e69-0015c5eaa2fd"');
-                $sth->execute();
+               // $sth->execute();
 
         // $this->exec("DELETE FROM SET session_expires='$newExp', session_data='$p_sessData' WHERE session_id='$p_sessID'");
 
