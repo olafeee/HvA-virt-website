@@ -2,7 +2,7 @@
 
 $nameFound = $this->nameFound;
 
-
+$i = 0;
 while ($i < count($nameFound)) {
 	echo $nameFound[$i]['username'];
 	echo '</br>';
