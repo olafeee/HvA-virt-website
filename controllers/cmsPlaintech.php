@@ -102,7 +102,9 @@ class cmsPlaintech extends baseController {
 
 	function managePrivileges($CSID){
 		$manageUser = $this->model->managePrivileges($CSID);
+		echo'<pre>';
 		print_r($manageUser);
+		echo'</pre>';
 		//$this->baseView->manageUser = $manageUser;
 		//$this->index('managePrivileges');
 	}
