@@ -88,6 +88,7 @@ class baseController {
     	if (in_array("3", $roleArray[$i])) {
     		return true;
     	}
+    	$i++;
     }
     return false;
 
