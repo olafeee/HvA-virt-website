@@ -70,9 +70,9 @@ class Database1 extends PDO
         $sth->execute();
     }
 
-    public function delete($CSID)
+    public function delete($role_id, $CSID)
     {
-        return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = 6 AND `privileges`.`CSID` = '$CSID'");
+        return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = '$role_id' AND `privileges`.`CSID` = '$CSID'");
     }
 
 

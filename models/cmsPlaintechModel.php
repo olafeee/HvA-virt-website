@@ -95,9 +95,9 @@ class cmsPlaintechModel extends baseModel
                 return $sqlArray;
 	}
 
-	function deletePrivileges($CSID){ 
-	        $sth = $this->db->delete($CSID); 
-	        print_r($sth);       
+	function deletePrivileges($role_id, $CSID){ 
+	        $x = $this->db->delete($role_id, $CSID); 
+	        return $x;    
 	}
 
 }
