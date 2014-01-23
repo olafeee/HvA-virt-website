@@ -25,7 +25,7 @@ class Management extends baseController {
 		
 	}
 
-	function console() {
+	function console($vmid) {
 		$this->baseView->vmid = $vmid;
 		$this->index('console');
 
@@ -34,6 +34,10 @@ class Management extends baseController {
 	function accountTab() {
 		$this->index('accountTab');
 
+	}
+
+	function invoiceTab() {
+		$this->index('invoiceTab');
 	}
 
 	

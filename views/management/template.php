@@ -9,7 +9,7 @@
       <div class="list-group">
         <a href="/management/" class="list-group-item">Systems Panel</a>
         <a href="/management/accountTab" class="list-group-item">Account Info</a>
-        <a href="#" class="list-group-item">Invoice Overview</a>
+        <a href="/management/invoiceTab" class="list-group-item">Invoice Overview</a>
       </div>
     </div>
 

@@ -24,6 +24,14 @@ class managementModel extends baseModel
 
           // Bouw nu een array for elke VM
           $vmResponce = $vmResponce['listvirtualmachinesresponse'];
+
+          // Check if the user has no VMs.
+          if(count($vmResponce)==0) {
+
+          } else {
+
+          }
+
           $vmResponce = $vmResponce['virtualmachine'];
           
           return $vmResponce;
