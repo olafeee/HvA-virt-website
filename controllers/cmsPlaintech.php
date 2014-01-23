@@ -15,6 +15,9 @@ class cmsPlaintech extends baseController {
 		echo "<pre>";
 		print_r($role);
 		echo "</pre>";
+		if (in_array("3", $role, true)){
+			"het werkt jongen";
+		}
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
 		$this->baseView->cmstext = $getCMS;
