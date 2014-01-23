@@ -9,9 +9,41 @@
       </div>
       <div class="panel-body">
         
+        <!-- Start VM listing here -->
+         <table class="table">
+        <thead>
+        <tr>
+        <th>VM</th>
+        <th>Status</th>
+        <th>CPU</th>
+        <th>CPU speed</th>
+        <th>Memory</th>
+        <th>HDD</th>
+        <th>IP Adres</th>
+        <th></th>
+        </tr>
+        </thead>
+        <tbody><?php
+                    $xy = 0;
+                    $maxArray = count($vmResponce);
+                    while ($xy < $maxArray) {?>
+        <tr class="success">
+        <td class"displayname"><?php echo $vmResponce[$xy]["displayname"];?></td>
+        <td class="status"><?php echo $vmResponce[$xy]["state"];?></td>
+        <td class="CPU"><?php echo $vmResponce[$xy]["cpunumber"];?></td>
+        <td class="CPUSPEED"><?php echo $vmResponce[$xy]["cpuspeed"];?> Mhz</td>
+        <td class="memory"><?php echo $vmResponce[$xy]["memory"];?> MB</td>
+        <td class="HHD">20GB</td>
+
+        <td class="IPAdres"><?php echo $vmResponce[$xy]["nic"][0]["ipaddress"]." /". prefixSubnet($vmResponce[$xy]["nic"][0]["netmask"]);?></td>
+        <td><a href="/klantPaneel/VM/<?php echo $xy; ?>"><button type="button" class="btn btn-info"> Info </button></a> <button type="button" class="btn btn-success"> Upgrade </button></td>
+        </tr><?
+                      $xy++;
+                    }
+              ?></tbody>
+        </table>
 
         
-        <a href="javascript:window.open('/management/console','VM NAME HERE','width=800,height=500')">Open window333333333333333333</a>
         <br />
       </div>
     </div>
