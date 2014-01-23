@@ -152,7 +152,7 @@ function addBetaalDatum( $date ) {
         if($klantTaal == "NL"){$this->Cell(10,4, "Uiterste betaaldatum", 0, 0, "L");}else{$this->Cell(10,4, "Due By",0,0,"L");}
         $this->SetXY( $r1 + ($r2-$r1)/2 - 5 , $y1 + 5 );
         $this->SetFont( "Arial", "", 10);
-        $this->Cell(10,5,$date, 0,0, "L");
+        $this->Cell(10,4,$date, 0,0, "L");
 }
 
 // Referentie uitlijning en font
