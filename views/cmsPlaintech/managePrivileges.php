@@ -17,7 +17,3 @@ while ($i < count($manageUser)) {
 
 ?>
 
-<div>
-	<a href="/cmsPlaintech/deletePrivileges/"></a>
-</div>
-
