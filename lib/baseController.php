@@ -88,7 +88,7 @@ class baseController {
 	    	$i=0;
 		    while ($i < count($roleArray)) {
 		    	
-		    	if ($_SESSION['userRole'][$x] == $roleArray[$i]['rol_id']){
+		    	if ($_SESSION['userRole'][$x]['rol_id'] == $roleArray[$i]['rol_id']){
 		    		return true;
 		    	}//einde if
 	    		$i++;
