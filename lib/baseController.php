@@ -81,11 +81,11 @@ class baseController {
 		}
 	}
 
-	function in_array_r($roleArray, $user) {
+	function in_array_r($roleArray,) {
     
     $i=0;
     while ($i < count($roleArray)) {
-    	if ($user == $roleArray[$i]['rol_id']) {
+    	if ("3" == $roleArray[$i]['rol_id']) {
     		print_r($_SESSION);
     		echo"beunhaas";
     		return true;
