@@ -1,8 +1,15 @@
 <?php
 
-$nameFound = $this->nameFound;
+$manageUser = $this->manageUser;
 
+$i = 0;
+echo $manageUser[0]['username'];
+echo $manageUser[0]['firstname'];
+echo $manageUser[0]['lastname'];
+while ($i <= count($manageUser)) {
+	echo $manageUser[$i]['rol_id'];
+	$i++;
+}
 
-print_r($nameFound);
 ?>
 

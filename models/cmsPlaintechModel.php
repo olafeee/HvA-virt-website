@@ -88,6 +88,8 @@ class cmsPlaintechModel extends baseModel
 													FROM privileges
 													INNER JOIN CSUsers
 													ON CSUsers.CSID = privileges.CSID
+													INNER JOIN rollen
+													ON rollen.rol_id = privileges.rol_id
 													WHERE privileges.CSID = :CSID', 
                 									array('CSID' => $CSID));
                 return $sqlArray;
