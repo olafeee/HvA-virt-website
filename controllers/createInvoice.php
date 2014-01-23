@@ -133,3 +133,5 @@ $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output('invoice.pdf', 'I');
 	}
 }
+
+?>
