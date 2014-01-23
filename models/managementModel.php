@@ -19,7 +19,7 @@ class managementModel extends baseModel
           
           Session::init();
           // Haal de vms op voor de gebruiker die ingeloged is
-          $vmResponce = $cloud->listVirtualMachines('',$_SESSION['logArr']['account']);
+          $vmResponce = $this->cloud->listVirtualMachines('',$_SESSION['logArr']['account']);
           $vmResponce = json_decode($vmResponce, true);
 
           // Bouw nu een array for elke VM
