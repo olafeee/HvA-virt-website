@@ -1,15 +1,18 @@
 <?php
 
-$nameFound = $this->nameFound;
+if(isset($this->nameFound)){
+	$nameFound = $this->nameFound;
 
-$i = 0;
-while ($i < count($nameFound)) {
-	echo $nameFound[$i]['username'];
-	echo '</br>';
-	echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'">Bekijk</a>';
-	echo '</br>';
-	$i++;
+	$i = 0;
+	while ($i < count($nameFound)) {
+		echo $nameFound[$i]['username'];
+		echo '</br>';
+		echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'">Bekijk</a>';
+		echo '</br>';
+		$i++;
+	}
 }
+
 ?>
 
 <div class="row">
