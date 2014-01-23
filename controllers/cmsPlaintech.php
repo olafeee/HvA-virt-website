@@ -92,16 +92,9 @@ class cmsPlaintech extends baseController {
      * 
      */
 	function managePrivileges(){
-		/*if (isset($_POST['Submit'])) {
-			
-		 	$nameFound = $this->model->getUserByName($name);
-		 	$this->baseView->nameFound = $nameFound;
-		}
-		$this->index('managePrivileges');*/
-
 		if (!empty($_POST)){
 			$name = $_POST['name'];
-			$nameFound = $this->model->getUserByName("admin");
+			$nameFound = $this->model->getUserByName($name);
 			$this->baseView->nameFound = $nameFound;
 		}
 		
