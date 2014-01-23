@@ -90,14 +90,13 @@ class baseController {
 		    	
 		    	if ($_SESSION['userRole'][$x]['rol_id'] == $roleArray[$i]['rol_id']){
 		    		return true;
-		    	}//einde if
+		    	}
 	    		$i++;
-	    	}//eind second while
+	    	}
 	    	$x++;
-	    }//einde first while
+	    }
 	    return false;
-
-	}//einde functie
+	}
 
 	
 }
