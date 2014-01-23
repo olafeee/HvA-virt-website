@@ -11,20 +11,16 @@ class cmsPlaintech extends baseController {
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
 		
+
 		$getRole = $this->model->getRoleByPage();
-		echo "<pre>";
-		print_r($getRole);
-		echo "</pre>";
-
 		$role = $this->in_array_r($getRole);
-
-		print_r($role);
-
-		echo"hande lul";
-
-		if($role == true){
-			echo"het werkt";
+		if($role == false){
+			header('location: /account');
 		}
+		
+		//echo "<pre>";
+		//print_r($getRole);
+		//echo "</pre>";
 
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
