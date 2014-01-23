@@ -110,9 +110,9 @@ class cmsPlaintech extends baseController {
 	}
 	 
 	 function deletePrivileges(){
-	 	//$CSID = $_SESSION['logArr']['userid'];
-	 	//$rol_id = "6";
+	 	$CSID = $_SESSION['logArr']['userid'];
+	 	$rol_id = "6";
 	 	//print_r($CSID);
-	 	$this->deletePrivileges();
+	 	$this->model->deletePrivileges();
 	}
 }
