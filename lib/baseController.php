@@ -85,14 +85,11 @@ class baseController {
     session_start();
     $i=0;
     while ($i < count($roleArray)) {
-    	if ("3" == $roleArray[$i]['rol_id']) {
-    		print_r($_SESSION['userRole']);
-    		echo"beunhaas";
+    	if ($_SESSION['userRole'] == $roleArray[$i]['rol_id']) {
     		return true;
     	}
     	$i++;
     }
-  	echo"hai";
     return false;
 
 }
