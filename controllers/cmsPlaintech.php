@@ -11,13 +11,12 @@ class cmsPlaintech extends baseController {
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
 		
-
 		$getRole = $this->model->getRoleByPage();
 		$role = $this->in_array_r($getRole);
 		if($role == false){
 			header('location: /account');
 		}
-		
+
 		//echo "<pre>";
 		//print_r($getRole);
 		//echo "</pre>";
