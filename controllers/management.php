@@ -2,6 +2,8 @@
 
 require_once("lib/cloudstack.php");
 
+public $model;
+
 class Management extends baseController {
 
 	function __construct() {
@@ -11,7 +13,7 @@ class Management extends baseController {
 			header('location: /account');
 		}
 
-		$this->laadModel();
+		$this->model = $this->laadModel();
 		$this->baseView->vmresponse = $this->model->getVM();
 
 		parent::__construct();
