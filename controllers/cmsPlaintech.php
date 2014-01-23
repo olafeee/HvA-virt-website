@@ -97,12 +97,13 @@ class cmsPlaintech extends baseController {
 			$nameFound = $this->model->getUserByName($name);
 			$this->baseView->nameFound = $nameFound;
 		}
-		
-		
 		$this->index('managePrivileges');
 	}
 	 
-	 function getUserByName(){
-
+	 function deletePrivileges($rol_id){
+	 	$CSID = $_SESSION['logArr']['userid'];
+	 	$rol_id = "6";
+	 	print_r($CSID);
+	 	$this->deletePrivileges($CSID, $rol_id);
 	}
 }
