@@ -83,12 +83,16 @@ class baseController {
 
 	function in_array_r($roleArray) {
     session_start();
-    $i=0;
-    while ($i < count($roleArray)) {
-    	if ($_SESSION['userRole'] == $roleArray[$i]['rol_id']) {
-    		return true;
+    $x=0;
+    while ($x < count($roleArray) {
+    	$i=0;
+	    while ($i < count($roleArray)) {
+	    	if ($_SESSION['userRole'][$x] == $roleArray[$i]['rol_id']) {
+	    		return true;
+	    	}
+    		$i++;
     	}
-    	$i++;
+    	$x++;
     }
     return false;
 
