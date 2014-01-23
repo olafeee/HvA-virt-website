@@ -105,8 +105,8 @@ class cmsPlaintech extends baseController {
 		echo'<pre>';
 		print_r($manageUser);
 		echo'</pre>';
-		//$this->baseView->manageUser = $manageUser;
-		//$this->index('managePrivileges');
+		$this->baseView->manageUser = $manageUser;
+		$this->index('managePrivileges');
 	}
 	 
 	 function deletePrivileges(){
