@@ -1,5 +1,7 @@
 <?php
-die ('can I remove this?');
-echo "<a href=\"/invoice.php\">Sorry, pdf wordt hier gemaakt</a>";
+
+// Quite frankly, the model appears to require
+// the existence of this file... Hmm...
+
 
 ?>
