@@ -11,7 +11,7 @@ class Management extends baseController {
 			header('location: /account');
 		}
 
-		//parent::__construct();
+		parent::__construct();
 		include('/views/management/template.php');
 	}
 
