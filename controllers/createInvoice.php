@@ -175,7 +175,9 @@ function sentInvoice($email, $file){
 	//$mail_sent = mail( $email, $subject, $message, $headers ); 
 	//echo $mail_sent ? "Mail sent" : "Mail failed"; 
 	
-	echo $message;
+	$fp = fopen('./data.txt', 'w');
+	fwrite($fp, $message);
+	fclose($fp);
 	
 }
 }
