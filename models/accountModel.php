@@ -87,10 +87,20 @@ class accountModel extends baseModel
 	}
 
 
+	public function insertUser(){
+        $this->db->insert('CSUsers', array(
+			'CSID' => $_SESSION['logArr']['userid'],
+			'username' => $_SESSION['logArr']['username'],
+			'firstname' => $_SESSION['logArr']['firstname'],
+			'lastname' => $_SESSION['logArr']['lastname']
+
+        ));
+
+    }
+
 	public function insertRole(){
         $this->db->insert('privileges', array(
             'rol_id' => "6",
-            'username' => $_SESSION['logArr']['username'],
             'CSID' => $_SESSION['logArr']['userid']
         ));
 

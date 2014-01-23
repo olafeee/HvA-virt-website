@@ -13,12 +13,12 @@ class cmsPlaintechModel extends baseModel
                 return $sqlArray;
 	}
 
-	function getPage($pageid){
-			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
-						pageid = :pageid', 
-                array('pageid' => $pageid));
-                return $sqlArray;
-	}
+		function getPage($pageid){
+				    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
+							pageid = :pageid', 
+	                array('pageid' => $pageid));
+	                return $sqlArray;
+		}
 
 	function getOneCmsItem($pageid, $cwid){
 			    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
@@ -75,6 +75,13 @@ class cmsPlaintechModel extends baseModel
                 return $sqlArray;
 	}
 
+	function getUserByName($search){
+	    $sqlArray = $this->db->select('SELECT * FROM CSUsers WHERE 
+				firstname = :firstname OR lastname = :lastname', 
+        array('lastname' => $search,
+        	'firstname' => $search));
+        return $sqlArray;
+	}
 
 }
 ?>
