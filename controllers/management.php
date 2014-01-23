@@ -5,24 +5,25 @@ require_once("lib/cloudstack.php");
 class Management extends baseController {
 
 	function __construct() {
-		// Check if already logged in.
+		// Check if logged in.
 		session_start();
 		if (!isset($_SESSION['loggedIn'])) {
 			header('location: /account');
 		}
 
-		parent::__construct();
+		//parent::__construct();
+		include('/views/management/template.php');
 	}
 
-	function consoletest($vmid, $display = null) {
+	function vmTab($vmid) {
+		if
+	}
 
-		$model = $this->laadModel();
+	function console($vmid) {
 
-		if ($display == null) {
-			$model->consoleSession();
-		} else {
-			$model->consoleWindow();
-		}
+	}
+
+	function accountTab() {
 
 	}
 
