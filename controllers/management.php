@@ -15,7 +15,6 @@ class Management extends baseController {
 	}
 
 	function vmTab() {
-		include('/views/management/template.php');
 		
 	}
 
