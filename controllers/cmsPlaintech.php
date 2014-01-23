@@ -20,6 +20,8 @@ class cmsPlaintech extends baseController {
 
 		print_r($role);
 
+		echo"hande lul";
+
 		if($role == true){
 			echo"het werkt";
 		}
