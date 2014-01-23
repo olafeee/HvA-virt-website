@@ -1,4 +1,15 @@
-<?php include('template.php'); ?>
+<?php 
+
+// Tijdelijk hier in
+require_once('/lib/cloudstack.php');
+$cloudstack = new cloudstack();
+
+$account = $_SESSION['logArr']['account'];
+
+$vmresponse = $this->cloudstack->listVirtualMachines('',$account);
+
+include('template.php'); 
+?>
 
 
 <div class="tab-pane" id="tab3">
