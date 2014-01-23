@@ -13,7 +13,7 @@ class cmsPlaintech extends baseController {
 		
 		$getRole = $this->model->getRoleByPage();
 		echo "<pre>";
-		print_r($role);
+		print_r($getRole);
 		echo "</pre>";
 
 		$role = $this->in_array_r($getRole);
