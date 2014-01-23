@@ -18,6 +18,8 @@ class cmsPlaintech extends baseController {
 
 		$role = $this->in_array_r($getRole);
 
+		print_r($role);
+
 		if($role == true){
 			echo"het werkt";
 		}
