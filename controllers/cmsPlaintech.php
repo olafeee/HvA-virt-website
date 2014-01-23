@@ -99,7 +99,8 @@ class cmsPlaintech extends baseController {
 		}
 		$this->index('managePrivileges');*/
 		$nameFound = $this->model->getUserByName("admin");
-		print_r($nameFound);
+		$this->baseView->nameFound = $nameFound;
+		$this->index('managePrivileges');
 	}
 	 
 	 function getUserByName(){
