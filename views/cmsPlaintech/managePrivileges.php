@@ -11,7 +11,7 @@ print_r($nameFound);
   <div class="col-md-6">
 
 
-      <form class="form-signin" action="/cmsPlaintech/getUserByName" method="post">
+      <form class="form-signin" action="/cmsPlaintech/managePrivileges" method="post">
         <input type="text" class="form-control" placeholder="firstname of lastname" required="" autofocus="" name="name">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
       </form>
