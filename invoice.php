@@ -35,7 +35,7 @@ if (empty($_SESSION['logArr'])){
 $klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
 //$klantNaam = "Dhr K. LANT";
 //$klantStraat = 
-//$klantStraat = "Duivendrechtsekade 36-38";
+$klantStraat = "Duivendrechtsekade 36-38";
 $klantPostcode = "1096 AH";
 $klantWoonplaats = "Amsterdam";
 $klantLand = "Netherlands";
