@@ -12,18 +12,19 @@ class Management extends baseController {
 		}
 
 		parent::__construct();
-		include('/views/management/template.php');
 	}
 
-	function vmTab($vmid) {
+	function vmTab() {
+		include('/views/management/template.php');
 		
 	}
 
-	function console($vmid) {
+	function console() {
 
 	}
 
 	function accountTab() {
+
 
 	}
 
