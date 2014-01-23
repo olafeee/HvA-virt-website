@@ -86,10 +86,12 @@ class baseController {
     $i=0;
     while ($i < count($roleArray)) {
     	if ("3" == $roleArray[$i]) {
+    		echo"beunhaas";
     		return true;
     	}
     	$i++;
     }
+  	echo"hai";
     return false;
 
 }
