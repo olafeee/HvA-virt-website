@@ -10,7 +10,7 @@ echo $manageUser[0]['lastname'];
 while ($i < count($manageUser)) {
 	echo $manageUser[$i]['rol_naam'];
 	echo "<br/>";
-	echo '<a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'];.'/'.$manageUser[$i]['CSID'].'"></a>';
+	echo '<a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'"></a>';
 	echo "<br/>";
 	$i++;
 }
