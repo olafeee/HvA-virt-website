@@ -19,7 +19,7 @@ class cmsPlaintech extends baseController {
 			"het werkt jongen";
 		}
 
-		echo in_array_r("3", $role) ? 'found' : 'not found';
+		echo $this->in_array_r("3", $role) ? 'found' : 'not found';
 		//test of var gedropt wordt
 		$getCMS = $this->model->getCmsIndex("CMS_pages", "*");
 		$this->baseView->cmstext = $getCMS;
