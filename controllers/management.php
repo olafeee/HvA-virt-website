@@ -11,6 +11,9 @@ class Management extends baseController {
 			header('location: /account');
 		}
 
+		$this->laadModel();
+		$this->baseView->vmresponse = $this->model->getVM();
+
 		parent::__construct();
 	}
 

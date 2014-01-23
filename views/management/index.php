@@ -1,13 +1,4 @@
 <?php 
-
-// Tijdelijk hier in
-require_once('/lib/cloudstack.php');
-$cloudstack = new cloudstack();
-
-$account = $_SESSION['logArr']['account'];
-
-$vmresponse = $this->cloudstack->listVirtualMachines('',$account);
-
 include('template.php'); 
 ?>
 
