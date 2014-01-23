@@ -70,10 +70,12 @@ class Database1 extends PDO
         $sth->execute();
     }
 
-    public function delete($table, $where, $limit = 1)
+    public function delete()
     {
-        return $this->exec("DELETE FROM $table WHERE $where LIMIT $limit");
+        return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = 6 AND `privileges`.`CSID` = '33e89114-7f70-11e3-9e69-0015c5eaa2fd'");
     }
+
+
 
 
 }// einde class
