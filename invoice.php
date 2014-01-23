@@ -16,18 +16,20 @@ session_start();
 // Initialize variables
 require('./views/createInvoice/invoice/invoice.php');
 
-if (empty($_SESSION['cart']) && !headers_sent()){
-	header('location /order');
-	exit;
-}else{
-	die ("<h1><center><a href=\"/order\">Please order first</a></center></h1>");
+if (empty($_SESSION['cart'])){
+	if(header('location /order')){
+		exit;
+	}else{
+		die ("<h1><center><a href=\"/order\">Please order first</a></center></h1>");
+	}
 }
 
-if (empty($_SESSION['logArr']) && !headers_sent()){
-	header('location /account');
-	exit;
-}else{
-	die ("<h1><center><a href=\"/account\">Please login first</a></center></h1>");
+if (empty($_SESSION['logArr'])){
+	if(header('location /account')){
+		exit;
+	}else{
+		die ("<h1><center><a href=\"/account\">Please login first</a></center></h1>");
+	}
 }
 
 $klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
