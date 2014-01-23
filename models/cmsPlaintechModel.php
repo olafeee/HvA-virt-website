@@ -96,7 +96,8 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function deletePrivileges($CSID, $rol_id){ 
-	        $this->db->delete('privileges', "`CSID` = {$CSID} AND rol_id = '{$rol_id}'");        
+	        $sth = $this->db->delete('privileges', "`CSID` = {$CSID} AND rol_id = '{$rol_id}'"); 
+	        print_r($sth);       
 	}
 
 }
