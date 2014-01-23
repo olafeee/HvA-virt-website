@@ -83,6 +83,15 @@ class cmsPlaintechModel extends baseModel
         return $sqlArray;
 	}
 
+	function managePrivileges($CSID){
+				$sqlArray = $this->db->select('SELECT * 
+													FROM privileges
+													INNER JOIN CSUsers
+													ON CSUsers.CSID = privileges.CSID
+													WHERE privileges.CSID = :CSID', 
+                									array('CSID' => $CSID));
+                return $sqlArray;
+	}
 
 	function deletePrivileges($CSID, $rol_id){                		
 		$this->db->delete('privileges', "`CSID` = $CSID AND `rol_id` = $rol_id ");
