@@ -96,7 +96,7 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function deletePrivileges(){ 
-	        $this->db->delete();        
+	       echo"ackbar";        
 	}
 
 }
