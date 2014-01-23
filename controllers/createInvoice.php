@@ -2,7 +2,7 @@
 
 class createInvoice extends baseController {
 
-function index(){
+function __construct(){
 	self::makeInvoice();
 }
 
@@ -133,5 +133,3 @@ $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output('invoice.pdf', 'I');
 	}
 }
-
-?>
