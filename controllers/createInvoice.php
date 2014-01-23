@@ -13,7 +13,7 @@ ini_set('display_errors', 1);
 
 session_start();
 // Initialize variables
-require('../lib/invoice/invoice.php');
+require('./lib/invoice/invoice.php');
 
 if (empty($_SESSION['cart'])){
 	if(header('location /order')){
