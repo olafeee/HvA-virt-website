@@ -41,7 +41,7 @@ $klantWoonplaats = "Amsterdam";
 $klantLand = "Netherlands";
 $factuurNummer = "VPS".rand(10000,99999);
 $klantNummer = substr(base_convert(md5($klantNaam), 16, 10),0,7);
-$incassoTijd = "21";
+$incassoTijd = "14";
 
 //session_start();
 //$_SESSION['klantTaal'] = "EN";
@@ -68,9 +68,9 @@ $pdf->addCompanyAddress("Plaintechstraat 1, 1234 AB, Amsterdam");
 $pdf->addKvkInfo("12345678","NL123456789B01");
 $pdf->addWebsite("www.plaintech.nl","sales@plaintech.nl");
 $pdf->addFactuurNummer($factuurNummer);
-$pdf->addFactuurDatum(strftime("%e / %B / %Y"));
+$pdf->addFactuurDatum(strftime("%d / %B / %Y"));
 if(!isset($autoIncasso)){
-	$pdf->addBetaalDatum(strftime("%e / %B / %Y", strtotime("+$incassoTijd day")));
+	$pdf->addBetaalDatum(strftime("%d / %B / %Y", strtotime("+$incassoTijd day")));
 }
 $pdf->addKenmerk("AI-".$factuurNummer."-".$klantNummer);
 $pdf->addKlantNummer($klantNummer);
