@@ -16,12 +16,24 @@ session_start();
 // Initialize variables
 require('./views/createInvoice/invoice/invoice.php');
 
-if (empty($_SESSION['cart'])){
+if (empty($_SESSION['cart']) && !headers_sent()){
 	header('location /order');
+	exit;
+}else{
+	die ("<h1><center><a href=\"/order\">Please order first</a></center></h1>");
 }
 
-$klantNaam = "Dhr K. LANT";
-$klantStraat = "Duivendrechtsekade 36-38";
+if (empty($_SESSION['logArr']) && !headers_sent()){
+	header('location /account');
+	exit;
+}else{
+	die ("<h1><center><a href=\"/account\">Please login first</a></center></h1>");
+}
+
+$klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
+//$klantNaam = "Dhr K. LANT";
+//$klantStraat = 
+//$klantStraat = "Duivendrechtsekade 36-38";
 $klantPostcode = "1096 AH";
 $klantWoonplaats = "Amsterdam";
 $klantLand = "Netherlands";
