@@ -59,7 +59,7 @@ $totalprice = $totalprice + $TP;
 
     <div class="divROWorderTop"></div>
       <div class="sb-totalprice">
-      <div class="sb-totalprice-1"><a href="/invoice.php"><button class="btn btn-lg btn-primary btn-block">Create Invoice</button></a></div>
+      <div class="sb-totalprice-1"><a href="/invoice.php"><button style="margin-top: 6px; text-align: right;"class="btn btn-lg btn-primary btn">Create Invoice</button></a></div>
       <div class="sb-totalprice-2"><button class="btn btn-lg btn-primary btn-block">Bestellen</button></div>
     </div>
 
