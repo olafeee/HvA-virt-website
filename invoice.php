@@ -8,6 +8,7 @@
 //									   							  //
 ////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
+die ('can I remove this?');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -132,4 +133,5 @@ $tot_calc = round($tot_calc, 2);
 
 $pdf->addTotaalBedrag($tot_calc);
 $pdf->Output('invoice.pdf', 'I');
+$pdf->Output('');
 ?>

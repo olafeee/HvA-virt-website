@@ -1,5 +1,5 @@
 <?php
-die ('can I remove this?');
+
 class createInvoice extends baseController {
 
 function __construct(){
