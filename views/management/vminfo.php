@@ -17,7 +17,7 @@ include('template.php');
         
       	<div class="label label-danger">Stopped</div><br /><br />
 
-        <hr />
+        <h4><span class="glyphicon glyphicon-cog"></span>   Systems Controls</h4><hr />
 
       	<button type="button" class="btn btn-primary">Start / Stop VM</button>
       	<button type="button" class="btn btn-primary">Restart VM</button>
