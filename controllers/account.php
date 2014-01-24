@@ -67,7 +67,7 @@ class Account extends baseController {
 				/ Required for invoice /
 				/**********************/
 				$this->db = $model->conDB1();
-				$sth = $model->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (:fname, :lname, :street, :zip, :city, :country);");
+				$sth = $this->db->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (:fname, :lname, :street, :zip, :city, :country);");
 				$sth->bindParam(':fname', $_POST['fname']);
 				$sth->bindParam(':lname', $_POST['lname']);
 				$sth->bindParam(':street', $_POST['adstr']);
