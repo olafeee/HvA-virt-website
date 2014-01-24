@@ -44,6 +44,12 @@ function makeInvoice(){
 	
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
+
+				//$sth = $invoice->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (?,?,?,?,?,?);");
+				//$sth->bind_param('ssssss', $_POST['fname'],$_POST['lname'],$_POST['adstr'],$_POST['adzip'],$_POST['adcit'],$_POST['country']);
+				//$sth->execute();
+	
+	//$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1 VALUES (?,?,?,?,?,?)";
 	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1";
 	//$sth = mysqli_prepare($invoice, $query);
 	$stmt = $invoice->stmt_init();
@@ -51,9 +57,14 @@ function makeInvoice(){
 	//printf(mysqli_stmt_error($sth));
 	//$stm = $sth->execute();
 	//$stmt->execute();
+	//$stmt->bind_param("ssssss", $val1, $val2, $val3);
+	
+	
+	
+	$stmt->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	$invoice->execute($stmt);
 	//printf(mysqli_stmt_error($sth));
-	$stmt->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	
 	if($sth->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
 	}
