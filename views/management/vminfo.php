@@ -20,7 +20,7 @@ function prefixSubnet($input) {
 }
 
 function getInfo($arrayKey) {
-  if(!isset($vmResponse[0][$arrayKey])) {
+  if(!isset($this->vmResponse[0][$arrayKey])) {
     return $vmResponse[0][$arrayKey];
   } else {
     return '';
