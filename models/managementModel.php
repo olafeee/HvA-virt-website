@@ -32,7 +32,7 @@ class managementModel extends baseModel
 
           }
 
-          $vmResponce = $vmResponce['virtualmachine'];
+          //$vmResponce = $vmResponce['virtualmachine'];
           
           return $vmResponce;
 	}
