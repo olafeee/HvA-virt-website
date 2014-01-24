@@ -44,7 +44,7 @@ function makeInvoice(){
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1";
-	$sth = $invoice->prepare($query));
+	$sth = $invoice->prepare($query);
 	$sth->execute();
 	$sth->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	
