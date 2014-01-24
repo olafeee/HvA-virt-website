@@ -9,6 +9,11 @@ $allRoles = $this->allRoles;
 		<?php require 'inc/header.php'; ?>
 	</div>
 	<div class="col-md-7">
+		<?php
+		echo $manageUser[0]['username'].'<br/>';
+		echo $manageUser[0]['firstname'].'<br/>';
+		echo $manageUser[0]['lastname'].'<br/>';
+		?>
 		<table class="table">
 			<thead>
 				<tr>
@@ -20,19 +25,18 @@ $allRoles = $this->allRoles;
 			<tbody>
 		<?php
 		$i = 0;
-		echo $manageUser[0]['username'];
-		echo $manageUser[0]['firstname'];
-		echo $manageUser[0]['lastname'];
 
 		while ($i < count($manageUser)) {
-			echo $manageUser[$i]['rol_naam'];
-			echo "<br/>";
+			echo '<tr>';
+			echo '<td>'.$manageUser[$i]['rol_naam'].'</td>';
 			echo '<a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'">verijwder</a>';
-			echo "<br/>";
+			echo "</tr>";
 			$i++;
 		}
 
 		?>
+			</tbody>
+		</table>
 		<div class="privilegesForm">
 			<select class="form-control bfh-countries" id="role" name="role">
 			<?php
