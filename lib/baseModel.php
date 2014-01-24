@@ -17,7 +17,7 @@ class baseModel {
 		$this->dbRole = new databaseRole();
 	}
 
-	function getRoleByPage(){
+	public function getRoleByPage(){
 			    $sqlArray = $this->db->select('SELECT rol_id 
 													FROM CMS_pages_rollen
 													INNER JOIN CMS_pages
