@@ -1,6 +1,6 @@
 <div class="row">
 <div class="SLAdiv"> 
-	<!-- gedaan door oscar /////tabs gedaan door olaf(y) en design-->
+	<!-- gedaan door oscar  design /////tabs gedaan door olaf(y)-->
 	<br/>
 	Inleiding:
 	<br/>

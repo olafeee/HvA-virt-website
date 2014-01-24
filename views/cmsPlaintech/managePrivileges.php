@@ -2,7 +2,6 @@
 
 $manageUser = $this->manageUser;
 $allRoles = $this->allRoles;
-print_r($allRoles);
 ?>
 
 <div class="row">
@@ -10,6 +9,15 @@ print_r($allRoles);
 		<?php require 'inc/header.php'; ?>
 	</div>
 	<div class="col-md-7">
+		<table class="table">
+			<thead>
+				<tr>
+					<td>GB</td>
+					<td>Price</td>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
 		<?php
 		$i = 0;
 		echo $manageUser[0]['username'];
