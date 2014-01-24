@@ -43,7 +43,7 @@ include('template.php');
 					echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
-					if (!is_array($_SESSION['allowFile'])){
+					if (!isset($_SESSION['allowFile'])){
 						$_SESSION['allowFile'][] = $rij['file'];
 					}elseif (!in_array($rij['file'], $_SESSION['allowFile'])){
 						$_SESSION['allowFile'][] = $rij['file'];
