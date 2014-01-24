@@ -34,9 +34,9 @@ $vmResponse = $this->vmResponse;
             print_r($vmResponse);
             $maxArray = count($vmResponse['virtualmachine']);
             while ($i < $maxArray) { 
-              if($vmResponse['virtualmachine'][$i]['state'] == ) {
+              if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
                 $stateColor = 'alert-success';
-              } else if() {
+              } else if($vmResponse['virtualmachine'][$i]['state'] == 'Stopped' ) {
                 $stateColor = 'alert-danger';
               } else {
                 $stateColor = '';
