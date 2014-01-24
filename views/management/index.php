@@ -43,7 +43,7 @@ $vmResponse = $this->vmResponse;
               }
           ?>
               
-              <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success " onclick="document.location= '/management/vminfo/';">
+              <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="document.location= '/management/vminfo/';">
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
                 <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
                 <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
