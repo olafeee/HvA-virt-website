@@ -93,7 +93,6 @@ include('template.php');
             </tr>
           </table>
         </div>
-      </div>
 
       <!-- VM Controls -->
       <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
