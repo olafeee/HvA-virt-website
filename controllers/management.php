@@ -44,7 +44,9 @@ class Management extends baseController {
 	function vmcontrol() {
 		//if(isset($_POST['command']) && isset($_POST['vmid'])) {
 
+			echo "<pre>";
 			print_r($_POST);
+			echo ($_POST['command']);
 			
 			// Kijk wat het commando is, en voer deze uit.
 			$command = $_POST['command'];
