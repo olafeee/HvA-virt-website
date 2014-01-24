@@ -5,7 +5,7 @@
 //function __construct(){
 	$fileToOpen = pack("H*", $_GET["f"]);
 	
-	if (empty($_SESSION['allowFile'])) {
+	if (!isset($_SESSION['allowFile'])) {
 		echo "<pre>";
 		var_dump($_SESSION['allowFile']);
 		echo "</pre>";
