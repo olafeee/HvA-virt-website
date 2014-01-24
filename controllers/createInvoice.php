@@ -40,14 +40,12 @@ function makeInvoice(){
 		$klantLand = "";
 	}	
 	
-	$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
+	$invoice = new mysqli(NULL,DB_USER1,DB_PASS1,DB_NAME1);
 	
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1";
 	$sth = mysqli_prepare($invoice, $query);
-	
-	echo mysqli_connect_error();
 	
 	//$sth = $invoice->prepare($query);
 printf(mysqli_stmt_error($sth));
