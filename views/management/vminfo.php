@@ -20,7 +20,7 @@ function prefixSubnet($input) {
 }
 
 function getInfo($arrayKey) {
-  if(!isset($this->vmResponse[0][$arrayKey])) {
+  if(!empty($vmResponse[0][$arrayKey])) {
     return $vmResponse[0][$arrayKey];
   } else {
     return '';
@@ -61,7 +61,7 @@ include('template.php');
         <table>
           <tr>
             <th>Name: </th>
-            <td><?php echo getInfo('name'); ?></td>
+            <td><?php echo $vmResponse[0]['name']; ?></td>
           </tr>
           <tr>
             <th>Status: </th>
@@ -69,11 +69,11 @@ include('template.php');
           </tr>
           <tr>
             <th>Created: </th>
-            <td><?php echo getInfo('created'); ?></td>
+            <td><?php echo $vmResponse[0]['created']; ?></td>
           </tr>
           <tr>
             <th>Template:</th>
-            <td><?php echo getInfo('templatedisplaytext'); ?></td>
+            <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
           </tr>
           <tr>
             <th>Iso: </th>
@@ -90,19 +90,19 @@ include('template.php');
         <table>
           <tr>
             <th>Offering: </th>
-            <td><?php echo getInfo('serviceofferingname'); ?></td>
+            <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
           </tr>
           <tr>
             <th>CPUs: </th>
-            <td><?php echo getInfo('cpunumber'); ?></td>
+            <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
           </tr>
           <tr>
             <th>CPU Speed: </th>
-            <td><?php echo getInfo('cpuspeed'); ?></td>
+            <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
           </tr>
           <tr>
             <th>Memory: </th>
-            <td><?php echo getInfo('memory'); ?></td>
+            <td><?php echo $vmResponse[0]['memory']; ?></td>
           </tr>
         </table>
       </div>
@@ -117,7 +117,6 @@ include('template.php');
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
       	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
-        <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Restart</button>
         
         <!-- Restart VM -->
         <form action="/management/vmcontrol" role="form" method="post">
@@ -139,12 +138,6 @@ include('template.php');
     </div>
   </div><!-- END Col 9 -->
 </div>
-
-<script type="text/javascript">
-  tr td:nth-child(2) { /* I don't think they are 0 based */
-    text-align: right;
-  }
-</script>
 
 
 
