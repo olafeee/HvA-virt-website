@@ -67,7 +67,7 @@ class Database1 extends PDO
             $sth->bindValue(":$key", $value);
         }
         
-        $sth->execute();
+        return $sth->execute();
     }
 
     public function delete($role_id, $CSID)
