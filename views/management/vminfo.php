@@ -143,7 +143,7 @@ include('template.php');
 <script type="text/javascript">
   $(window).load(function () {
       // run code
-      td:first-child + td { text-align: right; }
+      th:first-child + th { text-align: right; }
   });
 </script>
 
