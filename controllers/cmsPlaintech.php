@@ -102,10 +102,12 @@ class cmsPlaintech extends baseController {
 
 	function managePrivileges($CSID){
 		$manageUser = $this->model->managePrivileges($CSID);
+		$allRoles = $this->model->getCmsIndex("rollen", "*");
 		echo'<pre>';
 		print_r($manageUser);
 		echo'</pre>';
 		$this->baseView->manageUser = $manageUser;
+		$this->baseView->allRoles = $allRoles;
 		$this->index('managePrivileges');
 	}
 	 
@@ -113,8 +115,8 @@ class cmsPlaintech extends baseController {
 	 	$delete = $this->model->deletePrivileges($role_id, $CSID);
 	}
 
-	function addPrivileges(){
-		$delete = $this->model->addPrivileges();
-		echo"test";
+	function addPrivileges($role_id, $CSID){
+		$delete = $this->model->addPrivileges($role_id, $CSID);
+		print_r($delete);
 	}
 }

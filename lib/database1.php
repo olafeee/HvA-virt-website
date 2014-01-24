@@ -54,9 +54,9 @@ class Database1 extends PDO
         $sth->execute();
     }
 
-    public function insert()
+    public function insert($role_id, $CSID)
     {
-        $sth = $this->prepare("INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('4', '33e89114-7f70-11e3-9e69-0015c5eaa2fd');");   
+        $sth = $this->prepare("INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('$role_id', '$CSID');");   
         return $sth->execute();
     }
 

@@ -102,8 +102,7 @@ class cmsPlaintechModel extends baseModel
 
 	public function addPrivileges()
     {
-        $x = $this->db->insert();
-        echo "string";
+        $x = $this->db->insert($role_id, $CSID);
         return $x;
     }
 
