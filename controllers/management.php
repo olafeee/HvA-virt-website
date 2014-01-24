@@ -45,7 +45,7 @@ class Management extends baseController {
 	}
 
 	function vmcontrol() {
-		//if(isset($_POST['command']) && isset($_POST['vmid'])) {
+		if(isset($_POST['command']) && isset($_POST['vmid'])) {
 
 			echo "<pre>";
 			print_r($_POST);
@@ -53,25 +53,36 @@ class Management extends baseController {
 			
 			// Kijk wat het commando is, en voer deze uit.
 			$command = $_POST['command'];
-			if ($command == 'start') {
+			if (strcmp($command,'start') == 0 ) 
+			{
 				$this->cloudstack->startVirtualMachine($_POST['vmid']);
-			} else if ($command == 'stop') {
+			} 
+			else if (strcmp($command,'stop') == 0 ) 
+			{
 				$this->cloudstack->stopVirtualMachine($_POST['vmid'], $_POST['forced']);
-			} else if (strcmp($command,'restart') == 0) {
-				echo $this->cloudstack->rebootVirtualMachine($_POST['vmid']);
+			} 
+			else if (strcmp($command,'restart') == 0) 
+			{
+				$response = $this->cloudstack->rebootVirtualMachine($_POST['vmid']);
 				echo "TROLOLOLOL PARTY!!";
-			} else if ($command == 'destroy') {
+			} 
+			else if (strcmp($command,'destroy') == 0 ) 
+			{
 				$this->cloudstack->destroyVirtualMachine($_POST['vmid']);
-			} else if ($command == 'recover') {
+			} 
+			else if (strcmp($command,'recover') == 0 ) 
+			{
 				$this->cloudstack->recoverVirtualMachine($_POST['vmid']);
-			} else {
+			} 
+			else 
+			{
 				// Als geen van de bovenste commands kloppen
-				//throw new Exception('Unknown command!');
+				throw new Exception('Unknown command!');
 			}
 				
-		//} else {
-		//	header('location: /management/');
-		//}
+		} else {
+			header('location: /management/');
+		}
 	}
 
 	
