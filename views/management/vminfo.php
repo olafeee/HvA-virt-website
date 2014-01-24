@@ -15,18 +15,18 @@ include('template.php');
       </div>
       <div class="panel-body">
 
-        <h4><span class="glyphicon glyphicon-list-alt"></span>   Systems Controls</h4><hr />
+        <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
         
-      	<div class="label label-danger">Stopped</div><br /><br />
+      	<div class="label label-danger">Stopped</div><br /><br /><br />
 
-        <h4><span class="glyphicon glyphicon-cog"></span>   Systems Controls</h4><hr />
+        <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
-      	<button type="button" class="btn btn-primary">Start / Stop VM</button>
-      	<button type="button" class="btn btn-primary">Restart VM</button>
-      	<button type="button" class="btn btn-primary">VM Console</button>
-      	<button type="button" class="btn btn-primary">Backup VM</button>
-      	<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</button>
-      	<button type="button" class="btn btn-primary">Upgrade VM</button>
+      	<a type="button" class="btn btn-primary" style="width:25px;">Start / Stop VM</a>
+      	<a type="button" class="btn btn-primary" style="width:25px;">Restart VM</a>
+      	<a type="button" class="btn btn-primary" style="width:25px;">VM Console</a>
+      	<a type="button" class="btn btn-primary" style="width:25px;">Backup VM</a>
+      	<a type="button" class="btn btn-danger" style="width:25px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
+      	<a type="button" class="btn btn-primary" style="width:25px;">Upgrade VM</a>
 
         <br />
       </div>
