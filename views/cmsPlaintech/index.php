@@ -1,12 +1,18 @@
-<div class="row">
-	<div class="col-md-2">
-		<?php require 'inc/header.php'; ?>
+
+<?php require 'inc/header.php'; ?>
+
+
+<div class="tab-pane">
+  <div class="col-md-9" role="main">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Virtual Machine Panel</h3>
+      </div>
+      <div class="panel-body">
+		<div class="viewPageTable">
+			<h1>Plaintech CMS page!!!</h1>
 	</div>
-	<div class="col-md-7">
-		<a href="/cmsPlaintech/manangeVpsParts/CPU"><button type="button" class="btn btn-info">CPU</button></a>
-		<a href="/cmsPlaintech/manangeVpsParts/RAM"><button type="button" class="btn btn-info">RAM</button></a>
-		
-	</div>
-	<div class="col-md-3"></div>
+      </div>
+    </div>
+  </div><!-- END Col 9 -->
 </div>
-	

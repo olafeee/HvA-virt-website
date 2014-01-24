@@ -1,18 +1,18 @@
 <?php require 'inc/header.php'; ?>
-
+<?php
+			$text = $this->rolesMR;
+			$username = $this->username;
+?>
 
 <div class="tab-pane">
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Virtual Machine Panel</h3>
+        <h3 class="panel-title">Manange Roles of <?php echo $username;?> </h3>
       </div>
       <div class="panel-body">
 		<div class="viewPageTable">
 		<?php
-
-			$text = $this->rolesMR;
-			//print_r($text);
 			$i = 0;
 			while ($i < count($text)) {
 				echo '<div class="divTable"><div class="divRow">';

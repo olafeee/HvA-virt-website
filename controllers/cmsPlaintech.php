@@ -101,11 +101,12 @@ class cmsPlaintech extends baseController {
 		$this->index('searchPrivileges');
 	}
 
-	function managePrivileges($CSID){
+	function managePrivileges($CSID, $username){
 		$manageUser = $this->model->managePrivileges($CSID);
 		$allRoles = $this->model->getCmsIndex("rollen", "*");
 		$this->baseView->manageUser = $manageUser;
 		$this->baseView->allRoles = $allRoles;
+		$this->baseView->username = $username;
 		$this->index('managePrivileges');
 	}
 	 

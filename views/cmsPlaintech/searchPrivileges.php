@@ -5,10 +5,10 @@
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Virtual Machine Panel</h3>
+        <h3 class="panel-title">Search for User</h3>
       </div>
       <div class="panel-body">
-      	      <form class="form-signin" action="/cmsPlaintech/searchPrivileges" method="post">
+      	<form class="form-signin" action="/cmsPlaintech/searchPrivileges" method="post">
         <input type="text" class="form-control" placeholder="firstname of lastname" required="" autofocus="" name="name">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
       </form>
@@ -21,7 +21,7 @@
 			while ($i < count($nameFound)) {
 				echo $nameFound[$i]['username'];
 				echo '</br>';
-				echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'">Bekijk</a>';
+				echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'/'.$nameFound[$i]['username'].'">Bekijk</a>';
 				echo '</br>';
 				$i++;
 			}
