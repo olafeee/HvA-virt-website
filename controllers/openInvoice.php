@@ -7,7 +7,7 @@
 	
 	if (!isset($_SESSION['allowFile'])) {
 		echo "<pre>";
-		var_dump($_SESSION['allowFile']);
+		var_dump($_SESSION);
 		echo "</pre>";
 		die('No allowed invoices');
 	}

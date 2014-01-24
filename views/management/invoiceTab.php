@@ -56,6 +56,7 @@ include('template.php');
 			echo "<pre>";
 			var_dump($_SESSION);
 			echo "</pre>";
+			?>
       </div>
     </div>
   </div><!-- END Col 9 -->
