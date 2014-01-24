@@ -181,8 +181,9 @@ function makeInvoice(){
 	
 	function saveToDb($filename, $userid){
 		$invoice = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
-		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`id`, `file`) VALUES (?,?);");
-		$sth->bind_param('is', $userid, $filename);
+		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`id`, `file`, `date`) VALUES (?,?,?);");
+		$time = strtotime(YY"-"mm"-"dd" "HH":"MM":"II);
+		$sth->bind_param('iss', $userid, $filename, $time);
 		$sth->execute();
 	}
 	
