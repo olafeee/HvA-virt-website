@@ -3,9 +3,8 @@
 
 
 
-<?php 
-include('template.php');
-?>
+<?php require 'inc/header.php'; ?>
+
 
 <div class="tab-pane">
   <div class="col-md-9" role="main">
