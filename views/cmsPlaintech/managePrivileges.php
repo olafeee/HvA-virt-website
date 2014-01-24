@@ -10,7 +10,7 @@ $allRoles = $this->allRoles;
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Role panel jwz #yolo</h3>
+        <h3 class="panel-title">Manange Roles of <?php echo $manageUser[0]['firstname'].' '.$manageUser[0]['lastname'] ?></h3>
       </div>
       <div class="panel-body">
       	<?php
@@ -40,8 +40,8 @@ $allRoles = $this->allRoles;
 		?>
 			</tbody>
 		</table>
+		<br/>
 		<div class="privilegesForm">
-
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
