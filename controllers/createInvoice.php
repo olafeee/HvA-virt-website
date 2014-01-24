@@ -57,7 +57,8 @@ function makeInvoice(){
 	//printf(mysqli_stmt_error($sth));
 	//$stm = $sth->execute();
 	//$stmt->execute();
-	$stmt->bind_param("ssssss", $klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	//$stmt->bind_param("ssssss", $klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	$invoice->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	$invoice->execute($stmt);
 	//printf(mysqli_stmt_error($sth));
 	//$stmt->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
