@@ -62,8 +62,7 @@ $vmResponse = $this->vmResponse;
           ?>
               
               <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="document.location= '/management/vminfo/';">
-
-
+                
                 <!-- heb even die oude shit erbij gedaan plus subnet functie kon het niet laten hahahahahaha -->
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
                 <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
