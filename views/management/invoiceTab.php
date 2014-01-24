@@ -15,8 +15,40 @@ include('template.php');
         <h3 class="panel-title">System Overview</h3>
       </div>
       <div class="panel-body">
-
-
+	  <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+		<?php 
+			// Jep, I know, maar kreeg prepared statements niet helemaal lekker... dan maar ff zo...
+			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
+			$first = $_SESSION['logArr']['firstname'];
+			$laste = $_SESSION['logArr']['lastname'];
+			$query = "SELECT * FROM invoice_users WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
+			$sth = mysqli_query($list, $query);
+			$row = mysqli_fetch_assoc($sth);
+			$klantId = $row['id'];
+			$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
+			$sti = mysqli_query($list, $querz);
+			while($rij = mysqli_fetch_assoc($sti)){
+				if(file_exists("/var/invoices/".$rij['file']){
+				
+					echo "<tr>";
+					echo "<td><a href=\""$rij['file']"\">".$rij['file']."</a></td>";
+					echo "<td>".$rij['date']."</td>";
+					echo "</tr>";
+					
+				}else{
+					echo "No invoices were found.";
+			}
+			
+		?>
+		</tbody>
+        </table>
 		<br />
       </div>
     </div>
