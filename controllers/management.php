@@ -26,7 +26,6 @@ class Management extends baseController {
 	function vminfo($vmid) {
 		$this->baseView->vmid = $vmid;
 
-		$this->model = $this->laadModel();
 		$vmResponse = $this->model->getVMbyID($vmid);
 		$this->baseView->vmResponse = $vmResponse;
 
