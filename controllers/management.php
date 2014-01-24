@@ -5,6 +5,7 @@ require_once("lib/cloudstack.php");
 class Management extends baseController {
 
 	public $model;
+	public $vmResponse;
 
 	function __construct() {
 		// Check if logged in.
