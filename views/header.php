@@ -119,7 +119,7 @@ if($this->url0=='order'){
       <li><a href="/">Home</a></li>
       <li><a href="/order">Order</a></li>
       <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; }?>
-      <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; }?>
+      <?php if(Session::get('userRole') == 7){ echo '<li><a href="/cmsPlaintech"> CMS</a></li>'; }?>
     </ul>
     </div>
   </div><!-- /.navbar-collapse -->
