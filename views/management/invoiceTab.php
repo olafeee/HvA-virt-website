@@ -44,7 +44,7 @@ include('template.php');
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
 					//$_SESSION['allowFile'][$i]['file'] = $rij['file'];
-					$_SESSION['allowFile'] = $rij['file'];
+					$_SESSION['allowFile']['file'] = $rij['file'];
 					//$i++;
 				}else{
 					echo "No invoices were found.";
