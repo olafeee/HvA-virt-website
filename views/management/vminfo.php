@@ -23,7 +23,7 @@ include('template.php');
       	<button type="button" class="btn btn-primary">Restart VM</button>
       	<button type="button" class="btn btn-primary">VM Console</button>
       	<button type="button" class="btn btn-primary">Backup VM</button>
-      	<button type="button" class="btn btn-danger">Destroy VM</button>
+      	<button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-exclamation-sign"></span>Destroy VM</button>
       	<button type="button" class="btn btn-primary">Upgrade VM</button>
 
         <br />
