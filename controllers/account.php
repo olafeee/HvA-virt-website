@@ -66,8 +66,9 @@ class Account extends baseController {
 				/**********************\
 				/ Required for invoice /
 				/**********************/
-				$this->db = $model->conDB1();
-				$sth = $this->db->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (:fname, :lname, :street, :zip, :city, :country);");
+				// Sorry, zooitje, kreeg t ff niet helemaal voor elkaar...
+				$invoice = new mysqli(DB_HOST1,DB_NAME1,DB_USER1,DB_PASS1);
+				$sth = $invoice->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (:fname, :lname, :street, :zip, :city, :country);");
 				$sth->bindParam(':fname', $_POST['fname']);
 				$sth->bindParam(':lname', $_POST['lname']);
 				$sth->bindParam(':street', $_POST['adstr']);
