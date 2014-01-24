@@ -22,7 +22,7 @@ while ($i < count($manageUser)) {
  	<?php
  	$y=9;
  	while ($y < count($allRoles)) {
- 		echo'<option value="">Saab</option>'
+ 		echo'<option value="">Saab</option>';
  	}
 
  	print_r($allRoles);
