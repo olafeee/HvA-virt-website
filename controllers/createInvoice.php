@@ -75,6 +75,9 @@ function makeInvoice(){
 	//mysqli_select_db($invoice, 'user_db_plaintech');
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
+	
+	die ($first . " AND " . $laste);
+	
 	//$query = "SELECT firstname, lastname, street, zip, city, country FROM invoice_users WHERE firstname = $first AND lastname = $laste LIMIT 1";
 	$query = 'SELECT * FROM invoice_users WHERE firstname="curl" AND lastname="haxx" LIMIT 3';
 	$sth = mysqli_query($invoice, $query);
