@@ -38,18 +38,18 @@ include('template.php');
 			//$i = 0;
 			//$_SESSION['allowFile'] = array();
 			while($rij = mysqli_fetch_assoc($sti)){
-				if (!in_array($rij['file'], $_SESSION['allowFile'])){
-					if(file_exists("/var/invoices/".$rij['file'])){
-						echo "<tr>";
-						echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
-						echo "<td>".$rij['date']."</td>";
-						echo "</tr>";
-						//$_SESSION['allowFile'][$i]['file'] = $rij['file'];
+				if(file_exists("/var/invoices/".$rij['file'])){
+					echo "<tr>";
+					echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
+					echo "<td>".$rij['date']."</td>";
+					echo "</tr>";
+					if (!is_array($_SESSION['allowFile'])){
 						$_SESSION['allowFile'][] = $rij['file'];
-						//$i++;
-					}else{
-						echo "No invoices were found.";
+					}elseif (!in_array($rij['file'], $_SESSION['allowFile'])){
+						$_SESSION['allowFile'][] = $rij['file'];
 					}
+				}else{
+					echo "No invoices were found.";
 				}
 			}
 		?>
