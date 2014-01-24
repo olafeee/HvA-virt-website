@@ -1,7 +1,7 @@
 <?php 
 include('template.php'); 
 
-$vmResponse;
+$vmResponse = $this->vmResponse;
 ?>
 
 
