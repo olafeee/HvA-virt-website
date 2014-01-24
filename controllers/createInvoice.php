@@ -174,7 +174,7 @@ function makeInvoice(){
 	
 	$pdf->Output('invoice.pdf', 'I');
 	$pdfname = uniqid('invoice_').".pdf";
-	$pdf->Output('/var/invoice/'.$pdfname, 'F');
+	$pdf->Output('/var/invoices/'.$pdfname, 'F');
 	//self::sentInvoice("a@b.c", "/tmp/1.pdf");
 	self::saveToDb($pdfname, $klantId);
 	}
