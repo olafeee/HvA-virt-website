@@ -49,9 +49,9 @@ function makeInvoice(){
 	
 	//$sth = $invoice->prepare($query);
 	//printf(mysqli_stmt_error($sth));
-	$invoice->$sth->execute();
+	$stm = $sth->execute();
 	//printf(mysqli_stmt_error($sth));
-	$sth->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	$stm->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	if($sth->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
 	}
