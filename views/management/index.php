@@ -31,7 +31,7 @@ $vmResponse = $this->vmResponse;
         <tbody>
           <?php
             $i = 0;
-            $maxArray = count($vmResponse);
+            $maxArray = count($vmResponse['virtualmachine']);
             while ($i < $maxArray) { 
           ?>
               <a href="/management/vminfo/<?php echo $xy; ?>">
