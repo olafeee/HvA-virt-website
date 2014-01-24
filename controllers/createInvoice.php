@@ -33,6 +33,7 @@ function makeInvoice(){
 	
 	//Do NOT remove, otherwise script may generate variable error if user forgets to log in
 	if (empty($_SESSION['logArr'])){
+	die('not logged in');
 		$klantNaam = "";
 		$klantStraat = "";
 		$klantPostcode = "";
