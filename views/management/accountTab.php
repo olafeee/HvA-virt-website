@@ -15,7 +15,7 @@ include('template.php');
       </div>
       <div class="panel-body">
         
-      	<h4><span class="glyphicon glyphicon-user"></span>   Account Information</h4><br />
+      	<h4><span class="glyphicon glyphicon-user"></span>   Account Information</h4><hr /><br />
 
 		<label for="fname" class="col-sm-2 control-label">First Name :</label>
 		<div class="col-sm-10">
@@ -51,7 +51,8 @@ include('template.php');
 
 		<br /><br /><br /><br /><br /><br /><br />
 
-		<h4><span class="glyphicon glyphicon-euro"></span>   Payment Information</h4><br />
+		<h4><span class="glyphicon glyphicon-euro"></span>   Payment Information</h4><hr /><br />
+
 
 		Filler here<br />
 
