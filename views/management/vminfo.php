@@ -6,6 +6,19 @@
 
 $vmResponse = $this->vmResponse;
 
+function prefixSubnet($input){
+  $subBin = explode( '.', $input );
+  $subBinX = 0;
+  $subnet = 0;
+  while ($subBinX <= 3) {
+    $x = decbin($subBin[$subBinX]);
+    $var3 = strlen(str_replace('0', '', $x));
+    $subnet = $subnet + $var3;
+    $subBinX++;
+  }
+  return $subnet;
+}
+
 // Check the state of the vm and make a lable for that state
 if(strcmp($vmResponse[0]['state'],'Running') == 0) {
   $state = '<span class="label label-success">Running</span>';
