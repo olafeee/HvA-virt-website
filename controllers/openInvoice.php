@@ -9,15 +9,15 @@
 	echo "</pre>";*/
 	
 	if (!isset($_SESSION['allowFile'])) {
-		die('<h1>Access Denied!</h1><br /><p style=\"color:red\">Code 1</p>');
+		die('<h1>Access Denied!</h1><br /><p style="color:red">Code 1</p>');
 	}
 	
 	if (!in_array($fileToOpen, $_SESSION['allowFile'])){
-		die('<h1>Access Denied!</h1><br /><p style=\"color:red\">Code 2</p>');
+		die('<h1>Access Denied!</h1><br /><p style="color:red">Code 2</p>');
 	}
 	
 	if(!file_exists("/var/invoices/".$fileToOpen)){
-		die('<h1>Access Denied!</h1><br /><p style=\"color:red\">Code 3</p>');
+		die('<h1>Access Denied!</h1><br /><p style="color:red">Code 3</p>');
 	} else {
 		echo gzdecode(file_get_contents("/var/invoices/".$fileToOpen));
 	}
