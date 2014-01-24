@@ -21,12 +21,12 @@ include('template.php');
 
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
-      	<a type="button" class="btn btn-primary" style="width:25px;">Start / Stop VM</a>
-      	<a type="button" class="btn btn-primary" style="width:25px;">Restart VM</a>
-      	<a type="button" class="btn btn-primary" style="width:25px;">VM Console</a>
-      	<a type="button" class="btn btn-primary" style="width:25px;">Backup VM</a>
-      	<a type="button" class="btn btn-danger" style="width:25px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
-      	<a type="button" class="btn btn-primary" style="width:25px;">Upgrade VM</a>
+      	<a type="button" class="btn btn-primary" style="width:125px;">Start / Stop VM</a>
+      	<a type="button" class="btn btn-primary" style="width:125px;">Restart VM</a>
+      	<a type="button" class="btn btn-primary" style="width:125px;">VM Console</a>
+      	<a type="button" class="btn btn-primary" style="width:125px;">Backup VM</a>
+      	<a type="button" class="btn btn-danger" style="width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
+      	<a type="button" class="btn btn-primary" style="width:125px;">Upgrade VM</a>
 
         <br />
       </div>
