@@ -27,7 +27,7 @@ class Account extends baseController {
 				if(empty($responseRole)) {
 					$model->insertRole();
 					$model->insertUser();
-					Session::set('userRole', '6');
+					Session::set('userRole', '7');
 					header('location: /management');
 				 }else{
 				 	print_r($responseRole);

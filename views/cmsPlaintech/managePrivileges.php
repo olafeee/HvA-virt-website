@@ -29,7 +29,7 @@ $allRoles = $this->allRoles;
 		while ($i < count($manageUser)) {
 			echo '<tr>';
 			echo '<td>'.$manageUser[$i]['rol_naam'].'</td>';
-			echo '<td><a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'"><button type="button" class="btn btn-primary">Delete</button></a></td>';
+			echo '<td><a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'"><button type="button" class="btn btn-danger">Delete</button></a></td>';
 			echo "</tr>";
 			$i++;
 		}
@@ -38,7 +38,9 @@ $allRoles = $this->allRoles;
 			</tbody>
 		</table>
 		<div class="privilegesForm">
-			<select class="form-control bfh-countries" id="role" name="role">
+
+		<form name="input" action="/cmsPlaintech/insertMVP" onsubmit="return checkInp()" method="post">
+			<select class="form-control bfh-countries" id="rol_naam" name="rol_naam">
 			<?php
 			 	$y=0;
 			 	
@@ -49,6 +51,10 @@ $allRoles = $this->allRoles;
 
 			 	?>
 			 </select>
+	        <div class="faultMVP"></div>
+	        <button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button>
+	    </form>
+
 		</div>
 
 
