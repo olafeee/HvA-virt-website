@@ -6,7 +6,7 @@
 
 $vmResponse = $this->vmResponse;
 
-function prefixSubnet($input){
+function prefixSubnet($input) {
   $subBin = explode( '.', $input );
   $subBinX = 0;
   $subnet = 0;
@@ -17,6 +17,14 @@ function prefixSubnet($input){
     $subBinX++;
   }
   return $subnet;
+}
+
+function getInfo($arrayKey) {
+  if(!empty($vmResponse[0][$arrayKey])) {
+    return $vmResponse[0][$arrayKey]);
+  } else {
+    return '';
+  }
 }
 
 // Check the state of the vm and make a lable for that state
@@ -43,10 +51,10 @@ include('template.php');
     <div class="panel-body">
 
     <div class="row">
-
-      <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
-      
       <div class="col-md-6" role="main">
+
+        <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
+      
         <table>
           <tr>
             <th>Name: </th>
@@ -66,7 +74,7 @@ include('template.php');
           </tr>
           <tr>
             <th>Iso: </th>
-            <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
+            <td><?php echo getInfo('isodisplaytext') ?></td>
           </tr>
           <tr>
             <th>Address: </th>
@@ -95,11 +103,9 @@ include('template.php');
           </tr>
         </table>
       </div>
+    </div>
 
-      </div>
-
-      <div class="row">
-
+    <div class="row">
       <div class="col-md-12" role="main">
       
         <!-- VM Controls -->
