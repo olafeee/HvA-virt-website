@@ -6,6 +6,9 @@
 	$fileToOpen = pack("H*", $_GET["f"]);
 	
 	if (empty($_SESSION['allowFile'])) {
+		echo "<pre>";
+		var_dump($_SESSION['allowFile']);
+		echo "</pre>";
 		die('No allowed invoices');
 	}
 	
