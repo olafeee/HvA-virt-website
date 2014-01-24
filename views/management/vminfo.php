@@ -15,7 +15,7 @@ include('template.php');
       </div>
       <div class="panel-body">
         
-      	TROLOLOLOL
+      	<div class="label label-danger">Stopped</div>
 
         <br />
       </div>
