@@ -15,7 +15,14 @@ include('template.php');
       </div>
       <div class="panel-body">
         
-      	<div class="label label-danger">Stopped</div>
+      	<div class="label label-danger">Stopped</div><br /><br />
+
+      	<button type="button" class="btn btn-primary">Start / Stop VM</button>
+      	<button type="button" class="btn btn-primary">Restart VM</button>
+      	<button type="button" class="btn btn-primary">VM Console</button>
+      	<button type="button" class="btn btn-primary">Backup VM</button>
+      	<button type="button" class="btn btn-danger">Destroy VM</button>
+      	<button type="button" class="btn btn-primary">Upgrade VM</button>
 
         <br />
       </div>
