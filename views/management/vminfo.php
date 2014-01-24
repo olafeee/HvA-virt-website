@@ -44,7 +44,7 @@ include('template.php');
 
         <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
         
-        <div class="col-md-9" width="50%" role="main">
+        <div class="col-md-6" role="main">
           <table>
             <tr>
               <th>Name: </th>
@@ -73,7 +73,7 @@ include('template.php');
           </table>
         </div>
 
-        <div class="col-md-9" width="50%">
+        <div class="col-md-6" role="main">
           <table>
             <tr>
               <th>Offering: </th>
