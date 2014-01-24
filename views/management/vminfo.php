@@ -6,7 +6,7 @@
 
 $vmResponse = $this->vmResponse;
 
-// Check the state of the vm:
+// Check the state of the vm and make a lable for that state
 if(strcmp($vmResponse[0]['state'],'running') == 0) {
   $state = '<span class="label label-success">Running</span>';
 } else if(strcmp($vmResponse[0]['state'],'stopping') == 0) {
@@ -18,6 +18,10 @@ if(strcmp($vmResponse[0]['state'],'running') == 0) {
 } else {
   $state = '<span class="label label-default">Unknown</span>';
 }
+
+// Format the created date
+$date = $vmResponse[0]['created'];
+$created = $date->format('Y-m-d H:i:s');
 
 include('template.php');
 ?>
@@ -35,7 +39,7 @@ include('template.php');
         <table id="">
           <tr>
             <th>Name: </th>
-            <td><?php echo $vmResponse['name']; ?></td>
+            <td><?php echo $vmResponse[0]['name']; ?></td>
           </tr>
           <tr>
             <th>Status: </th>

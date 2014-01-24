@@ -25,7 +25,7 @@ class Management extends baseController {
 
 	function vminfo($vmid) {
 		// Check of er een ID is mee gegeven
-		if(isset($vmid)) {
+		if(!empty($vmid)) {
 			$this->baseView->vmid = $vmid;
 
 			$vmResponse = $this->model->getVMbyID($vmid);
