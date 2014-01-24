@@ -70,7 +70,7 @@ function makeInvoice(){
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 	$query = "SELECT firstname, lastname, street, zip, city, country FROM invoice_users WHERE firstname = $first AND lastname = $laste LIMIT 1";
-	$sth = mysqli_query($invoice, $query);
+	$sth = mysqli_query($query);
 	$row = mysqli_fetch_assoc($sth);
 	
 	$klantFNaam = $row['firstname'];
