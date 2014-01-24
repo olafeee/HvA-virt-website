@@ -47,7 +47,7 @@ class Management extends baseController {
 			print_r($_POST);
 			
 			// Kijk wat het commando is, en voer deze uit.
-			$command = $_POST['çommand'];
+			$command = $_POST['command'];
 			if ($command == 'start') {
 				$this->cloudstack->startVirtualMachine($_POST['vmid']);
 			} else if ($command == 'stop') {
