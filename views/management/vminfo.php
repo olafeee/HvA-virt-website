@@ -68,7 +68,7 @@ include('template.php');
           </tr>
           <tr>
             <th>Address: </th>
-            <td><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][0]["nic"][0]["netmask"]);?></td>
+            <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
           </tr>
           <tr>
             <th>Offering: </th>
