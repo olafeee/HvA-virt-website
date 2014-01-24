@@ -38,7 +38,7 @@ $vmResponse = $this->vmResponse;
               <a href="/management/vminfo/<?php echo $xy; ?>">
                 <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success">
                   <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
-                  <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." /". echo($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
+                  <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." /". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
                   <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
                   <td></td>
                 </tr>
