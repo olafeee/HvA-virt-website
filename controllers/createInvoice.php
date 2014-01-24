@@ -180,9 +180,9 @@ function makeInvoice(){
 	}
 	
 	function saveToDb($filename, $userid){
-		$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
-		$sth = $invoice->prepare("INSERT INTO `user_db_plaintech`.`invoice_files` (`id`, `file`) VALUES (?,?);");
-		$sth->bind_param('ss', $userid, $filename);
+		$invoice = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
+		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`id`, `file`) VALUES (?,?);");
+		$sth->bind_param('is', $userid, $filename);
 		$sth->execute();
 	}
 	
