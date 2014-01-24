@@ -54,9 +54,25 @@ class Database1 extends PDO
         $sth->execute();
     }
 
-    public function insert($role_id, $CSID)
+    public function insert($table, $data)
     {
-        $sth = $this->prepare("INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('$role_id', '$CSID')");   
+        ksort($data);
+        
+        $fieldNames = implode('`, `', array_keys($data));
+        $fieldValues = ':' . implode(', :', array_keys($data));
+        
+        $sth = $this->prepare("INSERT INTO $table (`$fieldNames`) VALUES ($fieldValues)");
+        
+        foreach ($data as $key => $value) {
+            $sth->bindValue(":$key", $value);
+        }
+        
+        $sth->execute();
+    }
+
+    public function insertRole($role_id, $CSID)
+    {
+        $sth = $this->prepare("INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('$role_id', '$CSID') ");   
         return $sth->execute();
     }
 
