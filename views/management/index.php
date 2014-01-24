@@ -31,6 +31,7 @@ $vmResponse = $this->vmResponse;
         <tbody>
           <?php
             $i = 0;
+            print_r($cmResponse);
             $maxArray = count($vmResponse['virtualmachine']);
             while ($i < $maxArray) { 
           ?>
