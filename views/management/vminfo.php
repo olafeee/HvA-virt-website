@@ -26,7 +26,7 @@ include('template.php');
         <!-- Restart VM -->
         <form action="/management/vmcontrol" methode="POST" id="restart">
           <input type="hidden" name="command" value="restart" />
-          <input type="hidden" name="vmid" value="<?php echo '32-23-04' ?>" />
+          <input type="hidden" name="vmid" value="<?php echo 'be77cacc-1124-4c8b-8017-878e98ba7101' ?>" />
           <button type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
         </form>
 
