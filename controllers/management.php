@@ -13,11 +13,11 @@ class Management extends baseController {
 			header('location: /account');
 		}
 
+		parent::__construct();
+
 		$this->model = $this->laadModel();
 		$vmResponse = $this->model->getVM();
-		$this->baseView->$vmResponse;
-
-		parent::__construct();
+		$this->baseView->vmResponse;
 	}
 
 	function vmInfo($vmid) {
