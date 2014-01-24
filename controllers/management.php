@@ -42,7 +42,7 @@ class Management extends baseController {
 	}
 
 	function vmcontrol() {
-		if(isset($_POST['command'] && $_POST['vmid'])) {
+		if(isset($_POST['command']) && isset($_POST['vmid'])) {
 			
 
 		} else {
