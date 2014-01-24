@@ -106,6 +106,7 @@ class cmsPlaintech extends baseController {
 		$allRoles = $this->model->getCmsIndex("rollen", "*");
 		echo'<pre>';
 		print_r($manageUser);
+		print_r($allRoles);
 		echo'</pre>';
 		$this->baseView->manageUser = $manageUser;
 		$this->baseView->allRoles = $allRoles;
