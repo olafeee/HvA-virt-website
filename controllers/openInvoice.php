@@ -4,24 +4,24 @@
 @session_start();
 //function __construct(){
 	$fileToOpen = pack("H*", $_GET["f"]);
-	echo "<pre>";
+	/*echo "<pre>";
 		var_dump($_SESSION['allowFile']);
-	echo "</pre>";
+	echo "</pre>";*/
 	
 	if (!isset($_SESSION['allowFile'])) {
-		die('No allowed invoices');
+		die('<h1>Access Denied!</h1><br /><p style=\"color:red\">Code 1</p>');
 	}
 	
 	if (!in_array($fileToOpen, $_SESSION['allowFile'])){
-		die('This invoice belongs to someone else');
+		die('<h1>Access Denied!</h1><br /><p style=\"color:red\">Code 2</p>');
 	}
 	
 	if(!file_exists("/var/invoices/".$fileToOpen)){
-		die('Invoice could not be loaded.');
+		die('<h1>Access Denied!</h1><br /><p style=\"color:red\">Code 3</p>');
 	} else {
-		echo file_get_contents("/var/invoices/".$fileToOpen);
+		echo gzdecode(file_get_contents("/var/invoices/".$fileToOpen));
 	}
 //}
 //}	
-	
+	exit();
 ?>
