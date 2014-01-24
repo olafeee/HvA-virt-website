@@ -20,7 +20,7 @@ function prefixSubnet($input) {
 }
 
 function getInfo($arrayKey) {
-  if(!empty($vmResponse[0][$arrayKey])) {
+  if(!isset($vmResponse[0][$arrayKey])) {
     return $this->vmResponse[0][$arrayKey];
   } else {
     return '';
@@ -117,6 +117,7 @@ include('template.php');
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
       	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
+        <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Restart</button>
         
         <!-- Restart VM -->
         <form action="/management/vmcontrol" role="form" method="post">
