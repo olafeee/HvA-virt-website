@@ -56,10 +56,10 @@ include('template.php');
 		</tbody>
         </table>
 		<br />
-		<?php 
+		<?php /*
 			echo "<pre>";
 			var_dump($_SESSION['allowFile']);
-			echo "</pre>";
+			echo "</pre>";*/
 			?>
       </div>
     </div>
