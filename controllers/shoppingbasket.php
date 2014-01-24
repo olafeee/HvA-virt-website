@@ -15,7 +15,12 @@ class Shoppingbasket extends baseController {
 	* @param string $zoneid is het id van de zone waar de VM in aangemaakt moet worden.
 	* @param string $hypervisor, geeft het hypervisor method mee van cloudstack.
 	* @param string $hostid is het id van de host waar cloudstack op draait.
-	* @param string 
+	* @param string $disk-offering-id is het id van root storage op de host.
+	* @param string $displayname is de naam die je ziet als gebruiker.
+	* @param string $name is de naam die gegeven word aan de VM in cloudstack.
+	* @param string $account dit is het account die huidig staat ingelogd en de VM creeert.
+	* @param string $domain-id is het id van het domain waar het account aan gekoppeld is.
+	* @param string $securitygroupids is het id van de securitygroup waar de VM aan gaat deelnemen.
 	*/
 	function createVM() {
 		if (1 == 1) {
