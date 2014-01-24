@@ -35,12 +35,14 @@ if(strcmp($vmResponse[0]['state'],'Running') == 0) {
 include('template.php');
 ?>
 
-<div class="col-md-9" role="main">  
+<div class="col-md-9" role="main">
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Virtual Machine Panel</h3>
     </div>
     <div class="panel-body">
+
+    <div class="row">
 
       <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
       
@@ -94,12 +96,14 @@ include('template.php');
         </table>
       </div>
 
+      </div>
+
+      <div class="row">
+
       <div class="col-md-12" role="main">
       
-
         <!-- VM Controls -->
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
-
 
       	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
         
@@ -116,6 +120,8 @@ include('template.php');
       	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
 
         <br />
+      </div>
+
       </div>
 
     </div>
