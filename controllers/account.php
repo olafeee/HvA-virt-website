@@ -66,8 +66,8 @@ class Account extends baseController {
 				/**********************\
 				/ Required for invoice /
 				/**********************/
-				$sth = $this->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`)
-					VALUES (`$_POST['fname']`, `$_POST['lname']`, `$_POST['adstr']`, `$_POST['adzip']`,	`$_POST['adcit']`, `$_POST['country']`);");   
+				$sth = $this->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) 
+					VALUES (`$_POST['fname']`, `$_POST['lname']`, `$_POST['adstr']`, `$_POST['adzip']`,	`$_POST['adcit']`, `$_POST['country']`)");   
 				$sth->execute();
 				
 				Session::set('successPage', TRUE);
