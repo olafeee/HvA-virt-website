@@ -4,6 +4,8 @@
 ** Account Tab on Management Page
 ** ******************************/
 
+$vmResponse = $this->vmResponse;
+
 // Check the state of the vm:
 if(strcmp($vmResponse['state'],'running') == 0) {
   $state = '<span class="label label-success">Running</span>';
