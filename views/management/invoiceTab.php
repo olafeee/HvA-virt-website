@@ -36,7 +36,7 @@ include('template.php');
 			$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
 			$sti = mysqli_query($list, $querz);
 			//$i = 0;
-			//$_SESSION['allowFile'] = array();
+			$_SESSION['allowFile'] = array();
 			while($rij = mysqli_fetch_assoc($sti)){
 				if(file_exists("/var/invoices/".$rij['file'])){
 					echo "<tr>";
