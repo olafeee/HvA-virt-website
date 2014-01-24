@@ -35,7 +35,7 @@ include('template.php');
 			$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
 			$sti = mysqli_query($list, $querz);
 			while($rij = mysqli_fetch_assoc($sti)){
-				if(file_exists("/var/invoices/".$rij['file']){
+				if(file_exists("/var/invoices/".$rij['file'])){
 				
 					echo "<tr>";
 					echo "<td><a href=\""$rij['file']"\">".$rij['file']."</a></td>";
@@ -44,7 +44,7 @@ include('template.php');
 					
 				}else{
 					echo "No invoices were found.";
-			}
+			}}
 			
 		?>
 		</tbody>
