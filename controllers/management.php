@@ -52,7 +52,7 @@ class Management extends baseController {
 				$this->cloudstack->startVirtualMachine($_POST['vmid']);
 			} else if ($command == 'stop') {
 				$this->cloudstack->stopVirtualMachine($_POST['vmid'], $_POST['forced']);
-			} else if ($command == 'restart') {
+			} else if ($command === 'restart') {
 				$this->cloudstack->rebootVirtualMachine($_POST['vmid']);
 				echo "TROLOLOLOL PARTY!!";
 			} else if ($command == 'destroy') {
