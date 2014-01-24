@@ -38,86 +38,84 @@ include('template.php');
 <div class="tab-pane">
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
-      <div class="row">
-        <div class="panel-heading">
-          <h3 class="panel-title">Virtual Machine Panel</h3>
-        </div>
-        <div class="panel-body">
+      <div class="panel-heading">
+        <h3 class="panel-title">Virtual Machine Panel</h3>
+      </div>
+      <div class="panel-body">
 
-          <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
-          
-          <div class="col-md-4" width="50%" role="main">
-            <table>
-              <tr>
-                <th>Name: </th>
-                <td><?php echo $vmResponse[0]['name']; ?></td>
-              </tr>
-              <tr>
-                <th>Status: </th>
-                <td><?php echo $state; ?></td>
-              </tr>
-              <tr>
-                <th>Created: </th>
-                <td><?php echo $vmResponse[0]['created']; ?></td>
-              </tr>
-              <tr>
-                <th>Template:</th>
-                <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
-              </tr>
-              <tr>
-                <th>Iso: </th>
-                <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
-              </tr>
-              <tr>
-                <th>Address: </th>
-                <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="col-md-4" width="50%">
-            <table>
-              <tr>
-                <th>Offering: </th>
-                <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
-              </tr>
-              <tr>
-                <th>CPUs: </th>
-                <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
-              </tr>
-              <tr>
-                <th>CPU Speed: </th>
-                <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
-              </tr>
-              <tr>
-                <th>Memory: </th>
-                <td><?php echo $vmResponse[0]['memory']; ?></td>
-              </tr>
-            </table>
-          </div>
+        <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
+        
+        <div class="col-md-4" width="50%" role="main">
+          <table>
+            <tr>
+              <th>Name: </th>
+              <td><?php echo $vmResponse[0]['name']; ?></td>
+            </tr>
+            <tr>
+              <th>Status: </th>
+              <td><?php echo $state; ?></td>
+            </tr>
+            <tr>
+              <th>Created: </th>
+              <td><?php echo $vmResponse[0]['created']; ?></td>
+            </tr>
+            <tr>
+              <th>Template:</th>
+              <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
+            </tr>
+            <tr>
+              <th>Iso: </th>
+              <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
+            </tr>
+            <tr>
+              <th>Address: </th>
+              <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
+            </tr>
+          </table>
         </div>
 
-        <div class="row">
-          <!-- VM Controls -->
-          <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
-
-
-        	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
-          
-          <!-- Restart VM -->
-          <form action="/management/vmcontrol" role="form" method="post">
-            <input type="hidden" name="command" value="restart" />
-            <input type="hidden" name="vmid" value="<?php echo 'e86a8cce-af66-42a9-9e94-695aa6ece678' ?>" />
-            <button type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
-          </form>
-
-        	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
-        	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
-        	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
-        	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
-
-          <br />
+        <div class="col-md-4" width="50%">
+          <table>
+            <tr>
+              <th>Offering: </th>
+              <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
+            </tr>
+            <tr>
+              <th>CPUs: </th>
+              <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
+            </tr>
+            <tr>
+              <th>CPU Speed: </th>
+              <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
+            </tr>
+            <tr>
+              <th>Memory: </th>
+              <td><?php echo $vmResponse[0]['memory']; ?></td>
+            </tr>
+          </table>
         </div>
+      </div>
+
+        <!-- VM Controls -->
+        <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
+
+
+      	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
+        
+        <!-- Restart VM -->
+        <form action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="restart" />
+          <input type="hidden" name="vmid" value="<?php echo 'e86a8cce-af66-42a9-9e94-695aa6ece678' ?>" />
+          <button type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
+        </form>
+
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
+      	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
+
+        <br />
+
       </div>
     </div>
   </div><!-- END Col 9 -->
