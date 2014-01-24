@@ -20,7 +20,7 @@ class Management extends baseController {
 		$this->baseView->vmResponse = $vmResponse;
 	}
 
-	function vmInfo($vmid) {
+	function vminfo($vmid) {
 		$this->baseView->vmid = $vmid;
 		$this->index('vminfo');
 		
@@ -32,12 +32,12 @@ class Management extends baseController {
 
 	}
 
-	function accountTab() {
+	function accounttab() {
 		$this->index('accountTab');
 
 	}
 
-	function invoiceTab() {
+	function invoicetab() {
 		$this->index('invoiceTab');
 	}
 
