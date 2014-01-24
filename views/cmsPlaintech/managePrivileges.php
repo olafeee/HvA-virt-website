@@ -3,22 +3,25 @@
 $manageUser = $this->manageUser;
 $allRoles = $this->allRoles;
 ?>
+<?php require 'inc/header.php'; ?>
 
-<div class="row">
-	<div class="col-md-2">
-		<?php require 'inc/header.php'; ?>
-	</div>
-	<div class="col-md-7">
-		<?php
+
+<div class="tab-pane">
+  <div class="col-md-9" role="main">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Role panel jwz #yolo</h3>
+      </div>
+      <div class="panel-body">
+      	<?php
 		echo $manageUser[0]['username'].'<br/>';
 		echo $manageUser[0]['firstname'].'<br/>';
 		echo $manageUser[0]['lastname'].'<br/>';
 		?>
-		<table class="table">
+ 		<table class="table">
 			<thead>
 				<tr>
-					<td>GB</td>
-					<td>Price</td>
+					<td>Role</td>
 					<td></td>
 				</tr>
 			</thead>
@@ -59,8 +62,9 @@ $allRoles = $this->allRoles;
 		</div>
 
 
-</div><!--eind col-md-7 -->
-<div class="col-md-3"></div>	
+      </div>
+    </div>
+  </div><!-- END Col 9 -->
 </div>
 
 
