@@ -106,6 +106,7 @@ class cmsPlaintechModel extends baseModel
             'role_id' => $role_id,
             'CSID' => $CSID
         ));
+        echo "string";
         return $x;
     }
 
