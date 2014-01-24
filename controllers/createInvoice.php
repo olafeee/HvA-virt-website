@@ -41,7 +41,7 @@ function makeInvoice(){
 	}	
 	
 	// Okee toen werd ik er dus helemaal ******ziek van...
-	$invoice = new mysqli(NULL,DB_USER1,DB_PASS1,DB_NAME1);
+	/*$invoice = new mysqli(NULL,DB_USER1,DB_PASS1,DB_NAME1);
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 
@@ -64,18 +64,20 @@ function makeInvoice(){
 	$stmt->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	if($stmt->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
-	}
-	/*$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
+	}*/
+	$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
-	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1";
+	$query = "SELECT firstname, lastname, street, zip, city, country FROM invoice_users WHERE firstname = $first AND lastname = $laste LIMIT 1";
 	$sth = mysqli_query($invoice, $query);
 	$row = mysqli_fetch_assoc($sth);
 	
-	$klantFNaam = $row['fname'];
-	$klantLNaam = $row['lname'];
-	$klantStraat = $row['adstr*/
-	
+	$klantFNaam = $row['firstname'];
+	$klantLNaam = $row['lastname'];
+	$klantStraat = $row['street'];
+	$klantPostcode = $row['zip'];
+	$klantStad = $row['city'];
+	$klantLand = $row['country'];
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
 	
