@@ -42,7 +42,7 @@ class Management extends baseController {
 	}
 
 	function vmcontrol() {
-		if(isset($_POST['command']) && isset($_POST['vmid'])) {
+		//if(isset($_POST['command']) && isset($_POST['vmid'])) {
 
 			print_r($_POST);
 			
@@ -54,6 +54,7 @@ class Management extends baseController {
 				$this->cloudstack->stopVirtualMachine($_POST['vmid'], $_POST['forced']);
 			} else if ($command == 'restart') {
 				$this->cloudstack->rebootVirtualMachine($_POST['vmid']);
+				echo "TROLOLOLOL PARTY!!";
 			} else if ($command == 'destroy') {
 				$this->cloudstack->destroyVirtualMachine($_POST['vmid']);
 			} else if ($command == 'recover') {
@@ -63,9 +64,9 @@ class Management extends baseController {
 				throw new Exception('Unknown command!');
 			}
 				
-		} else {
-			header('location: /management/');
-		}
+		//} else {
+		//	header('location: /management/');
+		//}
 	}
 
 	
