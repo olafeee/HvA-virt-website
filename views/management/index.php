@@ -78,7 +78,6 @@ $vmResponse = $this->vmResponse;
           <?php
               $i++;
             } // End While loop
-            vmResponse
           ?>
         </tbody>
         </table>
