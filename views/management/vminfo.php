@@ -140,5 +140,10 @@ include('template.php');
   </div><!-- END Col 9 -->
 </div>
 
-
+<script type="text/javascript">
+  $(window).load(function () {
+      // run code
+      td:first-child + td { text-align: right; }
+  });
+</script>
 
