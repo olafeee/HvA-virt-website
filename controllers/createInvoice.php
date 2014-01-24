@@ -30,7 +30,7 @@ function makeInvoice(){
 		$klantPostcode = "";
 		$klantWoonplaats = "";
 		$klantLand = "";
-	}	
+	} else {
 	
 	// Okee toen werd ik er dus helemaal ******ziek van...
 	// Ik kijk t later wel na als ik nog tijd heb
@@ -61,12 +61,7 @@ function makeInvoice(){
 	}*/
 	
 	$invoice = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
-	if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-	}
-
-	
+		
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 	$query = "SELECT * FROM invoice_users WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
@@ -83,6 +78,7 @@ function makeInvoice(){
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
 	
+	}
 	$factuurNummer = "VPS".rand(10000,99999);
 	$klantNummer = substr(base_convert(md5($klantNaam), 16, 10),0,7);
 	$incassoTijd = "14";
