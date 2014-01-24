@@ -1,15 +1,30 @@
-    <ul class="nav nav-pills navCM">
-    	<li><a href="/cmsPlaintech/">Index</a></li>
     <?php 
-		$pages = $this->cmstext;
+		/*$pages = $this->cmstext;
 
 	        $i = 0;
 		    while ($i < count($pages)) {
 		    	echo '<li><a href="/cmsPlaintech/viewPage/'. $pages[$i]["pageid"] .'">'.$pages[$i]["page"].'</a></li>';
 		    	$i++;
-		    }
+		    }*/
 		?>
-	<li><a href="/cmsPlaintech/manangeVpsParts/CPU">CPU Price</a></li>
-	<li><a href="/cmsPlaintech/manangeVpsParts/RAM">RAM Price</a></li>
-	<li><a href="/cmsPlaintech/manangeVpsParts/Disk">Disk Price</a></li>
-</ul>
+
+
+
+ <div class="row">
+
+  <div class="col-md-3">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Management Panel</h3>
+      </div>
+      <div class="list-group">
+        <a href="/management/" class="list-group-item">Systems Panel</a>
+        <a href="/management/accountTab" class="list-group-item">Account Info</a>
+        <a href="/management/invoiceTab" class="list-group-item">Invoice Overview</a>
+      </div>
+    </div>
+
+  </div> <!-- END Col 3 -->
+
+
