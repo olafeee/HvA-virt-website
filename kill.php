@@ -1,5 +1,6 @@
 ﻿<?php
 
+	@session_start();
 	unset($_SESSION['allowFile']);
 	echo('Session has been killed, look!');
 	echo "<pre>";
