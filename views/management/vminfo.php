@@ -38,15 +38,15 @@ include('template.php');
 <div class="tab-pane">
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Virtual Machine Panel</h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
+      <div class="row">
+        <div class="panel-heading">
+          <h3 class="panel-title">Virtual Machine Panel</h3>
+        </div>
+        <div class="panel-body">
 
           <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
           
-          <div class="col-md-4" role="main">
+          <div class="col-md-4" width="50%" role="main">
             <table>
               <tr>
                 <th>Name: </th>
@@ -75,7 +75,7 @@ include('template.php');
             </table>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-4" width="50%">
             <table>
               <tr>
                 <th>Offering: </th>
