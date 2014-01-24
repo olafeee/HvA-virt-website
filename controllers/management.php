@@ -66,10 +66,12 @@ class Management extends baseController {
 			if (strcmp($command,'start') == 0 ) 
 			{
 				$this->cloudstack->startVirtualMachine($_POST['vmid']);
+				header('location: /management/vminfo/' . $_POST['vmid']);
 			} 
 			else if (strcmp($command,'stop') == 0 ) 
 			{
 				$this->cloudstack->stopVirtualMachine($_POST['vmid'], $_POST['forced']);
+				header('location: /management/vminfo/' . $_POST['vmid']);
 			} 
 			else if (strcmp($command,'restart') == 0) 
 			{

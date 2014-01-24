@@ -116,20 +116,50 @@ include('template.php');
         <!-- VM Controls -->
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
-      	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
-        <button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Restart</button>
+      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;" href="/management/api">Start VM</button>
+        <button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;" href="/management/api">Stop VM</button>
+        <button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;" href="/management/api">Restart</button>
 
-        <!-- Restart VM -->
-        <form action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="restart" />
-          <input type="hidden" name="vmid" value="<?php echo 'e86a8cce-af66-42a9-9e94-695aa6ece678' ?>" />
-          <button type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
+      	<a type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
+      	<a type="button" class="btn btn-primary sendCmdButton" id="btn_backup" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
+      	<a type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
+      	<a type="button" class="btn btn-primary sendCmdButton" id="btn_upgrade" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
+
+        <!-- Start VM form -->
+        <form id="form_start" action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="start" />
+          <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
         </form>
 
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
-      	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
+        <!-- Stop VM form -->
+        <form id="form_stop" action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="stop" />
+          <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
+        </form>
+
+        <!-- Restart VM form -->
+        <form id="form_restart" action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="restart" />
+          <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
+        </form>
+
+        <!--  -->
+        <form id="form_" action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="" />
+          <input type="hidden" name="vmid" value="" />
+        </form>
+
+        <!--  -->
+        <form id="form_" action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="" />
+          <input type="hidden" name="vmid" value="" />
+        </form>
+
+        <!--  -->
+        <form id="form_" action="/management/vmcontrol" role="form" method="post">
+          <input type="hidden" name="command" value="" />
+          <input type="hidden" name="vmid" value="" />
+        </form>
 
         <br />
       </div>
@@ -146,18 +176,12 @@ include('template.php');
   $( ".right" ).css( "text-align", "right" );
   $( ".right" ).css( "margin-right", "5px" );
 
-  $('a.pagerlink').click(function() { 
+  // Submit de form die toebehoort tot de button die is ingedrukt
+  $('.sendCmdButton').click(function() { 
     var id = $(this).attr('id');
-    $container.cycle(id.replace('pager_', '')); 
-    return false; 
+    id = id.replace('btn_', '#form_');
+    $(id).submit(); 
   });
 
-  // When button is pressed send the form
-  $( ".sendForm" ).click(function() {
-    alert( "Handler for .click() called." );
-
-    // Get the command by ID
-    var command = $(this).closest(".head-div").attr("id");
-  });
 </script>
 
