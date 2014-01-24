@@ -14,7 +14,7 @@ class cmsPlaintech extends baseController {
 		# check of de persoon recht heeft	#yolo		#
 		# laad hierboven nog wel conDB1() in!!!!!!!!!!!!#
 		#################################################
-		$url = urlfix();
+		$url = $this->urlfix();
 		$getRole = $this->model->getRoleByPage($url[0]);
 		$role = $this->in_array_r($getRole);
 		if($role == false){
