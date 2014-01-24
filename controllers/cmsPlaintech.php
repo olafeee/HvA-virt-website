@@ -115,5 +115,6 @@ class cmsPlaintech extends baseController {
 
 	function addPrivileges($role_id, $CSID){
 		$delete = $this->model->addPrivileges($role_id, $CSID);
+		echo"test":
 	}
 }
