@@ -27,7 +27,8 @@ include('template.php');
         <form action="/management/vmcontrol" methode="POST" role="form" id="restart">
           <input name="command" value="restart" />
           <input name="vmid" value="<?php echo 'be77cacc-1124-4c8b-8017-878e98ba7101' ?>" />
-          <submit type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</submit>
+          <submit type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">test lekker</button>
         </form>
 
       	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
