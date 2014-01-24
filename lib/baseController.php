@@ -5,12 +5,13 @@ class baseController {
 		$this->baseView = new baseView();
 		$url = $this->urlfix();
 		$this->baseView->url0 = $url[0];
+
 		#################################################
 		# check of de persoon recht heeft	#yolo		#
 		# laad hierboven nog wel conDB1() in!!!!!!!!!!!!#
 		#################################################
 		$url = $this->urlfix();
-		$getRole = $this->model->getRoleByPage($url[0]);
+		$getRole = $this->model->getRoleByPage();
 		$role = $this->in_array_r($getRole);
 		if($role == false){
 			header('location: /account');
