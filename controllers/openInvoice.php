@@ -13,6 +13,7 @@
 	}
 	
 	if (!in_array($fileToOpen, $_SESSION['allowFile'])){
+		unset($_SESSION['allowFile']);
 		die('<h1>Access Denied!</h1><h2 style="color:red">Code 2</h2>');
 	}
 	
