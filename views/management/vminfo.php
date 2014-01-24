@@ -19,10 +19,6 @@ if(strcmp($vmResponse[0]['state'],'running') == 0) {
   $state = '<span class="label label-default">Unknown</span>';
 }
 
-// Format the created date
-$date = $vmResponse[0]['created'];
-$created = $date->format('Y-m-d H:i:s');
-
 include('template.php');
 ?>
 
@@ -46,16 +42,40 @@ include('template.php');
             <td><?php echo $state; ?></td>
           </tr>
           <tr>
-            <th></th>
-            <td></td>
+            <th>Created: </th>
+            <td><?php echo $vmResponse[0]['created']; ?></td>
           </tr>
           <tr>
-            <th></th>
-            <td></td>
+            <th>Template:</th>
+            <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
           </tr>
           <tr>
-            <th></th>
-            <td></td>
+            <th>Iso: </th>
+            <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
+          </tr>
+          <tr>
+            <th>Iso: </th>
+            <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
+          </tr>
+          <tr>
+            <th>Offering: </th>
+            <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
+          </tr>
+          <tr>
+            <th>CPUs: </th>
+            <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
+          </tr>
+          <tr>
+            <th>CPU Speed: </th>
+            <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
+          </tr>
+          <tr>
+            <th>Memory: </th>
+            <td><?php echo $vmResponse[0]['memory']; ?></td>
+          </tr>
+          <tr>
+            <th>Address: </th>
+            <td><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
           </tr>
         </table>
 
