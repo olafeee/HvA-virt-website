@@ -43,8 +43,26 @@ class Management extends baseController {
 
 	function vmcontrol() {
 		if(isset($_POST['command']) && isset($_POST['vmid'])) {
-			
 
+			print_r($)
+			
+			// Kijk wat het commando is, en voer deze uit.
+			$command = $_POST['çommand'];
+			if ($command == 'start') {
+				$this->cloudstack->startVirtualMachine($_POST['vmid']);
+			} else if ($command == 'stop') {
+				$this->cloudstack->stopVirtualMachine($_POST['vmid'], $_POST['forced']);
+			} else if ($command == 'restart') {
+				$this->cloudstack->rebootVirtualMachine($_POST['vmid']);
+			} else if ($command == 'destroy') {
+				$this->cloudstack->destroyVirtualMachine($_POST['vmid']);
+			} else if ($command == 'recover') {
+				$this->cloudstack->recoverVirtualMachine($_POST['vmid']);
+			} else {
+				// Als geen van de bovenste commands kloppen
+				throw new Exception('Unknown command!');
+			}
+				
 		} else {
 			header('location: /management/');
 		}
