@@ -47,6 +47,9 @@ function makeInvoice(){
 	$sth = $invoice->prepare($query);
 	$sth->execute();
 	$sth->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	if($sth->fetch() === 0){
+		die("somehow, something went somewhere wrong...");
+	}
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
 	
