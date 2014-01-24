@@ -1,7 +1,7 @@
 ﻿<?php
 
 //class openInvoice {
-
+@session_start();
 //function __construct(){
 	$fileToOpen = pack("H*", $_GET["f"]);
 	echo "<pre>";
