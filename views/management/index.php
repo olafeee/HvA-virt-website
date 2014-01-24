@@ -42,14 +42,14 @@ $vmResponse = $this->vmResponse;
                 $stateColor = '';
               }
           ?>
-              <a href="/management/vminfo/<?php echo $i; ?>">
-                <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success ">
+              
+              <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success ">
+                <a href="/management/vminfo/<?php echo $i; ?>">
                   <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
                   <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
                   <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
-                  <td></td>
-                </tr>
-              </a>
+                </a>
+              </tr>
           <?php
               $i++;
             } // End While loop
