@@ -87,6 +87,8 @@ function makeInvoice(){
 	$klantWoonplaats = $row['city'];
 	$klantLand = $row['country'];
 	
+	die($row['firstname']);
+	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
 	
 	/*$this->db->select('Select invoice_users FROM user_db_plaintech WHERE id = :id ', array(
