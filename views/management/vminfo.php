@@ -7,13 +7,13 @@
 $vmResponse = $this->vmResponse;
 
 // Check the state of the vm:
-if(strcmp($vmResponse['state'],'running') == 0) {
+if(strcmp($vmResponse[0]['state'],'running') == 0) {
   $state = '<span class="label label-success">Running</span>';
-} else if(strcmp($vmResponse['state'],'stopping') == 0) {
+} else if(strcmp($vmResponse[0]['state'],'stopping') == 0) {
   $state = '<span class="label label-danger">Stopping</span>';
-} else if(strcmp($vmResponse['state'],'stopped') == 0) {
+} else if(strcmp($vmResponse[0]['state'],'stopped') == 0) {
   $state = '<span class="label label-danger">Stopped</span>';
-} else if(strcmp($vmResponse['state'],'Expunging') == 0) {
+} else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) {
   $state = '<span class="label label-default">Deleted</span>';
 } else {
   $state = '<span class="label label-default">Unknown</span>';
@@ -32,8 +32,7 @@ include('template.php');
 
         <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
         
-        <table id="vertical-1">
-          <caption>First Way</caption>
+        <table id="">
           <tr>
             <th>Name: </th>
             <td><?php echo $vmResponse['name']; ?></td>
@@ -46,13 +45,15 @@ include('template.php');
             <th></th>
             <td></td>
           </tr>
+          <tr>
+            <th></th>
+            <td></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+          </tr>
         </table>
-
-
-
-
-
-      	<br /><br /><br />
 
 
         <!-- VM Controls -->
