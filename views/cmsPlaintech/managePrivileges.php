@@ -19,14 +19,13 @@ while ($i < count($manageUser)) {
 ?>
 
  <select class="form-control bfh-countries" id="role" name="role">
- 	<?php
- 	$y=9;
+<?php
+ 	$y=0;
  	
  	while ($y < count($allRoles)) {
- 		echo'<option value="">Saab</option>';
+ 		echo'<option value="">'.$allRoles[$y]['rol_naam'].'</option>';
  	}
 
- 	print_r($allRoles);
  	?>
  </select>
 
