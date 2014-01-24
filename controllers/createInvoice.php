@@ -51,7 +51,7 @@ function makeInvoice(){
 	//printf(mysqli_stmt_error($sth));
 	//$stm = $sth->execute();
 	//$sth->execute();
-	$sth->execute($query);
+	$invoice->execute($sth);
 	//printf(mysqli_stmt_error($sth));
 	$stm->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	if($sth->fetch() === 0){
