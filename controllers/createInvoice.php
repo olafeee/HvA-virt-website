@@ -23,21 +23,44 @@ function makeInvoice(){
 		}
 	}
 
-	if (empty($_SESSION['logArr'])){
+	/*if (empty($_SESSION['logArr'])){
 		if(header('location /account')){
 			exit;
 		}else{
 			die ("<h1><center><a href=\"/account\">Please login first</a></center></h1>");
 		}
-	}
-
-	$klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
+	}*/
+	
+	if (empty($_SESSION['logArr'])){
+		$klantNaam = "Unidentified";
+		$klantStraat = "Please log in";
+		$klantPostcode = "and try again";
+		$klantWoonplaats = "";
+		$klantLand = "";
+	}	
+	
+	
+$this->db->select('Select invoice_users FROM user_db_plaintech WHERE id = :id ', array(
+				//'id' =>
+				'firstname' => $klantNaamF,
+				'lastname' => $klantNaamL,
+				'street' => $klantStraat,
+				'zip' => $klantPostcode,
+				'city' => $klantWoonplaats,
+				'country' => $klantLand));
+				
+				
+				
+	//$klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
 	//$klantNaam = "Dhr K. LANT";
 	//$klantStraat = 
-	$klantStraat = "Duivendrechtsekade 36-38";
-	$klantPostcode = "1096 AH";
-	$klantWoonplaats = "Amsterdam";
-	$klantLand = "Netherlands";
+	//$klantStraat = "Duivendrechtsekade 36-38";
+	//$klantPostcode = "1096 AH";
+	//$klantWoonplaats = "Amsterdam";
+	//$klantLand = "Netherlands";
+	
+//	$this->db->select('SELECT invoice_users FROM user_db_plaintech WHERE id = :id ', array('CSID' => $CSID));
+	
 	$factuurNummer = "VPS".rand(10000,99999);
 	$klantNummer = substr(base_convert(md5($klantNaam), 16, 10),0,7);
 	$incassoTijd = "14";

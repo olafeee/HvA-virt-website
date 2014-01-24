@@ -60,7 +60,19 @@ class Account extends baseController {
 		if(isset($_POST['submit'])) {
 			$model = $this->laadModel();
 			$response = $model->createAccount($_POST);
+			
+			
 			if ($response == TRUE ) {
+				/**********************\
+				/ Required for invoice /
+				/**********************/
+				$this->db->insert('invoice_users', array(
+				'firstname' => $_POST['fname'],
+				'lastname' => $_POST['lname'],
+				'street' => $_POST['adstr'],
+				'zip' => $_POST['adzip'],
+				'city' => $_POST['adcit'],
+				'country' => $_POST['country']));
 				Session::set('successPage', TRUE);
 				$model->runLogin($_POST['email'],$_POST['password']);
 				header('location: /account/registerSuccess');
