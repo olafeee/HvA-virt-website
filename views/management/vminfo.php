@@ -30,14 +30,19 @@ function getInfo($arrayKey) {
 // Check the state of the vm and make a lable for that state
 if(strcmp($vmResponse[0]['state'],'Running') == 0) {
   $state = '<span class="label label-success">Running</span>';
+  $onOff = '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
 } else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) {
   $state = '<span class="label label-danger">Stopping</span>';
+  $onOff = ''
 } else if(strcmp($vmResponse[0]['state'],'Stopped') == 0) {
   $state = '<span class="label label-danger">Stopped</span>';
+  $onOff = '<button type="button" class="btn btn-primary sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Start System</button>'
 } else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) {
   $state = '<span class="label label-default">Deleted</span>';
+  $onOff = '<button type="button" class="btn btn-primary disabled"  style="margin-bottom:5px; width:125px;">Blocked</button>';
 } else {
   $state = '<span class="label label-default">Unknown</span>';
+  $onOff = '';
 }
 
 include('template.php');
@@ -116,8 +121,8 @@ include('template.php');
         <!-- VM Controls -->
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
-      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;" href="/management/api">Start VM</button>
-        <button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;" href="/management/api">Stop VM</button>
+      	<?php echo $onOff; ?>
+        
         <button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;" href="/management/api">Restart</button>
 
       	<a type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
