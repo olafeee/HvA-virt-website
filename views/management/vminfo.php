@@ -51,10 +51,13 @@ include('template.php');
     <div class="panel-body">
 
     <div class="row">
+      <div class="col-md-12" role="main">
+        <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-6" role="main">
 
-        <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
-      
         <table>
           <tr>
             <th>Name: </th>
@@ -104,6 +107,8 @@ include('template.php');
         </table>
       </div>
     </div>
+
+    <br />
 
     <div class="row">
       <div class="col-md-12" role="main">
