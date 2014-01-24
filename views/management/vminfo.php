@@ -14,6 +14,8 @@ include('template.php');
         <h3 class="panel-title">Virtual Machine Panel</h3>
       </div>
       <div class="panel-body">
+
+        <h4><span class="glyphicon glyphicon-list-alt"></span>   Systems Controls</h4><hr />
         
       	<div class="label label-danger">Stopped</div><br /><br />
 
