@@ -63,7 +63,7 @@ class Management extends baseController {
 				$this->cloudstack->recoverVirtualMachine($_POST['vmid']);
 			} else {
 				// Als geen van de bovenste commands kloppen
-				throw new Exception('Unknown command!');
+				//throw new Exception('Unknown command!');
 			}
 				
 		//} else {

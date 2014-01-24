@@ -141,7 +141,7 @@ if($this->url0=='order'){
         </div>
       </div>
       <div class="kp_hm_logout">
-        <a href="../account/logout" class="btn btn-default kp_hm_logoutbtn">Uitloggen</a>
+        <a href="/account/logout" class="btn btn-default kp_hm_logoutbtn">Uitloggen</a>
       </div>
     </div>
   </div>
