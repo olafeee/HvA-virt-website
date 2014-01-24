@@ -61,7 +61,7 @@ include('template.php');
         <table>
           <tr>
             <th>Name: </th>
-            <td><?php echo $vmResponse[0]['name']; ?></td>
+            <td><?php echo getInfo('name'); ?></td>
           </tr>
           <tr>
             <th>Status: </th>
@@ -69,11 +69,11 @@ include('template.php');
           </tr>
           <tr>
             <th>Created: </th>
-            <td><?php echo $vmResponse[0]['created']; ?></td>
+            <td><?php echo getInfo('created'); ?></td>
           </tr>
           <tr>
             <th>Template:</th>
-            <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
+            <td><?php echo getInfo('templatedisplaytext'); ?></td>
           </tr>
           <tr>
             <th>Iso: </th>
@@ -90,19 +90,19 @@ include('template.php');
         <table>
           <tr>
             <th>Offering: </th>
-            <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
+            <td><?php echo getInfo('serviceofferingname'); ?></td>
           </tr>
           <tr>
             <th>CPUs: </th>
-            <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
+            <td><?php echo getInfo('cpunumber'); ?></td>
           </tr>
           <tr>
             <th>CPU Speed: </th>
-            <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
+            <td><?php echo getInfo('cpuspeed'); ?></td>
           </tr>
           <tr>
             <th>Memory: </th>
-            <td><?php echo $vmResponse[0]['memory']; ?></td>
+            <td><?php echo getInfo('memory'); ?></td>
           </tr>
         </table>
       </div>
@@ -138,6 +138,12 @@ include('template.php');
     </div>
   </div><!-- END Col 9 -->
 </div>
+
+<script type="text/javascript">
+  tr td:nth-child(2) { /* I don't think they are 0 based */
+    text-align: right;
+  }
+</script>
 
 
 
