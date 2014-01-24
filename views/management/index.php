@@ -2,6 +2,26 @@
 include('template.php'); 
 
 $vmResponse = $this->vmResponse;
+
+
+
+//if (!isset($_SESSION['loggedIn'])):
+$vmResponce = $this->vmResponce;
+
+  // maak van subnet een prifix
+  function prefixSubnet($input){
+    $subBin = explode( '.', $input );
+    $subBinX = 0;
+    $subnet = 0;
+
+    while ($subBinX <= 3) {
+      $x = decbin($subBin[$subBinX]);
+      $var3 = strlen(str_replace('0', '', $x));
+      $subnet = $subnet + $var3;
+      $subBinX++;
+    }
+    return $subnet;
+  }
 ?>
 
 
@@ -44,8 +64,16 @@ $vmResponse = $this->vmResponse;
           ?>
               
               <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="document.location= '/management/vminfo/';">
+
+
+                <!-- heb even die oude shit erbij gedaan plus subnet functie kon het niet laten hahahahahaha -->
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
-                <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
+                <td class="CPU"><?php echo $vmResponce['virtualmachine'][$i]["cpunumber"];?></td>
+                <td class="CPUSPEED"><?php echo $vmResponce['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
+                <td class="memory"><?php echo $vmResponce['virtualmachine'][$i]["memory"];?> MB</td>
+                <td class="HHD">20GB</td>
+                <td class="IPAdres"><?php echo $vmResponce['virtualmachine'][$i]['nic'][0]['ipaddress']." /". prefixSubnet($vmResponce['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
+                <!--<td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>-->
                 <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
               </tr>
           <?php
