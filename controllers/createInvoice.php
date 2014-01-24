@@ -31,16 +31,24 @@ function makeInvoice(){
 		}
 	}*/
 	
+	//Do NOT remove, otherwise script may generate variable error if user forgets to log in
 	if (empty($_SESSION['logArr'])){
-		$klantNaam = "Unidentified";
-		$klantStraat = "Please log in";
-		$klantPostcode = "and try again";
+		$klantNaam = "";
+		$klantStraat = "";
+		$klantPostcode = "";
 		$klantWoonplaats = "";
 		$klantLand = "";
 	}	
 	
+	$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
+	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $_SESSION['logArr']['firstname'] AND lname = $_SESSION['logArr']['lastname'] LIMIT 1"
+	$sth = $invoice->prepare($query));
+	$sth->execute();
+	$sth->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	
-$this->db->select('Select invoice_users FROM user_db_plaintech WHERE id = :id ', array(
+	$klantNaam =  $klantFNaam." ".$klantLNaam;
+	
+	/*$this->db->select('Select invoice_users FROM user_db_plaintech WHERE id = :id ', array(
 				//'id' =>
 				'firstname' => $klantNaamF,
 				'lastname' => $klantNaamL,
@@ -48,7 +56,7 @@ $this->db->select('Select invoice_users FROM user_db_plaintech WHERE id = :id ',
 				'zip' => $klantPostcode,
 				'city' => $klantWoonplaats,
 				'country' => $klantLand));
-				
+				*/
 				
 				
 	//$klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
