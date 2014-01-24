@@ -173,10 +173,13 @@ function makeInvoice(){
 	$pdf->addTotaalBedrag($tot_calc);
 	
 	$pdf->Output('invoice.pdf', 'I');
-	$pdfname = uniqid('invoice_').".pdf";
-	$pdf->Output('/var/invoices/'.$pdfname, 'F');
-	//self::sentInvoice("a@b.c", "/tmp/1.pdf");
-	self::saveToDb($pdfname, $klantId);
+	
+	if (isset($_SESSION['logArr'])){
+		$pdfname = uniqid('invoice_').".pdf";
+		$pdf->Output('/var/invoices/'.$pdfname, 'F');
+		//self::sentInvoice("a@b.c", "/tmp/1.pdf");
+		self::saveToDb($pdfname, $klantId);
+	}
 	}
 	
 	function saveToDb($filename, $userid){
