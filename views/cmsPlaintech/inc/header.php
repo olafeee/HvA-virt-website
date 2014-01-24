@@ -18,9 +18,9 @@
 		    	$i++;
 		    }
       	?>
-      	<a href="/cmsPlaintech/manangeVpsParts/CPU">CPU Price</a>
-		<a href="/cmsPlaintech/manangeVpsParts/RAM">RAM Price</a>
-		<a href="/cmsPlaintech/manangeVpsParts/Disk">Disk Price</a>
+      	<a href="/cmsPlaintech/manangeVpsParts/CPU" class="list-group-item">CPU Price</a>
+		<a href="/cmsPlaintech/manangeVpsParts/RAM" class="list-group-item">RAM Price</a>
+		<a href="/cmsPlaintech/manangeVpsParts/Disk" class="list-group-item">Disk Price</a>
         <a href="/cmsPlaintech/searchPrivileges" class="list-group-item">Search Privileges</a>
       </div>
     </div>
