@@ -4,7 +4,7 @@
 = 						Plaintech index.php							  =
 =				Created by Plaintech on november 2013				  =
 =				for more info go to www.plaintech.co.uk				  =
-=					last modified by jwz					 		  =
+=					Copyright olaf jwz niks van Dinesh		 		  =
 =======================================================================
 */
 #################################################
