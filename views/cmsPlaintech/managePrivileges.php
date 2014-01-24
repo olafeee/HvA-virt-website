@@ -2,7 +2,7 @@
 
 $manageUser = $this->manageUser;
 $allRoles = $this->allRoles;
-
+print_r($allRoles);
 $i = 0;
 echo $manageUser[0]['username'];
 echo $manageUser[0]['firstname'];
@@ -21,7 +21,7 @@ while ($i < count($manageUser)) {
  <select class="form-control bfh-countries" id="role" name="role">
  	<?php
  	$y=9;
- 	print_r($allRoles);
+ 	
  	while ($y < count($allRoles)) {
  		echo'<option value="">Saab</option>';
  	}
