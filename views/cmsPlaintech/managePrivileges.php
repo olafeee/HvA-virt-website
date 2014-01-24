@@ -24,6 +24,7 @@ while ($i < count($manageUser)) {
  	
  	while ($y < count($allRoles)) {
  		echo'<option value="">'.$allRoles[$y]['rol_naam'].'</option>';
+ 		$y++;
  	}
 
  	?>
