@@ -41,7 +41,7 @@ function makeInvoice(){
 	}	
 	
 	$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
-	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $_SESSION['logArr']['firstname'] AND lname = $_SESSION['logArr']['lastname'] LIMIT 1"
+	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $_SESSION['logArr']['firstname'] AND lname = $_SESSION['logArr']['lastname'] LIMIT 1";
 	$sth = $invoice->prepare($query));
 	$sth->execute();
 	$sth->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
