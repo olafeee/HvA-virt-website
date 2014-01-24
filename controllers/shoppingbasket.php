@@ -25,7 +25,7 @@ class Shoppingbasket extends baseController {
 			$hostid= "84d9d37d-2078-4f27-9799-f634cb66a29c";
 			$diskofferingid= "663eaff4-eacd-47e3-848b-08fba13fe4cb";
 			$displayname= "centos65";
-			$name= "centos65minimal-test";
+			$name= "centos65minimal-komop";
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
 			$securitygroupids= "33ef1c00-7f70-11e3-9e69-0015c5eaa2fd";
