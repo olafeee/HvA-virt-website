@@ -21,12 +21,12 @@ include('template.php');
 
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Start / Stop VM</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;">VM Console</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Backup VM</a>
-      	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Upgrade VM</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Restart VM</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
+      	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
+      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
 
         <br />
       </div>

@@ -41,6 +41,15 @@ class Management extends baseController {
 		$this->index('invoiceTab');
 	}
 
+	function vmcontrol() {
+		if(isset($_POST['command'] && $_POST['vmid'])) {
+			
+
+		} else {
+			header('location: /management/');
+		}
+	}
+
 	
 
 }
