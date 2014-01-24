@@ -66,6 +66,7 @@ class Account extends baseController {
 				/**********************\
 				/ Required for invoice /
 				/**********************/
+				$this->db = $model->conDB1();
 				$this->db->insert('invoice_users', array(
 				'firstname' => $_POST['fname'],
 				'lastname' => $_POST['lname'],
