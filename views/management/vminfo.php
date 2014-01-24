@@ -141,9 +141,14 @@ include('template.php');
 </div>
 
 <script type="text/javascript">
+
+  // Alle table headers align naar rechts geven
   $(window).load(function () {
-      // run code
-      th:first-child + th { text-align: right; }
+      th { text-align: right; }
   });
+
+  $( "#target" ).click(function() {
+  alert( "Handler for .click() called." );
+});
 </script>
 
