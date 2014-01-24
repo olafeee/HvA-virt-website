@@ -17,13 +17,13 @@ class baseModel {
 		$this->dbRole = new databaseRole();
 	}
 
-	public function getRoleByPage(){
+	public function getRoleByPage($page){
 			    $sqlArray = $this->db->select('SELECT rol_id 
 													FROM CMS_pages_rollen
 													INNER JOIN CMS_pages
 													ON CMS_pages_rollen.pageid = CMS_pages.pageid
 													WHERE CMS_pages.page = :page', 
-                									array('page' => 'index'));
+                									array('page' => $page));
                 return $sqlArray;
 	}
 }
