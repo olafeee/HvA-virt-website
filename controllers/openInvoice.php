@@ -5,11 +5,10 @@
 //function __construct(){
 	$fileToOpen = pack("H*", $_GET["f"]);
 	echo "<pre>";
-		var_dump($_SESSION);
+		var_dump($_SESSION['allowFile']);
 	echo "</pre>";
 	
 	if (!isset($_SESSION['allowFile'])) {
-		
 		die('No allowed invoices');
 	}
 	
