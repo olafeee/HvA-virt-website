@@ -36,16 +36,14 @@ include('template.php');
 			$sti = mysqli_query($list, $querz);
 			while($rij = mysqli_fetch_assoc($sti)){
 				if(file_exists("/var/invoices/".$rij['file'])){
-				
 					echo "<tr>";
-					echo "<td><a href=\"".$rij['file']."\">".$rij['file']."</a></td>";
+					echo "<td><a target=\"_blank\" href=\"openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
-					
 				}else{
 					echo "No invoices were found.";
-			}}
-			
+				}
+			}
 		?>
 		</tbody>
         </table>
