@@ -74,9 +74,7 @@ include('template.php');
               </tr>
             </table>
           </div>
-        </div>
 
-        <div class="row">
           <div class="col-md-4">
             <table>
               <tr>
@@ -99,26 +97,27 @@ include('template.php');
           </div>
         </div>
 
+        <div class="row">
+          <!-- VM Controls -->
+          <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
-        <!-- VM Controls -->
-        <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
+        	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
+          
+          <!-- Restart VM -->
+          <form action="/management/vmcontrol" role="form" method="post">
+            <input type="hidden" name="command" value="restart" />
+            <input type="hidden" name="vmid" value="<?php echo 'e86a8cce-af66-42a9-9e94-695aa6ece678' ?>" />
+            <button type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
+          </form>
 
-      	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
-        
-        <!-- Restart VM -->
-        <form action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="restart" />
-          <input type="hidden" name="vmid" value="<?php echo 'e86a8cce-af66-42a9-9e94-695aa6ece678' ?>" />
-          <button type="submit" class="btn btn-primary" style="margin-bottom:5px; width:125px;">Restart VM</button>
-        </form>
+        	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
+        	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
+        	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
+        	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
 
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
-      	<a type="button" class="btn btn-danger" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
-      	<a type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
-
-        <br />
+          <br />
+        </div>
       </div>
     </div>
   </div><!-- END Col 9 -->
