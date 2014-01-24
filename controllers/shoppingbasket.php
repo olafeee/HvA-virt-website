@@ -13,7 +13,9 @@ class Shoppingbasket extends baseController {
 	* @param string $serviceofferingid is een id van een instance in cloudstack.
 	* @param string $templateid is het id van het ISO bestand dat je wilt toevoegen.
 	* @param string $zoneid is het id van de zone waar de VM in aangemaakt moet worden.
-	* @param string $diskofferingid 
+	* @param string $hypervisor, geeft het hypervisor method mee van cloudstack.
+	* @param string $hostid is het id van de host waar cloudstack op draait.
+	* @param string 
 	*/
 	function createVM() {
 		if (1 == 1) {
