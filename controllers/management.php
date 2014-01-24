@@ -24,12 +24,18 @@ class Management extends baseController {
 	}
 
 	function vminfo($vmid) {
-		$this->baseView->vmid = $vmid;
+		// Check of er een ID is mee gegeven
+		if(isset($vmid)) {
+			$this->baseView->vmid = $vmid;
 
-		$vmResponse = $this->model->getVMbyID($vmid);
-		$this->baseView->vmResponse = $vmResponse;
+			$vmResponse = $this->model->getVMbyID($vmid);
+			$this->baseView->vmResponse = $vmResponse;
 
-		$this->index('vminfo');
+			$this->index('vminfo');
+		} else {
+			header('location: /management');
+		}
+		
 		
 	}
 
