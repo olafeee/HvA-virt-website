@@ -181,6 +181,9 @@ include('template.php');
   $( ".right" ).css( "text-align", "right" );
   $( ".right" ).css( "margin-right", "5px" );
 
+  // Zorg er voor dat de pagina om de 5 seconde een refresh doet
+  setTimeout(function () { location.reload(1); }, 5000);
+
   // Submit de form die toebehoort tot de button die is ingedrukt
   $('.sendCmdButton').click(function() { 
     var id = $(this).attr('id');
