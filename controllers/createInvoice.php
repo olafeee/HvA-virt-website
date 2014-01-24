@@ -22,18 +22,9 @@ function makeInvoice(){
 			die ("<h1><center><a href=\"/order\">Please order first</a></center></h1>");
 		}
 	}
-
-	/*if (empty($_SESSION['logArr'])){
-		if(header('location /account')){
-			exit;
-		}else{
-			die ("<h1><center><a href=\"/account\">Please login first</a></center></h1>");
-		}
-	}*/
 	
 	//Do NOT remove, otherwise script may generate variable error if user forgets to log in
 	if (empty($_SESSION['logArr'])){
-	die('not logged in');
 		$klantNaam = "";
 		$klantStraat = "";
 		$klantPostcode = "";
@@ -42,6 +33,8 @@ function makeInvoice(){
 	}	
 	
 	// Okee toen werd ik er dus helemaal ******ziek van...
+	// Ik kijk t later wel na als ik nog tijd heb
+	
 	/*$invoice = new mysqli(NULL,DB_USER1,DB_PASS1,DB_NAME1);
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
@@ -66,23 +59,21 @@ function makeInvoice(){
 	if($stmt->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
 	}*/
+	
 	$invoice = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 	if (mysqli_connect_errno()) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 	}
+
 	
-	//mysqli_select_db($invoice, 'user_db_plaintech');
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
-	
-	//die ($first . " AND " . $laste);
-	
-	//$query = "SELECT firstname, lastname, street, zip, city, country FROM invoice_users WHERE firstname = $first AND lastname = $laste LIMIT 1";
 	$query = "SELECT * FROM invoice_users WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
 	$sth = mysqli_query($invoice, $query);
 	$row = mysqli_fetch_assoc($sth);
 	
+	$klantId = $row['id'];
 	$klantFNaam = $row['firstname'];
 	$klantLNaam = $row['lastname'];
 	$klantStraat = $row['street'];
@@ -90,30 +81,7 @@ function makeInvoice(){
 	$klantWoonplaats = $row['city'];
 	$klantLand = $row['country'];
 	
-	//die($row);
-	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
-	
-	/*$this->db->select('Select invoice_users FROM user_db_plaintech WHERE id = :id ', array(
-				//'id' =>
-				'firstname' => $klantNaamF,
-				'lastname' => $klantNaamL,
-				'street' => $klantStraat,
-				'zip' => $klantPostcode,
-				'city' => $klantWoonplaats,
-				'country' => $klantLand));
-				*/
-				
-				
-	//$klantNaam = $_SESSION['logArr']['firstname']." ".$_SESSION['logArr']['lastname'];
-	//$klantNaam = "Dhr K. LANT";
-	//$klantStraat = 
-	//$klantStraat = "Duivendrechtsekade 36-38";
-	//$klantPostcode = "1096 AH";
-	//$klantWoonplaats = "Amsterdam";
-	//$klantLand = "Netherlands";
-	
-//	$this->db->select('SELECT invoice_users FROM user_db_plaintech WHERE id = :id ', array('CSID' => $CSID));
 	
 	$factuurNummer = "VPS".rand(10000,99999);
 	$klantNummer = substr(base_convert(md5($klantNaam), 16, 10),0,7);
@@ -207,9 +175,19 @@ function makeInvoice(){
 	// $pdf->addOpmerking("Voorbeeldopmerking");
 
 	$pdf->addTotaalBedrag($tot_calc);
+	
 	$pdf->Output('invoice.pdf', 'I');
-	$pdf->Output('/tmp/1.pdf', 'F');
-	self::sentInvoice("a@b.c", "/tmp/1.pdf");
+	$pdfname = uniqid('invoice_').".pdf";
+	$pdf->Output('/var/invoice/'.$pdfname, 'F');
+	//self::sentInvoice("a@b.c", "/tmp/1.pdf");
+	self::saveToDb($pdfname, $klantId);
+	}
+	
+	function saveToDb($filename, $userid){
+		$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
+		$sth = $invoice->prepare("INSERT INTO `user_db_plaintech`.`invoice_files` (`id`, `file`) VALUES (?,?);");
+		$sth->bind_param('ss', $userid, $filename);
+		$sth->execute();
 	}
 	
 function sentInvoice($email, $file){
