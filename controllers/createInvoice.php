@@ -65,7 +65,7 @@ function makeInvoice(){
 	if($stmt->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
 	}*/
-	$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
+	$invoice = new mysqli('localhost','user_admin','T=56(Wp23','user_db_plaintech');
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 	$query = "SELECT firstname, lastname, street, zip, city, country FROM invoice_users WHERE firstname = $first AND lastname = $laste LIMIT 1";
@@ -76,7 +76,7 @@ function makeInvoice(){
 	$klantLNaam = $row['lastname'];
 	$klantStraat = $row['street'];
 	$klantPostcode = $row['zip'];
-	$klantStad = $row['city'];
+	$klantWoonplaats = $row['city'];
 	$klantLand = $row['country'];
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
