@@ -60,27 +60,27 @@ include('template.php');
 
         <table>
           <tr>
-            <th>Name: </th>
+            <th class="right">Name: </th>
             <td><?php echo $vmResponse[0]['name']; ?></td>
           </tr>
           <tr>
-            <th>Status: </th>
+            <th class="right">Status: </th>
             <td><?php echo $state; ?></td>
           </tr>
           <tr>
-            <th>Created: </th>
+            <th class="right">Created: </th>
             <td><?php echo $vmResponse[0]['created']; ?></td>
           </tr>
           <tr>
-            <th>Template:</th>
+            <th class="right">Template:</th>
             <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
           </tr>
           <tr>
-            <th>Iso: </th>
+            <th class="right">Iso: </th>
             <td><?php echo getInfo('isodisplaytext') ?></td>
           </tr>
           <tr>
-            <th>Address: </th>
+            <th class="right">Address: </th>
             <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
           </tr>
         </table>
@@ -89,19 +89,19 @@ include('template.php');
       <div class="col-md-6" role="main">
         <table>
           <tr>
-            <th>Offering: </th>
+            <th class="right">Offering: </th>
             <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
           </tr>
           <tr>
-            <th>CPUs: </th>
+            <th class="right">CPUs: </th>
             <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
           </tr>
           <tr>
-            <th>CPU Speed: </th>
+            <th class="right">CPU Speed: </th>
             <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
           </tr>
           <tr>
-            <th>Memory: </th>
+            <th class="right">Memory: </th>
             <td><?php echo $vmResponse[0]['memory']; ?></td>
           </tr>
         </table>
@@ -147,11 +147,20 @@ include('template.php');
   //    th { text-align: right; }
   //});
 
-  $( th ).css( "text-align", "right" );
+  $( ".right" ).css( "text-align", "right" );
+
+  $('a.pagerlink').click(function() { 
+    var id = $(this).attr('id');
+    $container.cycle(id.replace('pager_', '')); 
+    return false; 
+});
 
   // When button is pressed send the form
   $( ".sendForm" ).click(function() {
     alert( "Handler for .click() called." );
+
+    // Get the command by ID
+    var command = $(this).closest(".head-div").attr("id");
   });
 </script>
 
