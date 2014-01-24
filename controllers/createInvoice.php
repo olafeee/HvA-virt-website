@@ -87,7 +87,7 @@ function makeInvoice(){
 	$klantWoonplaats = $row['city'];
 	$klantLand = $row['country'];
 	
-	die($row['firstname']);
+	die($row);
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
 	
