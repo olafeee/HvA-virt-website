@@ -38,7 +38,7 @@ include('template.php');
 				if(file_exists("/var/invoices/".$rij['file'])){
 				
 					echo "<tr>";
-					echo "<td><a href=\""$rij['file']"\">".$rij['file']."</a></td>";
+					echo "<td><a href=\"".$rij['file']."\">".$rij['file']."</a></td>";
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
 					
