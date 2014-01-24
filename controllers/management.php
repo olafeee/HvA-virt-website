@@ -32,12 +32,12 @@ class Management extends baseController {
 
 	}
 
-	function accounttab() {
+	function accountTab() {
 		$this->index('accountTab');
 
 	}
 
-	function invoicetab() {
+	function invoiceTab() {
 		$this->index('invoiceTab');
 	}
 

@@ -8,8 +8,8 @@
       </div>
       <div class="list-group">
         <a href="/management/" class="list-group-item">Systems Panel</a>
-        <a href="/management/accounttab" class="list-group-item">Account Info</a>
-        <a href="/management/invoicetab" class="list-group-item">Invoice Overview</a>
+        <a href="/management/accountTab" class="list-group-item">Account Info</a>
+        <a href="/management/invoiceTab" class="list-group-item">Invoice Overview</a>
       </div>
     </div>
 
