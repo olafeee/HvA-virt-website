@@ -6,7 +6,6 @@ $vmResponse = $this->vmResponse;
 
 
 //if (!isset($_SESSION['loggedIn'])):
-$vmResponce = $this->vmResponce;
 
   // maak van subnet een prifix
   function prefixSubnet($input){
@@ -51,7 +50,7 @@ $vmResponce = $this->vmResponce;
         <tbody>
           <?php
             $i = 0;
-            print_r($vmResponse);
+            //print_r($vmResponse);
             $maxArray = count($vmResponse['virtualmachine']);
             while ($i < $maxArray) { 
               if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
