@@ -47,7 +47,7 @@
 	  <div class="form-group">
 	    <label for="adstr" class="col-sm-2 control-label">Street + number :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="adstr" name="adstr" placeholder="Street" data-validation="alphanumeric" data-validation-error-msg="Please enter your street and number.">
+	      <input type="text" class="form-control" id="adstr" name="adstr" placeholder="Street" data-validation="required" data-validation-error-msg="Please enter your street and number.">
 	    </div>
 	  </div>
 	  
@@ -61,7 +61,7 @@
 	  <div class="form-group">
 	    <label for="adcit" class="col-sm-2 control-label">City :</label>
 	    <div class="col-sm-10">
-	      <input type="text" class="form-control" id="adcit" name="adcit" placeholder="City" data-validation="alphanumeric" data-validation-error-msg="Please enter your city.">
+	      <input type="text" class="form-control" id="adcit" name="adcit" placeholder="City" data-validation="required" data-validation-error-msg="Please enter your city.">
 	    </div>
 	  </div>
 	  
