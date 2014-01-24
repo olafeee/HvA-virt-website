@@ -67,17 +67,18 @@ $vmResponse = $this->vmResponse;
 
                 <!-- heb even die oude shit erbij gedaan plus subnet functie kon het niet laten hahahahahaha -->
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
-                <td class="CPU"><?php echo $vmResponce['virtualmachine'][$i]["cpunumber"];?></td>
-                <td class="CPUSPEED"><?php echo $vmResponce['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
-                <td class="memory"><?php echo $vmResponce['virtualmachine'][$i]["memory"];?> MB</td>
+                <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
+                <td class="CPUSPEED"><?php echo $vmResponse['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
+                <td class="memory"><?php echo $vmResponse['virtualmachine'][$i]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
-                <td class="IPAdres"><?php echo $vmResponce['virtualmachine'][$i]['nic'][0]['ipaddress']." /". prefixSubnet($vmResponce['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
-                <!--<td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>-->
+                <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." /". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
+                <!--<td class="IPAdres"><?php// echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>-->
                 <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
               </tr>
           <?php
               $i++;
             } // End While loop
+            vmResponse
           ?>
         </tbody>
         </table>
