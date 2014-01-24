@@ -7,11 +7,11 @@
 $vmResponse = $this->vmResponse;
 
 // Check the state of the vm and make a lable for that state
-if(strcmp($vmResponse[0]['state'],'running') == 0) {
+if(strcmp($vmResponse[0]['state'],'Running') == 0) {
   $state = '<span class="label label-success">Running</span>';
-} else if(strcmp($vmResponse[0]['state'],'stopping') == 0) {
+} else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) {
   $state = '<span class="label label-danger">Stopping</span>';
-} else if(strcmp($vmResponse[0]['state'],'stopped') == 0) {
+} else if(strcmp($vmResponse[0]['state'],'Stopped') == 0) {
   $state = '<span class="label label-danger">Stopped</span>';
 } else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) {
   $state = '<span class="label label-default">Deleted</span>';
@@ -54,8 +54,8 @@ include('template.php');
             <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
           </tr>
           <tr>
-            <th>Iso: </th>
-            <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
+            <th>Address: </th>
+            <td><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][0]["nic"][0]["netmask"]);?></td>
           </tr>
           <tr>
             <th>Offering: </th>
@@ -73,10 +73,7 @@ include('template.php');
             <th>Memory: </th>
             <td><?php echo $vmResponse[0]['memory']; ?></td>
           </tr>
-          <tr>
-            <th>Address: </th>
-            <td><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
-          </tr>
+          
         </table>
 
 
