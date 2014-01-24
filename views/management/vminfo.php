@@ -143,12 +143,15 @@ include('template.php');
 <script type="text/javascript">
 
   // Alle table headers align naar rechts geven
-  $(window).load(function () {
-      th { text-align: right; }
-  });
+  //$(window).load(function () {
+  //    th { text-align: right; }
+  //});
 
-  $( "#target" ).click(function() {
-  alert( "Handler for .click() called." );
-});
+  $( th ).css( "text-align", "right" );
+
+  // When button is pressed send the form
+  $( ".sendForm" ).click(function() {
+    alert( "Handler for .click() called." );
+  });
 </script>
 
