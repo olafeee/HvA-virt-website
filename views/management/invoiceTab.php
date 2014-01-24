@@ -25,7 +25,7 @@ include('template.php');
         <tbody>
 		<?php 
 			// Jep, I know, maar kreeg prepared statements niet helemaal lekker... dan maar ff zo...
-			session_start();
+			@session_start();
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
@@ -42,7 +42,7 @@ include('template.php');
 					echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
-					$_SESSION['allowFile'][$i][$rij['file']];
+					$_SESSION['allowFile'][$i]['file'] = $rij['file'];
 					$i++;
 				}else{
 					echo "No invoices were found.";
