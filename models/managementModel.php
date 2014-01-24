@@ -19,22 +19,22 @@ class managementModel extends baseModel
           
           Session::init();
           // Haal de vms op voor de gebruiker die ingeloged is
-          $vmResponce = $this->cloud->listVirtualMachines('',$_SESSION['logArr']['account']);
-          $vmResponce = json_decode($vmResponce, true);
+          $vmResponse = $this->cloud->listVirtualMachines('',$_SESSION['logArr']['account']);
+          $vmResponse = json_decode($vmResponse, true);
 
           // Bouw nu een array for elke VM
-          $vmResponce = $vmResponce['listvirtualmachinesresponse'];
+          $vmResponse = $vmResponse['listvirtualmachinesresponse'];
 
           // Check if the user has no VMs.
-          if(count($vmResponce)==0) {
+          if(count($vmResponse)==0) {
 
           } else {
 
           }
 
-          //$vmResponce = $vmResponce['virtualmachine'];
+          //$vmResponse = $vmResponse['virtualmachine'];
           
-          return $vmResponce;
+          return $vmResponse;
 	}
 
 }

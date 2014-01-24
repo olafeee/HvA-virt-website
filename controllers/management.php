@@ -14,7 +14,7 @@ class Management extends baseController {
 		}
 
 		$this->model = $this->laadModel();
-		$this->baseView->vmresponse = $this->model->getVM();
+		$this->baseView->vmResponse = $this->model->getVM();
 
 		parent::__construct();
 	}
