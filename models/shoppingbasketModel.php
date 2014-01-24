@@ -21,8 +21,8 @@ class shoppingbasketModel extends baseModel
 		$this->cloudstack_sign = new cloudstack_sign();
 	}
 
-	function createVM($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids){
-		echo ($this->cloudstack->deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids));
+	function createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids){
+		echo ($this->cloudstack->deployVirtualMachine($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids));
 		
 		echo ($this->cloudstack->listAsyncJobs());
 	}
