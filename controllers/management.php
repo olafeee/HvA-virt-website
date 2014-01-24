@@ -25,6 +25,11 @@ class Management extends baseController {
 
 	function vminfo($vmid) {
 		$this->baseView->vmid = $vmid;
+
+		$this->model = $this->laadModel();
+		$vmResponse = $this->model->getVMbyID($vmid);
+		$this->baseView->vmResponse = $vmResponse;
+
 		$this->index('vminfo');
 		
 	}
@@ -64,7 +69,7 @@ class Management extends baseController {
 			else if (strcmp($command,'restart') == 0) 
 			{
 				$response = $this->cloudstack->rebootVirtualMachine($_POST['vmid']);
-				echo "TROLOLOLOL PARTY!!";
+				header('location: /management/vminfo/' . $_POST['vmid']);
 			} 
 			else if (strcmp($command,'destroy') == 0 ) 
 			{

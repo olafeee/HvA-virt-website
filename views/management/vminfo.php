@@ -4,6 +4,19 @@
 ** Account Tab on Management Page
 ** ******************************/
 
+// Check the state of the vm:
+if(strcmp($vmResponse['state'],'running') == 0) {
+  $state = '<span class="label label-success">Running</span>';
+} else if(strcmp($vmResponse['state'],'stopping') == 0) {
+  $state = '<span class="label label-danger">Stopping</span>';
+} else if(strcmp($vmResponse['state'],'stopped') == 0) {
+  $state = '<span class="label label-danger">Stopped</span>';
+} else if(strcmp($vmResponse['state'],'Expunging') == 0) {
+  $state = '<span class="label label-default">Deleted</span>';
+} else {
+  $state = '<span class="label label-default">Unknown</span>';
+}
+
 include('template.php');
 ?>
 
@@ -17,9 +30,32 @@ include('template.php');
 
         <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
         
-      	<div class="label label-danger">Stopped</div><br /><br /><br />
+        <table id="vertical-1">
+          <caption>First Way</caption>
+          <tr>
+            <th>Name: </th>
+            <td><?php echo $vmResponse['name']; ?></td>
+          </tr>
+          <tr>
+            <th>Status: </th>
+            <td><?php echo $state; ?></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td></td>
+          </tr>
+        </table>
 
+
+
+
+
+      	<br /><br /><br />
+
+
+        <!-- VM Controls -->
         <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
+
 
       	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
         

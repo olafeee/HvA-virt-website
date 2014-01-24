@@ -37,5 +37,16 @@ class managementModel extends baseModel
           return $vmResponse;
 	}
 
+     public function getVMbyID($vmid) {
+          // Haal de VM op by ID
+          $this->cloud->listVirtualMachines($vmid);
+          $vmResponse = json_decode($vmResponse, true);
+
+          // Bouw nu een array for de VM
+          $vmResponse = $vmResponse['listvirtualmachinesresponse']['virtualmachine'];
+
+          return $vmResponse;
+     }
+
 }
 

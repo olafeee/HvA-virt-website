@@ -41,8 +41,9 @@ $vmResponse = $this->vmResponse;
         <table class="table">
         <thead>
           <tr>
-            <th>VM</th>
-            <th>IP Address</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>CPU</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -62,15 +63,12 @@ $vmResponse = $this->vmResponse;
           ?>
               
               <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="document.location= '/management/vminfo/';">
-                
-                <!-- heb even die oude shit erbij gedaan plus subnet functie kon het niet laten hahahahahaha -->
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
                 <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
                 <td class="CPUSPEED"><?php echo $vmResponse['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
                 <td class="memory"><?php echo $vmResponse['virtualmachine'][$i]["memory"];?> MB</td>
                 <td class="HHD">20GB</td>
-                <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." /". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
-                <!--<td class="IPAdres"><?php// echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". ($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>-->
+                <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
                 <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
               </tr>
           <?php
