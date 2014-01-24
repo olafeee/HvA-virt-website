@@ -9,15 +9,15 @@
 	echo "</pre>";*/
 	
 	if (!isset($_SESSION['allowFile'])) {
-		die('<h1>Access Denied!</h1><br /><p style="color:red">Code 1</p>');
+		die('<h1>Access Denied!</h1><br /><h2 style="color:red">Code 1</h2>');
 	}
 	
 	if (!in_array($fileToOpen, $_SESSION['allowFile'])){
-		die('<h1>Access Denied!</h1><br /><p style="color:red">Code 2</p>');
+		die('<h1>Access Denied!</h1><br /><h2 style="color:red">Code 2</h2>');
 	}
 	
 	if(!file_exists("/var/invoices/".$fileToOpen)){
-		die('<h1>Access Denied!</h1><br /><p style="color:red">Code 3</p>');
+		die('<h1>Access Denied!</h1><br /><h2 style="color:red">Code 3</h2>');
 	} else {
 		header('Content-Type: application/pdf');
 		header('Content-Disposition: inline; filename="'.$fileToOpen.'"');
