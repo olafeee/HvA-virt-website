@@ -2,21 +2,8 @@
 class baseController {
 
 	function __construct() {
-		$url = $this->urlfix();
-		// laad model in & selecteer database
-		$this->model = $this->laadModel();
-		$this->db = $this->model->conDB1();
-		#################################################
-		# check of de persoon recht heeft	#yolo		#
-		# laad hierboven nog wel conDB1() in!!!!!!!!!!!!#
-		#################################################
-		$getRole = $this->model->getRoleByPage($url[0]);
-		$role = $this->in_array_r($getRole);
-		if($role == false){
-			header('location: /account');
-		}
-		#################################################
 		$this->baseView = new baseView();
+		$url = $this->urlfix();
 		$this->baseView->url0 = $url[0];
 	}
 
