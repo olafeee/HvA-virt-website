@@ -44,55 +44,52 @@ include('template.php');
 
         <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
         
-        <div class="col-md-4" width="50%" role="main">
-          <table>
-            <tr>
-              <th>Name: </th>
-              <td><?php echo $vmResponse[0]['name']; ?></td>
-            </tr>
-            <tr>
-              <th>Status: </th>
-              <td><?php echo $state; ?></td>
-            </tr>
-            <tr>
-              <th>Created: </th>
-              <td><?php echo $vmResponse[0]['created']; ?></td>
-            </tr>
-            <tr>
-              <th>Template:</th>
-              <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
-            </tr>
-            <tr>
-              <th>Iso: </th>
-              <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
-            </tr>
-            <tr>
-              <th>Address: </th>
-              <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
-            </tr>
-          </table>
-        </div>
+        <table>
+          <tr>
+            <th>Name: </th>
+            <td><?php echo $vmResponse[0]['name']; ?></td>
+          </tr>
+          <tr>
+            <th>Status: </th>
+            <td><?php echo $state; ?></td>
+          </tr>
+          <tr>
+            <th>Created: </th>
+            <td><?php echo $vmResponse[0]['created']; ?></td>
+          </tr>
+          <tr>
+            <th>Template:</th>
+            <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
+          </tr>
+          <tr>
+            <th>Iso: </th>
+            <td><?php echo $vmResponse[0]['isodisplaytext']; ?></td>
+          </tr>
+          <tr>
+            <th>Address: </th>
+            <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
+          </tr>
+        </table>
 
-        <div class="col-md-4" width="50%">
-          <table>
-            <tr>
-              <th>Offering: </th>
-              <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
-            </tr>
-            <tr>
-              <th>CPUs: </th>
-              <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
-            </tr>
-            <tr>
-              <th>CPU Speed: </th>
-              <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
-            </tr>
-            <tr>
-              <th>Memory: </th>
-              <td><?php echo $vmResponse[0]['memory']; ?></td>
-            </tr>
-          </table>
-        </div>
+        <table>
+          <tr>
+            <th>Offering: </th>
+            <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
+          </tr>
+          <tr>
+            <th>CPUs: </th>
+            <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
+          </tr>
+          <tr>
+            <th>CPU Speed: </th>
+            <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
+          </tr>
+          <tr>
+            <th>Memory: </th>
+            <td><?php echo $vmResponse[0]['memory']; ?></td>
+          </tr>
+        </table>
+
 
       <!-- VM Controls -->
       <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
