@@ -24,7 +24,7 @@ include('template.php');
       	<button type="button" class="btn btn-primary" style="margin-bottom:5px; width:125px;" href="/management/api">Start / Stop VM</button>
         
         <!-- Restart VM -->
-        <form action="/management/vmcontrol" methode="POST" role="form" id="restart">
+        <form action="/management/vmcontrol" role="form" method="post">
           <input name="command" value="restart" />
           <input name="vmid" value="<?php echo 'be77cacc-1124-4c8b-8017-878e98ba7101' ?>" />
           <input type="submit"> 
