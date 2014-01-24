@@ -143,17 +143,14 @@ include('template.php');
 <script type="text/javascript">
 
   // Alle table headers align naar rechts geven
-  //$(window).load(function () {
-  //    th { text-align: right; }
-  //});
-
   $( ".right" ).css( "text-align", "right" );
+  $( ".right" ).css( "margin-right", "5px" );
 
   $('a.pagerlink').click(function() { 
     var id = $(this).attr('id');
     $container.cycle(id.replace('pager_', '')); 
     return false; 
-});
+  });
 
   // When button is pressed send the form
   $( ".sendForm" ).click(function() {
