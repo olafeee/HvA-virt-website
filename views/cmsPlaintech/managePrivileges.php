@@ -39,7 +39,8 @@ $allRoles = $this->allRoles;
 		</table>
 		<div class="privilegesForm">
 
-		<form name="input" action="/cmsPlaintech/insertMVP" onsubmit="return checkInp()" method="post">
+		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
+			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_naam" name="rol_naam">
 			<?php
 			 	$y=0;
