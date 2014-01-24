@@ -40,8 +40,8 @@ function makeInvoice(){
 		$klantLand = "";
 	}	
 	
+	// Okee toen werd ik er dus helemaal ******ziek van...
 	$invoice = new mysqli(NULL,DB_USER1,DB_PASS1,DB_NAME1);
-	
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
 
@@ -50,21 +50,32 @@ function makeInvoice(){
 				//$sth->execute();
 	
 	//$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1 VALUES (?,?,?,?,?,?)";
-	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1";
-	//$sth = mysqli_prepare($invoice, $query);
-	$stmt = $invoice->stmt_init();
+	$query = "SELECT firstname, lastname, street, zip, city, country FROM invoice_users WHERE firstname = $first AND lastname = $laste LIMIT 1";
+	//$stmt = mysqli_prepare($invoice, $query);
+	//$stmt = $invoice->stmt_init();
 	$stmt = $invoice->prepare($query);
 	//printf(mysqli_stmt_error($sth));
 	//$stm = $sth->execute();
-	//$stmt->execute();
+	$stmt->execute();
 	//$stmt->bind_param("ssssss", $klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
-	$invoice->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
-	$invoice->execute($stmt);
+	//$invoice->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	//$invoice->execute($stmt);
 	//printf(mysqli_stmt_error($sth));
-	//$stmt->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
+	$stmt->bind_result($klantFNaam, $klantLNaam, $klantStraat, $klantPostcode, $klantWoonplaats, $klantLand);
 	if($stmt->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
 	}
+	/*$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
+	$first = $_SESSION['logArr']['firstname'];
+	$laste = $_SESSION['logArr']['lastname'];
+	$query = "SELECT fname, lname, adstr, adzip, adcit, country FROM invoice_users WHERE fname = $first AND lname = $laste LIMIT 1";
+	$sth = mysqli_query($invoice, $query);
+	$row = mysqli_fetch_assoc($sth);
+	
+	$klantFNaam = $row['fname'];
+	$klantLNaam = $row['lname'];
+	$klantStraat = $row['adstr*/
+	
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
 	
