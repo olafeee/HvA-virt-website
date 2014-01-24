@@ -65,7 +65,7 @@ function makeInvoice(){
 	if($stmt->fetch() === 0){
 		die("somehow, something went somewhere wrong...");
 	}*/
-	$invoice = new mysqli('localhost','user_admin','T=56(Wp23');
+	$invoice = mysqli_connect('localhost','user_admin','T=56(Wp23');
 	mysqli_select_db($invoice, 'user_db_plaintech');
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
