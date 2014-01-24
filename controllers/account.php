@@ -69,13 +69,13 @@ class Account extends baseController {
 				// Sorry, zooitje, kreeg t ff niet helemaal voor elkaar...
 				$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
 				$sth = $invoice->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (:fname, :lname, :street, :zip, :city, :country);");
-				$invoice->bindParam(':fname', $_POST['fname']);
-				$invoice->bindParam(':lname', $_POST['lname']);
-				$invoice->bindParam(':street', $_POST['adstr']);
-				$invoice->bindParam(':zip', $_POST['adzip']);
-				$invoice->bindParam(':city', $_POST['adcit']);
-				$invoice->bindParam(':country', $_POST['country']);
-				$invoice->execute();
+				$sth->bindParam(':fname', $_POST['fname']);
+				$sth->bindParam(':lname', $_POST['lname']);
+				$sth->bindParam(':street', $_POST['adstr']);
+				$sth->bindParam(':zip', $_POST['adzip']);
+				$sth->bindParam(':city', $_POST['adcit']);
+				$sth->bindParam(':country', $_POST['country']);
+				$sth->execute();
 				
 				Session::set('successPage', TRUE);
 				$model->runLogin($_POST['email'],$_POST['password']);
