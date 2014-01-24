@@ -1,12 +1,4 @@
-    <?php 
-		/*$pages = $this->cmstext;
-
-	        $i = 0;
-		    while ($i < count($pages)) {
-		    	echo '<li><a href="/cmsPlaintech/viewPage/'. $pages[$i]["pageid"] .'">'.$pages[$i]["page"].'</a></li>';
-		    	$i++;
-		    }*/
-		?>
+    <?php $pages = $this->cmstext;?>
 
 
 
@@ -19,12 +11,21 @@
         <h3 class="panel-title">Management Panel</h3>
       </div>
       <div class="list-group">
-        <a href="/management/" class="list-group-item">Systems Panel</a>
-        <a href="/management/accountTab" class="list-group-item">Account Info</a>
-        <a href="/management/invoiceTab" class="list-group-item">Invoice Overview</a>
+      	<?php
+      		$i = 0;
+		    while ($i < count($pages)) {
+		    	echo '<a href="/cmsPlaintech/viewPage/'. $pages[$i]["pageid"] .'" class="list-group-item">'.$pages[$i]["page"].'</a>';
+		    	$i++;
+		    }
+      	?>
+      	<a href="/cmsPlaintech/manangeVpsParts/CPU">CPU Price</a>
+		<a href="/cmsPlaintech/manangeVpsParts/RAM">RAM Price</a>
+		<a href="/cmsPlaintech/manangeVpsParts/Disk">Disk Price</a>
+        <a href="/cmsPlaintech/searchPrivileges" class="list-group-item">Search Privileges</a>
       </div>
     </div>
 
   </div> <!-- END Col 3 -->
+
 
 
