@@ -172,12 +172,12 @@ function sentInvoice($email, $file){
 
 	<?php 
 	$message = ob_get_clean(); 
-	//$mail_sent = mail( $email, $subject, $message, $headers ); 
+	$mail_sent = mail( $email, $subject, $message, $headers ); 
 	//echo $mail_sent ? "Mail sent" : "Mail failed"; 
 	
-	$fp = fopen('/tmp/data.txt', 'w');
-	fwrite($fp, $message);
-	fclose($fp);
+	//$fp = fopen('/tmp/data.txt', 'w');
+	//fwrite($fp, $message);
+	//fclose($fp);
 	
 }
 }
