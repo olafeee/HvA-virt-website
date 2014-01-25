@@ -26,4 +26,9 @@ class baseModel {
                 									array('page' => $page));
                 return $sqlArray;
 	}
+
+	function getCmsIndex($table ,$part){
+			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table");
+                return $sqlArray;
+	}
 }

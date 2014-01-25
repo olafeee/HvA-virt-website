@@ -5,6 +5,7 @@ require_once("lib/cloudstack.php");
 class Management extends baseController {
 
 	public $model;
+	public $db;
 	public $cloudstack;
 
 	function __construct() {
@@ -46,6 +47,7 @@ class Management extends baseController {
 	}
 
 	function accountTab() {
+		$this->baseView->accountInfo = $this->model->getCmsIndex("CSUsers", "*");
 		$this->index('accountTab', TRUE);
 
 	}

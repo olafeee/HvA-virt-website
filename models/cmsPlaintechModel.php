@@ -8,11 +8,6 @@ class cmsPlaintechModel extends baseModel
 		parent::__construct();
 	}
 
-	function getCmsIndex($table ,$part){
-			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table");
-                return $sqlArray;
-	}
-
 		function getPage($pageid){
 				    $sqlArray = $this->db->select('SELECT * FROM CMS_website WHERE 
 							pageid = :pageid', 
