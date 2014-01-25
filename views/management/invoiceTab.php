@@ -4,13 +4,19 @@
 ** Robert L
 *********************/
 
+
 ?>
 
-<div class="tab-pane" id="tab3">
+<!--<div class="tab-pane" id="tab3">
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">System Overview</h3>
+      </div>
+      <div class="panel-body">-->
+	  
+	  <div class="panel-heading">
+        <h3 class="panel-title">Invoices</h3>
       </div>
       <div class="panel-body">
 	  <table class="table">
@@ -22,7 +28,6 @@
         </thead>
         <tbody>
 		<?php 
-			// Jep, I know, maar kreeg prepared statements niet helemaal lekker... dan maar ff zo...
 			@session_start();
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
@@ -31,10 +36,9 @@
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			$klantId = $row['id'];
+			if($_SESSION['logArr'] == 
 			$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
 			$sti = mysqli_query($list, $querz);
-			//$i = 0;
-			//$_SESSION['allowFile'] = array();
 			while($rij = mysqli_fetch_assoc($sti)){
 				if(file_exists("/var/invoices/".$rij['file'])){
 					echo "<tr>";
@@ -60,6 +64,6 @@
 			echo "</pre>";*/
 			?>
       </div>
-    </div>
-  </div><!-- END Col 9 -->
-</div>
+    <!--</div>
+  </div><!-- END Col 9 --
+</div>-->
