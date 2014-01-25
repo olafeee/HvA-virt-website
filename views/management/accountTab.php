@@ -37,7 +37,7 @@ print_r($accountInfo);
 			<p id="email"><?php echo $accountInfo['phone']; ?></p>
 		</div>
 
-		<h4><span class="glyphicon glyphicon-euro"></span>   General Information</h4><hr />
+		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4><hr />
 
 		<label for="adstr" class="col-sm-2 control-label">Street :</label>
 		<div class="col-sm-10">
