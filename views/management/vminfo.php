@@ -35,7 +35,7 @@ if(strcmp($vmResponse[0]['state'],'Running') == 0)
     // Stop knop toevoegen
     $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
     // Restart knop toevoegen
-    $onOff .= $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Restart System</button>';
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Restart System</button>';
 } 
 else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) 
 {
