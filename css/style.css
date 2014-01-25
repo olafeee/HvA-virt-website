@@ -1,0 +1,669 @@
+/*
+=======================================================================
+= 						Plaintech style.css 						  =
+=					  	Main style sheet!!!							  =
+=======================================================================
+*/
+
+/* HEADER */
+#plaintech-logo{
+	width: 118px;
+	height: 30px;
+	
+}
+
+#imagecontainer .seethroughbg {
+	position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+/* Eind HEADER */
+/* CONTAINER */
+.container {
+	position: relative;
+}
+
+/* eind CONTAINER */
+/* LOGIN MENU */
+.login-btn {
+	max-width: 1150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.login-boton-pull-right{
+	float: right !important;
+	margin-right: 8px;
+	margin-top: 18px;
+	margin-bottom: 8px;
+}
+p.login-boton-pull-right{
+margin-top: 24px;
+}
+
+.introdiv{
+	background: url('/img/bannerbg.png') #e9e9e9 repeat-x center top;
+	min-height: 100%;
+}
+
+.introColid{
+	height: 222px;
+	position: absolute;
+}
+
+.introColid-push{
+	margin-top: 222px;
+}
+
+.cloud_img{
+	float: left;
+	margin-left: 40px;
+	margin-top: 30px;
+}
+
+.introdiv_text{
+	float: left;
+	margin-left:150px;
+	margin-top:20px;
+	padding: 20px;
+	color: white;
+}
+
+.introdiv_text_h1{
+	font-size: 48px;
+	margin: 0;
+}
+.introdiv_text_h4{
+	margin: 0;
+	font-size: 18px;
+}
+.introdiv_text_p{
+	font-size: 10px;
+}
+
+.introdiv_text_price{
+	float: left;
+	margin-left:130px;
+	margin-top:140px;
+	color: white;
+}
+.introdiv_text_price_p{
+	margin: 0;
+	font-size: 10px;
+	color: black;
+}
+.introdiv_text_price_pp{
+	margin: 0;
+	font-size: 28px;
+	font-style: oblique;
+	font-weight:900;
+}
+
+.index_block1{
+	height: 280px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background: #eeeeee;
+	-webkit-border-radius: 8px 8px 8px 8px;
+	border-radius: 3px;
+	border: 1px;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+
+
+.login-class{
+	background-color: #f2f2f2;
+	-webkit-border-radius: 7px 7px 7px 7px;
+    border-radius: 7px 7px 7px 7px;
+    margin: 0 auto;
+    min-height: 300px;
+}
+
+#img-login-logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+}
+
+.form-signin{
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+
+.kp_hm_div{
+	height: 200px;
+	width: 300px;
+	position: absolute;
+	z-index: 14;
+	background-color: white;
+	margin-top: -56px;
+	right: 112px;
+	-webkit-border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px;
+    border: 1px;
+    border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	display: none;
+}
+
+.kp_hm_top{
+	width:35px;
+	height:35px;
+	background-color:white;
+	top: -16px;
+	right: 20px;
+	z-index: 15;
+	position: absolute;
+	/* Rotate div */
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); /* IE 9 */
+	-webkit-transform:rotate(45deg); /* Safari and Chrome */
+	border: 1px;
+    border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.kp_hm_border{
+	height: 198px;
+	width: 296px;
+	position: absolute;
+	z-index: 16;
+	background-color: white;
+	-webkit-border-radius: 0px 0px 7px 7px;
+    border-radius: 0px 0px 7px 7px;
+}
+
+.kp_hm_ms{
+	display: block;
+}
+
+.kp_hm_mh{
+	display: none;
+}
+
+.kp_hm_logout{
+	background: #f5f5f5;
+	border-top: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	padding: 10px 0;
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+}
+
+.kp_hm_text{
+	height: 148px;
+	width: 100%;
+	padding: 7px;
+}
+
+.kp_hm_text_left{
+	position: relative;
+	width: 30%;
+	float: left;
+}
+.kp_hm_text_right{
+	position: relative;
+	width: 70%;
+	float: right;
+}
+
+.kp_hm_logoutbtn{
+	right: 7px;
+	bottom: 7px;
+	position: absolute;
+}
+.kp_hm_text_userglyphicon{
+	height: 70px;
+	width: 70px;
+	background-color: #70DBFF;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.kp_hm_userglyphicon{
+	font-size: 4.3em;
+	padding: 4px;
+}
+
+
+
+
+/* EIND LOGIN MENU */
+/* SVG op home pagina */
+span.confi{
+    font-size: 3.3em;
+}
+
+span.span-shopping-cart{
+    font-size: 3.3em;
+}
+.div-align-span-center {
+	text-align: center;
+}
+/* EIND SVG op home pagina */
+/* acountTable */
+.acountTable{
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+/* EIND acountTable */
+/* FOOTER */
+.rowlast{
+	margin-bottom: 70px;
+}
+
+.footerrow{
+	padding-top: 15px;
+}
+/* EIND FOOTER */
+
+<<<<<<< HEAD
+.kp_div_left{
+	position: relative;
+	width: 20%;
+	max-width: 20%;
+	float: left;
+}
+
+.kp_div_right{
+	
+}
+
+.kp_img{
+	max-width: 200px;
+	max-height: 100px;
+}
+
+/* Order page */
+.order_slider{
+	padding-top: 20px;
+}
+.order_change{
+	width: 120px;
+	padding-top: 14px;
+}
+
+.order_summery{
+
+}
+
+#totalorderCostDIV{
+	float: left;
+	width: 70%; 
+	display:block;
+	min-height: 10px;
+}
+
+.totalorderCostDIV_right{
+	float: left;
+	width: 30%; 
+	display:block;
+	min-height: 10px;
+}
+
+.order-button{
+	width: 100px;
+	margin-left: 300px;
+	margin-bottom: 20px;
+}
+
+.divROW{
+	 width: 99%; 
+     display:block;
+     padding-bottom:5px;
+}
+
+.divROWorderTop{
+	float: left;
+	border-bottom: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	width: 100%;
+	display:block;
+	margin: 0px;
+}
+/* END Order page */
+/* Begin order*/
+
+.bladeVPSindex{
+	float: left;
+	width: 200px;
+	padding: 10px;
+	margin:10px;
+	background: #f5f5f5;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.bladeVPSindex_line{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+}
+
+.bladeVPSindex_price{
+	color: #fff;
+	background-color: #47a447;
+	border-color: #398439;
+	width: 100px;
+	left: 40px;
+	right: 40px;
+	margin-top: 12px;
+	position: relative;
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.428571429;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.order_summery{
+	background: #f5f5f5;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+.bladeVPSindex_btndiv{
+	padding-top: 8px;
+	padding-bottom: 4px;
+	margin-left: 40px;
+	width: 100px;
+	margin-right: 40px;
+}
+
+.bladeVPSindex_btn{
+	width: 100px;
+}
+
+span.right{
+	float: right;
+}
+p.right{
+	float: right;
+}
+.bladeVPSintro{
+	background: #f5f5f5;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	margin-left: 40px;
+	margin-right: 28px;
+	padding: 10px;
+}
+
+.bladeVPSindex1{
+	margin-left: 40px;
+}
+.bladeVPS_confi{
+	font-size: 4em;
+	position: absolute;
+	top: 25px;
+	right: 70px;
+
+}
+
+.orderslider{
+	float: left;
+	width: 240px;
+
+}
+.orderslider-right{
+	float: left;
+	width: 60px;
+	margin-left: 20px;
+}
+
+div.order_options_OS{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+p.order_options_OS{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/*.glyphicon-list-alt */
+/* shopping bascet */
+.sb-div{
+	margin-bottom: 10px;
+	padding: 10px;
+	background: #f5f5f5;
+	-webkit-border-radius: 0px 0px 3px 3px;
+	border-radius: 0px 0px 3px 3px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+	overflow:hidden;
+}
+
+.sb-speci-l1{
+	width: 15%;
+	height: 100px;
+	float: left;
+}
+
+.sb-speci1{
+	width: 15%;
+	height: 100px;
+	float: left;
+}
+
+.sb-price{
+	width: 15%;
+	height: 100px;
+	float: left;
+}
+
+.sb-delete{
+	float: left;
+	width: 15%;
+	height: 100px;
+}
+
+.sb-speci-1{
+	font-size: 14px;
+}
+
+.sb-speci-2{
+	font-size: 10px;
+}
+
+.sb-totalprice{
+	float: left;
+	width: 100%;
+}
+
+.sb-totalprice-right{
+	float: right;
+}
+
+.sb-totalprice-1{
+	float: left;
+	width: 79%;
+	height:50px;
+	padding: 5px;
+}
+
+.sb-totalprice-2{
+	float: left;
+	width: 20%;
+	height: 50px;
+	padding: 5px;
+}
+
+/* SLA css */
+.SLAdiv{
+	display: none;
+	height: 500px;
+	width: 650px;
+	position: absolute;
+	z-index: 34;
+	background: #f5f5f5;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: auto;
+}
+
+.MVPdiv{
+	display: none;
+	height: 350px;
+	width: 450px;
+	position: absolute;
+	z-index: 34;
+	background: #f5f5f5;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: auto;
+}
+
+.sla_ms{
+	display: block;
+}
+
+.sla_mh{
+	display: none;
+}
+
+.opacitySLAdiv{
+	display: none;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	background-color: black;
+}
+
+#close-img{
+	float: right;
+}
+
+/* end SLA css*/
+
+.fontpage-img{
+	width: 20px;
+	height:20px;
+}
+
+.validating_server_side input.server {
+	background: url(/img/ajax-preloader.gif) no-repeat center right;
+	opacity: 0.6
+}
+
+.divTable
+{
+    width: 100%;
+    display:block;
+    margin: 20px;
+	border: 1px;
+	border: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+.divRow
+{
+	width: 99%; 
+	display:block;
+	padding-bottom:5px;
+	height: 50px;
+	padding: 8px;
+}
+
+.divRow-Text{
+	background: #f5f5f5;
+	border-top: 1px solid #ccc;
+	border-color: rgba(0,0,0,.2);
+	padding: 10px 0;
+	width: 100%;
+	padding: 10px;
+		-webkit-border-radius: 0px 0px 6px 6px;
+	border-radius: 0px 0px 6px 6px;
+}
+.divColumn-ID
+{
+         float: left;
+         width: 90%;
+         display:block;
+}
+.divColumn-Text
+{
+         float: left;
+         width: 100%;
+         display:block;
+}
+.divColumn-Button
+{
+         float: left;
+         width: 10%;
+         display:block;
+}
+
+.navCM{
+	width: 120px;
+}
+
+.viewPageTable{
+	width: 90%;
+}
+
+.privilegesForm{
+	width: 200px;
+
+}

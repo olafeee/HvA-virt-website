@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <!-- begin van head + nav-->
+  <head>
+    <title>Plaintech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/plaintech-tab-logo.png">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/beheren.js"></script>
+    <script type="text/javascript" src="js/loginmenu.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html"><img id="plaintech-logo" src="img/plaintech-logo-c.png"></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blade VPS <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Configureer</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+          <li class="divider"></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li>
+      <li><a href="#">support</a></li>
+      
+    </ul>
+    <div class="login-btn">
+      <a href="javascript:showLoginMenu()" class="btn btn-default navbar-btn login-boton-pull-right">Login</a>
+
+  </div>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="login-class">
+      <div class="invoer-login-class">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label>
+                 <a href="register.html">Maak een account aan</a>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <a href="javascript:hideLoginMenu()" class="btn btn-danger">Cancel</a>
+              <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+<!-- einde van head + nav + login bij alles het zelfde-->
+  <table class="table">
+        <thead>
+          <tr>
+            <th>VM</th>
+            <th>Status</th>
+            <th>CPU</th>
+            <th>CPU speed</th>
+            <th>Memory</th>
+            <th>HDD</th>
+            <th>IP Adres</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="success">
+            <td>1</td>
+            <td class="status"></td>
+            <td class="CPU"></td>
+            <td class="CPUSPEED"></td>
+            <td class="memory"></td>
+            <td class="HHD"></td>
+            <td class="IPAdres"></td>
+            <td><button type="button" class="btn btn-info"> Info </button> <button type="button" class="btn btn-success"> Upgrade </button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+    <div class="row rowlast">
+
+    </div>
+
+
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+          hoi
+        </div>
+    </div>
+
+</div>
+
+
+
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+   
+  </body>
+</html>
+
+    <div class="login-class">
+      <div class="invoer-login-class">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+              <span class="input-group-addon">@</span>
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label>
+                 <a href="register.html">Maak een account aan</a>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <a href="javascript:hideLoginMenu()" class="btn btn-danger">Cancel</a>
+              <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+<!-- einde van head + nav + login bij alles het zelfde-->
