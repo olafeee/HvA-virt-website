@@ -77,6 +77,8 @@ class accountModel extends baseModel
 		echo"<pre>";
 		print_r($postArray);
 		echo"</pre>";
+
+		echo $postArray['adzip'];
 		// Send to cloudstack DB
 		/*
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
