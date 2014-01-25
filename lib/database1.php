@@ -107,9 +107,8 @@ class Database1 extends PDO
         foreach ($data as $key => $value) {
             print_r($sth1->bindValue(":$key", $value));
         }*/
-        
+        $sth1->execute();        
         $sth->execute();
-        $sth1->execute();  
         $this->commit();
         return TRUE;
        
