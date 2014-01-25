@@ -76,7 +76,7 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function getUserByName($search){
-	    $sqlArray = $this->db->select('SELECT * FROM CSUsers WHERE 
+	    $sqlArray = $this->db->select('SELECT * FROM CSUsers LIKE 
 				firstname = :firstname OR lastname = :lastname', 
         array('lastname' => $search,
         	'firstname' => $search));
