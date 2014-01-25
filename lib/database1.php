@@ -95,9 +95,9 @@ class Database1 extends PDO
                                             (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
                                     VALUES (:CSID, :username, :firstname, :lastname, :adstr, :adzip, :adcit, :country, :phone, :reseller)");
         foreach ($data as $key => $value) {
-            $sth1->bindValue(":$key", $value);
+            var_dump($sth1->bindValue(":$key", $value));
         }
-        var_dump($sth);
+        var_dump($sth1);
         /*
         $sth->execute();
         $sth1->execute();  
