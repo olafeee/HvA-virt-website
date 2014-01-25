@@ -60,9 +60,10 @@ class accountModel extends baseModel
 								'adcit' => $postArray['adcit'],
 								'country' => $postArray['country'],
 								'phone' => $postArray['phone'],
-								'reseller' => $reseller);
+								'reseller' => $reseller
+								);
 
-				$res = $this->db->INU($reseller;
+				$res = $this->db->INU($reseller,$loginArray['username']);
 
 				if($res == true){
 					Session::init();
