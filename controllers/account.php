@@ -59,27 +59,37 @@ class Account extends baseController {
 	function runRegister() {
 		if(isset($_POST['submit'])) {
 			$model = $this->laadModel();
+			$this->db = $model->conDB1();
 			$response = $model->createAccount($_POST);
 			
-			
+			$postArray = array(
+			'adstr' => $_POST['adstr'],
+			'adzip' => $_POST['adzip'],
+			'adcit' => $_POST['adcit'],
+			'country' => $_POST['country'],
+			'phone' => $_POST['phone'],
+			'reseller' => $_POST['reseller']
+			);
+
 			if ($response == TRUE ) {
 				/**********************\
 				/ Required for invoice /
 				/**********************/
-				// Sorry, zooitje, kreeg t ff niet helemaal voor elkaar...
+				/* Sorry, zooitje, kreeg t ff niet helemaal voor elkaar...
 				$invoice = new mysqli(DB_HOST1,DB_USER1,DB_PASS1,DB_NAME1);
 				$sth = $invoice->prepare("INSERT INTO `user_db_plaintech`.`invoice_users` (`firstname`, `lastname`, `street`, `zip`, `city`, `country`) VALUES (?,?,?,?,?,?);");
 				$sth->bind_param('ssssss', $_POST['fname'],$_POST['lname'],$_POST['adstr'],$_POST['adzip'],$_POST['adcit'],$_POST['country']);
 				$sth->execute();
-				
+				*/
 				Session::set('successPage', TRUE);
-				$model->runLogin($_POST['email'],$_POST['password']);
+				$model->runLogin($_POST['email'],$_POST['password'],$postArray);
 				header('location: /account/registerSuccess');
 			}
 		} else {
 			header('location: /account/register');
 		}
 	}
+
 
 	function registerSuccess() {
 		if ($_SESSION['successPage'] == TRUE) {

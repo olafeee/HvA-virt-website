@@ -20,17 +20,23 @@ class accountModel extends baseModel
 		$this->cloudstack_sign = new cloudstack_sign();
 	}
 
-	public function runLogin($username, $password)
+	public function runLogin($username, $password, $postArray)
 	{
 		$sth = $this->cloudstack_sign->login($username, $password);
 		$data = json_decode($sth,true);
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
-			$loginArray = $data['loginresponse'];
-			Session::init();
-			Session::set('loggedIn', true);
-		    Session::set('logArr', $loginArray);
-			return TRUE;
+			
+			$res = $this->db->INU();
+
+			if($res == true){
+				$loginArray = $data['loginresponse'];
+				Session::init();
+				Session::set('loggedIn', true);
+			    Session::set('logArr', $loginArray);
+				return TRUE;
+			}
+
 		} else {
 			return FALSE;
 		}
@@ -66,21 +72,8 @@ class accountModel extends baseModel
 	public function createAccount($data) {
 		// SQL Injection prefection TODO HERE ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!
 
-		$postArray = array('adstr' => $data['adstr'],
-			'adzip' => $data['adzip'],
-			'adcit' => $data['adcit'],
-			'country' => $data['country'],
-			'phone' => $data['phone'],
-			'reseller' => $data['reseller']
-			);
-
-		echo"<pre>";
-		print_r($postArray);
-		echo"</pre>";
-
-		echo $postArray['adzip'];
 		// Send to cloudstack DB
-		/*
+		
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		$response = json_decode($response,true);
 
@@ -89,7 +82,7 @@ class accountModel extends baseModel
 		} else {
 			print_r($response);
 			return FALSE;
-		}*/
+		}
 		
 	}
 

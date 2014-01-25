@@ -120,4 +120,9 @@ class cmsPlaintech extends baseController {
 		$delete = $this->model->addPrivileges($role_id, $CSID);
 		print_r($delete);
 	}
+
+	function jan(){
+		$x = $this->model->modeljan();
+		print_r($x);
+	}
 }

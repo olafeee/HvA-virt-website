@@ -81,6 +81,19 @@ class Database1 extends PDO
         return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = '$role_id' AND `privileges`.`CSID` = '$CSID'");
     }
 
+    public function INU(){
+        $sth = $this->prepare("START TRANSACTION ");
+       
+    }
+
+    public function jan(){
+        $this->beginTransaction();
+        $sth = $this->prepare("INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('3', '1150da1b-6580-4321-954a-47ef7fc09372') ");
+        $sth = $this->prepare("INSERT INTO `user_db_plaintech`.`users` (`id`, `login`,`password`) VALUES ('3', 'jan', 'kaas') ");  
+        $this->commit();  
+        return "het werkt of niet";
+    }
+
 
 
 
