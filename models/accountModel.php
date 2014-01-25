@@ -63,7 +63,8 @@ class accountModel extends baseModel
 								'reseller' => $reseller
 								);
 
-				$res = $this->db->INU($reseller,$loginArray['username']);
+				$CSID = $loginArray['userid'];
+				$res = $this->db->INU($reseller,$CSID,$PArray);
 
 				if($res == true){
 					Session::init();
