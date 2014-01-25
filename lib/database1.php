@@ -89,11 +89,7 @@ class Database1 extends PDO
         $this->beginTransaction();
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
-                                VALUES (?,?)");
-        $sth->bindParam(    '7',
-                           $CSID
-
-        );
+                                VALUES ('7','$CSID')");
         $fieldNames = implode('`, `', array_keys($data));
         $fieldValues = ':' . implode(', :', array_keys($data));
         
