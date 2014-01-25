@@ -51,7 +51,19 @@ class accountModel extends baseModel
 			if (is_array($data) && array_key_exists("loginresponse", $data)) {
 				$loginArray = $data['loginresponse'];
 
-				$res = TRUE;
+				$PArray = array('CSID' => $loginArray['userid'], 
+								'username' => $loginArray['username'],
+								'firstname' => $loginArray['firstname'],
+								'lastname' => $loginArray['lastname'],
+								'adstr' => $postArray['adstr'],
+								'adzip' => $postArray['adzip'],
+								'adcit' => $postArray['adcit'],
+								'country' => $postArray['country'],
+								'phone' => $postArray['phone'],
+								'reseller' => $reseller);
+
+				$res = $this->db->INU($reseller;
+
 				if($res == true){
 					Session::init();
 					Session::set('loggedIn', true);
