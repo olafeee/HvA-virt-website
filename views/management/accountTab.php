@@ -36,6 +36,14 @@ print_r($accountInfo);
 		<div class="col-sm-10">
 			<p id="email"><?php echo $accountInfo['phone']; ?></p>
 		</div>
+		<?php if($accountInfo['reseller'] == "TRUE"){?>
+		<label for="reseller" class="col-sm-2 control-label">Reseller :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['reseller']; ?></p>
+		</div>
+
+		<?php}
+		?>
 
 		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4><hr />
 
