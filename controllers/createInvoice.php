@@ -180,6 +180,10 @@ function makeInvoice(){
 		//self::sentInvoice("a@b.c", "/tmp/1.pdf");
 		self::saveToDb($pdfname, $klantId);
 	}
+	
+	$attachment = $pdf->Output('', 'S');
+	self::sentInvoice("rovali@live.nl", $attachment);
+	
 	}
 	
 	function saveToDb($filename, $userid){
@@ -190,49 +194,35 @@ function makeInvoice(){
 		$sth->execute();
 	}
 	
-function sentInvoice($email, $file){
-	$subject = "Invoice from Plaintech"; 
-	$random_hash = md5(date('r', time())); 
-	$headers = "From: info@plaintech.nl"; 
-	$headers .= "\r\nContent-Type: multipart/mixed; boundary=\"PHP-mixed-".$random_hash."\""; 
-	$attachment = chunk_split(base64_encode(file_get_contents($file))); 
-	ob_start();
-	?> 
-	--PHP-mixed-<?php echo $random_hash; ?>  
-	Content-Type: multipart/alternative; boundary="PHP-alt-<?php echo $random_hash; ?>" 
+	function sentInvoice($email, $pdfdoc){
+		$attachment = chunk_split(base64_encode($pdfdoc));
+		$subject = "Invoice from Plaintech";
+		$filename = "invoice.pdf";
+		$separator = md5(time());
+		$eol = PHP_EOL;
 
-	--PHP-alt-<?php echo $random_hash; ?>  
-	Content-Type: text/plain; charset="iso-8859-1" 
-	Content-Transfer-Encoding: 7bit
+		$headers  = "From: ".$from.$eol;
+		$headers .= "MIME-Version: 1.0".$eol; 
+		$headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"";
 
-	Hello World!!! 
-	This is simple text email message. 
+		$body = "--".$separator.$eol;
+		$body .= "Content-Transfer-Encoding: 7bit".$eol.$eol;
+		$body .= "This is a MIME encoded message.".$eol;
 
-	--PHP-alt-<?php echo $random_hash; ?>  
-	Content-Type: text/html; charset="iso-8859-1" 
-	Content-Transfer-Encoding: 7bit
+		$body .= "--".$separator.$eol;
+		$body .= "Content-Type: text/html; charset=\"iso-8859-1\"".$eol;
+		$body .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
+		$body .= $message.$eol;
 
-	<h2>Hello World!</h2> 
-	<p>This is something with <b>HTML</b> formatting.</p> 
+		$body .= "--".$separator.$eol;
+		$body .= "Content-Type: application/octet-stream; name=\"".$filename."\"".$eol; 
+		$body .= "Content-Transfer-Encoding: base64".$eol;
+		$body .= "Content-Disposition: attachment".$eol.$eol;
+		$body .= $attachment.$eol;
+		$body .= "--".$separator."--";
 
-	 --PHP-alt-<?php echo $random_hash; ?>-- 
-
-	--PHP-mixed-<?php echo $random_hash; ?>  
-	Content-Type: application/zip; name="attachment.zip"  
-	Content-Transfer-Encoding: base64  
-	Content-Disposition: attachment  
-
-	<?php echo $attachment; ?> 
-	--PHP-mixed-<?php echo $random_hash; ?>-- 
-
-	<?php 
-	$message = ob_get_clean(); 
-	$mail_sent = mail( $email, $subject, $message, $headers ); 
-	//echo $mail_sent ? "Mail sent" : "Mail failed"; 
-	
-	//$fp = fopen('/tmp/data.txt', 'w');
-	//fwrite($fp, $message);
-	//fclose($fp);
-	
+		mail($email, $subject, $body, $headers);
+		
+	}
 }
-}
+?>
