@@ -178,7 +178,7 @@ function makeInvoice(){
 		$pdfname = uniqid('invoice_').".pdf";
 		$pdf->Output('/var/invoices/'.$pdfname, 'F');
 		//self::sentInvoice("a@b.c", "/tmp/1.pdf");
-		self::saveToDb($pdfname, $klantId);
+		self::saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
 	}
 	
 	$attachment = $pdf->Output('', 'S');
@@ -186,11 +186,11 @@ function makeInvoice(){
 	
 	}
 	
-	function saveToDb($filename, $userid){
+	function saveToDb($filename, $userid, $fsname, $lsname){
 		$invoice = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 		$time = date("Y-m-d H:i:s");
-		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`id`, `file`, `date`) VALUES (?,?,?);");
-		$sth->bind_param('iss', $userid, $filename, $time);
+		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`id`, `file`, `date`, `firstname`, `lastname`) VALUES (?,?,?,?,?);");
+		$sth->bind_param('issss', $userid, $filename, $time, $fsname, $lsname);
 		$sth->execute();
 	}
 	
