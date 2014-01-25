@@ -49,7 +49,7 @@ class accountModel extends baseModel
 		$data = json_decode($sth,true);
 		
 			if (is_array($data) && array_key_exists("loginresponse", $data)) {
-				$loginArray = $data['loginresponse'];
+				$loginArray = TRUE;
 
 				$PArray = array('CSID' => $loginArray['userid'], 
 								'username' => $loginArray['username'],
