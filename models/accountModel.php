@@ -50,7 +50,6 @@ class accountModel extends baseModel
 		
 			if (is_array($data) && array_key_exists("loginresponse", $data)) {
 				$loginArray = $data['loginresponse'];
-				$reseller = "TRUE";
 				$PArray = array('CSID' => $loginArray['userid'], 
 								'username' => $loginArray['username'],
 								'firstname' => $loginArray['firstname'],
@@ -64,7 +63,7 @@ class accountModel extends baseModel
 								);
 
 				$CSID = $loginArray['userid'];
-				$res = $this->db->INU($reseller,$CSID,$PArray);
+				$res = $this->db->INU($CSID,$PArray);
 
 				if($res == true){
 					Session::init();

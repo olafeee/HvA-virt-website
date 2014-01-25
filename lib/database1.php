@@ -81,7 +81,7 @@ class Database1 extends PDO
         return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = '$role_id' AND `privileges`.`CSID` = '$CSID'");
     }
 
-    public function INU($reseller, $CSID, $PArray){
+    public function INU($CSID, $PArray){
         $data = $PArray;
         $this->beginTransaction();
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
