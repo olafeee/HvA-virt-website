@@ -21,7 +21,7 @@ class Management extends baseController {
 
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
-		$this->baseView->accountInfo = $this->model->getCmsIndex("CSUsers", "*");
+		$this->baseView->accountInfo = $this->model->getWhere("*", "CSUsers", "CSID" , $_SESSION['logArr']);
 		$vmResponse = $this->model->getVM();
 		$this->baseView->vmResponse = $vmResponse;
 	}
