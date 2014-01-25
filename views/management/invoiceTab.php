@@ -39,7 +39,7 @@
 			if($CFO === true){
 				$querz = "SELECT * FROM invoice_files ORDER BY date ASC";
 			} else {
-				$querz = "SELECT * FROM invoice_files WHERE id='$klantId'";
+				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' ORDER BY date ASC";
 			}
 			$sti = mysqli_query($list, $querz);
 			$count = mysqli_num_rows($sti);
@@ -74,7 +74,7 @@
 		</tbody>
         </table>
 		<?php 
-			echo $previous . $pagination . $next;
+			echo $pagination;
 		?>
 		<br />
 		<?php /*
