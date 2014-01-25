@@ -99,14 +99,6 @@ class Database1 extends PDO
             $sth1->bindValue(":$key", $value);
         }
 
-        /*
-        $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` 
-                                            (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
-                                    VALUES (:CSID, :username, :firstname, :lastname, :adstr, :adzip, :adcit, :country, :phone, :reseller)");
-        
-        foreach ($data as $key => $value) {
-            print_r($sth1->bindValue(":$key", $value));
-        }*/
         $sth1->execute();        
         $sth->execute();
         $this->commit();
