@@ -17,10 +17,6 @@ $vmResponse = $this->vmResponse;
   }
 
 ?>
-
-<div class="tab-pane" id="tab3">
-  <div class="col-md-9" role="main">
-    <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">System Overview</h3>
       </div>
@@ -57,7 +53,7 @@ $vmResponse = $this->vmResponse;
               }
           ?>
               
-              <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="document.location= '/management/vminfo/<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>';">
+              <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="url= '/management/vminfo/<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>';">
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
                 <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
                 <td class="CPUSPEED"><?php echo $vmResponse['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>

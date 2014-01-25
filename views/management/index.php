@@ -2,35 +2,6 @@
 
 ?>
 
-<script type="text/javascript">
-  var url;
-  var refresh;
-
-  $( document ).ready(function() {
-    url = '/management/vmlist';
-    refresh=true;
-  });
-
-  $('#nav-vmlist').click(function (){
-    url='/management/vmlist';
-    refresh=true;
-  });
-
-  $('#nav-accountTab').click(function (){
-    refresh=false;
-    url='/management/accountTab';
-  });
-
-  $(document).ready(function() {
-    $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
-    $('#vmContentWindow').load(url);
-    if(refresh===true) {
-      setInterval(function() {
-        $('#vmContentWindow').load(url);
-      }, 2000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
-    }
-  });
-</script>
 
 <!-- Navigation bar to the left -->
 <div class="row">
@@ -48,17 +19,49 @@
     </div>
   </div> <!-- END Col 3 -->
 
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <!-- Content Window -->
-      <div id="vmContentWindow">Loading...</div>
+<!-- Content Window -->
+<div class="col-md-9" role="main">
+    <div class="panel panel-default" id="vmContentWindow">
+      Loading...
     </div>
   </div>
 </div>
 
 
 
+<script type="text/javascript">
+  var url;
+  var refresh;
 
+  $( document ).ready(function() {
+    url = '/management/vmlist';
+    refresh='true';
+  });
+
+  $('#nav-vmlist').click(function (){
+    url='/management/vmlist';
+    refresh='true';
+    $('#vmContentWindow').load(url);
+  });
+
+  $('#nav-accountTab').click(function (){
+    refresh='false';
+    url='/management/accountTab';
+    $('#vmContentWindow').load(url);
+  });
+
+  $(document).ready(function() {
+    $.ajaxSetup({ 
+      cache: false 
+    }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
+    $('#vmContentWindow').load(url); // Faster initial load
+    if(refresh=='true') {
+        setInterval(function() {
+          $('#vmContentWindow').load(url);
+        }, 2000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
+    } 
+  });
+</script>
 
 
 

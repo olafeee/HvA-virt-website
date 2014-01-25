@@ -67,101 +67,96 @@ else
     $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Force Restart</button> ';
 }
 
-include('template.php');
+//include('template.php');
 ?>
 
-<div class="col-md-9" role="main">
-  <div class="panel panel-default">
-    <div class="panel-heading">
 
-      <div class="center-block"><h3 class="panel-title">Virtual Machine Panel</h3></div>
-      <ul class="right">
-        <li><?php echo $state; ?></li>
-      </ul>
-    </div>
-    <div class="panel-body">
 
-    <div class="row">
-      <div class="col-md-12" role="main">
-        <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6" role="main">
+<div class="panel-heading">
+  <h3 class="panel-title"><?php echo $vmResponse[0]['name']; ?></h3>
+</div>
+<div class="panel-body">
 
-        <table>
-          <tr>
-            <th class="right">Name: </th>
-            <td><?php echo $vmResponse[0]['name']; ?></td>
-          </tr>
-          <tr>
-            <th class="right">Status: </th>
-            <td><?php echo $state; ?></td>
-          </tr>
-          <tr>
-            <th class="right">Created: </th>
-            <td><?php echo $vmResponse[0]['created']; ?></td>
-          </tr>
-          <tr>
-            <th class="right">Template:</th>
-            <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
-          </tr>
-          <tr>
-            <th class="right">Iso: </th>
-            <td><?php echo getInfo('isodisplaytext') ?></td>
-          </tr>
-          <tr>
-            <th class="right">Address: </th>
-            <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
-          </tr>
-        </table>
-      </div>
+<div class="row">
+  <div class="col-md-12" role="main">
+    <h4><span class="glyphicon glyphicon-list-alt"></span>   System Information</h4><hr />
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6" role="main">
 
-      <div class="col-md-6" role="main">
-        <table>
-          <tr>
-            <th class="right">Offering: </th>
-            <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
-          </tr>
-          <tr>
-            <th class="right">CPUs: </th>
-            <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
-          </tr>
-          <tr>
-            <th class="right">CPU Speed: </th>
-            <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
-          </tr>
-          <tr>
-            <th class="right">Memory: </th>
-            <td><?php echo $vmResponse[0]['memory']; ?></td>
-          </tr>
-        </table>
-      </div>
-    </div>
+    <table>
+      <tr>
+        <th class="right">Name: </th>
+        <td><?php echo $vmResponse[0]['name']; ?></td>
+      </tr>
+      <tr>
+        <th class="right">Status: </th>
+        <td><?php echo $state; ?></td>
+      </tr>
+      <tr>
+        <th class="right">Created: </th>
+        <td><?php echo $vmResponse[0]['created']; ?></td>
+      </tr>
+      <tr>
+        <th class="right">Template:</th>
+        <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
+      </tr>
+      <tr>
+        <th class="right">Iso: </th>
+        <td><?php echo getInfo('isodisplaytext') ?></td>
+      </tr>
+      <tr>
+        <th class="right">Address: </th>
+        <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="col-md-6" role="main">
+    <table>
+      <tr>
+        <th class="right">Offering: </th>
+        <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
+      </tr>
+      <tr>
+        <th class="right">CPUs: </th>
+        <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
+      </tr>
+      <tr>
+        <th class="right">CPU Speed: </th>
+        <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
+      </tr>
+      <tr>
+        <th class="right">Memory: </th>
+        <td><?php echo $vmResponse[0]['memory']; ?></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<br />
+
+<div class="row">
+  <div class="col-md-12" role="main">
+  
+    <!-- VM Controls -->
+    <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
+
+  	<?php echo $onOff; ?>
+
+  	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;">View Console</button>
+  	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_backup" style="margin-bottom:5px; width:125px;">Backup System</button>
+  	<button type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
+  	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
 
     <br />
+  </div>
 
-    <div class="row">
-      <div class="col-md-12" role="main">
-      
-        <!-- VM Controls -->
-        <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
+  </div>
 
-      	<?php echo $onOff; ?>
-
-      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;">View Console</button>
-      	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_backup" style="margin-bottom:5px; width:125px;">Backup System</button>
-      	<button type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
-      	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
-
-        <br />
-      </div>
-
-      </div>
-
-    </div>
-  </div><!-- END Col 9 -->
 </div>
+
 
 <!-- Start VM form -->
 <form id="form_start" action="/management/vmcontrol" role="form" method="post">
@@ -205,9 +200,6 @@ include('template.php');
   $( ".right" ).css( "text-align", "right" );
   $( ".right" ).css( "margin-right", "35px" );
   $( ".right" ).css( "margin-bottum", "25px" );
-
-  // Zorg er voor dat de pagina om de paar seconde een refresh doet
-  setTimeout(function () { location.reload(1); }, 3000);
 
   // Submit de form die toebehoort tot de button die is ingedrukt
   $('.sendCmdButton').click(function() { 

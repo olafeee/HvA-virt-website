@@ -38,7 +38,7 @@ class Management extends baseController {
 			$vmResponse = $this->model->getVMbyID($vmid);
 			$this->baseView->vmResponse = $vmResponse;
 
-			$this->index('vminfo');
+			$this->index('vminfo', TRUE);
 		} else {
 			header('location: /management');
 		}
