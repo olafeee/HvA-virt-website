@@ -65,8 +65,9 @@ class accountModel extends baseModel
 
 	public function createAccount($data) {
 		// SQL Injection prefection TODO HERE ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!
-
+		print_r($data);
 		// Send to cloudstack DB
+		/*
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
 		$response = json_decode($response,true);
 
@@ -75,7 +76,7 @@ class accountModel extends baseModel
 		} else {
 			print_r($response);
 			return FALSE;
-		}
+		}*/
 		
 	}
 
