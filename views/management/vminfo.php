@@ -27,22 +27,38 @@ function getInfo($arrayKey) {
   }
 }
 
+$onOff = '';
 // Check the state of the vm and make a lable for that state
-if(strcmp($vmResponse[0]['state'],'Running') == 0) {
-  $state = '<span class="label label-success">Running</span>';
-  $onOff = '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
-} else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) {
-  $state = '<span class="label label-danger">Stopping</span>';
-  $onOff = '<button type="button" class="btn btn-default disabled"  style="margin-bottom:5px; width:125px;">Stopping</button>';
-} else if(strcmp($vmResponse[0]['state'],'Stopped') == 0) {
-  $state = '<span class="label label-danger">Stopped</span>';
-  $onOff = '<button type="button" class="btn btn-primary sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Start System</button>';
-} else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) {
-  $state = '<span class="label label-default">Deleted</span>';
-  $onOff = '';
-} else {
-  $state = '<span class="label label-default">Unknown</span>';
-  $onOff = '<button type="button" class="btn btn-default sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Force On</button>';
+if(strcmp($vmResponse[0]['state'],'Running') == 0) 
+{
+    $state = '<span class="label label-success">Running</span>';
+    // Stop knop toevoegen
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
+} 
+else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) 
+{
+    $state = '<span class="label label-danger">Stopping</span>';
+    // Disabled knop toevoegen
+    $onOff .= '<button type="button" class="btn btn-default disabled"  style="margin-bottom:5px; width:125px;">Stopping</button>';
+} 
+else if(strcmp($vmResponse[0]['state'],'Stopped') == 0) 
+{
+    $state = '<span class="label label-danger">Stopped</span>';
+    // Start knop toevoegen
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Start System</button>';
+} 
+else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) 
+{
+    $state = '<span class="label label-default">Deleted</span>';
+    $onOff .= '';
+} 
+else 
+{
+    $state = '<span class="label label-default">Unknown</span>';
+    // Force On knop toevoegen
+    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Force On</button>';
+    // Force Off knop toevoegen
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
 }
 
 include('template.php');
