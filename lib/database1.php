@@ -82,7 +82,7 @@ class Database1 extends PDO
     }
 
     public function INU($reseller, $CSID, $PArray){
-        $data , $PArray 
+        $data = $PArray;
         $this->beginTransaction();
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
