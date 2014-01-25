@@ -50,7 +50,7 @@ class accountModel extends baseModel
 		
 			if (is_array($data) && array_key_exists("loginresponse", $data)) {
 				$loginArray = $data['loginresponse'];
-				$reseller = TRUE;
+				$reseller = "TRUE";
 				$PArray = array('CSID' => $loginArray['userid'], 
 								'username' => $loginArray['username'],
 								'firstname' => $loginArray['firstname'],
