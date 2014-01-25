@@ -149,9 +149,9 @@ else
 
   	<?php echo $onOff; ?>
 
-  	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;">View Console</button>
-  	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
-    <button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_backup" style="margin-bottom:5px; width:125px;">Backup System</button>
+    <a type="button"  class="btn btn-primary" href="/management/console/<?php echo $vmResponse[0]['id']; ?>" style="margin-bottom:5px; width:125px;" onclick="window.open(this.href, 'Console', 'width=735, height=540, left=24, top=24, scrollbars, resizable'); return false;">View Console</a>
+  	<button type="button" class="btn btn-primary sendCmdButton disabled" id="upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
+    <button type="button" class="btn btn-primary sendCmdButton disabled" id="backup" style="margin-bottom:5px; width:125px;">Backup System</button>
     <button type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
 
     <br />

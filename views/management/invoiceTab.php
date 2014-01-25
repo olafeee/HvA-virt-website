@@ -4,8 +4,6 @@
 ** Robert L
 *********************/
 
-include('template.php');
-
 ?>
 
 <div class="tab-pane" id="tab3">

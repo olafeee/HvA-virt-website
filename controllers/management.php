@@ -59,14 +59,13 @@ class Management extends baseController {
 		if(isset($_POST['command']) && isset($_POST['vmid'])) {
 				$vmResponse = $this->model->vmcommands($_POST['command'],$_POST['vmid']);
 		} else {
-			die(json_encode(array('message' => 'ERROR: No valid argumments!', code => 1337)));
+			die(json_encode(array('message' => 'ERROR: No valid argumments in POST!', code => 1337)));
 		}
 	}
 
 	function console($vmid) {
 		$this->baseView->vmid = $vmid;
 		$this->index('console', TRUE);
-
 	}
 
 	
