@@ -18,7 +18,7 @@
 
 		<label for="fname" class="col-sm-2 control-label">First Name :</label>
 		<div class="col-sm-10">
-			<p id="fname" name="fname"><?php echo $_SESSION['logArr']['firstname']; ?></p>
+			<p id="fname" name="fname"><?php echo $accountInfo['firstname']; ?></p>
 		</div>
 
 		<label for="lname" class="col-sm-2 control-label">Last Name :</label>

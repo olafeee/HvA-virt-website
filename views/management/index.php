@@ -1,5 +1,6 @@
 <?php 
-print_r($this->accountInfo);
+$accountInfo = $this->accountInfo[0];
+print_r($accountInfo);
 ?>
 
 
