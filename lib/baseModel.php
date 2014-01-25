@@ -32,6 +32,7 @@ class baseModel {
                 return $sqlArray;
 	}
 	function getWhere($part, $table, $iets, $fiets){
+		print_r($fiets);
 			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table WHERE 'userid' = $fiets");
                 return $sqlArray;
 	}
