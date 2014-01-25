@@ -42,9 +42,13 @@ $vmResponse = $this->vmResponse;
     <thead>
       <tr>
         <th>Name</th>
-        <th>Address</th>
         <th>CPU</th>
+        <th>CPU speed</th>
+        <th>Memory</th>
+        <th>Harddisk</th>
+        <th>Address</th>
         <th>Status</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
