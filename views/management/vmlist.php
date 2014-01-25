@@ -17,63 +17,70 @@ $vmResponse = $this->vmResponse;
   }
 
 ?>
-      <div class="panel-heading">
-        <h3 class="panel-title">System Overview</h3>
-      </div>
-      <div class="panel-body">
+
+<div class="panel-heading">
+  <h3 class="panel-title">System Overview</h3>
+</div>
+<div class="panel-body">
         
-        <?php
-          // Check if user has any Vms
+<?php
+  // Check if user has any Vms
+  if (empty($vmResponse)) {
+    echo ('
+      <div class="jumbotron">
+        <h1>No VMs, YET!</h1>
+        <p>Get your own personal virtual private server today!</p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="/order">Get one now!</a></p>
+      </div>
+    '); // End echo
+  } else {
+  // START vm list here
+?>
 
-        ?>
+    <!-- Start VM listing here -->
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>CPU</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        $i = 0;
+        //print_r($vmResponse);
+        $maxArray = count($vmResponse['virtualmachine']);
+        while ($i < $maxArray) { 
+          if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
+            $stateColor = 'alert-success';
+          } else if($vmResponse['virtualmachine'][$i]['state'] == 'Stopped' ) {
+            $stateColor = 'alert-danger';
+          } else {
+            $stateColor = '';
+          }
+      ?>
 
-
-        <!-- Start VM listing here -->
-        <table class="table">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Address</th>
-            <th>CPU</th>
-            <th>Status</th>
+          <tr id="<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>" class="nav-vminfo <?php echo $stateColor ?>" style="cursor: pointer;">
+            <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
+            <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
+            <td class="CPUSPEED"><?php echo $vmResponse['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
+            <td class="memory"><?php echo $vmResponse['virtualmachine'][$i]["memory"];?> MB</td>
+            <td class="HHD">20GB</td>
+            <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
+            <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
+            <td><button type="button" class="btn btn-default nav-vminfo" id="<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>" style="margin-bottom:5px; width:125px;">More Info</button></td>
           </tr>
-        </thead>
-        <tbody>
-          <?php
-            $i = 0;
-            //print_r($vmResponse);
-            $maxArray = count($vmResponse['virtualmachine']);
-            while ($i < $maxArray) { 
-              if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
-                $stateColor = 'alert-success';
-              } else if($vmResponse['virtualmachine'][$i]['state'] == 'Stopped' ) {
-                $stateColor = 'alert-danger';
-              } else {
-                $stateColor = '';
-              }
-          ?>
-
-              <tr id="<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>" class="nav-vminfo <?php echo $stateColor ?>" style="cursor: pointer;">
-                <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
-                <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
-                <td class="CPUSPEED"><?php echo $vmResponse['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
-                <td class="memory"><?php echo $vmResponse['virtualmachine'][$i]["memory"];?> MB</td>
-                <td class="HHD">20GB</td>
-                <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
-                <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
-                <td><button type="button" class="btn btn-default nav-vminfo" id="<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>" style="margin-bottom:5px; width:125px;">More Info</button></td>
-              </tr>
-          <?php
-              $i++;
-            } // End While loop
-          ?>
-        </tbody>
-        </table>
-        
-        <br />
-      </div>
-    </div>
-  </div><!-- END Col 9 -->
+      <?php
+          $i++;
+        } // End While loop
+      ?>
+    </tbody>
+    </table>
+    
+    <br />
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -85,3 +92,7 @@ $('.nav-vminfo').click(function (){
   $('#vmContentWindow').load(url, args);
 });
 </script>
+
+<?php
+} // END else statement for VM check
+?>
