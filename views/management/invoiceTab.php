@@ -53,7 +53,7 @@
 			$next = "";
 			$previous = "";
 			if ($lastPage != "1"){ $pagination .= " Page ".$page." of ".$lastPage." "; if($page != "1"){$previous = $page - 1; $pagination .= "<a target=\"_self\" href=\"?page=".$previous."\">previous</a>";}
-			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a target=\"_self\" id=\"nav-invoiceTab?page=".$next."\">next</a>";}}
+			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a id=\"nav-invoiceTab?page=".$next."\">next</a>";}}
 			while($rij = mysqli_fetch_assoc($stj)){
 				if(file_exists("/var/invoices/".$rij['file'])){
 					echo "<tr>";

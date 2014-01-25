@@ -59,10 +59,9 @@ $('#nav-accountTab').click(function (){
 });
 
 $('#nav-invoiceTab').click(function (){
+  var queryString = $(this).next().val();
   url='/management/invoiceTab';
-  var page = $(this).attr('page');
-  args={page: page};
-  $('#vmContentWindow').load(url, args);
+  $('#vmContentWindow').load(url, queryString);
 });
 
 $(document).ready(function() {
