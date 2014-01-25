@@ -22,12 +22,13 @@
         <thead>
           <tr>
             <th>Name</th>
-            <th>Date</th>
+			<?php @session_start(); if($_SESSION['logArr']['type'] == "1" && $_SESSION['logArr']['lastname'] == "Cartland"){ $CFO = true;
+            echo "<th>Customer</th>"; } ?>
+			<th>Date</th>
           </tr>
         </thead>
         <tbody>
 		<?php 
-			@session_start();
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
@@ -35,16 +36,26 @@
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			$klantId = $row['id'];
-			if($_SESSION['logArr']['type'] == "1" && $_SESSION['logArr']['lastname'] == "Cartland"){
-				$querz = "SELECT * FROM invoice_files LIMIT 0,30";
+			if($CFO){
+				$querz = "SELECT * FROM invoice_files ORDER BY date ASC";
 			} else {
-				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
+				$querz = "SELECT * FROM invoice_files WHERE id='$klantId'";
 			}
 			$sti = mysqli_query($list, $querz);
-			while($rij = mysqli_fetch_assoc($sti)){
+			$count = mysqli_num_rows($sti);
+			if (isset($_GET['page'])) { $page = preg_replace('#[^0-9]#i', '', $_GET['page']);}else{	$page = 1;} 
+			$itemsPerPage = 1;
+			$lastPage = ceil($count / $itemsPerPage);
+			if ($page < 1){ $page = 1; }else if($page > $lastPage) {$page = $lastPage;}
+			$limit = 'LIMIT ' .($page - 1) * $itemsPerPage .',' .$itemsPerPage; 
+			$stj = mysqli_query($list, $querz.$limit);
+			if ($lastPage != "1"){ $pagination .= "Page ".$page." of ".$lastPage; if($page != "1"){$previous = $page - 1; $pagination .= "<a href=\"?page=".$previous."\">previous</a>"}
+			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a href=\"?page=".$next."\">next</a>";}}
+			while($rij = mysqli_fetch_assoc($stj)){
 				if(file_exists("/var/invoices/".$rij['file'])){
 					echo "<tr>";
 					echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
+					if($CFO){ echo "<td>".$rij['firstname'].$rij['lastname']."</td>";}
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
 					if (!isset($_SESSION['allowFile'])){
@@ -59,6 +70,9 @@
 		?>
 		</tbody>
         </table>
+		<?php 
+			echo $previous . $pagination . $next;
+		?>
 		<br />
 		<?php /*
 			echo "<pre>";
