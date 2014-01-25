@@ -20,6 +20,7 @@ class Management extends baseController {
 		$this->cloudstack = new cloudstack();
 
 		$this->model = $this->laadModel();
+		$this->db = $this->model->conDB1();
 		$vmResponse = $this->model->getVM();
 		$this->baseView->vmResponse = $vmResponse;
 	}
