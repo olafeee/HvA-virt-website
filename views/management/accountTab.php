@@ -42,7 +42,7 @@ print_r($accountInfo);
 			<p id="email"><?php echo $accountInfo['reseller']; ?></p>
 		</div>
 
-		<?php}
+		<?php }
 		?>
 
 		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4><hr />
