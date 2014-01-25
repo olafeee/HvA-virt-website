@@ -77,11 +77,11 @@ $vmResponse = $this->vmResponse;
 </div>
 
 <script type="text/javascript">
+// Link naar de vmInfo pagina
 $('.nav-vminfo').click(function (){
   var id = $(this).attr('id');
   args={vmid: id};
   url='/management/vminfo';
   $('#vmContentWindow').load(url, args);
 });
-
 </script>

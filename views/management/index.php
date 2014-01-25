@@ -65,7 +65,7 @@ $(document).ready(function() {
   if(refresh=='true') {
       setInterval(function() {
         $('#vmContentWindow').load(url, args);
-      }, 3000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
+      }, 6000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
   } 
 });
 

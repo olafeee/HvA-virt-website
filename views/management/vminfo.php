@@ -33,9 +33,9 @@ if(strcmp($vmResponse[0]['state'],'Running') == 0)
 {
     $state = '<span class="label label-success">Running</span>';
     // Stop knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button> ';
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="stop" style="margin-bottom:5px; width:125px;">Stop System</button> ';
     // Restart knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Restart System</button> ';
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="restart" style="margin-bottom:5px; width:125px;">Restart System</button> ';
 } 
 else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) 
 {
@@ -49,8 +49,12 @@ else if(strcmp($vmResponse[0]['state'],'Stopped') == 0)
 {
     $state = '<span class="label label-danger">Stopped</span>';
     // Start knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Start System</button> ';
+    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="start" style="margin-bottom:5px; width:125px;">Start System</button> ';
 } 
+else if(strcmp($vmResponse[0]['state'], 'Starting') == 0)
+{
+    $state = '<span class="label label-warning">Starting</span>';
+}
 else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) 
 {
     $state = '<span class="label label-default">Deleted</span>';
@@ -60,11 +64,11 @@ else
 {
     $state = '<span class="label label-default">Unknown</span>';
     // Force On knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Force On</button> ';
+    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="start" style="margin-bottom:5px; width:125px;">Force On</button> ';
     // Force Off knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Force Off</button> ';
+    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="stop" style="margin-bottom:5px; width:125px;">Force Off</button> ';
     // Force Restart knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Force Restart</button> ';
+    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="restart" style="margin-bottom:5px; width:125px;">Force Restart</button> ';
 }
 
 //include('template.php');
@@ -146,78 +150,14 @@ else
   	<?php echo $onOff; ?>
 
   	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;">View Console</button>
-  	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_backup" style="margin-bottom:5px; width:125px;">Backup System</button>
-  	<button type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
+    <button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_backup" style="margin-bottom:5px; width:125px;">Backup System</button>
+    <button type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
 
     <br />
-
-    <br>TEST:<br>
-
-    <button type="button" class="btn btn-danger nav-vminfo" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
-    
-    <br><br><br>
-
-<a href="#" class="topopup">Click Here Trigger</a>
-
-    <div id="toPopup">
-
-        <div class="close"></div>
-        <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
-    <div id="popup_content"> <!--your content start-->
-            <p>netus et malesuada fames ac turpis egestas. </p>
-            <p align="center"><a href="#" class="livebox">Click Here Trigger</a></p>
-        </div> <!--your content end-->
-
-    </div> <!--toPopup end-->
-
-  <div class="loader"></div>
-    <div id="backgroundPopup"></div>
-
-
-
   </div>
-
-  </div>
-
 </div>
 
-
-<!-- Start VM form -->
-<form id="form_start" action="/management/vmcontrol" role="form" method="post">
-  <input type="hidden" name="command" value="start" />
-  <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
-</form>
-
-<!-- Stop VM form -->
-<form id="form_stop" action="/management/vmcontrol" role="form" method="post">
-  <input type="hidden" name="command" value="stop" />
-  <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
-</form>
-
-<!-- Restart VM form -->
-<form id="form_restart" action="/management/vmcontrol" role="form" method="post">
-  <input type="hidden" name="command" value="restart" />
-  <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
-</form>
-
-<!--  -->
-<form id="form_" action="/management/vmcontrol" role="form" method="post">
-  <input type="hidden" name="command" value="" />
-  <input type="hidden" name="vmid" value="" />
-</form>
-
-<!--  -->
-<form id="form_" action="/management/vmcontrol" role="form" method="post">
-  <input type="hidden" name="command" value="" />
-  <input type="hidden" name="vmid" value="" />
-</form>
-
-<!--  -->
-<form id="form_" action="/management/vmcontrol" role="form" method="post">
-  <input type="hidden" name="command" value="" />
-  <input type="hidden" name="vmid" value="" />
-</form>
 
 <script type="text/javascript">
 
@@ -226,11 +166,19 @@ else
   $( ".right" ).css( "margin-right", "35px" );
   $( ".right" ).css( "margin-bottum", "25px" );
 
-  // Submit de form die toebehoort tot de button die is ingedrukt
+  // AJAX commands versturen. 
   $('.sendCmdButton').click(function() { 
     var id = $(this).attr('id');
-    id = id.replace('btn_', '#form_');
-    $(id).submit(); 
+    var args = {
+      command: id,
+      vmid:'<?php echo $this->vmid ?>'
+    };
+
+    $.ajax({
+      type: "POST",
+      url: '/management/vmcontrol',
+      data: args,
+    });
   });
 
 </script>

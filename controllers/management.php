@@ -43,13 +43,6 @@ class Management extends baseController {
 			header('location: /management');
 		}
 		
-		
-	}
-
-	function console($vmid) {
-		$this->baseView->vmid = $vmid;
-		$this->index('console');
-
 	}
 
 	function accountTab() {
@@ -58,56 +51,22 @@ class Management extends baseController {
 	}
 
 	function invoiceTab() {
-		$this->index('invoiceTab');
+		$this->index('invoiceTab', TRUE);
 	}
 
-	// AJAX responce for the status on A vm
-	function vmstatus() {
-
-		$this->index('vmstatus');
-	}
 
 	function vmcontrol() {
 		if(isset($_POST['command']) && isset($_POST['vmid'])) {
-
-			echo "<pre>";
-			print_r($_POST);
-			echo ($_POST['command']);
-			
-			// Kijk wat het commando is, en voer deze uit.
-			$command = $_POST['command'];
-			if (strcmp($command,'start') == 0 ) 
-			{
-				$this->cloudstack->startVirtualMachine($_POST['vmid']);
-				header('location: /management/vminfo/' . $_POST['vmid']);
-			} 
-			else if (strcmp($command,'stop') == 0 ) 
-			{
-				$this->cloudstack->stopVirtualMachine($_POST['vmid'], $_POST['forced']);
-				header('location: /management/vminfo/' . $_POST['vmid']);
-			} 
-			else if (strcmp($command,'restart') == 0) 
-			{
-				$response = $this->cloudstack->rebootVirtualMachine($_POST['vmid']);
-				header('location: /management/vminfo/' . $_POST['vmid']);
-			} 
-			else if (strcmp($command,'destroy') == 0 ) 
-			{
-				$this->cloudstack->destroyVirtualMachine($_POST['vmid']);
-			} 
-			else if (strcmp($command,'recover') == 0 ) 
-			{
-				$this->cloudstack->recoverVirtualMachine($_POST['vmid']);
-			} 
-			else 
-			{
-				// Als geen van de bovenste commands kloppen
-				throw new Exception('Unknown command!');
-			}
-				
+				$vmResponse = $this->model->vmcommands($_POST['command'],$_POST['vmid']);
 		} else {
-			header('location: /management/');
+			die(json_encode(array('message' => 'ERROR: No valid argumments!', code => 1337)));
 		}
+	}
+
+	function console($vmid) {
+		$this->baseView->vmid = $vmid;
+		$this->index('console', TRUE);
+
 	}
 
 	

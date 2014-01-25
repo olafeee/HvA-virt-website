@@ -48,5 +48,41 @@ class managementModel extends baseModel
           return $vmResponse;
      }
 
+     // Kijk wat het commando is, en voer deze uit.
+     public function vmcommands($command, $vmid, $args = null) {
+
+          if (strcmp($command,'start') == 0 ) 
+          {
+               $response = $this->cloudstack->startVirtualMachine($vmid);
+               return json_encode($response);
+          } 
+          else if (strcmp($command,'stop') == 0 ) 
+          {
+               $response = $this->cloudstack->stopVirtualMachine($vmid, $args);
+               return json_encode($response);
+          } 
+          else if (strcmp($command,'restart') == 0) 
+          {
+               $response = $this->cloudstack->rebootVirtualMachine($vmid);
+               return json_encode($response);
+          } 
+          else if (strcmp($command,'destroy') == 0 ) 
+          {
+               $response = $this->cloudstack->destroyVirtualMachine($vmid);
+               return json_encode($response);
+          } 
+          else if (strcmp($command,'recover') == 0 ) 
+          {
+               $response = $this->cloudstack->recoverVirtualMachine($vmid);
+               return json_encode($response);
+          } 
+          else 
+          {
+               // Als geen van de bovenste commands kloppen
+               throw new Exception('Unknown command!');
+          }
+
+     }
+
 }
 
