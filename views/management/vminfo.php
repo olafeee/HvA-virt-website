@@ -145,7 +145,7 @@ include('template.php');
 
       	<?php echo $onOff; ?>
 
-      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
+      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</button>
       	<a type="button" class="btn btn-primary sendCmdButton" id="btn_backup" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
       	<a type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
       	<a type="button" class="btn btn-primary sendCmdButton" id="btn_upgrade" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
