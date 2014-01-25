@@ -197,6 +197,7 @@ function makeInvoice(){
 	function sentInvoice($email, $pdfdoc){
 		$attachment = chunk_split(base64_encode($pdfdoc));
 		$subject = "Invoice from Plaintech";
+		$message = "<p>Please see attachment for your invoice</p>";
 		$filename = "invoice.pdf";
 		$separator = md5(time());
 		$eol = PHP_EOL;
