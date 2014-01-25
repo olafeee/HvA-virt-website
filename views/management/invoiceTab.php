@@ -37,9 +37,9 @@
 			$row = mysqli_fetch_assoc($sth);
 			$klantId = $row['id'];
 			if($CFO === true){
-				$querz = "SELECT * FROM invoice_files ORDER BY date ASC";
+				$querz = "SELECT * FROM invoice_files ORDER BY date ASC ";
 			} else {
-				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' ORDER BY date ASC";
+				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' ORDER BY date ASC ";
 			}
 			$sti = mysqli_query($list, $querz);
 			$count = mysqli_num_rows($sti);
