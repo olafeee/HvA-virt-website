@@ -41,7 +41,7 @@ else if(strcmp($vmResponse[0]['state'],'Stopping') == 0)
 {
     $state = '<span class="label label-danger">Stopping</span>';
     // Disabled knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-default disabled"  style="margin-bottom:5px; width:125px;">Stopping System</button> ';
+    $onOff .= '<button type="button" class="btn btn-default disabled" style="margin-bottom:5px; width:125px;">Start System</button> ';
     // Restart knop toevoegen
     //$onOff .= '<button type="button" class="btn btn-default disabled" style="margin-bottom:5px; width:125px;">Restart System</button>';
 } 
@@ -73,7 +73,11 @@ include('template.php');
 <div class="col-md-9" role="main">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Virtual Machine Panel</h3>
+
+      <div class="center-block"><h3 class="panel-title">Virtual Machine Panel</h3></div>
+      <ul class="navbar-right">
+        <li><?php echo $state; ?></li>
+      </ul>
     </div>
     <div class="panel-body">
 
@@ -145,10 +149,10 @@ include('template.php');
 
       	<?php echo $onOff; ?>
 
-      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</button>
-      	<a type="button" class="btn btn-primary sendCmdButton" id="btn_backup" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
-      	<a type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
-      	<a type="button" class="btn btn-primary sendCmdButton" id="btn_upgrade" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
+      	<button type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;">View Console</button>
+      	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_backup" style="margin-bottom:5px; width:125px;">Backup System</button>
+      	<button type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
+      	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
 
         <br />
       </div>
