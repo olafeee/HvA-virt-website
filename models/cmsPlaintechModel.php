@@ -71,12 +71,12 @@ class cmsPlaintechModel extends baseModel
 	}
 
 	function getUserByName($search){
-	    $sqlArray = $this->db->select("SELECT * FROM CSUsers WHERE 
-				firstname LIKE ':firstname%' ", 
-        array('firstname' => $search));
+	    $sqlArray = $this->db->select('SELECT * FROM CSUsers WHERE 
+				firstname LIKE :firstname OR lastname LIKE :lastname', 
+        array('lastname' => '%'.$search.'%',
+        	'firstname' => '%'.$search.'%'));
         return $sqlArray;
-	}//OR lastname LIKE '%',
-        	//'firstname' => $search
+	}
 
 	function managePrivileges($CSID){
 				$sqlArray = $this->db->select('SELECT * 
