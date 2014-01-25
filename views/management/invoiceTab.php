@@ -35,8 +35,11 @@
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			$klantId = $row['id'];
-			if($_SESSION['logArr'] == 
-			$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
+			if($_SESSION['logArr']['type'] == "1" && $_SESSION['logArr']['lastname'] == "Cartland"){
+				$querz = "SELECT * FROM invoice_files LIMIT 0,30";
+			} else {
+				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' LIMIT 0,30";
+			}
 			$sti = mysqli_query($list, $querz);
 			while($rij = mysqli_fetch_assoc($sti)){
 				if(file_exists("/var/invoices/".$rij['file'])){
