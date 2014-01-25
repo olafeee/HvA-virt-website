@@ -23,7 +23,7 @@
           <tr>
             <th>Name</th>
 			<?php @session_start(); if($_SESSION['logArr']['type'] == "1" && $_SESSION['logArr']['lastname'] == "Cartland"){ $CFO = true;
-            echo "<th>Customer</th>"; } ?>
+            echo "<th>Customer</th>"; }else{ $CFO = false;} ?>
 			<th>Date</th>
           </tr>
         </thead>
@@ -36,7 +36,7 @@
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			$klantId = $row['id'];
-			if($CFO){
+			if($CFO === true){
 				$querz = "SELECT * FROM invoice_files ORDER BY date ASC";
 			} else {
 				$querz = "SELECT * FROM invoice_files WHERE id='$klantId'";
@@ -49,7 +49,10 @@
 			if ($page < 1){ $page = 1; }else if($page > $lastPage) {$page = $lastPage;}
 			$limit = 'LIMIT ' .($page - 1) * $itemsPerPage .',' .$itemsPerPage; 
 			$stj = mysqli_query($list, $querz.$limit);
-			if ($lastPage != "1"){ $pagination .= "Page ".$page." of ".$lastPage; if($page != "1"){$previous = $page - 1; $pagination .= "<a href=\"?page=".$previous."\">previous</a>";}
+			$pagination = "";
+			$next = "";
+			$previous = "";
+			if ($lastPage != "1"){ $pagination .= " Page ".$page." of ".$lastPage; if($page != "1"){$previous = $page - 1; $pagination .= "<a href=\"?page=".$previous."\">previous</a>";}
 			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a href=\"?page=".$next."\">next</a>";}}
 			while($rij = mysqli_fetch_assoc($stj)){
 				if(file_exists("/var/invoices/".$rij['file'])){
