@@ -58,7 +58,7 @@
 				if(file_exists("/var/invoices/".$rij['file'])){
 					echo "<tr>";
 					echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
-					if($CFO){ echo "<td>".$rij['firstname'].$rij['lastname']."</td>";}
+					if($CFO){ echo "<td>".$rij['firstname']." ".$rij['lastname']."</td>";}
 					echo "<td>".$rij['date']."</td>";
 					echo "</tr>";
 					if (!isset($_SESSION['allowFile'])){
