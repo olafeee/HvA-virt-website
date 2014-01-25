@@ -84,6 +84,8 @@ class Database1 extends PDO
     public function INU($CSID, $PArray){
         $data = $PArray;
         ksort($data);
+        print_r($data);
+        echo"<br/><br/>";
         $this->beginTransaction();
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
@@ -96,9 +98,8 @@ class Database1 extends PDO
                                             (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
                                     VALUES (:CSID, :username, :firstname, :lastname, :adstr, :adzip, :adcit, :country, :phone, :reseller)");
         foreach ($data as $key => $value) {
-            var_dump($sth1->bindValue(":$key", $value));
+            print_r($sth1->bindValue(":$key", $value));
         }
-        var_dump($sth1);
         /*
         $sth->execute();
         $sth1->execute();  
