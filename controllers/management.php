@@ -21,6 +21,7 @@ class Management extends baseController {
 
 		$this->model = $this->laadModel();
 		$this->db = $this->model->conDB1();
+		$this->baseView->accountInfo = $this->model->getCmsIndex("CSUsers", "*");
 		$vmResponse = $this->model->getVM();
 		$this->baseView->vmResponse = $vmResponse;
 	}
@@ -48,7 +49,6 @@ class Management extends baseController {
 	}
 
 	function accountTab() {
-		$this->baseView->accountInfo = $this->model->getCmsIndex("CSUsers", "*");
 		$this->index('accountTab', TRUE);
 
 	}
