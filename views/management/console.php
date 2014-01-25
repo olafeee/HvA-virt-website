@@ -6,8 +6,7 @@
     $logonurl = 'http://145.92.14.90:8080/client/api'.$cmdline;
 
     // Generate the URL to the console of the selected VM
-    $console_uuid = 'e86a8cce-af66-42a9-9e94-695aa6ece678';
-    $console_vps_name = 'ConsoleTest';                             
+    $console_uuid = $this->vmid;                          
     $vmurl = "http://145.92.14.90:8080/client/console?cmd=access&vm=".$console_uuid."";
 ?>
 

@@ -7,19 +7,19 @@
 class managementModel extends baseModel
 {
 
-     public $cloud;
+     public $cloudstack;
 
 	function __construct()
 	{
 		parent::__construct();
-          $this->cloud = new cloudstack();
+          $this->cloudstack = new cloudstack();
 	}
 
 	public function getVM(){
           
           Session::init();
           // Haal de vms op voor de gebruiker die ingeloged is
-          $vmResponse = $this->cloud->listVirtualMachines('',$_SESSION['logArr']['account']);
+          $vmResponse = $this->cloudstack->listVirtualMachines('',$_SESSION['logArr']['account']);
           $vmResponse = json_decode($vmResponse, true);
 
           // Bouw nu een array for elke VM
@@ -39,7 +39,7 @@ class managementModel extends baseModel
 
      public function getVMbyID($vmid) {
           // Haal de VM op by ID
-          $vmResponse = $this->cloud->listVirtualMachines($vmid);
+          $vmResponse = $this->cloudstack->listVirtualMachines($vmid);
           $vmResponse = json_decode($vmResponse, true);
 
           // Bouw nu een array for de VM
