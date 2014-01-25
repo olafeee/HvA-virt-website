@@ -72,7 +72,7 @@ class cmsPlaintechModel extends baseModel
 
 	function getUserByName($search){
 	    $sqlArray = $this->db->select("SELECT * FROM CSUsers WHERE 
-				firstname LIKE ':lastname%' ", 
+				firstname LIKE ':firstname%' ", 
         array('firstname' => $search));
         return $sqlArray;
 	}//OR lastname LIKE '%',
