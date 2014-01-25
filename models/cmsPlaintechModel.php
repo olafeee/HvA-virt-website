@@ -107,7 +107,7 @@ class cmsPlaintechModel extends baseModel
     }
 
     public function modeljan(){
-    	$x = $this->db->jan());
+    	$x = $this->db->jan();
         return $x;
     }
 
