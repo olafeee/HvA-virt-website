@@ -35,7 +35,7 @@ class baseModel {
 		print_r($fiets);
 		print_r($table);
 		print_r($part);
-			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table WHERE 'CSID' = '0be19e80-4d63-4e8c-bc0e-27d84b31cdf7' ");
+			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table WHERE CSID = 0be19e80-4d63-4e8c-bc0e-27d84b31cdf7 ");
                 return $sqlArray;
 	}
 }
