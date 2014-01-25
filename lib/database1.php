@@ -81,37 +81,24 @@ class Database1 extends PDO
         return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = '$role_id' AND `privileges`.`CSID` = '$CSID'");
     }
 
-    public function INU($postArray, $loginArray){
-        if($postArray['reseller'] == true){
-            $reseller = TRUE;
-        }else{
-            $reseller = FALSE;
-        }
+    public function INU($reseller, $CSID, $data){
 
         $this->beginTransaction();
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
                                 VALUES (?,?)");
         $sth->bindParam(    '7',
-                            $loginArray['userid']
+                           $CSID
 
         );
         $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` 
                                             (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
-                                    VALUES (?,?,?,?,?,?,?,?,?,?)");
-        //$sth1->bindParam(  
-        //);
+                                    VALUES (:CSID, :username, :firstname, :lastname, :adstr, :adzip, :adcit, :country, :phone, :reseller)");
+        foreach ($data as $key => $value) {
+            $sth1->bindValue(":$key", $value);
+        }
         $sth->execute();
-        $sth1->execute(array($loginArray['userid'],
-                            $loginArray['username'],
-                            $loginArray['firstname'],
-                            $loginArray['lastname'],
-                            $postArray['adstr'],
-                            $postArray['adzip'],
-                            $postArray['adcit'],
-                            $postArray['country'],
-                            $postArray['phone'],
-                            $reseller));  
+        $sth1->execute();  
         $this->commit();
         return TRUE;
        
