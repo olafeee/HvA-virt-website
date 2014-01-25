@@ -44,7 +44,7 @@
 			$sti = mysqli_query($list, $querz);
 			$count = mysqli_num_rows($sti);
 			if (isset($_GET['page'])) { $page = preg_replace('#[^0-9]#i', '', $_GET['page']);}else{	$page = 1;} 
-			$itemsPerPage = 1;
+			$itemsPerPage = 30;
 			$lastPage = ceil($count / $itemsPerPage);
 			if ($page < 1){ $page = 1; }else if($page > $lastPage) {$page = $lastPage;}
 			$limit = 'LIMIT ' .($page - 1) * $itemsPerPage .',' .$itemsPerPage; 
