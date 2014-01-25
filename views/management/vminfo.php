@@ -33,7 +33,7 @@ if(strcmp($vmResponse[0]['state'],'Running') == 0)
 {
     $state = '<span class="label label-success">Running</span>';
     // Stop knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="stop" style="margin-bottom:5px; width:125px;">Stop System</button> ';
+    $onOff .= '<button type="button" class="btn btn-danger sendCmdButton" id="stop" style="margin-bottom:5px; width:125px;">Stop System</button> ';
     // Restart knop toevoegen
     $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="restart" style="margin-bottom:5px; width:125px;">Restart System</button> ';
 } 
