@@ -16,4 +16,9 @@ class baseView {
 			require 'views/footer.php';	
 	}
 
+	public function renderBlank($name)
+	{
+		require 'views/' . $name . '.php';
+	}
+
 }

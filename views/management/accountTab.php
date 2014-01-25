@@ -4,7 +4,7 @@
 ** Account Tab on Management Page
 ** ******************************/
 
-include('template.php');
+//include('template.php');
 ?>
 
 <div class="tab-pane">

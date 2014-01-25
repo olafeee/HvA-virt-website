@@ -11,7 +11,7 @@ class baseController {
      * index
      * @param string $value welke pagina geladen moet worden 
      */
-	function index($value) {
+	function index($value, $blankPage = FALSE) {
 
 		$url = $this->urlfix();
 
@@ -40,7 +40,12 @@ class baseController {
 			$pagina ='index';
 		}
 
-		$this->baseView->render($map.'/'.$pagina);
+		if ($blankPage == TRUE) {
+			$this->baseView->renderBlank($map.'/'.$pagina);
+		} else {
+			$this->baseView->render($map.'/'.$pagina);
+		}
+		
 
 	}
 

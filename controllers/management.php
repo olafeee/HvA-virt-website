@@ -23,6 +23,13 @@ class Management extends baseController {
 		$this->baseView->vmResponse = $vmResponse;
 	}
 
+	// List of all the Virtual Machines
+	function vmlist() {
+		$vmResponse = $this->model->getVM();
+		$this->baseView->vmResponse = $vmResponse;
+		$this->index('vmlist', TRUE);
+	}
+
 	function vminfo($vmid) {
 		// Check of er een ID is mee gegeven
 		if(!empty($vmid)) {
@@ -46,12 +53,18 @@ class Management extends baseController {
 	}
 
 	function accountTab() {
-		$this->index('accountTab');
+		$this->index('accountTab', TRUE);
 
 	}
 
 	function invoiceTab() {
 		$this->index('invoiceTab');
+	}
+
+	// AJAX responce for the status on A vm
+	function vmstatus() {
+
+		$this->index('vmstatus');
 	}
 
 	function vmcontrol() {

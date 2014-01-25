@@ -1,77 +1,23 @@
-<?php 
+<?php
+
+$vmResponse = $this->vmResponse;
+
+// maak van subnet een prifix
+  function prefixSubnet($input){
+    $subBin = explode( '.', $input );
+    $subBinX = 0;
+    $subnet = 0;
+    while ($subBinX <= 3) {
+      $x = decbin($subBin[$subBinX]);
+      $var3 = strlen(str_replace('0', '', $x));
+      $subnet = $subnet + $var3;
+      $subBinX++;
+    }
+    return $subnet;
+  }
 
 ?>
 
-<script type="text/javascript">
-  var url;
-  var refresh;
-
-  $( document ).ready(function() {
-    url = '/management/vmlist';
-    refresh=true;
-  });
-
-  $('#nav-vmlist').click(function (){
-    url='/management/vmlist';
-    refresh=true;
-  });
-
-  $('#nav-accountTab').click(function (){
-    refresh=false;
-    url='/management/accountTab';
-  });
-
-  $(document).ready(function() {
-    $.ajaxSetup({ cache: false }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
-    $('#vmContentWindow').load(url);
-    if(refresh===true) {
-      setInterval(function() {
-        $('#vmContentWindow').load(url);
-      }, 2000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
-    }
-  });
-</script>
-
-<!-- Navigation bar to the left -->
-<div class="row">
-
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Management Panel</h3>
-      </div>
-      <div class="list-group">
-        <a id="nav-vmlist" class="list-group-item" style="cursor: pointer;">Systems Panel</a>
-        <a id="nav-accountTab" class="list-group-item" style="cursor: pointer;">Account Info</a>
-        <a href="/management/invoiceTab" class="list-group-item" style="cursor: pointer;">Invoice Overview</a>
-      </div>
-    </div>
-  </div> <!-- END Col 3 -->
-
-  <div class="col-md-3">
-    <div class="panel panel-default">
-      <!-- Content Window -->
-      <div id="vmContentWindow">Loading...</div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php /*
 <div class="tab-pane" id="tab3">
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
@@ -132,10 +78,3 @@
     </div>
   </div><!-- END Col 9 -->
 </div>
-
-<script type="text/javascript">
-  // Zorg er voor dat de pagina om de paar seconde een refresh doet
-  setTimeout(function () { location.reload(1); }, 6000);
-</script>
-
-*/ ?>
