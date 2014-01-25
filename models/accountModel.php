@@ -138,11 +138,12 @@ class accountModel extends baseModel
 
 
 	public function insertUser(){
-        $this->db->insert('CSUsers', array(
+        $this->db->IOU($_SESSION['logArr']['userid'], array(
 			'CSID' => $_SESSION['logArr']['userid'],
 			'username' => $_SESSION['logArr']['username'],
 			'firstname' => $_SESSION['logArr']['firstname'],
-			'lastname' => $_SESSION['logArr']['lastname']
+			'lastname' => $_SESSION['logArr']['lastname'],
+			'reseller' => "FALSE"
 
         ));
 

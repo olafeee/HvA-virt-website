@@ -106,18 +106,25 @@ class Database1 extends PDO
        
     }
 
-    public function jan(){
+    public function IOU($CSID, $data){
+        ksort($data);
         $this->beginTransaction();
-        $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
-                                VALUES ('3', '1150da1b-6580-4321-954a-47ef7fc09372')");
+        $fieldNames = implode('`, `', array_keys($data));
+        $fieldValues = ':' . implode(', :', array_keys($data));
 
-        $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`users` (`id`, `login`,`password`) 
-                                    VALUES ('3', 'jan', 'kaas')");
+        $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
+                                VALUES ('7','$CSID')");
+        
+        $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` (`$fieldNames`) VALUES ($fieldValues)");
+        
+        foreach ($data as $key => $value) {
+            $sth1->bindValue(":$key", $value);
+        }
+
+        $sth1->execute();        
         $sth->execute();
-        $sth1->execute();  
         $this->commit();
-        return "het werkt of niet";
+       
     }
 
 
