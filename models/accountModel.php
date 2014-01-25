@@ -65,7 +65,18 @@ class accountModel extends baseModel
 
 	public function createAccount($data) {
 		// SQL Injection prefection TODO HERE ------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!
-		print_r($data);
+
+		$postArray = array('adstr' => $data['adstr'],
+			'adzip' => $data['adzip'],
+			'adcit' => $data['adcit'],
+			'country' => $data['country'],
+			'phone' => $data['phone'],
+			'reseller' => $data['reseller']
+			);
+
+		echo"<pre>";
+		print_r($postArray);
+		echo"</pre>";
 		// Send to cloudstack DB
 		/*
 		$response = $this->cloudstack->createAccount($data['email'], $data['fname'], $data['lname'], $data['password'], $data['email']);
