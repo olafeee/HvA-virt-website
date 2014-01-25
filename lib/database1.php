@@ -89,11 +89,12 @@ class Database1 extends PDO
     public function jan(){
         $this->beginTransaction();
         $sql = "
-    INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('3', '1150da1b-6580-4321-954a-47ef7fc09372');
-    INSERT INTO `user_db_plaintech`.`users` (`id`, `login`,`password`) VALUES ('3', 'jan', 'kaas');
-";
+        INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) VALUES ('3', '1150da1b-6580-4321-954a-47ef7fc09372');
+        INSERT INTO `user_db_plaintech`.`users` (`id`, `login`,`password`) VALUES ('3', 'jan', 'kaas');
+        ";
+
         $sth = $this->prepare($sql);
-        $this->commit();  
+        $sth->commit();  
         return "het werkt of niet";
     }
 
