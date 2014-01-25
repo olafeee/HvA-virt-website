@@ -91,11 +91,15 @@ class Database1 extends PDO
         $this->beginTransaction();
         $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
-                                VALUES ('7', '$CSID')");
+                                VALUES (?,?)");
+        $sth->bindParam(    '7',
+                            $loginArray['userid']
+
+        );
         $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` 
                                             (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
                                     VALUES (?,?,?,?,?,?,?,?,?,?)");
-        $sth1->bind_param(   $loginArray['userid'],
+        $sth1->bindParam(   $loginArray['userid'],
                             $loginArray['username'],
                             $loginArray['firstname'],
                             $loginArray['lastname'],
@@ -105,7 +109,7 @@ class Database1 extends PDO
                             $postArray['country'],
                             $postArray['phone'],
                             $reseller
-                            );
+        );
         $sth->execute();
         $sth1->execute();  
         $this->commit();
