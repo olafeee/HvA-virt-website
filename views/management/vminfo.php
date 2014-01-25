@@ -75,7 +75,7 @@ include('template.php');
     <div class="panel-heading">
 
       <div class="center-block"><h3 class="panel-title">Virtual Machine Panel</h3></div>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="navbar-right">
         <li><?php echo $state; ?></li>
       </ul>
     </div>
