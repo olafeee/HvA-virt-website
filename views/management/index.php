@@ -60,7 +60,9 @@ $('#nav-accountTab').click(function (){
 
 $('#nav-invoiceTab').click(function (){
   url='/management/invoiceTab';
-  $('#vmContentWindow').load(url);
+  var page = $(this).attr('page');
+  args={page: page};
+  $('#vmContentWindow').load(url, args);
 });
 
 $(document).ready(function() {
