@@ -59,7 +59,7 @@ class accountModel extends baseModel
 								'adcit' => $postArray['adcit'],
 								'country' => $postArray['country'],
 								'phone' => $postArray['phone'],
-								'reseller' => $reseller
+								'reseller' => "TRUE"
 								);
 
 				$CSID = $loginArray['userid'];
