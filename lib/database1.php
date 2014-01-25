@@ -94,7 +94,7 @@ class Database1 extends PDO
         ";
 
         $sth = $this->prepare($sql);
-        $sth->commit();  
+        $sth->execute();  
         return "het werkt of niet";
     }
 
