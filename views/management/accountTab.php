@@ -30,7 +30,7 @@ print_r($accountInfo);
 
 		<label for="email" class="col-sm-2 control-label">Email :</label>
 		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['account']; ?></p>
+			<p id="email"><?php echo $accountInfo['username']; ?></p>
 		</div>
 
 		<h4><span class="glyphicon glyphicon-euro"></span>   General Information</h4><hr />
@@ -41,7 +41,7 @@ print_r($accountInfo);
 		</div>
 		<label for="adzip" class="col-sm-2 control-label">Street :</label>
 		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['adzip']; ?></p>
+			<p id="email"><?php echo $accountInfo['adzip'].' '.$accountInfo['adcit']; ?></p>
 		</div>
 
 
