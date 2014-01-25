@@ -20,14 +20,14 @@ class accountModel extends baseModel
 		$this->cloudstack_sign = new cloudstack_sign();
 	}
 
-	public function runLogin($username, $password, $postArray)
+	public function runLogin($username, $password)
 	{
 		$sth = $this->cloudstack_sign->login($username, $password);
 		$data = json_decode($sth,true);
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			
-			$res = $this->db->INU();
+			//$res = $this->db->INU();
 
 			if($res == true){
 				$loginArray = $data['loginresponse'];
