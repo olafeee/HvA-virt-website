@@ -81,8 +81,35 @@ class Database1 extends PDO
         return $this->exec("DELETE FROM `user_db_plaintech`.`privileges` WHERE `privileges`.`rol_id` = '$role_id' AND `privileges`.`CSID` = '$CSID'");
     }
 
-    public function INU(){
-        $sth = $this->prepare("START TRANSACTION ");
+    public function INU($postArray, $loginArray){
+        if($postArray['reseller'] == true){
+            $reseller = TRUE;
+        }else{
+            $reseller = FALSE;
+        }
+
+        $this->beginTransaction();
+        $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sth = $this->prepare(" INSERT INTO `user_db_plaintech`.`privileges` (`rol_id`, `CSID`) 
+                                VALUES ('7', '$CSID')");
+        $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` 
+                                            (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
+                                    VALUES (?,?,?,?,?,?,?,?,?,?)");
+        $sth1->bind_param(   $loginArray['userid'],
+                            $loginArray['username'],
+                            $loginArray['firstname'],
+                            $loginArray['lastname'],
+                            $postArray['adstr'],
+                            $postArray['adzip'],
+                            $postArray['adcit'],
+                            $postArray['country'],
+                            $postArray['phone'],
+                            $reseller
+                            );
+        $sth->execute();
+        $sth1->execute();  
+        $this->commit();
+        return TRUE;
        
     }
 

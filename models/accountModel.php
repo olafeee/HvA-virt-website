@@ -27,7 +27,7 @@ class accountModel extends baseModel
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			
-			//$res = $this->db->INU();
+			//
 
 			//if($res == true){
 				$loginArray = $data['loginresponse'];
@@ -40,6 +40,29 @@ class accountModel extends baseModel
 		} else {
 			return FALSE;
 		}
+		
+	}
+
+	public function runLoginRegi($username, $password, $postArray)
+	{
+		$sth = $this->cloudstack_sign->login($username, $password);
+		$data = json_decode($sth,true);
+		
+			if (is_array($data) && array_key_exists("loginresponse", $data)) {
+				$loginArray = $data['loginresponse'];
+				$res = $this->db->INU();
+				$res = $this->db->INU($postArray, $loginArray);
+				if($res == true){
+					Session::init();
+					Session::set('loggedIn', true);
+				    Session::set('logArr', $loginArray);
+					return TRUE;
+				}
+			} else {
+				return FALSE;
+			}	
+		
+
 		
 	}
 
