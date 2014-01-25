@@ -97,10 +97,12 @@ class Database1 extends PDO
         foreach ($data as $key => $value) {
             $sth1->bindValue(":$key", $value);
         }
+        var_dump($sth);
+        /*
         $sth->execute();
         $sth1->execute();  
         $this->commit();
-        return TRUE;
+        return TRUE;*/
        
     }
 
