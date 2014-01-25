@@ -94,17 +94,28 @@ class Database1 extends PDO
                            $CSID
 
         );
+        $fieldNames = implode('`, `', array_keys($data));
+        $fieldValues = ':' . implode(', :', array_keys($data));
+        
+        $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` (`$fieldNames`) VALUES ($fieldValues)");
+        
+        foreach ($data as $key => $value) {
+            $sth1->bindValue(":$key", $value);
+        }
+
+        /*
         $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` 
                                             (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
                                     VALUES (:CSID, :username, :firstname, :lastname, :adstr, :adzip, :adcit, :country, :phone, :reseller)");
+        
         foreach ($data as $key => $value) {
             print_r($sth1->bindValue(":$key", $value));
-        }
-        /*
+        }*/
+        
         $sth->execute();
         $sth1->execute();  
         $this->commit();
-        return TRUE;*/
+        return TRUE;
        
     }
 
