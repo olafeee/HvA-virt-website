@@ -29,13 +29,13 @@ class accountModel extends baseModel
 			
 			//$res = $this->db->INU();
 
-			if($res == true){
+			//if($res == true){
 				$loginArray = $data['loginresponse'];
 				Session::init();
 				Session::set('loggedIn', true);
 			    Session::set('logArr', $loginArray);
 				return TRUE;
-			}
+			
 
 		} else {
 			return FALSE;
