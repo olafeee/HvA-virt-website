@@ -32,9 +32,16 @@ print_r($accountInfo);
 		<div class="col-sm-10">
 			<p id="email"><?php echo $accountInfo['account']; ?></p>
 		</div>
-		<label for="email" class="col-sm-2 control-label">Street :</label>
+
+		<h4><span class="glyphicon glyphicon-euro"></span>   General Information</h4><hr />
+
+		<label for="adstr" class="col-sm-2 control-label">Street :</label>
 		<div class="col-sm-10">
 			<p id="email"><?php echo $accountInfo['adstr']; ?></p>
+		</div>
+		<label for="adzip" class="col-sm-2 control-label">Street :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['adzip']; ?></p>
 		</div>
 
 
