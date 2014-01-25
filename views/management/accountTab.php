@@ -5,7 +5,6 @@
 ** ******************************/
 
 $accountInfo = $this->accountInfo[0];
-print_r($accountInfo);
 //include('template.php');
 ?>
 
@@ -39,7 +38,7 @@ print_r($accountInfo);
 		<?php if($accountInfo['reseller'] == "TRUE"){?>
 		<label for="reseller" class="col-sm-2 control-label">Reseller :</label>
 		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['reseller']; ?></p>
+			<p id="email"><span class="glyphicon glyphicon-check"></p>
 		</div>
 
 		<?php }
