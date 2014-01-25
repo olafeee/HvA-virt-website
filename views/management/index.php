@@ -3,10 +3,6 @@ include('template.php');
 
 $vmResponse = $this->vmResponse;
 
-
-
-//if (!isset($_SESSION['loggedIn'])):
-
   // maak van subnet een prifix
   function prefixSubnet($input){
     $subBin = explode( '.', $input );
@@ -83,3 +79,8 @@ $vmResponse = $this->vmResponse;
     </div>
   </div><!-- END Col 9 -->
 </div>
+
+<script type="text/javascript">
+  // Zorg er voor dat de pagina om de paar seconde een refresh doet
+  setTimeout(function () { location.reload(1); }, 6000);
+</script>
