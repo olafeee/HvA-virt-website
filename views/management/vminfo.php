@@ -34,12 +34,16 @@ if(strcmp($vmResponse[0]['state'],'Running') == 0)
     $state = '<span class="label label-success">Running</span>';
     // Stop knop toevoegen
     $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
+    // Restart knop toevoegen
+    $onOff .= $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Restart System</button>';
 } 
 else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) 
 {
     $state = '<span class="label label-danger">Stopping</span>';
     // Disabled knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-default disabled"  style="margin-bottom:5px; width:125px;">Stopping</button>';
+    $onOff .= '<button type="button" class="btn btn-default disabled"  style="margin-bottom:5px; width:125px;">Stopping System</button>';
+    // Restart knop toevoegen
+    //$onOff .= '<button type="button" class="btn btn-default disabled" style="margin-bottom:5px; width:125px;">Restart System</button>';
 } 
 else if(strcmp($vmResponse[0]['state'],'Stopped') == 0) 
 {
@@ -58,7 +62,9 @@ else
     // Force On knop toevoegen
     $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_start" style="margin-bottom:5px; width:125px;">Force On</button>';
     // Force Off knop toevoegen
-    $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Stop System</button>';
+    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_stop" style="margin-bottom:5px; width:125px;">Force Off</button>';
+    // Force Restart knop toevoegen
+    $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;">Force Restart</button>';
 }
 
 include('template.php');
@@ -139,7 +145,7 @@ include('template.php');
 
       	<?php echo $onOff; ?>
         
-        <button type="button" class="btn btn-primary sendCmdButton" id="btn_restart" style="margin-bottom:5px; width:125px;" href="/management/api">Restart</button>
+        
 
       	<a type="button" class="btn btn-primary sendCmdButton" id="btn_console" style="margin-bottom:5px; width:125px;" href="/management/api">VM Console</a>
       	<a type="button" class="btn btn-primary sendCmdButton" id="btn_backup" style="margin-bottom:5px; width:125px;" href="/management/api">Backup VM</a>
