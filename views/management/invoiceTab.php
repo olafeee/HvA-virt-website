@@ -49,7 +49,7 @@
 			if ($page < 1){ $page = 1; }else if($page > $lastPage) {$page = $lastPage;}
 			$limit = 'LIMIT ' .($page - 1) * $itemsPerPage .',' .$itemsPerPage; 
 			$stj = mysqli_query($list, $querz.$limit);
-			if ($lastPage != "1"){ $pagination .= "Page ".$page." of ".$lastPage; if($page != "1"){$previous = $page - 1; $pagination .= "<a href=\"?page=".$previous."\">previous</a>"}
+			if ($lastPage != "1"){ $pagination .= "Page ".$page." of ".$lastPage; if($page != "1"){$previous = $page - 1; $pagination .= "<a href=\"?page=".$previous."\">previous</a>";}
 			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a href=\"?page=".$next."\">next</a>";}}
 			while($rij = mysqli_fetch_assoc($stj)){
 				if(file_exists("/var/invoices/".$rij['file'])){
