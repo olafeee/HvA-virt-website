@@ -30,37 +30,51 @@
 
 
 <script type="text/javascript">
-  var url;
-  var refresh;
+// Ajax Auto reload!
+var url;
+var refresh;
+var args = {};
 
-  $( document ).ready(function() {
-    url = '/management/vmlist';
-    refresh='true';
-  });
+$( document ).ready(function() {
+  url = '/management/vmlist';
+  refresh='true';
+});
 
-  $('#nav-vmlist').click(function (){
-    url='/management/vmlist';
-    refresh='true';
-    $('#vmContentWindow').load(url);
-  });
+$('#nav-vmlist').click(function (){
+  url='/management/vmlist';
+  $('#vmContentWindow').load(url);
+});
 
-  $('#nav-accountTab').click(function (){
-    refresh='false';
-    url='/management/accountTab';
-    $('#vmContentWindow').load(url);
-  });
+$('.nav-vminfo').click(function (){
+  var id = $(this).attr('id');
+  args={vmid: id};
+  url='/management/vminfo';
+  $('#vmContentWindow').load(url, args);
+});
 
-  $(document).ready(function() {
-    $.ajaxSetup({ 
-      cache: false 
-    }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
-    $('#vmContentWindow').load(url); // Faster initial load
-    if(refresh=='true') {
-        setInterval(function() {
-          $('#vmContentWindow').load(url);
-        }, 2000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
-    } 
-  });
+$('#nav-accountTab').click(function (){
+  url='/management/accountTab';
+  $('#vmContentWindow').load(url);
+});
+
+$(document).ready(function() {
+  $.ajaxSetup({ 
+    cache: false 
+  }); // This part addresses an IE bug.  without it, IE will only load the first number and will never refresh
+  $('#vmContentWindow').load(url); // Faster initial load
+  if(refresh=='true') {
+      setInterval(function() {
+        $('#vmContentWindow').load(url, args);
+      }, 3000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
+  } 
+});
+
+// Popups!
+$(document).ready(function() {
+  // $('head').append('<script type="text/javascript" src="script.js"><%2Fscript>');
+  // $('head').append('<link href="style/style.css" rel="popupStyle.css" type="text/css" media="all" />');
+});
+
 </script>
 
 

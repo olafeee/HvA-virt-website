@@ -52,8 +52,8 @@ $vmResponse = $this->vmResponse;
                 $stateColor = '';
               }
           ?>
-              
-              <tr id="<?php echo $vmResponse[$i]['id']; ?>" class="success <?php echo $stateColor;?>" onclick="url= '/management/vminfo/<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>';">
+
+              <tr id="<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>" class="nav-vminfo <?php echo $stateColor ?>" style="cursor: pointer;">
                 <td class"displayname"><?php echo $vmResponse['virtualmachine'][$i]['displayname'];?></td>
                 <td class="CPU"><?php echo $vmResponse['virtualmachine'][$i]["cpunumber"];?></td>
                 <td class="CPUSPEED"><?php echo $vmResponse['virtualmachine'][$i]["cpuspeed"];?> Mhz</td>
@@ -61,6 +61,7 @@ $vmResponse = $this->vmResponse;
                 <td class="HHD">20GB</td>
                 <td class="IPAdres"><?php echo $vmResponse['virtualmachine'][$i]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse['virtualmachine'][$i]["nic"][0]["netmask"]);?></td>
                 <td class="status"><?php echo $vmResponse['virtualmachine'][$i]['state'];?></td>
+                <td><button type="button" class="btn btn-default nav-vminfo" id="<?php echo $vmResponse['virtualmachine'][$i]['id']; ?>" style="margin-bottom:5px; width:125px;">More Info</button></td>
               </tr>
           <?php
               $i++;
@@ -74,3 +75,13 @@ $vmResponse = $this->vmResponse;
     </div>
   </div><!-- END Col 9 -->
 </div>
+
+<script type="text/javascript">
+$('.nav-vminfo').click(function (){
+  var id = $(this).attr('id');
+  args={vmid: id};
+  url='/management/vminfo';
+  $('#vmContentWindow').load(url, args);
+});
+
+</script>

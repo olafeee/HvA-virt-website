@@ -151,6 +151,31 @@ else
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="btn_upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
 
     <br />
+
+    <br>TEST:<br>
+
+    <button type="button" class="btn btn-danger nav-vminfo" id="btn_destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
+    
+    <br><br><br>
+
+<a href="#" class="topopup">Click Here Trigger</a>
+
+    <div id="toPopup">
+
+        <div class="close"></div>
+        <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+    <div id="popup_content"> <!--your content start-->
+            <p>netus et malesuada fames ac turpis egestas. </p>
+            <p align="center"><a href="#" class="livebox">Click Here Trigger</a></p>
+        </div> <!--your content end-->
+
+    </div> <!--toPopup end-->
+
+  <div class="loader"></div>
+    <div id="backgroundPopup"></div>
+
+
+
   </div>
 
   </div>

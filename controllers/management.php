@@ -30,12 +30,12 @@ class Management extends baseController {
 		$this->index('vmlist', TRUE);
 	}
 
-	function vminfo($vmid) {
+	function vminfo() {
 		// Check of er een ID is mee gegeven
-		if(!empty($vmid)) {
-			$this->baseView->vmid = $vmid;
+		if(!empty($_POST['vmid'])) {
+			$this->baseView->vmid = $_POST['vmid'];
 
-			$vmResponse = $this->model->getVMbyID($vmid);
+			$vmResponse = $this->model->getVMbyID($_POST['vmid']);
 			$this->baseView->vmResponse = $vmResponse;
 
 			$this->index('vminfo', TRUE);
