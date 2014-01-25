@@ -102,7 +102,7 @@ class Database1 extends PDO
         //$sth1->bindParam(  
         //);
         $sth->execute();
-        $sth1->execute( $loginArray['userid'],
+        $sth1->execute(array($loginArray['userid'],
                             $loginArray['username'],
                             $loginArray['firstname'],
                             $loginArray['lastname'],
@@ -111,7 +111,7 @@ class Database1 extends PDO
                             $postArray['adcit'],
                             $postArray['country'],
                             $postArray['phone'],
-                            $reseller);  
+                            $reseller));  
         $this->commit();
         return TRUE;
        
