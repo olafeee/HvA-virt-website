@@ -94,6 +94,7 @@ class Database1 extends PDO
                                     INSERT INTO `user_db_plaintech`.`users` (`id`, `login`,`password`) 
                                     VALUES ('3', 'jan', 'kaas');");
         $sth->execute();  
+        $this->commit();
         return "het werkt of niet";
     }
 
