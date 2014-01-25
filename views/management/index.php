@@ -14,7 +14,7 @@
       <div class="list-group">
         <a id="nav-vmlist" class="list-group-item" style="cursor: pointer;">Systems Panel</a>
         <a id="nav-accountTab" class="list-group-item" style="cursor: pointer;">Account Info</a>
-        <a href="/management/invoiceTab" class="list-group-item" style="cursor: pointer;">Invoice Overview</a>
+        <a id="nav-invoiceTab" class="list-group-item" style="cursor: pointer;">Invoice Overview</a>
       </div>
     </div>
   </div> <!-- END Col 3 -->
@@ -55,6 +55,11 @@ $('.nav-vminfo').click(function (){
 
 $('#nav-accountTab').click(function (){
   url='/management/accountTab';
+  $('#vmContentWindow').load(url);
+});
+
+$('#nav-invoiceTab').click(function (){
+  url='/management/invoiceTab';
   $('#vmContentWindow').load(url);
 });
 
