@@ -150,42 +150,6 @@ include('template.php');
       	<a type="button" class="btn btn-danger sendCmdButton" id="btn_destroy" style="margin-bottom:5px; width:125px;" href="/management/api"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy VM</a>
       	<a type="button" class="btn btn-primary sendCmdButton" id="btn_upgrade" style="margin-bottom:5px; width:125px;" href="">Upgrade VM</a>
 
-        <!-- Start VM form -->
-        <form id="form_start" action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="start" />
-          <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
-        </form>
-
-        <!-- Stop VM form -->
-        <form id="form_stop" action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="stop" />
-          <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
-        </form>
-
-        <!-- Restart VM form -->
-        <form id="form_restart" action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="restart" />
-          <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
-        </form>
-
-        <!--  -->
-        <form id="form_" action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="" />
-          <input type="hidden" name="vmid" value="" />
-        </form>
-
-        <!--  -->
-        <form id="form_" action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="" />
-          <input type="hidden" name="vmid" value="" />
-        </form>
-
-        <!--  -->
-        <form id="form_" action="/management/vmcontrol" role="form" method="post">
-          <input type="hidden" name="command" value="" />
-          <input type="hidden" name="vmid" value="" />
-        </form>
-
         <br />
       </div>
 
@@ -195,11 +159,48 @@ include('template.php');
   </div><!-- END Col 9 -->
 </div>
 
+<!-- Start VM form -->
+<form id="form_start" action="/management/vmcontrol" role="form" method="post">
+  <input type="hidden" name="command" value="start" />
+  <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
+</form>
+
+<!-- Stop VM form -->
+<form id="form_stop" action="/management/vmcontrol" role="form" method="post">
+  <input type="hidden" name="command" value="stop" />
+  <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
+</form>
+
+<!-- Restart VM form -->
+<form id="form_restart" action="/management/vmcontrol" role="form" method="post">
+  <input type="hidden" name="command" value="restart" />
+  <input type="hidden" name="vmid" value="<?php echo $this->vmid ?>" />
+</form>
+
+<!--  -->
+<form id="form_" action="/management/vmcontrol" role="form" method="post">
+  <input type="hidden" name="command" value="" />
+  <input type="hidden" name="vmid" value="" />
+</form>
+
+<!--  -->
+<form id="form_" action="/management/vmcontrol" role="form" method="post">
+  <input type="hidden" name="command" value="" />
+  <input type="hidden" name="vmid" value="" />
+</form>
+
+<!--  -->
+<form id="form_" action="/management/vmcontrol" role="form" method="post">
+  <input type="hidden" name="command" value="" />
+  <input type="hidden" name="vmid" value="" />
+</form>
+
 <script type="text/javascript">
 
   // Alle table headers align naar rechts geven
   $( ".right" ).css( "text-align", "right" );
-  $( ".right" ).css( "margin-right", "15px" );
+  $( ".right" ).css( "margin-right", "35px" );
+  $( ".right" ).css( "margin-bottum", "25px" );
 
   // Zorg er voor dat de pagina om de paar seconde een refresh doet
   setTimeout(function () { location.reload(1); }, 3000);
