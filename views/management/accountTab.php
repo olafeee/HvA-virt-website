@@ -4,6 +4,8 @@
 ** Account Tab on Management Page
 ** ******************************/
 
+$accountInfo = $this->accountInfo[0];
+print_r($accountInfo);
 //include('template.php');
 ?>
 
@@ -23,30 +25,19 @@
 
 		<label for="lname" class="col-sm-2 control-label">Last Name :</label>
 		<div class="col-sm-10">
-			<p id="lname"><?php echo $_SESSION['logArr']['lastname']; ?></p>
+			<p id="lname"><?php echo $accountInfo['lastname']; ?></p>
 		</div>
 
 		<label for="email" class="col-sm-2 control-label">Email :</label>
 		<div class="col-sm-10">
-			<p id="email"><?php echo $_SESSION['logArr']['account']; ?></p>
+			<p id="email"><?php echo $accountInfo['account']; ?></p>
 		</div>
-
-		<label for="type" class="col-sm-2 control-label">Account Type :</label>
+		<label for="email" class="col-sm-2 control-label">Street :</label>
 		<div class="col-sm-10">
-			<p id="type"><?php
-				$accountType = $_SESSION['logArr']['type'];
-
-				if($accountType == '0'){
-					echo 'User';
-				} else if($accountType == '2') {
-					echo 'Reseller';
-				} else if($accountType == '1') {
-					echo 'PlainTech Employ';
-				} else {
-					echo 'Unknown';
-				}
-			?></p>
+			<p id="email"><?php echo $accountInfo['adstr']; ?></p>
 		</div>
+
+
 
 		<br /><br /><br /><br /><br /><br /><br />
 
