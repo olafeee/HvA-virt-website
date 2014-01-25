@@ -99,7 +99,10 @@ class Database1 extends PDO
         $sth1 = $this->prepare("INSERT INTO `user_db_plaintech`.`CSUsers` 
                                             (`CSID`, `username`,`firstname`,`lastname`,`adstr`,`adzip`,`adcit`,`country`,`phone`,`reseller`) 
                                     VALUES (?,?,?,?,?,?,?,?,?,?)");
-        $sth1->bindParam(   $loginArray['userid'],
+        //$sth1->bindParam(  
+        //);
+        $sth->execute();
+        $sth1->execute( $loginArray['userid'],
                             $loginArray['username'],
                             $loginArray['firstname'],
                             $loginArray['lastname'],
@@ -108,10 +111,7 @@ class Database1 extends PDO
                             $postArray['adcit'],
                             $postArray['country'],
                             $postArray['phone'],
-                            $reseller
-        );
-        $sth->execute();
-        $sth1->execute();  
+                            $reseller);  
         $this->commit();
         return TRUE;
        
