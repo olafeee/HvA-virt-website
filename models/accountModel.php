@@ -69,10 +69,10 @@ class accountModel extends baseModel
 					Session::init();
 					Session::set('loggedIn', true);
 				    Session::set('logArr', $loginArray);
-					return TRUE;
+					//return TRUE;
 				}
 			} else {
-				return FALSE;
+				//return FALSE;
 			}	
 		
 

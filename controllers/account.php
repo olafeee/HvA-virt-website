@@ -83,10 +83,10 @@ class Account extends baseController {
 				*/
 				Session::set('successPage', TRUE);
 				$model->runLoginRegi($_POST['email'],$_POST['password'],$postArray);
-				header('location: /account/registerSuccess');
+				//header('location: /account/registerSuccess');
 			}
 		} else {
-			header('location: /account/register');
+			//header('location: /account/register');
 		}
 	}
 
