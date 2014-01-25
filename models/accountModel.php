@@ -50,7 +50,6 @@ class accountModel extends baseModel
 		
 			if (is_array($data) && array_key_exists("loginresponse", $data)) {
 				$loginArray = $data['loginresponse'];
-				$res = $this->db->INU();
 				$res = $this->db->INU($postArray, $loginArray);
 				if($res == true){
 					Session::init();
