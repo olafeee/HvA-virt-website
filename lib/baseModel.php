@@ -33,7 +33,7 @@ class baseModel {
 	}
 	function getWhere($part, $table, $iets, $fiets){
 		print_r($fiets);
-			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table WHERE 'userid' = $fiets");
+			    $sqlArray = $this->db->selectAll("SELECT $part FROM $table WHERE 'CSID' = $fiets");
                 return $sqlArray;
 	}
 }
