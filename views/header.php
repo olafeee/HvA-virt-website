@@ -121,7 +121,8 @@ if($this->url0=='order'){
       <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; }?>
       <?php
       for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
-        # code...
+
+          echo $_SESSION['userRole'][$i];
       }
       ?>
 
