@@ -58,7 +58,7 @@ $vmResponse = $this->vmResponse;
         $maxArray = count($vmResponse['virtualmachine']);
         while ($i < $maxArray) {
 
-          if ($vmResponse['virtualmachine'][$i]['state'] != 'Expunging' || $vmResponse['virtualmachine'][$i]['state'] != 'Destroyed') {
+          if ($vmResponse['virtualmachine'][$i]['state'] != 'Expunging') {
              if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
               $stateColor = 'alert-success';
             } else if($vmResponse['virtualmachine'][$i]['state'] == 'Stopped' ) {
