@@ -2,6 +2,7 @@
 
 $manageUser = $this->manageUser;
 $allRoles = $this->allRoles;
+$accountInfo = $this->accountInfo[0];
 ?>
 <?php require 'inc/header.php'; ?>
 
@@ -15,6 +16,7 @@ $allRoles = $this->allRoles;
       <div class="panel-body">
  		<table class="table table-striped">
 			<thead>
+				<!--
 				<tr>
 					<td>Username</td>
 					<td>First Name</td>
@@ -31,6 +33,50 @@ $allRoles = $this->allRoles;
 		 			echo '<td>'.$manageUser[0]['rol_naam'].'</td>'
 				?>
 			</tr>
+				-->
+		<h4><span class="glyphicon glyphicon-user"></span>   Account Information</h4><hr />
+
+		<label for="fname" class="col-sm-2 control-label">First Name :</label>
+		<div class="col-sm-10">
+			<p id="fname" name="fname"><?php echo $accountInfo['firstname']; ?></p>
+		</div>
+
+		<label for="lname" class="col-sm-2 control-label">Last Name :</label>
+		<div class="col-sm-10">
+			<p id="lname"><?php echo $accountInfo['lastname']; ?></p>
+		</div>
+
+		<label for="email" class="col-sm-2 control-label">Email :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['username']; ?></p>
+		</div>
+		<label for="phone" class="col-sm-2 control-label">Phone :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['phone']; ?></p>
+		</div>
+		<?php if($accountInfo['reseller'] == "TRUE"){?>
+		<label for="reseller" class="col-sm-2 control-label">Reseller :</label>
+		<div class="col-sm-10">
+			<p id="email"><span class="glyphicon glyphicon-check"></p>
+		</div>
+
+		<?php }
+		?>
+
+		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4><hr />
+
+		<label for="adstr" class="col-sm-2 control-label">Street :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['adstr']; ?></p>
+		</div>
+		<label for="adzip-adcit" class="col-sm-2 control-label">Place :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['adzip'].' '.$accountInfo['adcit']; ?></p>
+		</div>
+		<label for="country" class="col-sm-2 control-label">Country :</label>
+		<div class="col-sm-10">
+			<p id="email"><?php echo $accountInfo['country']; ?></p>
+		</div>
 		<?php
 		$i = 0;
 
@@ -61,7 +107,7 @@ $allRoles = $this->allRoles;
 
 			 	?>
 			 </select>
-	        <div class="faultMVP"></div>
+	       <!-- <div class="faultMVP"></div> * -->
 	        <button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button>
 	    </form>
 
