@@ -10,7 +10,10 @@
       </div>
       <div class="panel-body">
 		<div class="viewPageTable">
-			<h1>Plaintech CMS page!!!</h1>
+			<h1>Plaintech content management page</h1>
+      <p>
+        This page is specificly designed for employees and/or managers of Plaintech. Through this page, they can manage the contents of this site.
+      </p>
 	</div>
       </div>
     </div>
