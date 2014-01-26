@@ -220,6 +220,17 @@ class cloudstack
         return $this->_apiRequest($command_array);
     }
 
+    public function listSecurityGroups ($account = null, $domainid = null){
+
+        $command_array = array(
+            'command' => 'listSecurityGroups',       
+            'account' => $id,
+            'domainid' => $domainid,
+            );
+        return $this->_apiRequest($command_array);
+    }
+
+
 
 
 
