@@ -11,7 +11,8 @@ class invoiceModel extends baseModel {
 	}
 
     function getAll($limit){
-        $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,30");
+        //$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,30");
+		$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files");
         return $sqlArray;
     }
 
@@ -31,10 +32,6 @@ class invoiceModel extends baseModel {
 		}
     }
 	
-	function getCustomers($cusName){
-		$sqlArray = $this->db->selectAll("SELECT firstname,lastname FROM invoice_files WHERE (firstname OR lastname LIKE '%$cusName%') ORDER BY firstname");
-		return $sqlArray;
-	}
 }
 
 
