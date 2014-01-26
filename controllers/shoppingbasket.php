@@ -37,11 +37,16 @@ class Shoppingbasket extends baseController {
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
 			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
+
+
+
+
+			print_r($securitygroupids);
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
-			$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
-		}else{
-			header('location: /account');
+			//$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
+		//}else{
+			//header('location: /account');
 		}
 		
 	}
