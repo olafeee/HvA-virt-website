@@ -151,6 +151,14 @@ else
 <div class="row">
   <div class="col-md-12" role="main">
   
+    <!-- test -->
+    <?php 
+      $date = $vmResponse[0]['created']; 
+      $date = substr($date, -5);
+      echo $date;
+
+    ?>
+
     <!-- VM Controls -->
     <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
