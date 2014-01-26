@@ -31,7 +31,7 @@ $allRoles = $this->allRoles;
 		 			echo '<td>'.$manageUser[0]['rol_naam'].'</td>'
 				?>
 			</tr>
-		<table class="table table-condensed">
+		<table class="table table-striped">
 		<tr>
 			<td>Roles</td>
 			<td>Action</td>
