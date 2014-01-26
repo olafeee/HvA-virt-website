@@ -51,7 +51,7 @@ $invoices = $this->invoice;
 				<span class="glyphicon glyphicon-forward next"></span>
 				<span class="glyphicon glyphicon-fast-forward last"></span>
 				<select class="pagesize">
-					<option selected="selected"  value="5">5</option>
+					<option selected="selected"  value="3">3</option>
 					<option value="10">10</option>
 					<option value="20">20</option>
 					<option  value="50">50</option>
@@ -63,9 +63,8 @@ $invoices = $this->invoice;
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$("#invoices").tablesorter( {sortList: [[1,0]]} );
-			$("table") 
-			.tablesorter({widthFixed: true, widgets: ['zebra']}) 
-			.tablesorterPager({container: $("#pager")}); 
+			$("#invoices").tablesorter({widthFixed: true, widgets: ['zebra']}) 
+			$("#invoices").tablesorterPager({container: $("#pager")}); 
 		});
 		</script>
 	</div>
