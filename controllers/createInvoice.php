@@ -64,16 +64,18 @@ function makeInvoice(){
 		
 	$first = $_SESSION['logArr']['firstname'];
 	$laste = $_SESSION['logArr']['lastname'];
-	$query = "SELECT * FROM invoice_users WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
+	$username = $_SESSION['logArr']['username'];
+	//$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
+	$query = "SELECT * FROM CSUsers WHERE username='$username' LIMIT 1";
 	$sth = mysqli_query($invoice, $query);
 	$row = mysqli_fetch_assoc($sth);
 	
 	$klantId = $row['id'];
 	$klantFNaam = $row['firstname'];
 	$klantLNaam = $row['lastname'];
-	$klantStraat = $row['street'];
-	$klantPostcode = $row['zip'];
-	$klantWoonplaats = $row['city'];
+	$klantStraat = $row['adstr'];
+	$klantPostcode = $row['adzip'];
+	$klantWoonplaats = $row['adcit'];
 	$klantLand = $row['country'];
 	
 	$klantNaam =  $klantFNaam." ".$klantLNaam;
@@ -175,10 +177,13 @@ function makeInvoice(){
 	$pdf->Output('invoice.pdf', 'I');
 	
 	if (isset($_SESSION['logArr'])){
-		$pdfname = uniqid('invoice_').".pdf";
-		$pdf->Output('/var/invoices/'.$pdfname, 'F');
-		//self::sentInvoice("a@b.c", "/tmp/1.pdf");
-		self::saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
+		if($_SESSION['invoice'] != "invoiceSaved"){
+			$pdfname = uniqid('invoice_').".pdf";
+			$pdf->Output('/var/invoices/'.$pdfname, 'F');
+			//self::sentInvoice("a@b.c", "/tmp/1.pdf");
+			self::saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
+			$_SESSION['invoice'] = "invoiceSaved";
+		}
 	}
 	
 	$attachment = $pdf->Output('', 'S');

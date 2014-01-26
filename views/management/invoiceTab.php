@@ -32,12 +32,33 @@
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
-			$query = "SELECT * FROM invoice_users WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
+			$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			$klantId = $row['id'];
+			$sort = $_GET['sort']{
+			switch($sort){
+				case 'customer':
+					$sortBy = "customer";
+				case 'date':
+					$sortBy = "date";
+				default: $sortBy = "date";
+			}
+			//Show only firstname x with lastname y
+			$show = $_GET['showc'];
+			if(preg_match('/^[a-zA-Z ]+$/', $show)){
+				$showMe = explode(" ", $show);
+				$showQy = "WHERE firstname='".$showMe[0]."' AND lastname='".$showMe[1]."' ";
+			}
+			//Show only invoices from date x
+			$show = $_GET['showd'];
+			if(preg_match('/^[0-9 _]+$/', $day)){
+				$date = explode(" ", $day);
+				// date[0] is day, date[1] is time
+				$showDa = "WHERE firstname='".$date[0]."' AND lastname='".$date[1]."' ";
+			}
 			if($CFO === true){
-				$querz = "SELECT * FROM invoice_files ORDER BY date ASC ";
+				$querz = "SELECT * FROM invoice_files $showQy ORDER BY $sortBy ASC ";
 			} else {
 				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' ORDER BY date ASC ";
 			}
