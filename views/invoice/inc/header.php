@@ -24,9 +24,10 @@ th.headerSortUp {
 			</div>
 			<div class="list-group">
 				<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
-				<h4 class="panel-title">Show by name</h4>
+				<a class="panel-title">Show by name</a>
+				<a class="panel-title">Show by date</a>
 			</div>
-			<div id="datepicker"></div>		
+			<div style="width:30px;" id="datepicker"></div>		
 			<script type="text/javascript">
 				$( "#datepicker" ).datepicker();
 			</script>
