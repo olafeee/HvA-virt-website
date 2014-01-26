@@ -155,6 +155,7 @@ else
     <?php 
       $date = $vmResponse[0]['created']; 
       $date = substr($date, 0, -5);
+      $date = str_replace('T', ' ', $date);
       echo $date;
 
     ?>
