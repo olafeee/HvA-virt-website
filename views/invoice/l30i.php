@@ -41,7 +41,7 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
-		<?php echo "<pre>";print_r($invoices);echo "</pre>"; ?>
+		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 	</div>
       </div>
     </div>
