@@ -43,7 +43,8 @@ $accountInfo = $this->accountInfo[0];
 		<?php }
 		?>
 
-		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4><hr />
+		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4> 
+		<a href="javascript:showEditstreet()"><button type="button" class="btn btn-info">Edit</button></a><hr />
 
 		<label for="adstr" class="col-sm-2 control-label">Street :</label>
 		<div class="col-sm-10">
