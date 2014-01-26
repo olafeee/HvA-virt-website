@@ -22,7 +22,7 @@ class shoppingbasketModel extends baseModel
 	}
 
 	function securityGroupsid($x, $y){
-		echo ($this->cloudstack->listSecurityGroups($x, $y));
+		return $this->cloudstack->listSecurityGroups($x, $y);
 
 
 	}

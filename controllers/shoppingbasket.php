@@ -36,14 +36,12 @@ class Shoppingbasket extends baseController {
 			$name= "WindowsServer2008";
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
-			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
-			echo $securitygroupids;
+			//$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
+			//echo $securitygroupids;
 
 
-
-			echo "<pre>";
-			print_r($securityGroupId);
-			echo "</pre>";
+			//echo"hoi";
+			echo '<pre>',print_r($securityGroupId,1),'</pre>';
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
 			//$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		

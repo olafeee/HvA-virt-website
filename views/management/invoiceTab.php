@@ -32,15 +32,19 @@
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
-			$klantId = $_SESSION['username'];
+			$klantId = $_SESSION['logArr']['username'];
 			//$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
 			$query = "SELECT * FROM CSUsers WHERE username='$klantId' LIMIT 1";
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			
-			if(isset($_GET['sort'] || $_GET['showc'] || $_GET['showd'])){
+			if(!isset($_GET['sort'])){
 				$_GET['sort'] = "";
+			}
+			if(!isset($_GET['showc'])){
 				$_GET['showc'] = "";
+			}
+			if(!isset($_GET['showd'])){
 				$_GET['showd'] = "";
 			}
 			
@@ -57,13 +61,17 @@
 			if(preg_match('/^[a-zA-Z ]+$/', $show)){
 				$showMe = explode(" ", $show);
 				$showQy = "WHERE firstname='".$showMe[0]."' AND lastname='".$showMe[1]."' ";
+			}else{
+				$showQy = "";
 			}
 			//Show only invoices from date x
-			$show = $_GET['showd'];
+			$day = $_GET['showd'];
 			if(preg_match('/^[0-9 _]+$/', $day)){
 				$date = explode(" ", $day);
 				// date[0] is day, date[1] is time
 				$showDa = "WHERE firstname='".$date[0]."' AND lastname='".$date[1]."' ";
+			}else{
+				$showDa = "";
 			}
 			if($CFO === true){
 				$querz = "SELECT * FROM invoice_files $showQy ORDER BY $sortBy ASC ";
