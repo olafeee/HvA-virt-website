@@ -48,7 +48,7 @@ $invoices = $this->invoice;
 				<span class="glyphicon glyphicon-fast-backward first"></span>
 				<span class="glyphicon glyphicon-backward back"></span>
 				<input type="text" class="pagedisplay"/>
-				<span class="glyphicon glyphicon-forward next"></span>
+				<img src="http://tablesorter.com/addons/pager/icons/next.png" class="next"/>
 				<span class="glyphicon glyphicon-fast-forward last"></span>
 				<select class="pagesize">
 					<option selected="selected"  value="5">5</option>
