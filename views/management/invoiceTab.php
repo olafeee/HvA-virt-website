@@ -38,9 +38,13 @@
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			
-			if(isset($_GET['sort'] || $_GET['showc'] || $_GET['showd'])){
+			if(!isset($_GET['sort'])){
 				$_GET['sort'] = "";
+			}
+			if(!isset($_GET['showc'])){
 				$_GET['showc'] = "";
+			}
+			if(!isset($_GET['showd'])){
 				$_GET['showd'] = "";
 			}
 			
