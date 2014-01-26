@@ -81,8 +81,10 @@ class Management extends baseController {
         $adcit = $_POST['adcit'];
         $CSID = $_SESSION['logArr']['userid'];
         $y = $this->model->updateChangeGI($adstr, $adzip, $adcit, $CSID);
-        print_r($y);
-        //header('location: /management');
+        if ($y == true){
+        	 header('location: /management');
+        }
+       
 	}
 
 }
