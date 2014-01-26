@@ -11,7 +11,7 @@ class Bank extends baseController {
 	}*/
 
 	function banker(){
-		$this->index('index', TRUE);
+		$this->renderBlank('bank/index');
 
 	}
 
