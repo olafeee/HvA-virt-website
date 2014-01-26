@@ -81,6 +81,12 @@ else
     $onOff .= '<a href="javascript:showWarning()"><button type="button" class="btn btn-danger" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>';
 }
 
+// Format the date
+$date = $vmResponse[0]['created']; 
+$date = substr($date, 0, -5);
+$date = str_replace('T', ' ', $date);
+echo $date;
+
 ?>
 
 <div class="panel-heading">
@@ -107,7 +113,7 @@ else
       </tr>
       <tr>
         <th class="right">Created: </th>
-        <td><?php echo $vmResponse[0]['created']; ?></td>
+        <td><?php echo $date ?></td>
       </tr>
       <tr>
         <th class="right">Template:</th>
@@ -150,15 +156,6 @@ else
 
 <div class="row">
   <div class="col-md-12" role="main">
-  
-    <!-- test -->
-    <?php 
-      $date = $vmResponse[0]['created']; 
-      $date = substr($date, 0, -5);
-      $date = str_replace('T', ' ', $date);
-      echo $date;
-
-    ?>
 
     <!-- VM Controls -->
     <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
