@@ -27,8 +27,8 @@ th.headerSortUp {
 			</div>
 			<div class="list-group">
 				<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
-				<a class="list-group-item">Show by name</a>
-				<input type="text" id="name" class="form-control" placeholder="name">
+				<br />
+				<input type="text" name="name" id="name" class="form-control" placeholder="Customer Name">
 				<!--<a class="list-group-item"></a>--><br />
 			</div>
 			<div id="datepicker"></div>		
