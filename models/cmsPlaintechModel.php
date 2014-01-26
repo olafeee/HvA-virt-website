@@ -75,7 +75,7 @@ class cmsPlaintechModel extends baseModel
 	    								FROM CSUsers 
 	    								WHERE firstname LIKE :firstname 
 	    								OR lastname LIKE :lastname 
-	    								LIMIT 2', 
+	    								LIMIT 10', 
         array('lastname' => '%'.$search.'%',
         	'firstname' => '%'.$search.'%'));
         return $sqlArray;
