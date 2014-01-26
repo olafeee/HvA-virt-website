@@ -54,9 +54,6 @@ class Management extends baseController {
 	}
 
 	function invoiceTab() {
-		$username = "karel.boer@hva.nl";
-		$invoices = $this->model->getInvoice($username);
-		$this->baseView->invoices = $invoices;
 		$this->index('invoiceTab', TRUE);
 	}
 
