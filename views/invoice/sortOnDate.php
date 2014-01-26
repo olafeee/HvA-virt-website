@@ -26,6 +26,9 @@ $invoices = $this->invoice;
 			</thead>
 			<tbody>
 			<?php
+			if(1 > count($invoices)){
+				echo "No invoices were made";
+			}else{			
 			for ($i=0; $i < count($invoices); $i++) { 
 				echo "<tr>";
 				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
@@ -41,7 +44,7 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
-		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
+		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/} ?>
 	</div>
       </div>
     </div>
