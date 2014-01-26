@@ -28,7 +28,7 @@ class Shoppingbasket extends baseController {
 	*/
 	function createVM() {
 		if (1 == 1) {
-			$securityGroupId = json_decode($model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']), true);
+			$securityGroupId = json_decode($this->model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']), true);
 
 			
 			$serviceofferingid = "eaacfa01-6e2f-4a5a-a789-03f259c8a644";
