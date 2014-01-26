@@ -3,7 +3,7 @@
 /********************
 ** Robert L
 *********************/
-print_r($this->invoices);
+//print_r($this->invoices);
 
 ?>
 
