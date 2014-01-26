@@ -23,7 +23,7 @@ class invoiceModel extends baseModel {
     }
 	
 	function getMyName($name){
-		if(!preg_match('/^[a-zA-Z\s]+$/', $name)){ $names = explode(' ',"THIS name SHOULD never be USED");}else{ $names = explode(' ',$name);
+		if(!preg_match('/^[a-zA-Z\s]+$/', $name)){ $names = explode(' ',"Karel Default Name");}else{ $names = explode(' ',$name);
 		//Hmm still generates error on $names[1] when $name is empty...
 	    $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE firstname='$names[0]' AND lastname='$names[1]' ORDER BY date ASC");
         return $sqlArray;
