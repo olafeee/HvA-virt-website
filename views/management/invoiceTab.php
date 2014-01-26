@@ -32,11 +32,17 @@
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
-			$klantId = $row['username'];
+			$klantId = $_SESSION['username'];
 			//$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
 			$query = "SELECT * FROM CSUsers WHERE username='$klantId' LIMIT 1";
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
+			
+			if(isset($_GET['sort'] || $_GET['showc'] || $_GET['showd'])){
+				$_GET['sort'] = "";
+				$_GET['showc'] = "";
+				$_GET['showd'] = "";
+			}
 			
 			$sort = $_GET['sort'];
 			switch($sort){
