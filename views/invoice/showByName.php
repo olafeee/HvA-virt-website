@@ -1,6 +1,7 @@
 ﻿<?php
 $invoices = $this->invoice;
 //print_r($invoices);
+@session_start();
 ?>
 
 
@@ -16,11 +17,7 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
-			<?php 
-			if(1 > count($invoices)){
-				echo "No invoices were made";
-			}else{ ?>
-			<table class="table table-condensed">
+			<table id="invoices" class="table table-condensed tablesorter">
 			<thead>
 				<tr>
 					<th>File</th>
@@ -29,7 +26,7 @@ $invoices = $this->invoice;
 				</tr>
 			</thead>
 			<tbody>
-			<?php			
+			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
 				echo "<tr>";
 				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
@@ -46,7 +43,34 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
-		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/} ?>
+		<div id="pager" class="pager">
+			<form>
+				<span class="glyphicon glyphicon-fast-backward"></span>
+				<span class="glyphicon glyphicon-backward"></span>
+				<input type="text" class="pagedisplay"/>
+				<span class="glyphicon glyphicon-forward"></span>
+				<span class="glyphicon glyphicon-fast-forward"></span>
+				<select class="pagesize">
+					<option selected="selected"  value="5">5</option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+				</select>
+			</form>
+		</div>
+
+		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#invoices").tablesorter({
+				sortList: [[1,0]],
+				widthFixed: true, 
+				widgets: ['zebra'],
+				container: $("#pager")
+			}); 
+		});
+		</script>
 	</div>
       </div>
     </div>

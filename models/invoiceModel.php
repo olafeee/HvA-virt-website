@@ -32,10 +32,6 @@ class invoiceModel extends baseModel {
 		}
     }
 	
-	function getCustomers($cusName){
-		$sqlArray = $this->db->selectAll("SELECT firstname,lastname FROM invoice_files WHERE (firstname OR lastname LIKE '%$cusName%') ORDER BY firstname");
-		return $sqlArray;
-	}
 }
 
 
