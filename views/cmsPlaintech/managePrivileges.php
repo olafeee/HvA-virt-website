@@ -86,6 +86,7 @@ $allRoles = $this->allRoles;
 		<div align="center">
 		<a href="/cmsPlaintech/searchPrivileges"><button type="button" class="btn btn-info">Back</button></a></td>
       </div>
+      <br>
       </div>
 
     </div>
