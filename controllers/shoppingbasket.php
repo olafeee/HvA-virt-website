@@ -26,6 +26,12 @@ class Shoppingbasket extends baseController {
 		if (1 == 1) {
 			$model = $this->laadModel();
 			$securityGroupId = $model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']);
+
+			echo '<pre>';
+			print_r($securityGroupId);
+			echo '</pre>';
+
+			/*
 			$serviceofferingid = "eaacfa01-6e2f-4a5a-a789-03f259c8a644";
 			$templateid= "6fdb27f7-49d2-426a-bec8-57c17040d1dc";
 			$zoneid= "bc1354a3-58b4-4f98-ab51-7d4406260e15";
@@ -39,9 +45,8 @@ class Shoppingbasket extends baseController {
 			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
 			//echo $securitygroupids;
 
-
+*/
 			//echo"hoi";
-			echo '<pre>',print_r($securityGroupId,1),'</pre>';
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
 			//$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
