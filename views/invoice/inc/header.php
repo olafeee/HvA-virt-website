@@ -18,6 +18,9 @@ th.headerSortUp {
 .ui-datepicker {
 	width: 100%;
 }
+.viewPageTable {
+    width: 100%;
+}
 </style>
 <div class="row">
 	<div class="col-md-3">
