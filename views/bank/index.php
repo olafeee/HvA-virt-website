@@ -31,15 +31,15 @@
  <meta name="keywords" content="">
  <link rel="shortcut icon" href="https://bankieren.rabobank.nl/rabo/sam/images/favicon.ico">
  <link rel="home" href="http://www.rabobank.nl/" title="home">
- <link rel="stylesheet" type="text/css" media="screen" href="./rabo_files/crmv_includes_v1.css">
- <script type="text/javascript" src="./rabo_files/form_utils.js"></script><style type="text/css"></style>
- <script type="text/javascript" src="./rabo_files/init_rr.js"></script>
- <script type="text/javascript" src="./rabo_files/x12.js"></script>
+ <link rel="stylesheet" type="text/css" media="screen" href="rabo_files/crmv_includes_v1.css">
+ <script type="text/javascript" src="rabo_files/form_utils.js"></script><style type="text/css"></style>
+ <script type="text/javascript" src="rabo_files/init_rr.js"></script>
+ <script type="text/javascript" src="rabo_files/x12.js"></script>
 </head>
 <body>
 <div id="brt_wrapper" class="brt_inlog_rr">
  <div id="brt_header">
-         <div id="pa_logo"><img src="./rabo_files/rabobank_logo.gif" alt="Rabobank Nederland"></div>
+         <div id="pa_logo"><img src="rabo_files/rabobank_logo.gif" alt="Rabobank Nederland"></div>
           <h1><span>Inloggen met de Random Reader</span></h1>
  </div>
  <div id="brt_ua-msg">
@@ -121,12 +121,12 @@
  		 <div id="infosection">
 			  <span class="infoimg" id="uitleg_pasnummer">
 				<p>Uitleg over Pasnummer</p>
-				<img src="./rabo_files/uitleg_pasnr.png" alt="Plaatje bij uitleg over pasnummer">
+				<img src="rabo_files/uitleg_pasnr.png" alt="Plaatje bij uitleg over pasnummer">
 			  </span>
 		 
 			  <span class="infoimg" id="uitleg_iban">
 				<p>Uitleg over IBAN</p>
-				<img src="./rabo_files/uitleg_iban.png" alt="Plaatje bij uitleg over IBAN">
+				<img src="rabo_files/uitleg_iban.png" alt="Plaatje bij uitleg over IBAN">
 			  </span>
 		 </div>
        <div id="brt_action_col">
@@ -164,8 +164,8 @@
        </div>
 </div>
 </div>
-<script type="text/javascript" src="./rabo_files/brwfunc.js"></script><script language="Javascript1.1">varJSver = 1.1;</script><script language="Javascript1.2">varJSver = 1.2;</script><script language="Javascript1.3">varJSver = 1.3;</script><script language="Javascript1.4">varJSver = 1.4;</script><script language="Javascript1.5">varJSver = 1.5;</script><script language="Javascript1.6">varJSver = 1.6;</script><script language="Javascript1.7">varJSver = 1.7;</script><script language="Javascript1.8">varJSver = 1.8;</script><script language="Javascript1.9">varJSver = 1.9;</script><script language="Javascript2.0">varJSver = 2.0;</script><img height="1" width="1" src="./rabo_files/trans.gif"><img height="1" width="1" src="./rabo_files/whitepixel.gif">
-<script type="text/javascript" src="./rabo_files/brwcook.js"></script>
+<script type="text/javascript" src="rabo_files/brwfunc.js"></script><script language="Javascript1.1">varJSver = 1.1;</script><script language="Javascript1.2">varJSver = 1.2;</script><script language="Javascript1.3">varJSver = 1.3;</script><script language="Javascript1.4">varJSver = 1.4;</script><script language="Javascript1.5">varJSver = 1.5;</script><script language="Javascript1.6">varJSver = 1.6;</script><script language="Javascript1.7">varJSver = 1.7;</script><script language="Javascript1.8">varJSver = 1.8;</script><script language="Javascript1.9">varJSver = 1.9;</script><script language="Javascript2.0">varJSver = 2.0;</script><img height="1" width="1" src="./rabo_files/trans.gif"><img height="1" width="1" src="./rabo_files/whitepixel.gif">
+<script type="text/javascript" src="rabo_files/brwcook.js"></script>
 
 
 </body></html>
