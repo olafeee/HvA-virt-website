@@ -670,8 +670,8 @@ p.order_options_OS{
 
 .Warningdiv{
 	display: none;
-	height: 200px;
-	width: 200px;
+	height: 55px;
+	width: 300px;
 	position: absolute;
 	z-index: 34;
 	background: #f5f5f5;
