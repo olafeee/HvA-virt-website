@@ -51,10 +51,11 @@ $invoices = $this->invoice;
 				<span class="glyphicon glyphicon-forward next"></span>
 				<span class="glyphicon glyphicon-fast-forward last"></span>
 				<select class="pagesize">
-					<option selected="selected"  value="3">3</option>
+					<option selected="selected"  value="5">5</option>
 					<option value="10">10</option>
 					<option value="20">20</option>
-					<option  value="50">50</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
 				</select>
 			</form>
 		</div>
@@ -62,9 +63,12 @@ $invoices = $this->invoice;
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
-			$("#invoices").tablesorter( {sortList: [[1,0]]} );
-			$("#invoices").tablesorter({widthFixed: true, widgets: ['zebra']}) 
-			$("#invoices").tablesorterPager({container: $("#pager")}); 
+			$("#invoices").tablesorter({
+				sortList: [[1,0]],
+				widthFixed: true, 
+				widgets: ['zebra'],
+				container: $("#pager")
+			}); 
 		});
 		</script>
 	</div>
