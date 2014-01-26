@@ -2,8 +2,12 @@
 
 class Shoppingbasket extends baseController {
 
+	public $model;
+
 	function __construct() {
 		parent::__construct();
+
+		$this->model = $this->laadModel();
 
 		session_start();
 	}
@@ -24,7 +28,6 @@ class Shoppingbasket extends baseController {
 	*/
 	function createVM() {
 		if (1 == 1) {
-			$model = $this->laadModel();
 			$securityGroupId = json_decode($model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']), true);
 
 			
@@ -43,7 +46,7 @@ class Shoppingbasket extends baseController {
 
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
-			$response = $model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
+			$response = $this->model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
 			$response = json_decode($response, true);
 
 			return $response;
@@ -69,7 +72,7 @@ class Shoppingbasket extends baseController {
 
 		// Eerst vm aanmaken, vervolgens invoice maken en versturen. Als laatste de winkel wagen legen.
 		$response = $this->createVM();
-		$this->makeInvoice();
+		$this->model->makeInvoice();
 		unset($_SESSION['cart']);
 
 		// Check succes
