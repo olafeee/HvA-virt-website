@@ -46,5 +46,8 @@ class invoice extends baseController {
  		$this->baseView->invoice = $invoice;
 		$this->index('sortByCol');
 	}
- 
+	function getCustomers($cusName){
+		$customers = $this->model->getCustomers($cusName);
+		$this->baseView->invoice = $invoice;
+		$this->index('getCustomers');
 }
