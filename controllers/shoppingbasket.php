@@ -43,7 +43,7 @@ class Shoppingbasket extends baseController {
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
 			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup'][0]['id'];
-			//echo $securitygroupids;
+			echo $securitygroupids;
 
 
 			//echo"hoi";
