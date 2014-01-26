@@ -55,7 +55,7 @@ $allRoles = $this->allRoles;
 			</tbody>
 		<table>
 		<br/>
-		<h4>Add user to the following group:</h4>
+		<h4>Add user to the following group</h4>
 		<table class="table table-condensed">
 		<tr>
 		<td><div class="privilegesForm">
