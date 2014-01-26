@@ -29,7 +29,7 @@ th.headerSortUp {
 				<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
 				<br /><br /><div class="input-group">
 				<input type="text" name="name" id="name" class="form-control" placeholder="Customer Name">
-				<span class="input-group-btn"><button id="custName" class="btn btn-default" type="button" onclick="showCust()">Show</button></span>
+				<span class="input-group-btn"><button id="custName" class="btn btn-default" type="button">Show</button></span>
 				</div><br /><br />
 			</div>
 			<div id="datepicker"></div>		
@@ -45,9 +45,9 @@ th.headerSortUp {
 					});
 				});
 				
-				$(function showCust(){ 
+				$("#custName").on('click', function(){
 					var custName1 = document.getElementById('custName').value;
-					document.location.href = "/invoice/showByName/" + custName1;
+					document.location.href = "/invoice/showByName/" + custName1; 
 				});
 			</script>
 		</div>
