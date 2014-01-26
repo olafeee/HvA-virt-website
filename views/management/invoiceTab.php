@@ -61,6 +61,8 @@
 			if(preg_match('/^[a-zA-Z ]+$/', $show)){
 				$showMe = explode(" ", $show);
 				$showQy = "WHERE firstname='".$showMe[0]."' AND lastname='".$showMe[1]."' ";
+			}else{
+				$showQy = "";
 			}
 			//Show only invoices from date x
 			$day = $_GET['showd'];
@@ -68,6 +70,8 @@
 				$date = explode(" ", $day);
 				// date[0] is day, date[1] is time
 				$showDa = "WHERE firstname='".$date[0]."' AND lastname='".$date[1]."' ";
+			}else{
+				$showDa = "";
 			}
 			if($CFO === true){
 				$querz = "SELECT * FROM invoice_files $showQy ORDER BY $sortBy ASC ";
