@@ -38,7 +38,7 @@
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
 			
-			$sort = $_GET['sort']{
+			$sort = $_GET['sort'];
 			switch($sort){
 				case 'customer':
 					$sortBy = "customer";
