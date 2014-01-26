@@ -92,8 +92,8 @@ class managementModel extends baseModel
                'adstr' => $adstr,
                'adzip' => $adzip
         );
-        
-        $this->db->update('CSUsers', $postData, "`CSID` = $CSID ");
+        print_r($postData)
+        //$this->db->update('CSUsers', $postData, "`CSID` = $CSID ");
     }
 }
 
