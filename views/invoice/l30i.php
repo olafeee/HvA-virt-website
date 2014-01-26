@@ -16,7 +16,7 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
-			<table class"table">
+			<table class="table table-bordered table-condensed">
 			<thead>
 				<tr>
 					<th>File</th>
