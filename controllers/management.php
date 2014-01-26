@@ -71,6 +71,10 @@ class Management extends baseController {
 		$this->index('console', TRUE);
 	}
 
+	function us(){
+		$this->model->usm();
+	}
+
 	
 
 }

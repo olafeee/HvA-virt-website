@@ -27,9 +27,6 @@ class accountModel extends baseModel
 
 		if (is_array($data) && array_key_exists("loginresponse", $data)) {
 			
-			//
-
-			//if($res == true){
 				$loginArray = $data['loginresponse'];
 				Session::init();
 				Session::set('loggedIn', true);

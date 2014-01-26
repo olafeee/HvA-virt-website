@@ -106,6 +106,18 @@ class cloudstack
         );
         return $this->_apiRequest($command_array);
     }
+
+    public function updateUser()
+    {
+        $command_array = array(
+            'command' => 'updateUser',
+            'id' => '73981fdb-60fd-464d-b61a-f9b77a69dceb',
+            'email' => 'orc@oscar.nl',
+            'firstname' => 'orc',
+            'lastname' => 'oscar'
+        );
+        return $this->_apiRequest($command_array);
+    }
 	
 	/******** Start VirtualMachine Methods ********/
 
