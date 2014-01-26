@@ -18,10 +18,17 @@ $accountInfo = $this->accountInfo[0];
 <div class="Editstreetdiv">
   <div class="panel panel-info">
     <div class="panel-heading">
-      <h3 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign"></span>  Warning!</h3>
+      <h3 class="panel-title">Edit General Information</h3>
     </div>
     <div class="panel-body">
-      <?php echo $accountInfo['adstr']; ?>
+        <?php echo $accountInfo['adstr']; ?>
+        <?php echo $accountInfo['adzip']; ?>
+        <?php echo $accountInfo['adcit']; ?>
+      <select class="form-control bfh-countries" id="rol_id" name="rol_id">
+      <?php
+          include '/view/account/register_countries.php';
+        ?>
+       </select>
       <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
     </div>
   </div>
