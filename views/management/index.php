@@ -12,6 +12,7 @@
       </div>
       <div class="list-group">
         <a id="nav-vmlist" class="list-group-item" style="cursor: pointer;">Systems Panel</a>
+        <?php print_r($_SESSION);?>
         <a id="nav-accountTab" class="list-group-item" style="cursor: pointer;">Account Info</a>
         <a id="nav-invoiceTab" class="list-group-item" style="cursor: pointer;">Invoice Overview</a>
       </div>
