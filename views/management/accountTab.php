@@ -7,7 +7,17 @@
 $accountInfo = $this->accountInfo[0];
 //include('template.php');
 ?>
-
+	<div class="Editstreetdiv">
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign"></span>  Warning!</h3>
+    </div>
+    <div class="panel-body">
+      <p>Are you sure you want to destroy this system?</p>
+      <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
+    </div>
+  </div>
+</div>
 
 
       <div class="panel-heading">
@@ -31,7 +41,7 @@ $accountInfo = $this->accountInfo[0];
 		<div class="col-sm-10">
 			<p id="email"><?php echo $accountInfo['username']; ?></p>
 		</div>
-		<label for="phone" class="col-sm-2 control-label">Street :</label>
+		<label for="phone" class="col-sm-2 control-label">Phone :</label>
 		<div class="col-sm-10">
 			<p id="email"><?php echo $accountInfo['phone']; ?></p>
 		</div>

@@ -99,7 +99,28 @@ function showWarning() {
 
 function hideWarning() {
     //change display to none
-    $(".Warningdiv").css("display", "none");
+    $(".Editstreetdiv").css("display", "none");
+    $(".opacitySLAdiv").css("display", "none");  
+}
+
+function showEditstreet() {
+    //change display to block
+    $(".Editstreetdiv").css("display", "block");
+    $(".opacitySLAdiv").css("display", "block");
+
+    // when clicked outside 
+    // call the funtion 
+    $('html').click(function() {
+    hideWarning()
+    });
+    $('.Editstreetdiv').click(function(event){
+    event.stopPropagation();
+    });
+}
+
+function hideEditstreet() {
+    //change display to none
+    $(".Editstreetdiv").css("display", "none");
     $(".opacitySLAdiv").css("display", "none");  
 }
           

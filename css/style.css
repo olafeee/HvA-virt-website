@@ -684,3 +684,20 @@ p.order_options_OS{
     padding: 10px;
     margin: auto;
 }
+
+.Editstreetdiv{
+	display: none;
+	min-height: 300px;
+	width: 350px;
+	position: absolute;
+	z-index: 34;
+
+	text-align: center;
+
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: auto;
+}
