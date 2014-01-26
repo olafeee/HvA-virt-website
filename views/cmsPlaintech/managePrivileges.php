@@ -58,7 +58,7 @@ $allRoles = $this->allRoles;
 		<h4>Add user to the following group</h4>
 		<table class="table table-condensed">
 		<tr>
-		<td><div class="privilegesForm">
+		<div align="left"><div class="privilegesForm">
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
@@ -72,18 +72,15 @@ $allRoles = $this->allRoles;
 
 			 	?>
 			 </select>
-		</td>
+		</div>
 	       <!-- <div class="faultMVP"></div> -->
 	        <div align="center">
-	        <td align="center">
 	        	<button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button>
-	        </td>
-	    </td>
-	    </tr>
+	        </div>
+	    </div>
+	</tr>
 	    </table>
 	    </form>
-
-		</div>
 		<br><br>
 		<div align="center">
 		<a href="/cmsPlaintech/searchPrivileges"><button type="button" class="btn btn-info">Back</button></a></td>
