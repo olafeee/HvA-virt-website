@@ -28,7 +28,7 @@ class invoice extends baseController {
 		$invoice = $this->model->getAll($limit);
 		$this->baseView->invoices = $invoice;
 		//print_r($invoice);
-		$this->index('index');
+		$this->index('invoice/index');
 	}
 	function sortOnTime($limit){
 		$invoice = $this->model->getOnTime($limit);
