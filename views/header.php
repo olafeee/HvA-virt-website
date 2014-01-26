@@ -120,8 +120,8 @@ if($this->url0=='order'){
       <li><a href="/order">Order</a></li>
       <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; }?>
       <?php
+      echo(count($_SESSION['userRole']));
       for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
-
           echo $_SESSION['userRole'][$i];
       }
       ?>
