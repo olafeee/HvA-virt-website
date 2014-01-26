@@ -32,10 +32,12 @@
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
-			$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
+			$klantId = $row['username'];
+			//$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
+			$query = "SELECT * FROM CSUsers WHERE username='$klantId' LIMIT 1";
 			$sth = mysqli_query($list, $query);
 			$row = mysqli_fetch_assoc($sth);
-			$klantId = $row['id'];
+			
 			$sort = $_GET['sort']{
 			switch($sort){
 				case 'customer':
@@ -60,7 +62,7 @@
 			if($CFO === true){
 				$querz = "SELECT * FROM invoice_files $showQy ORDER BY $sortBy ASC ";
 			} else {
-				$querz = "SELECT * FROM invoice_files WHERE id='$klantId' ORDER BY date ASC ";
+				$querz = "SELECT * FROM invoice_files WHERE username='$klantId' ORDER BY date ASC ";
 			}
 			$sti = mysqli_query($list, $querz);
 			$count = mysqli_num_rows($sti);

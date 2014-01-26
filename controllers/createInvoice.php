@@ -70,7 +70,7 @@ function makeInvoice(){
 	$sth = mysqli_query($invoice, $query);
 	$row = mysqli_fetch_assoc($sth);
 	
-	$klantId = $row['id'];
+	$klantId = $row['username'];
 	$klantFNaam = $row['firstname'];
 	$klantLNaam = $row['lastname'];
 	$klantStraat = $row['adstr'];
@@ -194,8 +194,8 @@ function makeInvoice(){
 	function saveToDb($filename, $userid, $fsname, $lsname){
 		$invoice = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 		$time = date("Y-m-d H:i:s");
-		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`id`, `file`, `date`, `firstname`, `lastname`) VALUES (?,?,?,?,?);");
-		$sth->bind_param('issss', $userid, $filename, $time, $fsname, $lsname);
+		$sth = $invoice->prepare("INSERT INTO `invoice_files` (`username`, `file`, `date`, `firstname`, `lastname`) VALUES (?,?,?,?,?);");
+		$sth->bind_param('sssss', $userid, $filename, $time, $fsname, $lsname);
 		$sth->execute();
 	}
 	
