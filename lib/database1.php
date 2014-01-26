@@ -44,13 +44,14 @@ class Database1 extends PDO
             $fieldDetails .= "`$key`=:$key,";
         }
         $fieldDetails = rtrim($fieldDetails, ',');
-        
+        print_r($fieldDetails);
         $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE $where");
-        print_r($sth);
+        
         foreach ($data as $key => $value) {
             $sth->bindValue(":$key", $value);
         }
-        
+        echo"<br/>";
+        print_r($sth);
         $sth->execute();
     }
 
