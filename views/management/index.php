@@ -4,7 +4,7 @@
 <div class="Warningdiv">
   <div class="panel panel-danger">
     <div class="panel-heading">
-      <h3 class="panel-title">Warning!</h3>
+      <h3 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign"></span>  Warning!</h3>
     </div>
     <div class="panel-body">
       <p>Are you sure you want to destroy this system?</p>
