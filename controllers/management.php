@@ -75,6 +75,12 @@ class Management extends baseController {
 		$this->model->usm();
 	}
 
-	
+	function changeGI(){
+		$adstr = $_POST['adstr'];
+        $adzip = $_POST['adzip'];
+        $adcit = $_POST['adcit'];
+        $this->model->updateChangeGI($adstr, $adzip, $adcit, $_SESSION['logArr']['userid']);
+        header('location: /management');
+	}
 
 }

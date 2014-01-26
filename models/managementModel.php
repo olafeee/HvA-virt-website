@@ -79,12 +79,21 @@ class managementModel extends baseModel
           $this->cloudstack->updateUser();
      }
 
-          function getInvoice($username){
-                        $sqlArray = $this->db->select('SELECT * FROM invoice_files WHERE 
-                                   username = :username', 
-                     array('username' => $username));
-                     return $sqlArray;
-          }
+     function getInvoice($username){
+                   $sqlArray = $this->db->select('SELECT * FROM invoice_files WHERE 
+                              username = :username', 
+                array('username' => $username));
+                return $sqlArray;
+     }
 
+     function updateChangeGI($adstr, $adzip, $adcit, $CSID){
+        $postData = array(
+               'adstr' => $adstr,
+               'adstr' => $adstr,
+               'adzip' => $adzip
+        );
+        
+        $this->db->update('CSUsers', $postData, "`CSID` = $CSID ");
+    }
 }
 

@@ -21,17 +21,14 @@ $accountInfo = $this->accountInfo[0];
       <h3 class="panel-title">Edit General Information</h3>
     </div>
     <div class="panel-body">
-      <form name="input" action="/cmsPlaintech/addPrivileges" method="post">
-        <input type="text" class="form-control" id="adstr" name="adstr" value="<?php echo $accountInfo['adstr']; ?>">
-        <input type="text" class="form-control" id="adzip" name="adzip" value="<?php echo $accountInfo['adzip']; ?>">
-         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
-      <select class="form-control bfh-countries" id="country" name="country">
-      <?php
-          include '/views/account/register_countries.php';
-        ?>
-       </select>
+      <form name="input" action="/management/changeGI" method="post">
+        <input type="text" class="form-control" id="adstr" name="adstr"  value="<?php echo $accountInfo['adstr']; ?>">
+        <input type="text" class="form-control" id="adzip" name="adzip"  value="<?php echo $accountInfo['adzip']; ?>">
+        <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
+        <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
+        <button type="button" type="submit" class="btn btn-succes" style="margin-bottom:5px; width:125px;">Save</button>
      </form>
-      <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
+
     </div>
   </div>
 </div>
