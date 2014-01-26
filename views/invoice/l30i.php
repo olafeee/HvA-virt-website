@@ -21,7 +21,7 @@ $invoices = $this->invoice;
 			<thead>
 				<tr>
 					<th>File</th>
-					<th>Date</th>
+					<th>Date <img src="/img/arrowdown.png"></th>
 					<th>Customer</th>
 				</tr>
 			</thead>

@@ -35,5 +35,11 @@ class invoice extends baseController {
 		//print_r($invoice);
 		$this->index('showByDate');
 	}
+	function showByName($name){
+		$invoice = $this->model->getOnTime($name);
+		$this->baseView->invoice = $invoice;
+		//print_r($invoice);
+		$this->index('showByName');
+	}
  
 }
