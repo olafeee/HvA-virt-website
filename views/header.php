@@ -123,7 +123,7 @@ if($this->url0=='order'){
       echo(count($_SESSION['userRole']));
       //print_r($_SESSION['userRole']);
       for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
-          echo $_SESSION['userRole'][$i]rol_id;
+          echo $_SESSION['userRole'][$i]['rol_id'];
       }
       ?>
 
