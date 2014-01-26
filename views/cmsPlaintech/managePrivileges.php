@@ -46,6 +46,7 @@ $allRoles = $this->allRoles;
 			</tbody>
 		</table>
 		<br/>
+		<h3>Add user to the following group:</h3>
 		<div class="privilegesForm">
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
