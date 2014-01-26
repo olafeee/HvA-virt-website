@@ -177,7 +177,7 @@ function makeInvoice(){
 	$pdf->Output('invoice.pdf', 'I');
 	
 	if (isset($_SESSION['logArr'])){
-		if($_SESSION['invoice'] != "invoiceSaved"){
+		if(!isset($_SESSION['invoice'])){
 			$pdfname = uniqid('invoice_').".pdf";
 			$pdf->Output('/var/invoices/'.$pdfname, 'F');
 			//self::sentInvoice("a@b.c", "/tmp/1.pdf");
