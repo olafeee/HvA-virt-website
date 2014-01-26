@@ -78,10 +78,30 @@ function showMVP(id, Amount, Price) {
 
 function hideMVP() {
     //change display to none
-    $(".MVPdiv").css("display", "none");
+    $(".Warningdiv").css("display", "none");
     $(".opacitySLAdiv").css("display", "none");  
 }
 
+function showWarning() {
+    //change display to block
+    $(".Warningdiv").css("display", "block");
+    $(".opacitySLAdiv").css("display", "block");
+
+    // when clicked outside 
+    // call the funtion 
+    $('html').click(function() {
+    hideSLAMenu()
+    });
+    $('.Warningdiv').click(function(event){
+    event.stopPropagation();
+    });
+}
+
+function hideWarning() {
+    //change display to none
+    $(".Warningdiv").css("display", "none");
+    $(".opacitySLAdiv").css("display", "none");  
+}
           
 
 function checkInp(){

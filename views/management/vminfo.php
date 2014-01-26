@@ -145,12 +145,12 @@ else
     <h4><span class="glyphicon glyphicon-cog"></span>   System Controls</h4><hr />
 
   	<?php echo $onOff; ?>
-
+    <a href="javascript:showWarning()" class="sla_ms">more info</a>
     <a type="button"  class="btn btn-primary" href="/management/console/<?php echo $vmResponse[0]['id']; ?>" style="margin-bottom:5px; width:125px;" onclick="window.open(this.href, 'Console', 'width=735, height=540, left=24, top=24, scrollbars, resizable'); return false;">View Console</a>
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
     <button type="button" class="btn btn-primary sendCmdButton disabled" id="backup" style="margin-bottom:5px; width:125px;">Backup System</button>
     <button type="button" class="btn btn-danger sendCmdButton" id="destroy" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
-
+    
     <br />
   </div>
 </div>
@@ -177,31 +177,6 @@ else
       data: args,
     });
   });
-
-  $('.popupCmdButton').click(function() { 
-    var id = $(this).attr('id');
-    var name = '#popup';
-    name = name.concat(id); 
-    console.log(name);
-    //change display to block
-    $(name).css("display", "block");
-    $(".opacitySLAdiv").css("display", "block");
-
-    // when clicked outside 
-    // call the funtion 
-    $('html').click(function() {
-      hidePopup()
-    });
-    $(name).click(function(event){
-      event.stopPropagation();
-    });
-  });
-
-  function hidePopup() {
-      //change display to none
-      $(".popupdiv").css("display", "none");
-      $(".opacitySLAdiv").css("display", "none");  
-  }
 
 </script>
 

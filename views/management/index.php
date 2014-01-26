@@ -1,6 +1,11 @@
 <?php 
 ?>
 
+<div class="Warningdiv">
+  
+  hoi
+</div>
+
 
 <!-- Navigation bar to the left -->
 <div class="row">
