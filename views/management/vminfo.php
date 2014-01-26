@@ -71,11 +71,15 @@ else
     $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="restart" style="margin-bottom:5px; width:125px;">Force Restart</button> ';
 }
 
-//include('template.php');
 ?>
 
+<!-- Warning popups -->
 
+<div id="destroy" class="popupdiv">
+  <p>Warning!</p>
+</div>
 
+<!-- Main window -->
 <div class="panel-heading">
   <h3 class="panel-title"><?php echo $vmResponse[0]['name'] . ' - ' . $vmResponse[0]['state'] ; ?></h3>
 </div>
