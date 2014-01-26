@@ -37,7 +37,7 @@ $allRoles = $this->allRoles;
 		while ($i < count($manageUser)) {
 			echo '<tr>';
 			// echo '<td>'.$manageUser[$i]['rol_naam'].'</td>';
-			echo '<td><a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'"><button type="button" class="btn btn-danger">Delete</button></a></td>';
+			echo '<td><a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'"><button type="button" class="btn btn-danger">Delete User</button></a></td>';
 			echo "</tr>";
 			$i++;
 		}
@@ -50,6 +50,7 @@ $allRoles = $this->allRoles;
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
+			<h3>Voeg gebruiker toe aan groep:</h3>
 			<?php
 			 	$y=0;
 			 	
