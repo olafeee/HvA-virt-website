@@ -202,7 +202,7 @@ else
     $(name).click(function(event){
       event.stopPropagation();
     });
-  }
+  });
 
   function hidePopup() {
       //change display to none
