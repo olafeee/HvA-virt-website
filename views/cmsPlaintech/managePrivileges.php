@@ -49,7 +49,8 @@ $accountInfo = $this->accountInfo[0];
 		</table>
 		<br/>
 		<h4>Add user to the following group:</h4>
-		<div class="privilegesForm">
+		<tr>
+		<td><div class="privilegesForm">
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
@@ -63,8 +64,12 @@ $accountInfo = $this->accountInfo[0];
 
 			 	?>
 			 </select>
+		</td>
 	       <!-- <div class="faultMVP"></div> * -->
-	        <button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button>
+	        <td>
+	        	<button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button>
+	        </td>
+	    </tr>
 	    </form>
 
 		</div>
