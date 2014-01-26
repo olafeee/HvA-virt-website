@@ -26,14 +26,11 @@ $invoices = $this->invoice;
 			<tbody>
 			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
-				echo "<tr>";
-				echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex(FILENAME)."\">".FILENAME."</a></td>";
-				
-				
-				//echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
-				//echo "<td>".$rij['date']."</td>";
-				//echo "<td>".$rij['firstname']." ".$rij['lastname']."</td>";
-				echo "</tr>";
+				//echo "<tr>";
+				echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
+				echo "<td>".$invoices[$i]['date']."</td>";
+				echo "<td>".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</td>";
+				//echo "</tr>";
 				
 				//print_r($invoices[$i]);
 				//Hier moet je mm doen 
