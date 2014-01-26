@@ -89,11 +89,11 @@ class managementModel extends baseModel
      function updateChangeGI($adstr, $adzip, $adcit, $CSID){
         $postData = array(
                'adstr' => $adstr,
-               'adstr' => $adstr,
-               'adzip' => $adzip
+               'adzip' => $adzip,
+               'adcit' => $adcit
         );
         print_r($postData);
-        //$this->db->update('CSUsers', $postData, "`CSID` = $CSID ");
+        $this->db->update('CSUsers', $postData, "`CSID` = $CSID ");
     }
 }
 
