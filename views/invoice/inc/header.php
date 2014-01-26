@@ -26,7 +26,7 @@ th.headerSortUp {
 				<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
 				<a class="list-group-item">Show by name</a>
 				<a class="list-group-item">Show by date</a>
-				<input type="text" id="datepicker" class="form-control" placeholder="date">
+				<!--<input type="text" id="datepicker" class="form-control" placeholder="date">-->
 			</div>
 			<div id="datepicker"></div>		
 			<script type="text/javascript">
@@ -36,6 +36,7 @@ th.headerSortUp {
 						onSelect: function(dateText, inst) {
 							var date = $.datepicker.parseDate(inst.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, inst.settings);
 							var dateText1 = $.datepicker.formatDate("yy-mm-dd", date, inst.settings);
+							document.location.href = "/showByDate/" + dateText;
 						}
 					});
 				});
