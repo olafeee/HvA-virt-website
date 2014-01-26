@@ -13,12 +13,7 @@ $allRoles = $this->allRoles;
         <h3 class="panel-title">Manange Roles of <?php echo $manageUser[0]['firstname'].' '.$manageUser[0]['lastname'] ?></h3>
       </div>
       <div class="panel-body">
-      	<?php
-		 echo $manageUser[0]['username'].'<br/>';
-		 echo $manageUser[0]['firstname'].'<br/>';
-		 echo $manageUser[0]['lastname'].'<br/>';
-		?>
- 		<table class="table">
+ 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<td>Username</td>
@@ -26,16 +21,16 @@ $allRoles = $this->allRoles;
 					<td>Last Name</td>
 					<td>Role</td>
 				</tr>
-				<tr>
+			</thead>
+			<tbody>
+			<tr>
 		    	<?php
 		 			echo '<td>'.$manageUser[0]['username'].'</td>';
 		 			echo '<td>'.$manageUser[0]['firstname'].'</td>';
 		 			echo '<td>'.$manageUser[0]['lastname'].'</td>';
 		 			echo '<td>'.$manageUser[0]['rol_naam'].'</td>'
 				?>
-				</tr>
-			</thead>
-			<tbody>
+			</tr>
 		<?php
 		$i = 0;
 
