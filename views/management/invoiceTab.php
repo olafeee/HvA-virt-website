@@ -105,7 +105,7 @@
 					}
 				}else{
 					echo "No invoices were found.";
-					echo $rij;
+					var_dump( $rij );
 				}
 			}
 		?>
