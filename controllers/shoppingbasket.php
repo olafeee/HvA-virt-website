@@ -41,7 +41,7 @@ class Shoppingbasket extends baseController {
 
 
 
-			echo "<pre>";
+			echo '<pre>';
 			print_r($securityGroupId);
 			echo "</pre>";
 			//$_SESSION['logArr']['userid']
