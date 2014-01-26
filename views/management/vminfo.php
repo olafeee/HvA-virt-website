@@ -36,6 +36,8 @@ if(strcmp($vmResponse[0]['state'],'Running') == 0)
     $onOff .= '<button type="button" class="btn btn-danger sendCmdButton" id="stop" style="margin-bottom:5px; width:125px;">Stop System</button> ';
     // Restart knop toevoegen
     $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="restart" style="margin-bottom:5px; width:125px;">Restart System</button> ';
+    $onOff .= '<a type="button"  class="btn btn-primary" href="/management/console/' . $vmResponse[0]['id'] . ' style="margin-bottom:5px; width:125px;" onclick="window.open(this.href, "Console", "width=735, height=540, left=24, top=24, scrollbars, resizable"); return false;">View Console</a>';
+    $onOff .= '<a href="javascript:showWarning()"><button type="button" class="btn btn-danger" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>';
 } 
 else if(strcmp($vmResponse[0]['state'],'Stopping') == 0) 
 {
@@ -50,10 +52,12 @@ else if(strcmp($vmResponse[0]['state'],'Stopped') == 0)
     $state = '<span class="label label-danger">Stopped</span>';
     // Start knop toevoegen
     $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="start" style="margin-bottom:5px; width:125px;">Start System</button> ';
+    $onOff .= '<a href="javascript:showWarning()"><button type="button" class="btn btn-danger" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>';
 } 
 else if(strcmp($vmResponse[0]['state'], 'Starting') == 0)
 {
     $state = '<span class="label label-warning">Starting</span>';
+    $onOff = '<a type="button"  class="btn btn-primary" href="/management/console/' . $vmResponse[0]['id'] . ' style="margin-bottom:5px; width:125px;" onclick="window.open(this.href, "Console", "width=735, height=540, left=24, top=24, scrollbars, resizable"); return false;">View Console</a>';
 }
 else if(strcmp($vmResponse[0]['state'],'Expunging') == 0) 
 {
@@ -74,6 +78,7 @@ else
     $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="stop" style="margin-bottom:5px; width:125px;">Force Off</button> ';
     // Force Restart knop toevoegen
     $onOff .= '<button type="button" class="btn btn-default sendCmdButton" id="restart" style="margin-bottom:5px; width:125px;">Force Restart</button> ';
+    $onOff .= '<a href="javascript:showWarning()"><button type="button" class="btn btn-danger" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>';
 }
 
 ?>
@@ -154,7 +159,6 @@ else
     <a type="button"  class="btn btn-primary" href="/management/console/<?php echo $vmResponse[0]['id']; ?>" style="margin-bottom:5px; width:125px;" onclick="window.open(this.href, 'Console', 'width=735, height=540, left=24, top=24, scrollbars, resizable'); return false;">View Console</a>
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
     <button type="button" class="btn btn-primary sendCmdButton disabled" id="backup" style="margin-bottom:5px; width:125px;">Backup System</button>
-     <a href="javascript:showWarning()"><button type="button" class="btn btn-danger" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>
     <br />
   </div>
 </div>
