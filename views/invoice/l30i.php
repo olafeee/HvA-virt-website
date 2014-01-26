@@ -16,14 +16,30 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
+			<thead>
+				<tr>
+					<th>File</th>
+					<th>Date</th>
+					<th>Customer</th>
+				</tr>
+			</thead>
+			<tbody>
 			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
-				print_r($invoices[$i]);
+				echo "<tr>";
+				echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
+				echo "<td>".$rij['date']."</td>";
+				echo "<td>".$rij['firstname']." ".$rij['lastname']."</td>";
+				echo "</tr>";
+				
+				//print_r($invoices[$i]);
 				//Hier moet je mm doen 
 			}
 
 			?>
 		<!-- nein man ich will no-->
+		</tbody>
+        </table>
 	</div>
       </div>
     </div>
