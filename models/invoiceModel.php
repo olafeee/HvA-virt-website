@@ -19,8 +19,9 @@ class invoiceModel extends baseModel
      }
 
      function getOnTime($date){
-                   //$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE date='$date'");
-				   $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE date='2014-01-25 14:08:00'");
+                   $day = substr($date, 0, 10);
+				   //$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE date LIKE '$day%'");
+				   $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE SUBSTRING('$day',1,10)"
                 return $sqlArray;
      }
 
