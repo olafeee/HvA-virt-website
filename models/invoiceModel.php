@@ -4,7 +4,7 @@
 * 
 */
 
-class managementModel extends baseModel
+class invoiceModel extends baseModel
 {
 
 
