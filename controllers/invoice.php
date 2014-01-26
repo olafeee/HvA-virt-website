@@ -29,7 +29,7 @@ class invoice extends baseController {
  		 $this->baseView->invoice = $invoice;
 		$this->index('l30i');
 	}
-	function sortOnDate($date){
+	function showByDate($date){
 		$invoice = $this->model->getOnTime($date);
 		$this->baseView->invoice = $invoice;
 		//print_r($invoice);
