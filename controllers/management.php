@@ -79,8 +79,13 @@ class Management extends baseController {
 		$adstr = $_POST['adstr'];
         $adzip = $_POST['adzip'];
         $adcit = $_POST['adcit'];
-        $this->model->updateChangeGI($adstr, $adzip, $adcit, $_SESSION['logArr']['userid']);
-        header('location: /management');
+        $CSID = $_SESSION['logArr']['userid'];
+        echo($adstr);
+         echo($adzip);
+          echo($adcit);
+           echo($CSID);
+        //$this->model->updateChangeGI($adstr, $adzip, $adcit, $CSID);
+        //header('location: /management');
 	}
 
 }
