@@ -14,11 +14,11 @@ $allRoles = $this->allRoles;
       </div>
       <div class="panel-body">
       	<?php
-		// echo $manageUser[0]['username'].'<br/>';
-		// echo $manageUser[0]['firstname'].'<br/>';
-		// echo $manageUser[0]['lastname'].'<br/>';
+		 echo $manageUser[0]['username'].'<br/>';
+		 echo $manageUser[0]['firstname'].'<br/>';
+		 echo $manageUser[0]['lastname'].'<br/>';
 		?>
- 		<table class="table table-striped">
+ 		<table class="table">
 			<thead>
 				<tr>
 					<td>Username</td>
@@ -28,9 +28,9 @@ $allRoles = $this->allRoles;
 				</tr>
 				<tr>
 		    	<?php
-		 			'<td>'echo .$manageUser[0]['username'].'<td/>';
-		 			'<td>'echo .$manageUser[0]['firstname'].'<td/>';
-		 			'<td>'echo .$manageUser[0]['lastname'].'<td/>';
+		 			echo '<td>'.$manageUser[0]['username'].'<td/>';
+		 			echo '<td>'.$manageUser[0]['firstname'].'<td/>';
+		 			echo '<td>'.$manageUser[0]['lastname'].'<td/>';
 				?>
 				</tr>
 			</thead>
