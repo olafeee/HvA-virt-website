@@ -25,6 +25,7 @@ class invoice extends baseController {
 	}
 
 	function l30i($limit){
+		echo"hoi";
  		 $invoice = $this->model->getAll($limit);
       print_r($invoice);
 		print_r($invoice);
