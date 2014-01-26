@@ -72,7 +72,7 @@ class Management extends baseController {
 	}
 
 	function us(){
-		$this->model->usm();
+		$this->model->updateUser();
 	}
 
 	
