@@ -154,7 +154,7 @@ else
     <!-- test -->
     <?php 
       $date = $vmResponse[0]['created']; 
-      $date = substr($date, -5);
+      $date = substr($date, 0, -5);
       echo $date;
 
     ?>
