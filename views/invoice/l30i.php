@@ -1,1 +1,3 @@
-<?php include'index.php'; ?>
+<?php
+print_r($this->invoices);
+?>
