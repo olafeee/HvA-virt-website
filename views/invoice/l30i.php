@@ -30,7 +30,7 @@ $invoices = $this->invoice;
 				echo "<tr>";
 				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
 				echo "<td>".$invoices[$i]['date']."</td>";
-				echo "<td><a style=\"none\" href=\"/invoice/showByName/\">".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</a></td>";
+				echo "<td><a style=\"none\" href=\"/invoice/showByName/".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."\">".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</a></td>";
 				echo "</tr>";
 				
 				//print_r($invoices[$i]);
