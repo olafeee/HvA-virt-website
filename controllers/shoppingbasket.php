@@ -28,7 +28,7 @@ class Shoppingbasket extends baseController {
 			$securityGroupId = json_decode($model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']));
 
 			echo '<pre>';
-			print_r(json_decode($securityGroupId));
+			print_r($securityGroupId);
 			echo '</pre>';
 
 			
