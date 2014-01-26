@@ -27,9 +27,12 @@ $invoices = $this->invoice;
 			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
 				echo "<tr>";
-				echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
-				echo "<td>".$rij['date']."</td>";
-				echo "<td>".$rij['firstname']." ".$rij['lastname']."</td>";
+				echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex(FILENAME)."\">".FILENAME."</a></td>";
+				
+				
+				//echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($rij['file'])."\">".$rij['file']."</a></td>";
+				//echo "<td>".$rij['date']."</td>";
+				//echo "<td>".$rij['firstname']." ".$rij['lastname']."</td>";
 				echo "</tr>";
 				
 				//print_r($invoices[$i]);
@@ -40,6 +43,7 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
+		<?php print_r($invoices); ?>
 	</div>
       </div>
     </div>
