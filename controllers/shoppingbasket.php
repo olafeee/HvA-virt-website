@@ -48,7 +48,7 @@ class Shoppingbasket extends baseController {
 
 			// Check succes
 			//if(isset($response['deployvirtualmachineresponse']['errorcode'])) {
-				echo $response;
+				print_r($response);
 				//header('location: /shoppingbasket');
 			//} else {
 				//header('location: /management');
