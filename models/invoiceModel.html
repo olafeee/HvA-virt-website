@@ -15,6 +15,7 @@ class managementModel extends baseModel
 
      function getAll($limit){
                    $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,2");
+                print_r($sqlArray);
                 return $sqlArray;
      }
 

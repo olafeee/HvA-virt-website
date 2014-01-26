@@ -14,7 +14,12 @@ class invoiceModel extends baseModel
 	}
 
      function getAll($limit){
-                   $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,2");
+                   $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,2 ORDER BY date ASC");
+                return $sqlArray;
+     }
+
+     function getOnTime($limit){
+                   $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE ");
                 return $sqlArray;
      }
 
