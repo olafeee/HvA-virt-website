@@ -87,7 +87,8 @@ class managementModel extends baseModel
      }
 
      function updateChangeGI($adstr, $adzip, $adcit, $CSID){
-        $this->db->updateGI($adstr, $adzip, $adcit, $CSID);
+        $x = $this->db->updateGI($adstr, $adzip, $adcit, $CSID);
+        return $x;
     }
 }
 
