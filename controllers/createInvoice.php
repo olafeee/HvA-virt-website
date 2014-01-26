@@ -183,8 +183,6 @@ function makeInvoice(){
 			//self::sentInvoice("a@b.c", "/tmp/1.pdf");
 			self::saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
 			$_SESSION['invoice'] = "invoiceSaved";
-		}else{
-			die("You have already created this invoice, please check your account page");
 		}
 	}
 	
