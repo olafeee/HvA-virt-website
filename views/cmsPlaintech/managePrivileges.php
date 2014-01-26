@@ -10,7 +10,7 @@ $allRoles = $this->allRoles;
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Manange Priviliges of <?php echo $manageUser[0]['firstname'].' '.$manageUser[0]['lastname'] ?></h3>
+        <h3 class="panel-title">Manage Priviliges of <?php echo $manageUser[0]['firstname'].' '.$manageUser[0]['lastname'] ?></h3>
       </div>
       <div class="panel-body">
  		<table class="table table-striped">
@@ -82,9 +82,9 @@ $allRoles = $this->allRoles;
 	    </form>
 
 		</div>
-<br><br>
-<a href="/cmsPlaintech/searchPrivileges"><button type="button" class="btn btn-info">Back</button></a></td>
-
+		<br><br>
+		
+		<a href="/cmsPlaintech/searchPrivileges"><button type="button" class="btn btn-info">Back</button></a></td>
       </div>
     </div>
   </div><!-- END Col 9 -->
