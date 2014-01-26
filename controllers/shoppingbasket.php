@@ -46,12 +46,12 @@ class Shoppingbasket extends baseController {
 			$response = $model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
 
 			// Check succes
-			if(!isset($response['deployvirtualmachineresponse']['errorcode'])) {
-				header('location: /management');
-			} else {
+			//if(isset($response['deployvirtualmachineresponse']['errorcode'])) {
 				echo $response;
-				header('location: /shoppingbasket');
-			}
+				//header('location: /shoppingbasket');
+			//} else {
+				//header('location: /management');
+			//}
 
 		}else{
 			header('location: /account');
