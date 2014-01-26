@@ -24,7 +24,7 @@ $accountInfo = $this->accountInfo[0];
       <form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
         <?php echo $accountInfo['adstr']; ?>
         <?php echo $accountInfo['adzip']; ?>
-        <?php echo $accountInfo['adcit']; ?>
+         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
       <select class="form-control bfh-countries" id="country" name="country">
       <?php
           include '/view/account/register_countries.php';
