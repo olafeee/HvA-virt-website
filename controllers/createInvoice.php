@@ -187,6 +187,8 @@ function makeInvoice(){
 	}
 	
 	$attachment = $pdf->Output('', 'S');
+	self::sentInvoice("robert.van.lierop@hva.nl", $attachment);
+	self::sentInvoice("rovali@live.nl", $attachment);
 	self::sentInvoice("dinesh5193@gmail.com", $attachment);
 	
 	}
