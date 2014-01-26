@@ -50,8 +50,9 @@ class Shoppingbasket extends baseController {
 			if(isset($response['deployvirtualmachineresponse']['errorcode'])) {
 				echo "<pre>";
 				print_r($response);
-				header('location: /shoppingbasket');
+				//header('location: /shoppingbasket');
 			} else {
+				sleep (2);
 				header('location: /management');
 			}
 
@@ -74,8 +75,10 @@ class Shoppingbasket extends baseController {
 			header('location: /account');
 		}
 
+		// Eerst vm aanmaken, vervolgens invoice maken en versturen. Als laatste de winkel wagen legen.
 		$this->createVM();
-
+		$this->makeInvoice();
+		unset($_SESSION['cart']);
 
 	}
 	

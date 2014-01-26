@@ -99,9 +99,11 @@
 			<input type="radio" name="a" value="1" onchange="SLAradio(1)"> Bronze<br>
 			<input type="radio" name="a" value="2" onchange="SLAradio(2)"> Silver<br>
 			<input type="radio" name="a" value="3" onchange="SLAradio(3)"> Gold<br>
-			<a href="javascript:showSLAMenu()" class="sla_ms">more info</a>
-
+			<a href="javascript:showSLAMenu()" class="sla_ms">More info</a>
 		</div>
+
+
+
 	</div>
 	<div class="orderslider-right">
 		<div class="order_change"><div class="changeCPU"></div></div>
