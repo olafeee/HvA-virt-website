@@ -29,12 +29,11 @@ th.headerSortUp {
 			</div>
 			<div id="datepicker"></div>		
 			<script type="text/javascript">
-				$( "#datepicker" ).datepicker();
-				$(function(){
-					var pickerOpts = {
-						maxDate: "+0"
-					};	
-					$("#date").datepicker(pickerOpts);
+				$("#datepicker").datepicker({
+					changeMonth:true,
+					changeYear:true,
+					yearRange:"-5:+0",
+					dateFormat:"yy-MM-dd"
 				});
 			</script>
 		</div>
