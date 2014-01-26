@@ -38,7 +38,7 @@ class Database1 extends PDO
     public function update($table, $data, $where)
     {
         ksort($data);
-        
+        print_r($data);
         $fieldDetails = NULL;
         foreach($data as $key=> $value) {
             $fieldDetails .= "`$key`=:$key,";
@@ -46,7 +46,7 @@ class Database1 extends PDO
         $fieldDetails = rtrim($fieldDetails, ',');
         
         $sth = $this->prepare("UPDATE $table SET $fieldDetails WHERE $where");
-        
+        print_r($sth);
         foreach ($data as $key => $value) {
             $sth->bindValue(":$key", $value);
         }
