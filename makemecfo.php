@@ -1,6 +1,6 @@
 ﻿<?php
 
-if ($_GET['yes'] = "4"){
+//if ($_GET['yes'] = "4"){
 @session_start();
 //$_SESSION['loggedIn'] = "1";
 //$_SESSION['logArr']['timeout'] = "3600";
@@ -18,8 +18,8 @@ echo "You are now CFO";
 
 
 
-}else{
+/*}else{
 	die "not that simple";
-}
+}*/
 
 ?>
