@@ -40,8 +40,9 @@ class Shoppingbasket extends baseController {
 
 
 
-
+			echo"<pre>";
 			print_r($securityGroupId);
+			echo"</pre>";
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
 			//$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
