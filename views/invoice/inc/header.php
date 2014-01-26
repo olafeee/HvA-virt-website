@@ -39,7 +39,7 @@ th.headerSortUp {
 						onSelect: function(dateText, inst) {
 							var date = $.datepicker.parseDate(inst.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, inst.settings);
 							var dateText1 = $.datepicker.formatDate("yy-mm-dd", date, inst.settings);
-							document.location.href = "/showByDate/" + dateText;
+							document.location.href = "/invoice/showByDate/" + dateText;
 						}
 					});
 				});
