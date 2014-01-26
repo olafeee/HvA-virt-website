@@ -230,7 +230,13 @@ class cloudstack
         return $this->_apiRequest($command_array);
     }
 
-
+    public function listServiceOfferings ($domainid) {
+        $command_array = array(
+            'command' => 'listServiceOfferings',       
+            'domainid' => $domainid,
+        );
+        return $this->_apiRequest($command_array);
+    }
 
 
 
