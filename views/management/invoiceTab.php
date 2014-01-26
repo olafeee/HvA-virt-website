@@ -32,7 +32,7 @@
 			$list = new mysqli('localhost','user_admin','T=56(Wp23', 'user_db_plaintech');
 			$first = $_SESSION['logArr']['firstname'];
 			$laste = $_SESSION['logArr']['lastname'];
-			$klantId = $_SESSION['username'];
+			$klantId = $_SESSION['logArr']['username'];
 			//$query = "SELECT * FROM CSUsers WHERE firstname='$first' AND lastname='$laste' LIMIT 1";
 			$query = "SELECT * FROM CSUsers WHERE username='$klantId' LIMIT 1";
 			$sth = mysqli_query($list, $query);
@@ -63,7 +63,7 @@
 				$showQy = "WHERE firstname='".$showMe[0]."' AND lastname='".$showMe[1]."' ";
 			}
 			//Show only invoices from date x
-			$show = $_GET['showd'];
+			$day = $_GET['showd'];
 			if(preg_match('/^[0-9 _]+$/', $day)){
 				$date = explode(" ", $day);
 				// date[0] is day, date[1] is time
