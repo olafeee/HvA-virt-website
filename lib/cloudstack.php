@@ -224,7 +224,7 @@ class cloudstack
 
         $command_array = array(
             'command' => 'listSecurityGroups',       
-            'account' => $id,
+            'account' => $account,
             'domainid' => $domainid,
             );
         return $this->_apiRequest($command_array);
