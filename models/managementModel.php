@@ -76,7 +76,7 @@ class managementModel extends baseModel
      }
 
      function usm(){
-          $this->cloudstack->listVirtualMachines();
+          $this->cloudstack->updateUser();
      }
 
 }
