@@ -35,7 +35,7 @@ class Shoppingbasket extends baseController {
 			$hostid= "84d9d37d-2078-4f27-9799-f634cb66a29c";
 			$diskofferingid= "663eaff4-eacd-47e3-848b-08fba13fe4cb";
 			$displayname= "WindowsServer2008";
-			$name= "WindowsServer2008" . date(DATE_ATOM, mktime(0, 0, 0, 7, 1, 2000));
+			$name= "WindowsServer2008" . date('YmdHis');
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
 			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup'][0]['id'];
