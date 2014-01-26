@@ -2,7 +2,7 @@
 
 class createInvoice extends baseController {
 
-	public model;
+	public $model;
 
 	function __construct(){
 		$this->model = $this->laadModel();
