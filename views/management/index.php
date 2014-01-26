@@ -1,4 +1,5 @@
 <?php 
+$accountInfo = $this->accountInfo[0];
 ?>
 
 <div class="Warningdiv">
@@ -13,6 +14,19 @@
     </div>
   </div>
 </div>
+
+<div class="Editstreetdiv">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign"></span>  Warning!</h3>
+    </div>
+    <div class="panel-body">
+      <?php echo $accountInfo['adstr']; ?>
+      <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- Navigation bar to the left -->
