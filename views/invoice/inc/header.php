@@ -45,9 +45,10 @@ th.headerSortUp {
 					});
 				});
 				
-				function showCust(){ 
+				$(function showCust(){ 
 					var custName1 = document.getElementById('custName').value;
 					document.location.href = "/invoice/showByName/" + custName1;
+				});
 			</script>
 		</div>
 	  
