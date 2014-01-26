@@ -24,8 +24,8 @@ $invoices = $this->invoice;
 			<thead>
 				<tr>
 					<th>File</th>
-					<th>Date</th>
-					<th>Customer <img src="/img/arrowdown.png"></th>
+					<th>Date <img src="/img/arrowdown.png"></th>
+					<th>Customer</th>
 				</tr>
 			</thead>
 			<tbody>

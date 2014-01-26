@@ -23,7 +23,7 @@ class invoiceModel extends baseModel {
     }
 	
 	function getMyName($name){
-		if(!preg_match('/^[a-zA-Z\s]+$/', $name)){ $name = "THISNAME SHOULDNEVERBEUSED";}else{ $names = explode(' ',$name);
+		if(!preg_match('/^[a-zA-Z\s]+$/', $name)){ $names = explode(' ',"THISNAME SHOULDNEVERBEUSED");}else{ $names = explode(' ',$name);
 	    $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE firstname='$names[0]' AND lastname='$names[1]' ORDER BY date ASC");
         return $sqlArray;
 		}
