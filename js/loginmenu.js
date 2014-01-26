@@ -90,7 +90,7 @@ function showWarning() {
     // when clicked outside 
     // call the funtion 
     $('html').click(function() {
-    hideSLAMenu()
+    hideWarning()
     });
     $('.Warningdiv').click(function(event){
     event.stopPropagation();
