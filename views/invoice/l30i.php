@@ -16,7 +16,8 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
-			<thead id="users" class="table table-bordered table-condensed">
+			<table class"table">
+			<thead>
 				<tr>
 					<th>File</th>
 					<th>Date</th>
@@ -27,7 +28,7 @@ $invoices = $this->invoice;
 			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
 				//echo "<tr>";
-				echo "<td><a target=\"_blank\" href=\"../openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
+				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
 				echo "<td>".$invoices[$i]['date']."</td>";
 				echo "<td>".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</td>";
 				//echo "</tr>";
