@@ -29,9 +29,10 @@ th.headerSortUp {
 			</div>
 			<div id="datepicker"></div>		
 			<script type="text/javascript">
-				$( "#datepicker" ).datepicker();	
-			</script>
-			<script type="text/javascript">
+				$(function(){
+				$.datepicker.setDefaults(
+				$.extend($.datepicker.regional['']));
+				$( "#datepicker" ).datepicker();
 				$( ".selector" ).datepicker({ firstDay: 1 });
 				var firstDay = $( ".selector" ).datepicker( "option", "firstDay" );
 				$( ".selector" ).datepicker( "option", "firstDay", 1 );
