@@ -15,6 +15,9 @@ th.headerSortUp {
 	cursor: pointer;
 } 
 </style>
+<script type="text/javascript">
+	$( "#datepicker" ).datepicker();
+</script>
  <div class="row">
 
   <div class="col-md-3">
@@ -22,12 +25,18 @@ th.headerSortUp {
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Invoice Panel</h3>
+		<div class="list-group"><a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a></div>
+		<h3 class="panel-title">Show by name</h3>
+		
+		<h3 class="panel-title">Show by date</h3>
+		<div id="datepicker"></div>
       </div>
-      <div class="list-group">
+	  
+      <!--<div class="list-group">
       	<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
 		<a href="/invoice/showByDate/" class="list-group-item">Show by date</a>
 		<a href="/invoice/showByName/" class="list-group-item">Show by name</a>
-      </div>
+      </div>-->
     </div>
 
   </div> <!-- END Col 3 -->
