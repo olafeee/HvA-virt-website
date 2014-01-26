@@ -68,7 +68,7 @@ print_r($this->invoices);
 				$querz = "SELECT * FROM invoice_files WHERE username='$klantId' ORDER BY date ASC ";
 			}*/
 			$querz = "SELECT * FROM invoice_files WHERE username='$klantId' ORDER BY date ASC";
-			$sti = mysqli_query($list, $querz);
+			//$sti = mysqli_query($list, $querz);
 			//$count = mysqli_num_rows($sti);
 			//if (isset($_GET['page'])) { $page = preg_replace('#[^0-9]#i', '', $_GET['page']);}else{	$page = 1;} 
 			//$itemsPerPage = 2;
