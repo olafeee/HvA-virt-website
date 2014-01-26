@@ -206,16 +206,14 @@ class shoppingbasketModel extends baseModel
 				$pdfname = uniqid('invoice_').".pdf";
 				$pdf->Output('/var/invoices/'.$pdfname, 'F');
 				//self::sentInvoice("a@b.c", "/tmp/1.pdf");
-				//self::saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
-				saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
+				self::saveToDb($pdfname, $klantId, $klantFNaam, $klantLNaam);
 				$_SESSION['invoice'] = "invoiceSaved";
 			}
 		}
 		
 		$attachment = $pdf->Output('', 'S');
 		//self::sentInvoice("robert.van.lierop@hva.nl", $attachment);
-		//self::sentInvoice($klantId, $attachment);
-		sentInvoice($klantId, $attachment);
+		self::sentInvoice($klantId, $attachment);
 	}
 	
 	function saveToDb($filename, $userid, $fsname, $lsname){
