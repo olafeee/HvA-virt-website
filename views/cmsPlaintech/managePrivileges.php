@@ -61,7 +61,7 @@ $allRoles = $this->allRoles;
 		<div class="privilegesForm">
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
-			<td>
+			<div align="left">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
 			<?php
 			 	$y=0;
@@ -73,15 +73,12 @@ $allRoles = $this->allRoles;
 
 			 	?>
 			 </select>
-			 </td>
+			</div>
 	       <!-- <div class="faultMVP"></div> -->
-	        	<td align="left"><button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button></td>
-	    </div>
-		</tr>
-	    </table>
+	        	<div align="left"><button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button></div>
 	    </form>
 		<br><br>
-		<div align="center">
+		<div align="left">
 		<a href="/cmsPlaintech/searchPrivileges"><button type="button" class="btn btn-info">Back</button></a></td>
       </div>
       <br>
