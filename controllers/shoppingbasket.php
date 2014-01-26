@@ -49,6 +49,24 @@ class Shoppingbasket extends baseController {
 		}
 		
 	}
+
+	function order() {
+
+		// Check if a order was made
+		if (FALSE) {
+			header('location: /shoppingbasket');
+		}
+
+		// Check if loged in!
+		// && $_SESSION['orderPage'] == TRUE
+		if (!isset($_SESSION['loggedIn']) ) {
+			header('location: /account');
+		}
+
+		$this->createVM();
+
+
+	}
 	
 }
 
