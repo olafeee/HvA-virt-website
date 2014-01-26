@@ -5,10 +5,11 @@
   <div class="panel-heading">
     <h3 class="panel-title">Warning!</h3>
   </div>
-  <p>Are you sure you want to destroy this system?</p>
-  <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
-  <a href="javascript:hideWarning()"><button type="button" class="btn btn-danger sendCmdButton" id="destroy" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>
-
+  <div class="panel-body">
+    <p>Are you sure you want to destroy this system?</p>
+    <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
+    <a href="javascript:hideWarning()"><button type="button" class="btn btn-danger sendCmdButton" id="destroy" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button></a>
+  </div>
 </div>
 
 
