@@ -25,7 +25,7 @@ class Shoppingbasket extends baseController {
 	function createVM() {
 		if (1 == 1) {
 			$model = $this->laadModel();
-			$securityGroupId = json_decode($model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']));
+			$securityGroupId = json_decode($model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']), true);
 
 			echo '<pre>';
 			print_r($securityGroupId);
@@ -43,7 +43,7 @@ class Shoppingbasket extends baseController {
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
 			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup'][0]['id'];
-			//echo $securitygroupids;
+			echo $securitygroupids;
 
 
 			//echo"hoi";
