@@ -75,7 +75,7 @@ else
 
 <!-- Warning popups -->
 
-<div id="popupdestroy" class="popupdiv" style="display:none;">
+<div id="popupdestroy" class="#popupdiv" style="display:none;">
   <p>Warning!</p><br />
 </div>
 
