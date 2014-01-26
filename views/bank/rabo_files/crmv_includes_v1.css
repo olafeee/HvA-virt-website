@@ -1,0 +1,1186 @@
+/***********************************************************/
+/* Rabobank Nederland crm virtueel							 */
+/* BRIT										            	 */
+/*															 */
+/* Archive file:      $Archive: /BRIT/css/crmv_brit.css $	 */
+/* Last changed by:   $Author: Dobbelsteenm $				 */
+/* Last checked in:   $Date: 12-06-13 16:03 $				 */
+/* Last modified:     $Modtime: 12-06-13 15:59 $			 */
+/* Revision number:   $Revision: 3 $						 */
+/*															 */
+/* CSS definitions	     			 						 */
+/************************************************************/
+
+#algn_btn {
+	position:relative;
+	margin-top:-26px;
+	margin-left:-1px;
+	margin-right:-3px;
+}
+
+#brt_wrapper {
+	width:922px;
+	margin:auto;
+	position:relative;
+	line-height:150%;
+}
+
+#brt_header #pa_logo {
+	position:absolute;
+	top:13px;
+	left:16px;
+}
+
+#brt_header {
+	position:relative;
+	width:100%;
+	height:60px;
+	margin-bottom:26px;
+	padding-top:43px;
+	background:#FFFFFF;
+	z-index:99;
+}
+
+#brt_header .brt_inl_alt {
+	position:absolute;
+	bottom:64px;
+	right:196px;
+}
+
+#brt_form {
+/*	background:url(../images/brt_panel_back.gif) bottom left repeat-x;	*/
+	margin-right:196px;
+	margin-left:196px;
+	width:528px;
+	position:relative;
+	padding-top:10px;
+	padding-bottom:20px;
+	border:1px solid #CCCCCC;
+	min-height:250px;
+}
+
+#brt_form_okknop {
+	margin-right:196px;
+	margin-left:196px;
+	width:528px;
+	position:relative;
+	padding-top:10px;
+	border:none;
+}
+
+.brt_verzend_rr #brt_form, 
+.brt_verzend_dp #brt_form, 
+.brt_betalen_ideal_rr #brt_form, 
+.brt_betalen_ideal_dp #brt_form {
+	background:url(../images/brt_panel_back_mono_h.gif) bottom left repeat-x;
+}
+
+* html #brt_form {
+	height:250px;
+	border-right:2px solid #AAAAAA;
+}
+
+#brt_form em {
+	color:#FF6600;
+	font-style:normal;
+}
+
+#brt_form fieldset {
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+#brt_form_okknop fieldset {
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+#brt_form input {
+	font:normal 1em Verdana, Helvetica, Arial, sans-serif;
+}
+
+#brt_form input.size20 {
+	border-width: 1px;
+	width:135px;
+}
+
+#AuthIdv4 {
+	margin-left:0px;
+}
+#brtcheck01 {
+	margin-left:0px;
+	padding-left:0px;
+}
+#AuthBpasNrv4 {
+	margin-left:0px;
+}
+#AuthCdv4 {
+	margin-left:0;
+}
+
+#SignCdv4 {
+	margin-left:37px;
+}
+input#AuthIdv4,
+input#accountNumber {
+	width:96px;
+}
+#brt_form fieldset legend {
+	display:none;
+}
+
+#brt_form_okknop fieldset legend {
+	display:none;
+}
+
+#brt_form label {
+	font-weight:bold;
+	width:100%;
+	display:block;
+	margin-bottom:6px;
+}
+
+#brt_form p {
+	margin-left:15px;
+	margin-right:20px;
+	line-height:190%;
+}
+
+#brt_form .brt_strong {
+	font-weight:bold;
+}
+
+#brt_form ol {
+	width:480px;
+	padding-left:0;
+	margin-bottom:0;
+	list-style:none;
+	margin-left:0;
+}
+
+#brt_form ol li {
+	margin-bottom:28px;
+	font-weight:bold;
+	margin-left:15px;
+}
+
+#brt_form ol li:first-child {
+	margin-bottom:4px;
+}
+
+#brt_form ol li:last-child {
+	margin-bottom:16px;
+}
+
+#brt_form ol li span {
+	font-weight:normal;
+}
+
+#brt_form ul.brt_list {
+	margin:0;
+	padding:0;
+	list-style:none;
+	padding-left:0;
+	margin-top:2px;
+	width:300px;
+	list-style:default;
+}
+
+#brt_form ul.brt_list li {
+	background:url(../images/brt_icon_dash.gif) 0 8px no-repeat;
+	padding-left:12px;
+	margin-bottom:2px;
+	margin-left:0;
+	font-weight:normal;
+}
+
+#brt_remark_col {
+	position:absolute;
+	left:0;
+	top:0;
+	width:180px;
+}
+
+#brt_action_col {
+	position:absolute;
+	top:0;
+	right:0;
+	width:180px;
+}
+
+#brt_footer {
+	color:#777777;
+	height:40px;
+	margin-right:196px;
+	margin-left:196px;
+	margin-top:6px;
+	padding-left:20px;
+}
+
+#brt_footer ul {
+	margin-top:0;
+}
+
+#brt_wrapper #brt_footer p {
+	margin-bottom:0;
+}
+
+#brt_header h1 {
+	margin:0;
+	margin-left:196px;
+	margin-right:196px;
+	color:#FFFFFF;
+	display:block;
+	height:50px;
+	padding-bottom:1px;
+	border-bottom:10px solid #FF6600;
+/*	margin-top:43px; */
+}
+
+.brt_verzend_dp #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_verzenden_digipass.gif) 10px 14px no-repeat;
+}
+
+.brt_verzend_rr #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_verzenden_random_reader.gif) 10px 14px no-repeat;
+}
+
+.brt_verzend #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_verzenden.gif) 10px 14px no-repeat;
+}
+
+.brt_inlog_rr #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_inloggen_random_reader.gif) 12px 14px no-repeat;
+}
+
+.brt_inlog_dp #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_inloggen_digipass.gif) 10px 14px no-repeat;
+}
+
+.brt_inlog #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_inloggen.gif) 10px 14px no-repeat;
+}
+
+#brt_header h1 span {
+	font:normal 26px 'Myriad Bold', Verdana, Helvetica, Arial, sans-serif;
+	display:block;
+	text-indent:-9999px;
+	background:#000099;
+	height:40px;
+	padding:10px 0 0 16px;
+}
+
+.brt_buttonbar {
+	position:relative;
+	top:0;
+	bottom:30px;
+	left:15px;
+	display:block;
+}
+
+#brt_form_okknop .brt_buttonbar {
+	position:relative;
+	top:1px;
+	bottom:1px;
+	left:9px;
+	display:block;
+}
+
+/* random reader */
+.brt_inlog_rr .brt_illustration_rr {
+	background:url(../images/randomreader_nieuw_transp_4.png) top left no-repeat;
+	height:219px;
+	width:222px;
+	position:absolute;
+	top:-9px;
+	right:-24px;
+}
+
+* html .brt_inlog_rr .brt_illustration_rr {
+	top:6px;
+	right:-16px;
+}
+
+.brt_verzend_rr .brt_illustration_rr {
+	background:url(../images/brt_random_reader_tr_1e_invoer_mono.png) top left no-repeat;
+	height:219px;
+	width:222px;
+	position:absolute;
+	top:-12px;
+	right:-30px;
+}
+
+* html .brt_verzend_rr .brt_illustration_rr {
+	background:url(../images/brt_random_reader_tr_1e_invoer_mono.png) top left no-repeat;
+}
+
+.brt_betalen_ideal_rr .brt_illustration_rr {
+	background:url(../images/randomreader_nieuw_transp_4.png) top left no-repeat;
+	height:219px;
+	width:222px;
+	position:absolute;
+	top:-12px;
+	right:-30px;
+}
+
+* html .brt_betalen_ideal_rr .brt_illustration_rr {
+	background:url(../images/randomreader_nieuw_transp_4.png) top left no-repeat;
+	top:6px;
+	right:-18px;
+}
+
+/* digipass */
+.brt_inlog_dp .brt_illustration_dp {
+	background:url(../images/brt_digipass_pin.png) top left no-repeat;
+	height:155px;
+	width:214px;
+	position:absolute;
+	top:30px;
+	right:10px;
+}
+
+* html .brt_inlog_dp .brt_illustration_dp {
+	background:url(../images/brt_digipass_pin.gif) top left no-repeat;
+}
+
+.brt_verzend_dp .brt_illustration_dp {
+	background:url(../images/brt_digipass_pin_mono.png) top left no-repeat;
+	height:155px;
+	width:214px;
+	position:absolute;
+	top:30px;
+	right:10px;
+}
+
+* html .brt_verzend_dp .brt_illustration_dp {
+	background:url(../images/brt_digipass_pin_mono.png) top left no-repeat;
+}
+
+.brt_betalen_ideal_dp .brt_illustration_dp {
+	background:url(../images/brt_digipass_pin_mono.png) top left no-repeat;
+	height:155px;
+	width:214px;
+	position:absolute;
+	top:30px;
+	right:10px;
+}
+
+* html .brt_betalen_ideal_dp .brt_illustration_dp {
+	background:url(../images/brt_digipass_pin_mono.png) top left no-repeat;
+}
+
+#brt_form .brt_foutmelding {
+	position:relative;
+	display:block;
+	color:#FF6600;
+	margin-left:20px;
+}
+
+.brt_foutmelding .brt_errorcode {
+	width:50px;
+	float:right;
+	font-weight:bold;
+	line-height:190%;
+}
+
+.brt_foutmelding .brt_errormsg {
+	margin-right:60px;
+	margin-left:40px;
+	font-weight:bold;
+	line-height:190%;
+}
+
+.brt_rborder {
+	width:2px;
+	height:100%;
+	background:url(../images/brt_panel_back_rborder.gif) top right repeat-y;
+	position:absolute;
+	right:-3px;
+	bottom:1px;
+}
+
+* html .brt_rborder {
+	background-image:none;
+}
+
+.brt_pctl {
+	background:url(../images/brt_panel_corner_topleft.gif) top left no-repeat;
+	height:2px;
+	width:2px;
+	position:absolute;
+	top:-1px;
+	left:-1px;
+}
+
+.brt_pctr {
+	background:url(../images/brt_panel_corner_topright.gif) top right no-repeat;
+	height:3px;
+	width:3px;
+	position:absolute;
+	top:-1px;
+	right:-3px;
+}
+
+.brt_pcbr {
+	background:url(../images/brt_panel_corner_botright.gif) bottom right no-repeat;
+	position:absolute;
+	height:5px;
+	width:4px;
+	bottom:0;
+	right:-3px;
+}
+
+.brt_pcbl {
+	background:url(../images/brt_panel_corner_botleft.gif) bottom left no-repeat;
+	height:5px;
+	width:3px;
+	position:absolute;
+	bottom:0;
+	left:-1px;
+}
+
+#brt_wrapper .brt_hidden {
+	display:none;
+}
+
+* html .brt_pctr {
+	background:#FFFFFF url(../images/brt_panel_corner_topright.gif) bottom right no-repeat;
+	height:15px;
+	width:3px;
+	position:absolute;
+	top:-13px;
+	right:-3px;
+}
+
+#brt_transactions {
+	margin-left:195px;
+	margin-right:195px;
+	margin-bottom:20px;
+	border:1px solid #CCCCCC;
+
+}
+
+.brt_reknr {
+	display: block;
+	padding-top: 3px;
+	padding-bottom: 5px;
+}
+
+.brt_dp_warning {
+	margin-top: 10px;
+	margin-left: 40px;
+	margin-bottom: 25px;
+	font-weight:bold;
+	color:#FF6600;
+	line-height:160%;
+}
+
+/* anoniem styles */
+
+body {
+	font:normal 70% Verdana, Helvetica, Arial, sans-serif;
+	border-style:none;
+	padding:0 20px;
+	margin:0;
+	background-color:#FFFFFF;
+}
+
+#brt_wrapper a {
+	font:1em/1.5em Verdana, Arial, Helvetica, sans-serif;
+	color:#0000CC;
+	text-align:left;
+	text-decoration:underline;
+}
+
+div, p, table {
+	font:1em/1.5em Verdana, Helvetica, Arial, sans-serif;
+	margin:0;
+	padding:0;
+}
+
+#brt_wrapper p {
+	margin-bottom:10px;
+}
+
+#brt_wrapper div.crosslink {
+	margin-bottom:10px;
+}
+ 
+#brt_wrapper div.crosslink h2,
+#brt_wrapper div.crosslink h3,
+#brt_wrapper div.crosslink h5 {
+	margin:0;
+	padding:0;
+	width:178px;
+	height:27px;
+	border:1px solid #AAAAAA;
+/* 	font:normal 1.4em 'Myriad Bold', Verdana, Helvetica, Arial, sans-serif; 
+ 	color:#FF6600; */
+}
+
+#brt_wrapper div.crosslink h3 span {
+	display:none;
+}
+
+#brt_wrapper div.crosslink h2.cl_text span, 
+#brt_wrapper div.crosslink h3.cl_text span,
+#brt_wrapper div.crosslink h5.cl_text span {
+	display: block;
+}
+
+#brt_wrapper div.crosslink h2.cl_text, 
+#brt_wrapper div.crosslink h3.cl_text,
+#brt_wrapper div.crosslink h5.cl_text {
+	border: 1px solid #AAAAAA;
+	color: #FF7700;
+	display: block;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1.2em;
+	font-weight: normal;
+	height: 24px;
+	letter-spacing: 0.2px;
+	margin: 0;
+	padding: 6px 0 0 7px;
+	width: 171px;
+}
+
+#brt_wrapper .cl_activeringscode {
+	background:url(../images/brt_cr_titel_activeringscode.gif) 6px 6px no-repeat;
+}
+
+#brt_wrapper .cl_uwveiligheid {
+	background:url(../images/brt_cr_titel_uwveiligheid.gif) 6px 6px no-repeat;
+}
+
+#brt_wrapper .cl_aanvragen {
+	background:url(../images/brt_cr_titel_aanvragen.gif) 6px 6px no-repeat;
+}
+
+#brt_wrapper .cl_help {
+	background:url(../images/brt_cr_titel_help.gif) 6px 6px no-repeat;
+}
+
+#brt_wrapper .container {
+	margin:0;
+	padding:4px 8px 0 0;
+}
+
+#brt_wrapper div.crosslink div.container {
+	width:162px;
+	margin-top:1px;
+	border-right:1px solid #AAAAAA;
+	border-bottom:1px solid #AAAAAA;
+	border-left:1px solid #AAAAAA;
+	padding:4px 8px 8px 8px;
+}
+
+#brt_wrapper div.crosslink p {
+	line-height:150%;
+}
+
+span.arb1,
+span.arb2,
+span.arb3,
+span.arb4 {
+	position:absolute;
+	display:block;
+	overflow:auto;
+	width:1px;
+	height:1px;
+	background-color:#FFFFFF;
+}
+
+span.arb1 {
+	margin-bottom:-1px;
+	left:0;
+}
+
+span.arb2 {
+	margin-bottom:-1px;
+	right:0;
+}
+
+span.arb3{
+	margin-top:-1px;
+	left:0;
+}
+
+span.arb4 { 
+	margin-top:-1px;
+	right:0;
+}
+
+#brt_wrapper ul.linklist {
+	margin:0;
+	padding-left:0;
+	list-style:none;
+	margin-bottom:10px;
+}
+
+#brt_wrapper ul.linklist li ul,
+ul.linklist li ul li ul {
+	list-style:none;
+}
+
+#brt_wrapper ul.linklist li {
+	margin:0;
+	padding-left:0;
+}
+
+#brt_wrapper .linklist a:visited, 
+#brt_wrapper a.decorated:visited {
+	color:#0000CC;
+	background-image:url(../images/arrowlight.gif);
+}
+
+#brt_wrapper .linklist a:hover,
+#brt_wrapper a.decorated:hover {
+	color:#FF6600;
+	background-image:url(../images/arrowhover.gif);
+}
+
+#brt_wrapper .linklist a, 
+#brt_wrapper a.decorated {
+	color:#0000CC;
+	font-weight:normal;
+	text-decoration:none;
+	background:url(../images/arrowlight.gif) no-repeat 0 5px;
+	padding-left:8px;
+	margin-left:0;
+	display:block;
+	width:auto;
+}
+
+* html #brt_wrapper .linklist li {
+	height:1%;
+}
+
+* html #brt_wrapper .linklist a {
+	display:block;
+}
+
+/*
+#brt_but_submit {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_inloggen.gif) no-repeat top left;
+}
+#brt_but_submit.m-over-state {
+	background:url(../images/brt_button_inloggen_mo.gif) no-repeat top left;
+}
+
+#brt_but_annuleren {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_annuleren.gif) no-repeat top left;
+}
+
+#brt_but_annuleren.m-over-state {
+	background:url(../images/brt_button_annuleren_mo.gif) no-repeat top left;
+}
+
+#brt_but_help {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_help.gif) no-repeat top left;
+}
+#brt_but_help.m-over-state {
+	background:url(../images/brt_button_help_mo.gif) no-repeat top left;
+}
+
+#brt_but_verzenden {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_verzenden.gif) no-repeat top left;
+}
+#brt_but_verzenden.m-over-state {
+	background:url(../images/brt_button_verzenden_mo.gif) no-repeat top left;
+}
+
+#brt_but_verder {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_verder.gif) no-repeat top left;
+}
+#brt_but_verder.m-over-state {
+	background:url(../images/brt_button_verder_mo.gif) no-repeat top left;
+}
+
+#brt_but_activeren {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_activeren.gif) no-repeat top left;
+}
+#brt_but_activeren.m-over-state {
+	background:url(../images/brt_button_activeren_mo.gif) no-repeat top left;
+}
+
+* html #brt_but_submit, * html #brt_but_annuleren, * html #brt_but_help, * html #brt_but_verzenden, * html #brt_but_verder, * html #brt_but_betalen, *html #brt_but_activeren {
+	text-indent:0;
+	font-size:0 !important;
+	color:#FFFFFF;
+	padding-bottom:10px;
+}
+
+*+html #brt_but_submit, *+html #brt_but_annuleren, *+html #brt_but_help, *+html #brt_but_verzenden, *+html #brt_but_verder, *+html #brt_but_betalen, *+html #brt_but_activeren {
+	text-indent:0;
+	font-size:0 !important;
+	color:#FFFFFF;
+	padding-bottom:10px;
+}
+
+*/
+
+/* iDEAL updates */
+.brt_midcol {
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+}
+
+#brt_ideal img {
+	float:right;
+	margin-right:20px;
+	margin-left:10px;
+	margin-top:10px;
+}
+
+#brt_ideal .brt_tablewrapper {
+	padding-left:8px;
+	padding-right:8px;
+	padding-bottom:12px;
+}
+
+#brt_ideal h2 {
+	margin-top:0;
+	margin-bottom:0;
+	display:block;
+	background:#EEEEEE;
+	width:auto;
+	height:12px;
+	padding-top:4px;
+	padding-bottom:6px;
+	padding-left:14px;
+	border-bottom:1px solid #CCCCCC;
+	font:bold 1em Verdana, Helvetica, Arial, sans-serif;
+}
+
+.brt_betalen_ideal_overzicht #brt_ideal h2 {
+	font:bold 1.2em Verdana, Helvetica, Arial, sans-serif;
+	color:#000000;
+	background:none;
+	border:none;
+	margin-bottom:20px;
+}
+
+.brt_betalen_ideal_reksel #brt_ideal h2 {
+	font:bold 1.2em Verdana, Helvetica, Arial, sans-serif;
+	color:#000000;
+	background:none;
+	border:none;
+	margin-bottom:20px;
+}
+
+#brt_ideal table {
+	display:table;
+	border-collapse:collapse;
+	table-layout:auto;
+	width:100%;
+	empty-cells:show;
+	margin-bottom:10px;
+	margin-top:0;
+}
+
+#brt_ideal caption {
+	display:none;
+}
+
+#brt_ideal table td, 
+#brt_ideal table th {
+	width:50%;
+	border-bottom:1px solid #CCCCCC;
+	border-collapse:none;
+	text-align:left;
+	font-weight:normal;
+	padding-left:6px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#brt_ideal table td strong, 
+#brt_ideal table th strong {
+	color:#000000;
+}
+
+ul.brt_ideal-list {
+	margin:0;
+	padding:0;
+	width:auto;
+	list-style: none;
+	padding-left:0;
+	margin-top:2px;
+	display: inline-block;
+}
+
+ul.brt_ideal-list li {
+	background:url(../images/brt_icon_dash.gif) 0 8px no-repeat;
+	padding-left:7px;
+	margin-bottom:2px;
+	margin-left:0;
+	font-weight:normal;
+	display:block;
+}
+
+.brt_betalen_ideal_rr #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_ideal.gif) 11px 14px no-repeat;
+}
+
+.brt_betalen_ideal_dp #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_ideal.gif) 11px 14px no-repeat;
+}
+
+#brt_form .brt_oneline {
+	margin-top:0px;
+	margin-left:150px;
+}
+
+#brt_form .brt_oneline label {
+	display:inline;
+	width:auto;
+	font-weight:normal;
+	padding-top:10px;
+}
+
+#brt_form .brt_onelinev4 {
+	margin-top:0px;
+	margin-left:0px;
+}
+
+#brt_form .brt_onelinev4 label {
+	display:inline;
+	width:auto;
+	font-weight:normal;
+	padding-top:10px;
+}
+
+#brt_form .brt_onelineTxtPlaceHolder {
+	display:inline-block;
+	width:150px;
+}
+
+#brt_but_betalen {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_betalen.gif) no-repeat top left;
+}
+
+#brt_but_betalen.m-over-state {
+	background:url(../images/brt_button_betalen_mo.gif) no-repeat top left;
+}
+
+#brt_but_afdrukken {
+	border:none;
+	width:94px;
+	height:22px;
+	text-indent:-9999px;
+	background:url(../images/brt_button_afdrukken.gif) no-repeat top left;
+}
+
+#brt_but_afdrukken.m-over-state {
+	background:url(../images/brt_button_afdrukken_mo.gif) no-repeat top left;
+}
+
+.brt_betalen_ideal_overzicht #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_ideal.gif) 11px 14px no-repeat;
+}
+
+.brt_betalen_ideal_reksel #brt_header h1 span {
+	background:#000099 url(../images/brt_titel_ideal.gif) 11px 14px no-repeat;
+}
+
+.brt_betalen_ideal_overzicht #brt_ideal p {
+	margin-left:14px;
+}
+
+.brt_betalen_ideal_overzicht #brt_ideal td, 
+.brt_betalen_ideal_overzicht #brt_ideal th {
+	border:none;
+}
+
+.brt_betalen_ideal_overzicht #brt_form .brt_buttonbar {
+	margin-left:-26px;
+}
+
+* html .brt_betalen_ideal_overzicht #brt_form .brt_buttonbar {
+	padding-left:26px;
+}
+
+.brt_betalen_ideal_overzicht #brt_ideal input{
+	margin-bottom:0;
+}
+
+.brt_betalen_ideal_reksel #brt_ideal label {
+	font-weight:normal;
+}
+
+.brt_betalen_ideal_reksel #brt_ideal p {
+	margin-left:12px;
+}
+
+.brt_betalen_ideal_reksel #brt_ideal fieldset {
+	margin-left:12px;
+}
+
+.brt_betalen_ideal_reksel #brt_ideal select option {
+	margin-top:4px;
+	margin-bottom:4px;
+}
+
+.brt_betalen_ideal_reksel #brt_ideal .brt_buttonbar {
+	margin-left:-28px;
+}
+
+.brt_nobullets {
+	list-style:none;
+}
+
+#brt_form .brt_nobullets label {
+	display:none;
+}
+
+/* MasterCard SecureCode */
+.brt_betalen_securecode_rr #brt_header h1 span {
+	background:#000099 url(../images/header_mastercard_securecode.png) 11px 14px no-repeat;
+}
+
+#brt_ideal .logo-mastercardsecurecode {
+	float:right;
+	margin-right:10px;
+	margin-left:10px;
+	margin-top:3px;
+}
+
+.brt_betalen_securecode_rr .brt_illustration_rr {
+	background:url(../images/brt_random_reader_tr_mcsc.png) top left no-repeat;
+	height:219px;
+	width:222px;
+	position:absolute;
+	top:-12px;
+	right:0;
+}
+
+* html .brt_betalen_securecode_rr .brt_illustration_rr {
+	background:url(../images/brt_random_reader_tr_mcsc.gif) top left no-repeat;
+}
+
+/* Added MvdD UA agent message */
+#brt_content-section {
+	position:relative;
+	height:1%;
+}
+
+#brt_ua-msg {
+	margin-right:196px;
+	margin-left:196px;
+	width:528px;
+	position:relative;
+	padding-top:0;
+	padding-bottom:0;
+	padding-left:8px;
+	padding-right:8px;
+}
+
+#brt_ua-msg h2 {
+	font-size:1.2em;
+	color:#FF6600;
+	margin-bottom:0.3em;
+	margin-top:0;
+}
+
+#info {
+	cursor:pointer;
+}
+
+#infoimg {
+	display:none !important;
+}
+
+#tooltip{
+	background:none repeat scroll 0 0;
+	display:block;
+	padding:0px;
+	position:absolute;
+	z-index:99;
+	cursor:pointer;
+}
+
+#brt_off-machtiging {
+	margin-left:0px;
+	width:528px;
+	position:relative;
+	padding-top:0;
+	padding-bottom:0;
+	padding-left:0px;
+	padding-right:0px;
+	border:1px solid #CCCCCC;
+}
+
+#brt_off-machtiging p {
+	padding-left:10px;
+}
+
+.signheader {
+    padding:2px 10px 0px 12px;
+    background-color: #EEEEEE;
+    height:20px;   
+    position:relative;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.signheader  h3{
+    float:left;
+    display:inline;
+    font:bold 1em/1.5em Verdana, Helvetica, Arial, sans-serif;
+    margin-top: 0px;
+    margin-bottom:0;
+}
+
+.signplainwrapper {
+    padding: 6px 10px 10px 2px;
+}
+
+#brt-infopanel {
+	background:url(../images/brt_info_panel.png) top left no-repeat;
+	margin-left:196px;
+	margin-right:196px;
+	margin-bottom:20px;
+	padding-top:8px;
+	position:relative;
+	width:528px;
+}
+
+#brt-infopanel p {
+	background:url(../images/css/info-banner.png) 0 4px no-repeat;
+	margin-left:15px;
+	padding-left:86px;
+	width:400px;
+}
+
+/* MvdD added 18012012 */
+.tooltip p {
+	display:none;
+}
+
+.infoimg {
+	display:none;
+}
+
+.imgstripe {
+	background:#EEEEEE url(../images/css/panel-stripe.png) top left !important;
+}
+
+.newpanel {
+	-webkit-box-shadow: 1px 1px 2px 0px #666666;
+	-moz-box-shadow: 1px 1px 2px 0px #666666;
+	box-shadow: 1px 1px 2px 0px #666666; 
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px; 
+	border:1px solid #CCCCCC;
+}
+
+#footertext {
+	margin-left:196px;
+	margin-right:196px;
+	padding-bottom:20px;
+	padding-top:8px;
+	position:relative;
+	width:531px;
+	color:#999999;
+	padding-left:20px;
+}	
+	
+.introtext strong {
+	color:#FF6600;
+	font-weight:bold;
+}
+
+.brt_buttonbar .rb-button, 
+.brt_buttonbar .rb-button:visited {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .25em 1em;
+	-webkit-border-radius: .3em;
+	-moz-border-radius: .3em;
+	border-radius: .3em;
+	background: #F0F0F0;
+    background: -moz-linear-gradient(center 9px , #FFFFFF, #F0F0F0);
+	background: -webkit-gradient(linear, 9px, center, from(#FFFFFF), to(#F0F0F0));
+    border: 1px solid #C0C0C0;
+    color: #000099;
+	}
+
+/* target IE7 */	
+*+html .brt_buttonbar .rb-button , 
+*+html .brt_buttonbar .rb-button :visited {
+	background: url(../images/css/btn_midden.gif) -1px -1px repeat-x;
+	height:24px;
+	width:auto;
+	padding:.2em .4em;
+}
+
+/* this selector contains invalid css intentionaly, to target IE8 */	
+.brt_buttonbar  .rb-button, 
+.brt_buttonbar  .rb-button:visited {
+	background: url(../images/css/btn_midden.gif) 0 -1px repeat-x\0;
+	height:22px\0;
+	width:auto\0;
+	padding:.2em 1em\0;
+}	
+	
+#brt_form input.rb-strong {
+	font-weight:bold;
+}	
+	
+.brt_buttonbar .rb-button:hover {
+	color:#FF6600;
+	text-decoration: none;
+}
+
+.brt_buttonbar .rb-button:active {
+	color:#FF6600;
+	text-decoration: none;
+	position: relative;
+	top: 1px;
+}
+
+.brt-infolabel {
+	 background:url(../images/css/information_small.gif) no-repeat top left;
+	 text-decoration:none;
+	 width:12px;
+	 height:12px;
+	 text-indent:-99999px;
+	 overflow:hidden;
+	 display:inline-block;
+	 margin-top:2px;
+}
