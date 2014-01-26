@@ -57,6 +57,13 @@ class Database1 extends PDO
         print_r($sth);     
     }
 
+    public function updateGI($adstr, $adzip, $adcit, $CSID){
+        $sth = $this->prepare("UPDATE  `user_db_plaintech`.`CSUsers` 
+                                SET  `adstr` =  '$adstr', `adzip` =  '$adzip', `adcit` =  '$adcit' 
+                                WHERE  `CSUsers`.`CSID` =  '$CSID';");   
+        return $sth->execute();
+    }
+
     public function insert($table, $data)
     {
         ksort($data);
