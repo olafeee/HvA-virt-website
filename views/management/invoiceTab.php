@@ -103,8 +103,8 @@
 					}elseif (!in_array($rij['file'], $_SESSION['allowFile'])){
 						$_SESSION['allowFile'][] = $rij['file'];
 					}
-				}else{
-					echo "No invoices were found.";
+				//}else{
+					//echo "No invoices were found.";
 				}
 			}
 		?>
