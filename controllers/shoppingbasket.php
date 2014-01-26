@@ -36,11 +36,11 @@ class Shoppingbasket extends baseController {
 			$name= "WindowsServer2008";
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
-			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
-			echo $securitygroupids;
+			//$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
+			//echo $securitygroupids;
 
 
-			echo"hoi";
+			//echo"hoi";
 			echo '<pre>';
 			print_r($securityGroupId);
 			echo "</pre>";
