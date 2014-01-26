@@ -60,6 +60,11 @@ else if(strcmp($vmResponse[0]['state'],'Expunging') == 0)
     $state = '<span class="label label-default">Deleted</span>';
     $onOff .= '';
 } 
+else if (strcmp($vmResponse[0]['state'],'Destroyed') == 0)
+{
+  $state = '<span class="label label-default">Destroyed</span>';
+  $onOff .= '<button type="button" class="btn btn-primary sendCmdButton" id="recover" style="margin-bottom:5px; width:125px;">Recover System</button> ';
+}
 else 
 {
     $state = '<span class="label label-default">Unknown</span>';
