@@ -21,14 +21,16 @@ $accountInfo = $this->accountInfo[0];
       <h3 class="panel-title">Edit General Information</h3>
     </div>
     <div class="panel-body">
+      <form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
         <?php echo $accountInfo['adstr']; ?>
         <?php echo $accountInfo['adzip']; ?>
         <?php echo $accountInfo['adcit']; ?>
-      <select class="form-control bfh-countries" id="rol_id" name="rol_id">
+      <select class="form-control bfh-countries" id="country" name="country">
       <?php
           include '/view/account/register_countries.php';
         ?>
        </select>
+     </form>
       <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
     </div>
   </div>

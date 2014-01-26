@@ -1,4 +1,14 @@
 <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script> 
+<style>
+th.headerSortDown { 
+    background-image: url(http://tablesorter.com/themes/blue/desc.gif); 
+    background-color: #3399FF; 
+} 
+th.headerSortUp { 
+    background-image: url(http://tablesorter.com/themes/blue/asc.gif); 
+    background-color: #3399FF; 
+} 
+</style>
  <div class="row">
 
   <div class="col-md-3">
