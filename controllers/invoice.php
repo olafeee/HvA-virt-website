@@ -50,4 +50,5 @@ class invoice extends baseController {
 		$customers = $this->model->getCustomers($cusName);
 		$this->baseView->invoice = $invoice;
 		$this->index('getCustomers');
+	}
 }
