@@ -48,7 +48,7 @@ $allRoles = $this->allRoles;
 		<table>
 		<br/>
 		<h4>Add user to the following group:</h4>
-		<table>
+		<table class="table table-condensed">
 		<tr>
 		<td><div class="privilegesForm">
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
