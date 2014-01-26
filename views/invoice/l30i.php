@@ -43,7 +43,7 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
-		<?php print_r($invoices); ?>
+		<?php echo "<pre>";print_r($invoices);echo "</pre>"; ?>
 	</div>
       </div>
     </div>
