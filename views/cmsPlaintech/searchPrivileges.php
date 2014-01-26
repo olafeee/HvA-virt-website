@@ -19,7 +19,6 @@
 			<td>Email</td>
 			<td>View</td>
 		</tr>
-		<tr>
 		<?php
 
 		if(isset($this->nameFound)){
@@ -27,17 +26,18 @@
 
 			$i = 0;
 			while ($i < count($nameFound)) {
+				echo'<tr>';
 				echo '<td>'.$nameFound[$i]['firstname'].'</td>';
 				echo '<td>'.$nameFound[$i]['lastname'].'</td>';
 				echo '<td>'.$nameFound[$i]['username'].'</td>';
 				echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'/'.$nameFound[$i]['username'].'">Bekijk</a>';
-				echo '</br>';
+				echo '</tr>';
 				$i++;
 			}
 		}
 
 		?>
-	</tr>
+	
 	</table>
       </div>
     </div>
