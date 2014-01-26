@@ -89,7 +89,7 @@ $date = str_replace('T', ' ', $date);
 ?>
 
 <div class="panel-heading">
-  <h3 class="panel-title"><?php echo $vmResponse[0]['name'] . ' - ' . $vmResponse[0]['state'] ; ?></h3>
+  <h3 class="panel-title"><?php echo $vmResponse[0]['displayname'] . ' - ' . $vmResponse[0]['state'] ; ?></h3>
 </div>
 <div class="panel-body">
 
@@ -104,7 +104,7 @@ $date = str_replace('T', ' ', $date);
     <table>
       <tr>
         <th class="right">Name: </th>
-        <td><?php echo $vmResponse[0]['name']; ?></td>
+        <td><?php echo $vmResponse[0]['displayname']; ?></td>
       </tr>
       <tr>
         <th class="right">Status: </th>
