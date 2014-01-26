@@ -25,8 +25,8 @@ $accountInfo = $this->accountInfo[0];
         <input type="text" class="form-control" id="adstr" name="adstr"  value="<?php echo $accountInfo['adstr']; ?>">
         <input type="text" class="form-control" id="adzip" name="adzip"  value="<?php echo $accountInfo['adzip']; ?>">
         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
-        <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
-        <button type="button" type="submit" class="btn btn-succes" style="margin-bottom:5px; width:125px;">Save</button>
+        <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info">Cancel</button></a>
+         <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
      </form>
 
     </div>
