@@ -53,6 +53,8 @@ class Database1 extends PDO
         echo"<br/>";
         print_r($sth);
         $sth->execute();
+           echo"<br/>";
+        print_r($sth);     
     }
 
     public function insert($table, $data)
