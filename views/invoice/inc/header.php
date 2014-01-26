@@ -44,5 +44,5 @@ th.headerSortUp {
 		<a href="/invoice/showByDate/" class="list-group-item">Show by date</a>
 		<a href="/invoice/showByName/" class="list-group-item">Show by name</a>
       </div>-->
-    </div>
+    <!--</div>-->
 </div> <!-- END Col 3 -->
