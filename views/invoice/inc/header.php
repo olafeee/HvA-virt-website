@@ -28,7 +28,7 @@ th.headerSortUp {
 			<div class="list-group">
 				<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
 				<br /><br /><div class="input-group">
-				<input type="text" name="name" id="name" class="form-control" placeholder="Customer Name" onkeyup="showData(this.value);">
+				<input type="text" name="name" id="name" class="form-control" placeholder="Customer Name">
 				<span class="input-group-btn"><button class="btn btn-default" type="button">Show</button></span>
 				</div><br /><br />
 			</div>
@@ -51,6 +51,7 @@ th.headerSortUp {
 						type : "GET",
 						async : false,
 						success : function(data) {
+							document.getElementById('name').innerHTML = "New Text";
 						}
 					});
 					}
