@@ -32,7 +32,7 @@ class shoppingbasketModel extends baseModel
 		//$this->cloudstack->listAsyncJobs();
 	}
 
-	function makeInvoice(){
+	public function makeInvoice(){
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
 

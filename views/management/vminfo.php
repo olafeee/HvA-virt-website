@@ -161,8 +161,10 @@ $date = str_replace('T', ' ', $date);
 
   	<?php echo $onOff; ?>
 
+    <!-- Not used 
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
     <button type="button" class="btn btn-primary sendCmdButton disabled" id="backup" style="margin-bottom:5px; width:125px;">Backup System</button>
+    -->
     <br />
   </div>
 </div>

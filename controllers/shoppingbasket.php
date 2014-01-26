@@ -46,15 +46,7 @@ class Shoppingbasket extends baseController {
 			$response = $model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
 			$response = json_decode($response, true);
 
-			// Check succes
-			if(isset($response['deployvirtualmachineresponse']['errorcode'])) {
-				echo "<pre>";
-				print_r($response);
-				//header('location: /shoppingbasket');
-			} else {
-				sleep (2);
-				header('location: /management');
-			}
+			return $response;
 
 		}else{
 			header('location: /account');
@@ -76,9 +68,19 @@ class Shoppingbasket extends baseController {
 		}
 
 		// Eerst vm aanmaken, vervolgens invoice maken en versturen. Als laatste de winkel wagen legen.
-		$this->createVM();
+		$response = $this->createVM();
 		$this->makeInvoice();
 		unset($_SESSION['cart']);
+
+		// Check succes
+		if(isset($response['deployvirtualmachineresponse']['errorcode'])) {
+			echo "<pre>";
+			print_r($response);
+			//header('location: /shoppingbasket');
+		} else {
+			sleep (2);
+			header('location: /management');
+		}
 
 	}
 	
