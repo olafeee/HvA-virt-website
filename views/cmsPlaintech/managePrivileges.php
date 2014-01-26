@@ -72,9 +72,7 @@ $allRoles = $this->allRoles;
 
 			 	?>
 			 </select>
-		</div>
 	       <!-- <div class="faultMVP"></div> -->
-	        <div align="center">
 	        	<button class="btn btn-lg btn-primary btn-block btn-soepmit" type="submit">Add</button>
 	        </div>
 	    </div>
