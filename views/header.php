@@ -120,15 +120,20 @@ if($this->url0=='order'){
       <li><a href="/order">Order</a></li>
       <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; }?>
       <?php
-      echo(count($_SESSION['userRole']));
       //print_r($_SESSION['userRole']);
-      for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
-          echo $_SESSION['userRole'][$i]['rol_id'];
+      if (isset($_SESSION['userRole'])) {
+        for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
+          if ($_SESSION['userRole'][$i]['rol_id']=='5') {
+            echo '<li><a href="/cmsPlaintech"> CMS</a></li>';
+          }
+          if ($_SESSION['userRole'][$i]['rol_id']=='2') {
+            echo '<li><a href="/invoice/l30i/0">Invoice</a></li>';
+          }
+        }
       }
+
       ?>
 
-
-      <?php if(Session::get('userRole') == 7){ echo '<li><a href="/cmsPlaintech"> CMS</a></li>'; }?>
     </ul>
     </div>
   </div><!-- /.navbar-collapse -->
