@@ -36,7 +36,7 @@ $allRoles = $this->allRoles;
 
 		while ($i < count($manageUser)) {
 			echo '<tr>';
-			echo '<td>'.$manageUser[$i]['rol_naam'].'</td>';
+			// echo '<td>'.$manageUser[$i]['rol_naam'].'</td>';
 			echo '<td><a href="/cmsPlaintech/deletePrivileges/'.$manageUser[$i]['rol_id'].'/'.$manageUser[$i]['CSID'].'"><button type="button" class="btn btn-danger">Delete</button></a></td>';
 			echo "</tr>";
 			$i++;
@@ -65,7 +65,7 @@ $allRoles = $this->allRoles;
 	    </form>
 
 		</div>
-
+<br><br>
 <a href="/cmsPlaintech/searchPrivileges"><button type="button" class="btn btn-info">Back</button></a></td>
 
       </div>
