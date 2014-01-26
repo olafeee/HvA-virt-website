@@ -15,8 +15,8 @@
 	<table class="table table-striped">
 		<tr>
 			<td>First name</td>
-			<td>Last name</td>
-			<td>Email</td>
+			<!-- <td>Last name</td>
+			<td>Email</td> -->
 			<td>View</td>
 		</tr>
 		<tr>
@@ -30,7 +30,7 @@
 				echo '<td>'.$nameFound[$i]['firstname'].'</td>';
 				// echo '<td>'.$nameFound[$i]['lastname'].'</td>';
 				// echo '<td>'.$nameFound[$i]['username'].'</td>';
-				 echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'/'.$nameFound[$i]['username'].'">Bekijk</a>';
+				 echo '<td>''<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'/'.$nameFound[$i]['username'].'">Bekijk</a>''</td>';
 				// echo '</br>';
 				$i++;
 			}
