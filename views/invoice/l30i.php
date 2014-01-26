@@ -43,10 +43,29 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
+		<div id="pager" class="pager">
+			<form>
+				<span class="glyphicon glyphicon-fast-backward first"></span>
+				<span class="glyphicon glyphicon-backward back"></span>
+				<input type="text" class="pagedisplay"/>
+				<span class="glyphicon glyphicon-forward next"></span>
+				<span class="glyphicon glyphicon-fast-forward last"></span>
+				<select class="pagesize">
+					<option selected="selected"  value="5">5</option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option  value="50">50</option>
+				</select>
+			</form>
+		</div>
+
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$("#invoices").tablesorter( {sortList: [[1,0]]} );
+			$("table") 
+			.tablesorter({widthFixed: true, widgets: ['zebra']}) 
+			.tablesorterPager({container: $("#pager")}); 
 		});
 		</script>
 	</div>
