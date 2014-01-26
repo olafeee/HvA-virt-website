@@ -42,7 +42,6 @@ $invoices = $this->invoice;
 		</tbody>
         </table>
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
-		<?php echo "And so it sorted...."; ?>
 	</div>
       </div>
     </div>
