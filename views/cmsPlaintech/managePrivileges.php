@@ -51,10 +51,10 @@ $allRoles = $this->allRoles;
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
 			<?php
-				echo "Add user to the following group:";
 			 	$y=0;
 			 	
 			 	while ($y < count($allRoles)) {
+			 		echo "Add user to the following group:";
 			 		echo'<option value="'.$allRoles[$y]['rol_id'].'">'.$allRoles[$y]['rol_naam'].'</option>';
 			 		$y++;
 			 	}
