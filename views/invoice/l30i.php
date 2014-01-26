@@ -1,6 +1,6 @@
 <?php
 $invoices = $this->invoice;
-print_r($invoices);
+//print_r($invoices);
 ?>
 
 
@@ -18,7 +18,8 @@ print_r($invoices);
 			<!--content !!!!!!!!!-->
 			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
-				//print_r($invoices[$i]);
+				print_r($invoices[$i]);
+				//Hier moet je mm doen 
 			}
 
 			?>
