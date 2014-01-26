@@ -27,10 +27,6 @@ class Shoppingbasket extends baseController {
 			$model = $this->laadModel();
 			$securityGroupId = json_decode($model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']), true);
 
-			echo '<pre>';
-			print_r($securityGroupId);
-			echo '</pre>';
-
 			
 			$serviceofferingid = "eaacfa01-6e2f-4a5a-a789-03f259c8a644";
 			$templateid= "6fdb27f7-49d2-426a-bec8-57c17040d1dc";
@@ -42,16 +38,14 @@ class Shoppingbasket extends baseController {
 			$name= "WindowsServer2008";
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
-			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup'][0]['id'];
-			echo $securitygroupids;
+			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup'][0]['id']
 
 
-			//echo"hoi";
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
-			//$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
-		//}else{
-			//header('location: /account');
+			$model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
+		}else{
+			header('location: /account');
 		}
 		
 	}
