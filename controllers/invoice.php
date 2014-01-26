@@ -33,7 +33,7 @@ class invoice extends baseController {
 		$invoice = $this->model->getOnTime($date);
 		$this->baseView->invoice = $invoice;
 		//print_r($invoice);
-		$this->index('sortOnDate');
+		$this->index('showByDate');
 	}
  
 }
