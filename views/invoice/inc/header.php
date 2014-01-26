@@ -46,7 +46,7 @@ th.headerSortUp {
 				});
 				
 				$("#custName").on('click', function(){
-					var custName1 = document.getElementById('custName').value;
+					var custName1 = document.getElementById('name').value;
 					document.location.href = "/invoice/showByName/" + custName1; 
 				});
 			</script>
