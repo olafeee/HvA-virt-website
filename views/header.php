@@ -121,9 +121,9 @@ if($this->url0=='order'){
       <?php if(Session::get('loggedIn') == true){ echo '<li><a href="/management">My Account</a></li>'; }?>
       <?php
       echo(count($_SESSION['userRole']));
-      print_r($_SESSION['userRole']);
+      //print_r($_SESSION['userRole']);
       for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
-          echo $_SESSION['userRole'][$i];
+          echo $_SESSION['userRole'][$i]rol_id;
       }
       ?>
 
