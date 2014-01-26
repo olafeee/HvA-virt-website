@@ -1,6 +1,6 @@
 <?php
-$invoices = $this->invoices;
-print_r($invoices);
+$invoices = $this->invoice;
+//print_r($invoices);
 ?>
 
 
@@ -11,14 +11,15 @@ print_r($invoices);
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Virtual Machine Panel</h3>
+        <h3 class="panel-title">Invoices</h3>
       </div>
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
 			<?php
 			for ($i=0; $i < count($invoices); $i++) { 
-				//print_r($invoices[$i]);
+				print_r($invoices[$i]);
+				//Hier moet je mm doen 
 			}
 
 			?>
