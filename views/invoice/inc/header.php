@@ -29,13 +29,13 @@ th.headerSortUp {
 			</div>
 			<div id="datepicker"></div>		
 			<script type="text/javascript">
-				$(function(){
-				$.datepicker.setDefaults(
-				$.extend($.datepicker.regional['']));
 				$( "#datepicker" ).datepicker();
-				$( ".selector" ).datepicker({ firstDay: 1 });
-				var firstDay = $( ".selector" ).datepicker( "option", "firstDay" );
-				$( ".selector" ).datepicker( "option", "firstDay", 1 );
+				$(function(){
+					var pickerOpts = {
+						maxDate: "+0"
+					};	
+					$("#date").datepicker(pickerOpts);
+				});
 			</script>
 		</div>
 	  
