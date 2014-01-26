@@ -25,7 +25,8 @@ class Shoppingbasket extends baseController {
 	function createVM() {
 		if (1 == 1) {
 			$model = $this->laadModel();
-			$securityGroupId = $model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']);
+			$
+			echo $securitygroupids."<br/>"; = $model->securityGroupsid($_SESSION['logArr']['account'], $_SESSION['logArr']['domainid']);
 			$serviceofferingid = "eaacfa01-6e2f-4a5a-a789-03f259c8a644";
 			$templateid= "6fdb27f7-49d2-426a-bec8-57c17040d1dc";
 			$zoneid= "bc1354a3-58b4-4f98-ab51-7d4406260e15";
@@ -36,7 +37,8 @@ class Shoppingbasket extends baseController {
 			$name= "WindowsServer2008";
 			$account= $_SESSION['logArr']['account'];
 			$domainid= $_SESSION['logArr']['domainid'];
-			//$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
+			$securitygroupids = $securityGroupId['listsecuritygroupsresponse']['securitygroup']['id'];
+			echo $securitygroupids.'<br/>';
 
 
 
