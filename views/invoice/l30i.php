@@ -17,11 +17,11 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
-			<table class="table table-condensed">
+			<table id="invoices" class="table table-condensed tablesorter">
 			<thead>
 				<tr>
 					<th>File</th>
-					<th>Date <img src="/img/arrowdown.png"></th>
+					<th>Date</th>
 					<th>Customer</th>
 				</tr>
 			</thead>
@@ -44,6 +44,14 @@ $invoices = $this->invoice;
 		</tbody>
         </table>
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$("#invoices").tablesorter();
+		});
+		$(document).ready(function() {
+			$("#invoices").tablesorter( {sortList: [[0,0], [1,0]]} );
+		});
+		</script>
 	</div>
       </div>
     </div>
