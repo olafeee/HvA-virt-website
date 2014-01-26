@@ -1,4 +1,6 @@
-    <?php $pages = $this->cmstext;?>
+    <?php $pages = $this->cmstext;
+print_r($pages);
+    ?>
 
 
 
@@ -14,6 +16,7 @@
       	<?php
       		$i = 0;
 		    while ($i < count($pages)) {
+
 		    	echo '<a href="/cmsPlaintech/viewPage/'. $pages[$i]["pageid"] .'" class="list-group-item">'.$pages[$i]["page"].'</a>';
 		    	$i++;
 		    }
