@@ -1,5 +1,5 @@
 <?php
-$invoices = $this->invoices;
+$invoices = $this->invoice;
 print_r($invoices);
 ?>
 
