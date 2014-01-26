@@ -157,7 +157,7 @@ else
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
     <button type="button" class="btn btn-primary sendCmdButton disabled" id="backup" style="margin-bottom:5px; width:125px;">Backup System</button>
     <button type="button" class="btn btn-danger sendCmdButton" id="destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
-    <a type="button" class="btn btn-danger popupdiv" id="destroy" href="javascript:showPopup()">more info</a>
+    <a type="button" class="btn btn-danger" id="destroy" href="javascript:showPopup()">more info</a>
 
     <br />
   </div>
