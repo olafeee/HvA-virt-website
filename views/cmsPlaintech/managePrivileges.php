@@ -28,9 +28,10 @@ $allRoles = $this->allRoles;
 				</tr>
 				<tr>
 		    	<?php
-		 			echo '<td>'.$manageUser[0]['username'].'<td/>';
-		 			echo '<td>'.$manageUser[0]['firstname'].'<td/>';
-		 			echo '<td>'.$manageUser[0]['lastname'].'<td/>';
+		 			echo '<td>'.$manageUser[0]['username'].'</td>';
+		 			echo '<td>'.$manageUser[0]['firstname'].'</td>';
+		 			echo '<td>'.$manageUser[0]['lastname'].'</td>';
+		 			echo '<td>'.$manageUser[0]['rol_naam'].'</td>'
 				?>
 				</tr>
 			</thead>
