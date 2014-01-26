@@ -2,11 +2,17 @@
 <style>
 th.headerSortDown { 
     background-image: url(http://tablesorter.com/themes/blue/desc.gif); 
-    background-color: #3399FF; 
+    background-color: #CFCFCF; 
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
 } 
 th.headerSortUp { 
     background-image: url(http://tablesorter.com/themes/blue/asc.gif); 
-    background-color: #3399FF; 
+    background-color: #CFCFCF; 
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
 } 
 </style>
  <div class="row">
