@@ -35,5 +35,5 @@ class invoice extends baseController {
 		//print_r($invoice);
 		$this->index('sortOnDate');
 	}
-
+ 
 }
