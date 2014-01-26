@@ -50,8 +50,8 @@ $allRoles = $this->allRoles;
 		<form name="input" action="/cmsPlaintech/addPrivileges" onsubmit="return checkInp()" method="post">
 			<input type="hidden" name="CSID" value="<?php echo $manageUser[0]['CSID']; ?>">
 			<select class="form-control bfh-countries" id="rol_id" name="rol_id">
-			<h3>Voeg gebruiker toe aan groep:</h3>
 			<?php
+				echo "Add user to the following group:";
 			 	$y=0;
 			 	
 			 	while ($y < count($allRoles)) {
