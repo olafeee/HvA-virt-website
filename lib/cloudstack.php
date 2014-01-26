@@ -111,10 +111,10 @@ class cloudstack
     {
         $command_array = array(
             'command' => 'updateUser',
-            'id' => '73981fdb-60fd-464d-b61a-f9b77a69dceb',
-            'email' => 'orc@oscar.nl',
-            'firstname' => 'orc',
-            'lastname' => 'oscar'
+            'id' => 'a7bd1ebf-9128-4a1c-90c3-72b63d41952e',
+            'email' => 'orc@oscarlguvluthorcrocvlugt.nl',
+            'firstname' => 'orcccc',
+            'lastname' => 'oscarrrr'
         );
         return $this->_apiRequest($command_array);
     }
