@@ -26,7 +26,14 @@ class invoice extends baseController {
 
 	function l30i($limit){
 		$invoice = $this->model->getAll($limit);
+		$this->baseView->invoices = $invoice;
+		//print_r($invoice);
+		$this->index('index');
+	}
+	function sortOnTime($limit){
+		$invoice = $this->model->getOnTime($limit);
 		print_r($invoice);
+		$this->index('index');
 	}
 
 }

@@ -17,6 +17,10 @@ class invoiceModel extends baseModel
                    $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,2");
                 return $sqlArray;
      }
+     function getOnTime($limit){
+                   $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,2");
+                return $sqlArray;
+     }
 
 }
 
