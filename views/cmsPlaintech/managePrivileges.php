@@ -2,7 +2,6 @@
 
 $manageUser = $this->manageUser;
 $allRoles = $this->allRoles;
-$accountInfo = $this->accountInfo[0];
 ?>
 <?php require 'inc/header.php'; ?>
 
