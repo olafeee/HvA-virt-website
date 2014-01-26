@@ -11,7 +11,8 @@ class invoiceModel extends baseModel {
 	}
 
     function getAll($limit){
-        $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,30");
+        //$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,30");
+		$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files");
         return $sqlArray;
     }
 

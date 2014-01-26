@@ -45,11 +45,11 @@ $invoices = $this->invoice;
         </table>
 		<div id="pager" class="pager">
 			<form>
-				<span class="glyphicon glyphicon-fast-backward first"></span>
-				<span class="glyphicon glyphicon-backward back"></span>
+				<span class="glyphicon glyphicon-fast-backward"></span>
+				<span class="glyphicon glyphicon-backward"></span>
 				<input type="text" class="pagedisplay"/>
-				<img src="http://tablesorter.com/addons/pager/icons/next.png" class="next"/>
-				<span class="glyphicon glyphicon-fast-forward last"></span>
+				<span class="glyphicon glyphicon-forward"></span>
+				<span class="glyphicon glyphicon-fast-forward"></span>
 				<select class="pagesize">
 					<option selected="selected"  value="5">5</option>
 					<option value="10">10</option>
