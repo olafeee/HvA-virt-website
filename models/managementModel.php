@@ -79,5 +79,12 @@ class managementModel extends baseModel
           $this->cloudstack->updateUser();
      }
 
+          function getInvoice($username){
+                        $sqlArray = $this->db->select('SELECT * FROM invoice_files WHERE 
+                                   username = :username', 
+                     array('username' => $username));
+                     return $sqlArray;
+          }
+
 }
 
