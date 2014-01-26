@@ -2,14 +2,9 @@
 ?>
 
 <div class="Warningdiv">
-  
-  hoi
+  <a href="javascript:hideWarning()"><button type="button" class="btn btn-info" style="margin-bottom:5px; width:125px;">Cancel</button></a>
+<button type="button" class="btn btn-danger sendCmdButton" id="destroy" style="margin-bottom:5px; min-width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
 
-  wtf
-
-
-
-  gds
 </div>
 
 
