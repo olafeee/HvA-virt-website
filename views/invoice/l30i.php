@@ -49,7 +49,7 @@ $invoices = $this->invoice;
 			$("#invoices").tablesorter();
 		});
 		$(document).ready(function() {
-			$("#invoices").tablesorter( {sortList: [[1,0], [2,0]]} );
+			$("#invoices").tablesorter( {sortList: [1,0]} );
 		});
 		</script>
 	</div>
