@@ -15,8 +15,8 @@
 	<table class="table table-striped">
 		<tr>
 			<td>First name</td>
-			<!-- <td>Last name</td>
-			<td>Email</td> -->
+			<td>Last name</td>
+			<td>Email</td>
 			<td>View</td>
 		</tr>
 		<tr>
