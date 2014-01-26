@@ -46,10 +46,7 @@ $invoices = $this->invoice;
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
-			$("#invoices").tablesorter();
-		});
-		$(document).ready(function() {
-			$("#invoices").tablesorter( {sortList: [1,0]} );
+			$("#invoices").tablesorter( {sortList: [[1,0]]} );
 		});
 		</script>
 	</div>
