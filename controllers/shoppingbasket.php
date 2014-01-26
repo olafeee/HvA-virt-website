@@ -44,6 +44,7 @@ class Shoppingbasket extends baseController {
 			//$_SESSION['logArr']['userid']
 			//$_SESSION['logArr']['domainid']
 			$response = $model->createVM($serviceofferingid, $templateid, $zoneid, $hypervisor, $hostid, $diskofferingid, $displayname, $name, $account, $domainid, $securitygroupids);		
+			$response = json_decode($response);
 
 			// Check succes
 			//if(isset($response['deployvirtualmachineresponse']['errorcode'])) {
