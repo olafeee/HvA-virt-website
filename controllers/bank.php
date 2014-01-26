@@ -10,4 +10,9 @@ class Bank extends baseController {
 		$this->baseView->render('error/index');
 	}*/
 
+	function banker(){
+		$this->index('index', TRUE);
+
+	}
+
 }
