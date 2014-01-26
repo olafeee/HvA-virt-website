@@ -16,7 +16,7 @@ th.headerSortUp {
 	cursor: pointer;
 } 
 .ui-datepicker {
-	width: 60px;
+	width: 100%;
 }
 </style>
 <div class="row">
