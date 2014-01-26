@@ -81,7 +81,7 @@
 			$sti = mysqli_query($list, $querz);
 			$count = mysqli_num_rows($sti);
 			if (isset($_GET['page'])) { $page = preg_replace('#[^0-9]#i', '', $_GET['page']);}else{	$page = 1;} 
-			$itemsPerPage = 1;
+			$itemsPerPage = 2;
 			$lastPage = ceil($count / $itemsPerPage);
 			if ($page < 1){ $page = 1; }else if($page > $lastPage) {$page = $lastPage;}
 			$limit = 'LIMIT ' .($page - 1) * $itemsPerPage .',' .$itemsPerPage; 
@@ -90,7 +90,7 @@
 			$next = "";
 			$previous = "";
 			if ($lastPage != "1"){ $pagination .= " Page ".$page." of ".$lastPage." "; if($page != "1"){$previous = $page - 1; $pagination .= "<a href=\"#nav-invoiceTab".$previous."\">previous</a>";}
-			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a id=\"#nav-invoiceTabUpdate\">next</a><input type=\"hidden\" id=\"num\" value=\"".$next."\">";}}
+			if ($page != $lastPage){ $next = $page + 1; $pagination .= "<a href=\"#nav-invoiceTabUpdate\">next</a><input type=\"hidden\" id=\"num\" value=\"".$next."\">";}}
 			while($rij = mysqli_fetch_assoc($stj)){
 				if(file_exists("/var/invoices/".$rij['file'])){
 					echo "<tr>";
@@ -103,8 +103,8 @@
 					}elseif (!in_array($rij['file'], $_SESSION['allowFile'])){
 						$_SESSION['allowFile'][] = $rij['file'];
 					}
-				}else{
-					echo "No invoices were found.";
+				//}else{
+					//echo "No invoices were found.";
 				}
 			}
 		?>
