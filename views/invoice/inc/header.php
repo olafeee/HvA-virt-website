@@ -26,14 +26,18 @@ th.headerSortUp {
 				<a href="/invoice/l30i/0" class="list-group-item">Show all invoices</a>
 				<a class="list-group-item">Show by name</a>
 				<a class="list-group-item">Show by date</a>
+				<input type="text" id="datepicker">
 			</div>
 			<div id="datepicker"></div>		
 			<script type="text/javascript">
-				$("#datepicker").datepicker({
-					changeMonth:true,
-					changeYear:true,
-					yearRange:"-5:+0",
-					dateFormat:"yy-MM-dd"
+				$(function() {
+					$("#datepicker").datepicker({
+						dateFormat: "yy-MM-dd",
+						onSelect: function(dateText, inst) {
+							var date = $.datepicker.parseDate(inst.settings.dateFormat || $.datepicker._defaults.dateFormat, dateText, inst.settings);
+							var dateText1 = $.datepicker.formatDate("yy-MM-dd", date, inst.settings);
+						}
+					});
 				});
 			</script>
 		</div>
