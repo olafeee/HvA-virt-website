@@ -17,7 +17,7 @@
 			<td>First name</td>
 			<td>Last name</td>
 			<td>Email</td>
-			<td>View</td>
+			<td></td>
 		</tr>
 		<?php
 
@@ -30,7 +30,7 @@
 				echo '<td>'.$nameFound[$i]['firstname'].'</td>';
 				echo '<td>'.$nameFound[$i]['lastname'].'</td>';
 				echo '<td>'.$nameFound[$i]['username'].'</td>';
-				echo '<a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'/'.$nameFound[$i]['username'].'">Bekijk</a>';
+				echo '<td><a href="/cmsPlaintech/managePrivileges/'.$nameFound[$i]['CSID'].'/'.$nameFound[$i]['username'].'">Bekijk</a></td>';
 				echo '</tr>';
 				$i++;
 			}
