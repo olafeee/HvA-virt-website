@@ -1,6 +1,7 @@
 <?php
 $invoices = $this->invoice;
 //print_r($invoices);
+@session_start();
 ?>
 
 
@@ -29,12 +30,13 @@ $invoices = $this->invoice;
 			for ($i=0; $i < count($invoices); $i++) { 
 				echo "<tr>";
 				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
-				echo "<td>".$invoices[$i]['date']."</td>";
-				echo "<td><a style=\"none\" href=\"/invoice/showByName/".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."\">".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</a></td>";
+				echo "<td><a href=\"/invoice/showByDate/".substr($invoices[$i]['date'],0,10)."\">".$invoices[$i]['date']."</a></td>";
+				echo "<td><a href=\"/invoice/showByName/".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."\">".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</a></td>";
 				echo "</tr>";
 				
 				//print_r($invoices[$i]);
 				//Hier moet je mm doen 
+				$_SESSION['allowFile'][] = $invoices[$i]['file'];
 			}
 
 			?>

@@ -16,6 +16,10 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
+			<?php 
+			if(1 > count($invoices)){
+				echo "No invoices were made";
+			}else{ ?>
 			<table class="table table-condensed">
 			<thead>
 				<tr>
@@ -25,10 +29,7 @@ $invoices = $this->invoice;
 				</tr>
 			</thead>
 			<tbody>
-			<?php
-			if(1 > count($invoices)){
-				echo "No invoices were made";
-			}else{			
+			<?php			
 			for ($i=0; $i < count($invoices); $i++) { 
 				echo "<tr>";
 				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
