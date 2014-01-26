@@ -40,7 +40,7 @@ class Shoppingbasket extends baseController {
 			echo $securitygroupids;
 
 
-
+			echo"hoi";
 			echo '<pre>';
 			print_r($securityGroupId);
 			echo "</pre>";
