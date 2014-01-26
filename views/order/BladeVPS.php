@@ -2,7 +2,7 @@
 <div class="SLAdiv"> 
 	<!-- gedaan door oscar  design /////tabs gedaan door olaf(y)-->
 	<br/>
-	Inleiding:
+	Plaintech:
 	<br/>
 	Plaintech is responsible for all incidents and failures that are related to hardware and/or network issues in the range of Plaintech.
 	What the customer does on their server is their responsibility and the administration of their server. Thus, Plaintech does not offer support.

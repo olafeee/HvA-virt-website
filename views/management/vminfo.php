@@ -153,6 +153,7 @@ else
   	<button type="button" class="btn btn-primary sendCmdButton disabled" id="upgrade" style="margin-bottom:5px; width:125px;">Upgrade System !!!</button>
     <button type="button" class="btn btn-primary sendCmdButton disabled" id="backup" style="margin-bottom:5px; width:125px;">Backup System</button>
     <button type="button" class="btn btn-danger sendCmdButton" id="destroy" style="margin-bottom:5px; width:125px;"><span class="glyphicon glyphicon-exclamation-sign"></span>  Destroy System</button>
+    <a type="button" class="btn btn-danger popupdiv" id="destroy" href="javascript:showPopup()">more info</a>
 
     <br />
   </div>
@@ -180,6 +181,30 @@ else
       data: args,
     });
   });
+
+  function showPopup() {
+    var id = $(this).attr('id');
+    var name = '#popup';
+    name = name.concat(id); 
+    //change display to block
+    $(name).css("display", "block");
+    $(".opacityPopupdiv").css("display", "block");
+
+    // when clicked outside 
+    // call the funtion 
+    $('html').click(function() {
+      hidePopup()
+    });
+    $(name).click(function(event){
+      event.stopPropagation();
+    });
+}
+
+function hidePopup() {
+    //change display to none
+    $(".popupdiv").css("display", "none");
+    $(".opacitySLAdiv").css("display", "none");  
+}
 
 </script>
 
