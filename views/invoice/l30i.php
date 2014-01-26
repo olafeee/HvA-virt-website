@@ -1,6 +1,7 @@
 <?php
 $invoices = $this->invoice;
 //print_r($invoices);
+@session_start();
 ?>
 
 
@@ -35,6 +36,7 @@ $invoices = $this->invoice;
 				
 				//print_r($invoices[$i]);
 				//Hier moet je mm doen 
+				$_SESSION['allowFile'][] = $invoices[$i]['file'];
 			}
 
 			?>
