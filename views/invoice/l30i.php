@@ -31,7 +31,7 @@ $invoices = $this->invoice;
 				echo "<td><a target=\"_blank\" href=\"/openInvoice?f=".bin2hex($invoices[$i]['file'])."\">".$invoices[$i]['file']."</a></td>";
 				echo "<td>".$invoices[$i]['date']."</td>";
 				echo "<td>".$invoices[$i]['firstname']." ".$invoices[$i]['lastname']."</td>";
-				//echo "</tr>";
+				echo "<br />";
 				
 				//print_r($invoices[$i]);
 				//Hier moet je mm doen 
