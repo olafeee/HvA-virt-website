@@ -674,13 +674,8 @@ p.order_options_OS{
 	width: 350px;
 	position: absolute;
 	z-index: 34;
-	background: #f5f5f5;
-	-webkit-border-radius: 3px 3px 3px 3px;
-	border-radius: 3px 3px 3px 3px;
-	border: 1px;
-	border: 1px solid #ccc;
-	border-color: rgba(0,0,0,.2);
-	box-shadow: 0 2px 10px rgba(0,0,0,.2);
+
+	text-align: center;
 
 	top:0;
     bottom: 0;
