@@ -22,9 +22,9 @@ $accountInfo = $this->accountInfo[0];
     </div>
     <div class="panel-body">
       <form id="editAccount" name="editAccount" action="/management/changeGI" method="post">
-        <input type="text" class="form-control" id="adstr" name="adstr"  value="<?php echo $accountInfo['adstr']; ?>">
-        <input type="text" class="form-control" id="adzip" name="adzip"  value="<?php echo $accountInfo['adzip']; ?>">
-        <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
+        <input type="text" class="form-control" id="adstr" name="adstr" placeholder="Street" value="<?php echo $accountInfo['adstr']; ?>">
+        <input type="text" class="form-control" id="adzip" name="adzip" placeholder="Zip code" value="<?php echo $accountInfo['adzip']; ?>">
+        <input type="text" class="form-control" id="adcit" name="adcit" placeholder="City" value="<?php echo $accountInfo['adcit']; ?>">
         <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info">Cancel</button></a>
         <button class="btn btn-success" type="submit">Save</button>
      </form>

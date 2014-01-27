@@ -42,7 +42,9 @@ $accountInfo = $this->accountInfo[0];
 
 		<?php }
 		?>
-<br><br>
+
+		<br><br>
+
 		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4> 
 		<div class="editGI"><a href="javascript:showEditstreet()"><button type="button" class="btn btn-info">Edit</button></a></div><hr />
 
@@ -58,10 +60,6 @@ $accountInfo = $this->accountInfo[0];
 		<div class="col-sm-10">
 			<p id="email"><?php echo $accountInfo['country']; ?></p>
 		</div>
-
-
-
-
 		
 
 		<h4><span class="glyphicon glyphicon-euro"></span>   Payment Information</h4><hr />
