@@ -110,8 +110,9 @@ class cmsPlaintech extends baseController {
 		$this->index('managePrivileges');
 	}
 	 
-	 function deletePrivileges($role_id, $CSID, ){
+	 function deletePrivileges($role_id, $CSID, $username){
 	 	$delete = $this->model->deletePrivileges($role_id, $CSID);
+		header('location: /cmsPlaintech/managePrivileges/'.$CSID.'/'.$username);
 	}
 
 	function addPrivileges(){
