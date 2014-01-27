@@ -20,9 +20,9 @@ $invoices = $this->invoice;
 			
 			<script type="text/javascript">
 			$(document).ready(function() {
-				var current = window.location.pathname + str.slice(-1);
-				var tbnext = current + 1;
-				var tbprev = current - 1;
+				var current=(window.location.pathname).str.slice(-1);
+				var tbnext=(current + 1);
+				var tbprev=(current - 1);
 				
 				if(current = 0){
 					$('#tbprev').hide();
