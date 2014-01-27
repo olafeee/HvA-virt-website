@@ -20,24 +20,24 @@ $accountInfo = $this->accountInfo[0];
       	<table>
 	      <tr>
 	        <th class="right-table">First Name : </th>
-	        <td><?php echo $accountInfo['firstname']; ?></td>
+	        <td class="left-table"><?php echo $accountInfo['firstname']; ?></td>
 	      </tr>
 	      <tr>
 	        <th class="right-table">Last Name : </th>
-	        <td><?php echo $accountInfo['lastname']; ?></td>
+	        <td class="left-table"><?php echo $accountInfo['lastname']; ?></td>
 	      </tr>
 	      <tr>
 	        <th class="right-table">Username : </th>
-	        <td><?php echo $accountInfo['username']; ?></td>
+	        <td class="left-table"><?php echo $accountInfo['username']; ?></td>
 	      </tr>
 	      <tr>
 	        <th class="right-table">Phone : </th>
-	        <td><?php echo $accountInfo['phone']; ?></td>
+	        <td class="left-table"><?php echo $accountInfo['phone']; ?></td>
 	      </tr>
 	      <?php if($accountInfo['reseller'] == "TRUE"){?>
 		    <tr>
 		    	<th class="right-table">Reseller : </th>
-		        <td><span class="glyphicon glyphicon-check"></td>
+		        <td class="left-table"><span class="glyphicon glyphicon-check"></td>
 		    </tr>
 		<?php }
 		?>
