@@ -17,6 +17,10 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
+			<?php 
+			if(1 > count($invoices)){
+				echo "No invoices were made this day.";
+			}else{ ?>
 			<table id="invoices" class="table table-condensed tablesorter">
 			<thead>
 				<tr>
@@ -60,7 +64,7 @@ $invoices = $this->invoice;
 			</form>
 		</div>
 
-		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
+		<?php } ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$("#invoices").tablesorter({
