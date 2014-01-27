@@ -65,7 +65,7 @@ class cmsPlaintech extends baseController {
 	function insertContent(){
 		$cwid = $_POST['cwid'];
 		$pageid = $_POST['pageid'];
-		$cmstext = $_POST['cmstext'];
+		$cmstext = htmlentities($_POST['cmstext']);
 		$this->model->insertOneCmsItem($cwid, $pageid, $cmstext);
 		//header('location: /cmsPlaintech/viewPage/'.$pageid);
 	}
