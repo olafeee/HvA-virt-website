@@ -53,6 +53,12 @@ th.headerSortUp {
 					var custName1 = document.getElementById('name').value;
 					document.location.href = "/invoice/showByName/" + custName1; 
 				});
+				
+				$("#name").keyup(function(event){
+					if(event.keyCode == 13){
+						$("#custName").click();
+					}
+				});
 			</script>
 		</div>
 	  
