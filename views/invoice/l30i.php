@@ -37,7 +37,6 @@ $invoices = $this->invoice;
 						window.location='/invoice/l30i/'+ tbnext;
 					}
 				}
-				alert(window.location.pathname);
 			});
 			</script>
 			<!--<table id="pager" class="table">
@@ -96,6 +95,7 @@ $invoices = $this->invoice;
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
+		alert(window.location.pathname);
 			$("#invoices").tablesorter({
 				sortList: [[1,0]],
 				widthFixed: true, 
