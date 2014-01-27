@@ -65,7 +65,8 @@ $accountInfo = $this->accountInfo[0];
 
 // Ajax Edit account info
 $('#submitEditAccount').click(function (){
-  $("#editAccount").ajaxForm({url: '/management/changeGI', type: 'post'})
+  $("#editAccount").ajaxSubmit({url: '/management/changeGI', type: 'post'});
+  hideEditstreet()
 });
 
 // Ajax Auto reload!
