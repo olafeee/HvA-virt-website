@@ -62,7 +62,7 @@ $accountInfo = $this->accountInfo[0];
 
 
 
-		<br /><br /><br /><br /><br /><br /><br />
+		
 
 		<h4><span class="glyphicon glyphicon-euro"></span>   Payment Information</h4><hr />
 
