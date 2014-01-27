@@ -26,7 +26,7 @@ class invoiceModel extends baseModel {
 		}*/
 		//$if($limit = 0){$page = 0
 		$page = $limit * 5;
-		$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT '$page,5' ORDER BY date ASC");
+		$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files ORDER BY date ASC LIMIT $page,5");
         return $sqlArray;
     }
 
