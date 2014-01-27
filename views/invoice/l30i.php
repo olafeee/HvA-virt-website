@@ -18,8 +18,6 @@ $invoices = $this->invoice;
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
 			
-			<div id="page_container"><div class="page_navigation"></div>
-			
 			<table id="invoices" class="table table-condensed tablesorter">
 			<thead>
 				<tr>
@@ -46,8 +44,6 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
-		
-		</div>
 		
 		<?php /*<div id="pager" class="pager">
 			<form>
