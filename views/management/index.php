@@ -21,12 +21,12 @@ $accountInfo = $this->accountInfo[0];
       <h3 class="panel-title">Edit General Information</h3>
     </div>
     <div class="panel-body">
-      <form id="editAccount" name="input">
+      <form id="editAccount" name="editAccount" action="/management/changeGI" method="post">
         <input type="text" class="form-control" id="adstr" name="adstr"  value="<?php echo $accountInfo['adstr']; ?>">
         <input type="text" class="form-control" id="adzip" name="adzip"  value="<?php echo $accountInfo['adzip']; ?>">
         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
         <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info">Cancel</button></a>
-        <button type="button" id="submitEditAccount" class="btn btn-success">Save</button>
+        <button type="button" class="btn btn-success" type="submit">Save</button>
      </form>
 
     </div>
@@ -64,10 +64,31 @@ $accountInfo = $this->accountInfo[0];
 <script type="text/javascript">
 
 // Ajax Edit account info
-$('#submitEditAccount').click(function (){
-  $("#editAccount").ajaxSubmit({url: '/management/changeGI', type: 'post'});
-  hideEditstreet()
+$("#editAccount").submit(function(e)
+{
+  var postData = $(this).serializeArray();
+  var formURL = $(this).attr("action");
+  $.ajax(
+  {
+    url : formURL,
+    type: "POST",
+    data : postData,
+    success:function(data, textStatus, jqXHR) 
+    {
+        hideWarning();
+    },
+    error: function(jqXHR, textStatus, errorThrown) 
+    {
+      hideWarning();
+      window.console ={log: 'FAILED TO EDIT ACCOUNT INFO'};   
+    }
+  });
+  e.preventDefault(); //STOP default action
+  e.unbind(); //unbind. to stop multiple form submit.
 });
+ 
+$("#editAccount").submit(); //Submit  the FORM
+
 
 // Ajax Auto reload!
 var url;
