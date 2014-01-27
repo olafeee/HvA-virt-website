@@ -37,6 +37,7 @@ $invoices = $this->invoice;
 						window.location='/invoice/l30i/'+ tbnext;
 					}
 				}
+				alert(window.location.pathname);
 			});
 			</script>
 			<!--<table id="pager" class="table">
