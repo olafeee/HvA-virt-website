@@ -12,7 +12,7 @@ class invoiceModel extends baseModel {
 
     function getAll($limit){
         //$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT $limit,30");
-		//$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files");
+		$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files");
 		/*if($limit = 0){
 			$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT 0,5");
 		}elseif($limit = 1){
@@ -25,8 +25,8 @@ class invoiceModel extends baseModel {
 			$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files LIMIT 0,50");
 		}*/
 		//$if($limit = 0){$page = 0
-		$page = $limit * 5;
-		$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files ORDER BY date ASC LIMIT $page,5");
+		//$page = $limit * 5;
+		//$sqlArray = $this->db->selectAll("SELECT * FROM invoice_files ORDER BY date ASC LIMIT $page,5");
         return $sqlArray;
     }
 

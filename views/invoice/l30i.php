@@ -18,7 +18,7 @@ $invoices = $this->invoice;
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
 			
-			<script type="text/javascript">
+			<?php /*<script type="text/javascript">
 			$(document).ready(function() {
 				var current=(window.location.pathname).str.slice(-1);
 				var tbnext=(current + 1);
@@ -46,7 +46,7 @@ $invoices = $this->invoice;
 					<th id="tbnext">Next</th>
 			</table>	-->
 			<button id="tbprev" class="btn btn-default">Previous</button>
-			<button id="tbnext" class="btn btn-default">Next</button>
+			<button id="tbnext" class="btn btn-default">Next</button>*/ ?>
 			
 			<table id="invoices" class="table table-condensed tablesorter">
 			<thead>
