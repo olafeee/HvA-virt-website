@@ -6,14 +6,10 @@
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <h3 class="panel-title">Virtual Machine Panel</h3>
+        <h3 class="panel-title">Plaintech Content Management Page</h3>
       </div>
       <div class="panel-body">
 		<div class="viewPageTable">
-			<h3>Plaintech content management page</h3>
-      <p>
-        This page is specificly designed for employees and/or managers of Plaintech. Through this page, they can manage the contents of this site.
-      </p>
       <h3>CPU Price</h3>
       <p>
         Here you can modify the price per CPU core or physical CPU. You can even add special prices to a specific ammount of cores.
