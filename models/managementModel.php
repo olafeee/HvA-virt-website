@@ -7,19 +7,36 @@
 class managementModel extends baseModel
 {
 
+     public $db;
      public $cloudstack;
 
 	function __construct()
 	{
 		parent::__construct();
           $this->cloudstack = new cloudstack();
+          $this->db = $this->model->conDB1();
 	}
 
 	public function getVM(){
           
           Session::init();
-          // Haal de vms op voor de gebruiker die ingeloged is
-          $vmResponse = $this->cloudstack->listVirtualMachines('',$_SESSION['logArr']['account']);
+          
+          $role = 7;
+          if (isset($_SESSION['userRole'])) {
+             for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
+               if ($_SESSION['userRole'][$i]['rol_id']=='2') {
+                 $role = '2';
+               }
+             }
+           }
+
+          // Als role gelijk is aan 3, alle vms laten zien
+          if ($role == '2') {
+               $vmResponse = $this->cloudstack->listVirtualMachines();
+          } else {
+               // Haal de vms op voor de gebruiker die ingeloged is
+               $vmResponse = $this->cloudstack->listVirtualMachines('',$_SESSION['logArr']['account']); 
+          }
           $vmResponse = json_decode($vmResponse, true);
 
           // Bouw nu een array for elke VM
