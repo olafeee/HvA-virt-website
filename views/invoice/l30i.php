@@ -20,7 +20,7 @@ $invoices = $this->invoice;
 			
 			<script type="text/javascript">
 			$(document).ready(function() {
-				var current = window.location.pathname.str.slice(-1);
+				var current = window.location.pathname + str.slice(-1);
 				var tbnext = current + 1;
 				var tbprev = current - 1;
 				
@@ -95,9 +95,6 @@ $invoices = $this->invoice;
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
-		var kippetj = window.location.pathname;
-		var kippetje = kippetj.str.slice(-1);
-		alert(kippetje);
 			$("#invoices").tablesorter({
 				sortList: [[1,0]],
 				widthFixed: true, 
