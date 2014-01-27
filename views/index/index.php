@@ -59,7 +59,6 @@ $cmstext = $this->cmstext;
   			<br>	
   			<p>    <?php echo $cmstext[11]['cmstext']; ?></p>
   			<p>    <?php echo $cmstext[12]['cmstext']; ?></p>
-  			<?php print_r($_SESSION);?>
 			</div>
 			</div>
 		</div>
