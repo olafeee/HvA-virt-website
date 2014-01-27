@@ -100,7 +100,8 @@ function showWarning() {
 function hideWarning() {
     //change display to none
     $(".Editstreetdiv").css("display", "none");
-    $(".opacitySLAdiv").css("display", "none");  
+    $(".opacitySLAdiv").css("display", "none");
+    $(".Warningdiv").css("display", "none");
 }
 
 function showEditstreet() {
@@ -121,7 +122,7 @@ function showEditstreet() {
 function hideEditstreet() {
     //change display to none
     $(".Editstreetdiv").css("display", "none");
-    $(".opacitySLAdiv").css("display", "none");  
+    $(".opacitySLAdiv").css("display", "none");
 }
           
 
