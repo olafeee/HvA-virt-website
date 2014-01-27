@@ -68,7 +68,7 @@ $invoices = $this->invoice;
 				widthFixed: true,
 				widgets: ['zebra']
 			}); 
-			$("#invoices")
+			$("table")
 				.tablesorterPager({container: $("#pager")
 			});
 		});
