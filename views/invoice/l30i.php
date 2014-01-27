@@ -17,6 +17,9 @@ $invoices = $this->invoice;
       <div class="panel-body">
 		<div class="viewPageTable">
 			<!--content !!!!!!!!!-->
+			
+			<div id="page_container">
+			
 			<table id="invoices" class="table table-condensed tablesorter">
 			<thead>
 				<tr>
@@ -43,6 +46,9 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
+		
+		<div class="page_navigation"></div></div>
+		
 		<?php /*<div id="pager" class="pager">
 			<form>
 				<span class="glyphicon glyphicon-fast-backward"></span>

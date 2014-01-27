@@ -1,6 +1,7 @@
 <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
 <?php /*<script type="text/javascript" src="/js/jquery.tablesorter.pager.js"></script> */ ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script type="text/javascript" src="http://dl.dropboxusercontent.com/u/4151695/html/pajinate/examples/js/jquery.pajinate.js"></script>
 <style>
 th.headerSortDown { 
     background-image: url(http://tablesorter.com/themes/blue/desc.gif); 
@@ -23,6 +24,15 @@ th.headerSortUp {
     width: 100%;
 }
 </style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#page_container').pajinate({
+			items_per_page : 5,
+			item_container_id : '.alt_content',
+			nav_panel_id : '.alt_page_navigation'
+		});
+	});
+</script>
 <div class="row">
 	<div class="col-md-3">
 		<div class="panel panel-default">
