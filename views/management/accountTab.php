@@ -16,6 +16,34 @@ $accountInfo = $this->accountInfo[0];
         
       	<h4><span class="glyphicon glyphicon-user"></span>   Account Information</h4><hr />
 
+
+      	<table>
+	      <tr>
+	        <th class="right">First Name : </th>
+	        <td><?php echo $accountInfo['firstname']; ?></td>
+	      </tr>
+	      <tr>
+	        <th class="right">Last Name : </th>
+	        <td><?php echo $accountInfo['lastname']; ?></td>
+	      </tr>
+	      <tr>
+	        <th class="right">Username : </th>
+	        <td><?php echo $accountInfo['username']; ?></td>
+	      </tr>
+	      <tr>
+	        <th class="right">Phone : </th>
+	        <td><?php echo $accountInfo['phone']; ?></td>
+	      </tr>
+	      <?php if($accountInfo['reseller'] == "TRUE"){?>
+		    <tr>
+		    	<th class="right">Reseller : </th>
+		        <td><span class="glyphicon glyphicon-check"></td>
+		    </tr>
+		<?php }
+		?>
+	    </table>
+
+
 		<label for="fname" class="col-sm-2 control-label">First Name :</label>
 		<div class="col-sm-10">
 			<p id="fname" name="fname"><?php echo $accountInfo['firstname']; ?></p>
