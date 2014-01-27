@@ -18,15 +18,15 @@ $accountInfo = $this->accountInfo[0];
 
 
       	<table>
-	      <tr>
+	      <tr class="right-table">
 	        <th class="right-table">First Name : </th>
 	        <td><?php echo $accountInfo['firstname']; ?></td>
 	      </tr>
-	      <tr>
+	      <tr class="right-table">
 	        <th class="right-table">Last Name : </th>
 	        <td><?php echo $accountInfo['lastname']; ?></td>
 	      </tr>
-	      <tr>
+	      <tr class="right-table">
 	        <th class="right-table">Username : </th>
 	        <td><?php echo $accountInfo['username']; ?></td>
 	      </tr>
@@ -35,13 +35,15 @@ $accountInfo = $this->accountInfo[0];
 	        <td><?php echo $accountInfo['phone']; ?></td>
 	      </tr>
 	      <?php if($accountInfo['reseller'] == "TRUE"){?>
-		    <tr>
+		    <tr class="right-table">
 		    	<th class="right-table">Reseller : </th>
 		        <td><span class="glyphicon glyphicon-check"></td>
 		    </tr>
 		<?php }
 		?>
 	    </table>
+
+	    <br /><br />
 
 
 		<label for="fname" class="col-sm-2 control-label">First Name :</label>

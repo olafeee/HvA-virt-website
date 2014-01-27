@@ -710,7 +710,7 @@ p.order_options_OS{
 
 .right-table{
 	text-align: right;
-	margin-right: 35px;
-	margin-bottom: 25px;
+	padding-right: 35px;
+	padding-bottom: 25px;
 }
 
