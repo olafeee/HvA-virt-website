@@ -9,13 +9,6 @@ $invoices = $this->invoice;
 
 
 <div class="tab-pane">
-<pre class="javascript">
-$(document).ready(function() {
-	$("table")
-	.tablesorter({widthFixed: true, widgets: ['zebra']})
-	.tablesorterPager({container: $("#pager")});
-});
-</pre>
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
