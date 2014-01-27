@@ -14,6 +14,10 @@
       <p>
         This page is specificly designed for employees and/or managers of Plaintech. Through this page, they can manage the contents of this site.
       </p>
+      <h2>CPU Price</h2>
+      <p>
+        Here you can modify the price per CPU core or physical CPU. You can even add special prices to a specific ammount of cores.
+      </p>
 	</div>
       </div>
     </div>
