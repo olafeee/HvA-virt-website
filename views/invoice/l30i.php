@@ -19,6 +19,7 @@ $invoices = $this->invoice;
 			<!--content !!!!!!!!!-->
 			
 			<script type="text/javascript">
+			$(document).ready(function() {
 				var current = window.location.pathname.str.slice(-1);
 				var tbnext = current + 1;
 				var tbprev = current - 1;
@@ -36,6 +37,7 @@ $invoices = $this->invoice;
 						window.location='/invoice/l30i/'+ tbnext;
 					}
 				}
+			});
 			</script>
 			<!--<table id="pager" class="table">
 				<thead>
