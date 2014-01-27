@@ -7,14 +7,13 @@
 class managementModel extends baseModel
 {
 
-     public $db;
      public $cloudstack;
 
 	function __construct()
 	{
 		parent::__construct();
+
           $this->cloudstack = new cloudstack();
-          $this->db = $this->model->conDB1();
 	}
 
 	public function getVM(){
