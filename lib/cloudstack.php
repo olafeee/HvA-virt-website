@@ -204,7 +204,7 @@ class cloudstack
     }
 
     // List the virtual machines owned by the account.
-    public function listVirtualMachines($id = null, $account = null, $name = null, $state = null, $domainid = null, $templateid = null, $isoid =null, $listall = 'false')
+    public function listVirtualMachines($id = null, $account = null, $name = null, $state = null, $domainid = null, $templateid = null, $isoid =null, $listall = 'true')
     {
         $command_array = array(
             'command' => 'listVirtualMachines',

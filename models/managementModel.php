@@ -20,17 +20,17 @@ class managementModel extends baseModel
           
           Session::init();
           
-          $role = 7;
+          $role = false;
           if (isset($_SESSION['userRole'])) {
              for ($i=0; $i < count($_SESSION['userRole']); $i++) { 
-               if ($_SESSION['userRole'][$i]['rol_id']=='2') {
-                 $role = '2';
+               if ($_SESSION['userRole'][$i]['rol_id']=='3') {
+                 $role = true;
                }
              }
            }
 
           // Als role gelijk is aan 3, alle vms laten zien
-          if ($role == '2') {
+          if ($role == true) {
                $vmResponse = $this->cloudstack->listVirtualMachines();
           } else {
                // Haal de vms op voor de gebruiker die ingeloged is
