@@ -63,13 +63,14 @@ $invoices = $this->invoice;
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
-			$("#invoices").tablesorter({
+			<?php /*$("#invoices").tablesorter({
 				sortList: [[1,0],
 				widthFixed: true,
 				widgets: ['zebra']
-			}); 
+			}); */ ?>
 			$("table")
-				.tablesorterPager({container: $("#pager")
+				.tablesorter({widthFixed: true, widgets: ['zebra']})
+				.tablesorterPager({container: $("#pager")});
 			});
 		});
 		</script>
