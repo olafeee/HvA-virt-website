@@ -26,7 +26,7 @@ th.headerSortUp {
 </style>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#page_container').pajinate({
+		$('#invoices').pajinate({
 			items_per_page : 5,
 			item_container_id : '.alt_content',
 			nav_panel_id : '.alt_page_navigation'
