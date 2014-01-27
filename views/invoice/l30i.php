@@ -95,7 +95,7 @@ $invoices = $this->invoice;
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
 		$(document).ready(function() {
-		alert(window.location.pathnamestr.slice(-1));
+		alert(window.location.pathname.str.slice(-1));
 			$("#invoices").tablesorter({
 				sortList: [[1,0]],
 				widthFixed: true, 
