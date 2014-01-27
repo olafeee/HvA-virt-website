@@ -172,11 +172,6 @@ $date = str_replace('T', ' ', $date);
 
 <script type="text/javascript">
 
-  // Alle table headers align naar rechts geven
-  $( ".right" ).css( "text-align", "right" );
-  $( ".right" ).css( "margin-right", "35px" );
-  $( ".right" ).css( "margin-bottum", "25px" );
-
   // AJAX commands versturen. 
   $('.sendCmdButton').click(function() { 
     var id = $(this).attr('id');

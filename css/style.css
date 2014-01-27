@@ -711,12 +711,12 @@ p.order_options_OS{
 .right-table{
 	text-align: right;
 	vertical-align: middle;
-	padding-right: 50px;
-	padding-bottom: 10px;
+	padding-right: 40px;
+	padding-bottom: 6px;
 }
 
 .left-table{
 	text-align: left;
 	vertical-align: middle;
-	padding-bottom: 10px;
+	padding-bottom: 6px;
 }
