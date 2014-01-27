@@ -82,7 +82,7 @@ class Management extends baseController {
         $CSID = $_SESSION['logArr']['userid'];
         $y = $this->model->updateChangeGI($adstr, $adzip, $adcit, $CSID);
         if ($y == true){
-        	 header('location: /management');
+        	 echo 'Success! Account information changed.';
         }
        
 	}

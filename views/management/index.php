@@ -21,7 +21,7 @@ $accountInfo = $this->accountInfo[0];
       <h3 class="panel-title">Edit General Information</h3>
     </div>
     <div class="panel-body">
-      <form name="input" action="/management/changeGI" method="post">
+      <form id="editAccount" name="input">
         <input type="text" class="form-control" id="adstr" name="adstr"  value="<?php echo $accountInfo['adstr']; ?>">
         <input type="text" class="form-control" id="adzip" name="adzip"  value="<?php echo $accountInfo['adzip']; ?>">
         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
@@ -62,6 +62,9 @@ $accountInfo = $this->accountInfo[0];
 
 
 <script type="text/javascript">
+
+// Ajax Edit account info
+$("#editAccount").ajaxForm({url: '/management/changeGI', type: 'post'})
 
 // Ajax Auto reload!
 var url;
