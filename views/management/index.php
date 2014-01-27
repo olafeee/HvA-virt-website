@@ -26,7 +26,7 @@ $accountInfo = $this->accountInfo[0];
         <input type="text" class="form-control" id="adzip" name="adzip"  value="<?php echo $accountInfo['adzip']; ?>">
         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
         <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info">Cancel</button></a>
-        <button class="btn btn-success" type="submit" >Save</button>
+        <button type="button" id="submitEditAccount" class="btn btn-success">Save</button>
      </form>
 
     </div>
@@ -64,7 +64,9 @@ $accountInfo = $this->accountInfo[0];
 <script type="text/javascript">
 
 // Ajax Edit account info
-$("#editAccount").ajaxForm({url: '/management/changeGI', type: 'post'})
+$('#submitEditAccount').click(function (){
+  $("#editAccount").ajaxForm({url: '/management/changeGI', type: 'post'})
+});
 
 // Ajax Auto reload!
 var url;
