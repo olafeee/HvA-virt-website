@@ -9,6 +9,13 @@ $invoices = $this->invoice;
 
 
 <div class="tab-pane">
+<pre class="javascript">
+$(document).ready(function() {
+	$("table")
+	.tablesorter({widthFixed: true, widgets: ['zebra']})
+	.tablesorterPager({container: $("#pager")});
+});
+</pre>
   <div class="col-md-9" role="main">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -61,18 +68,18 @@ $invoices = $this->invoice;
 		</div>
 
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
-		<script type="text/javascript">
+		<?php /*<script type="text/javascript">
 		$(document).ready(function() {
-			<?php /*$("#invoices").tablesorter({
+			$("#invoices").tablesorter({
 				sortList: [[1,0],
 				widthFixed: true,
 				widgets: ['zebra']
-			}); */ ?>
+			}); 
 			$("table")
 				.tablesorter({widthFixed: true, widgets: ['zebra']})
 				.tablesorterPager({container: $("#pager")});
 			});
-		});
+		});*/ ?>
 		</script>
 	</div>
       </div>
