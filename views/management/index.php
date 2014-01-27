@@ -27,7 +27,6 @@ $accountInfo = $this->accountInfo[0];
         <input type="text" class="form-control" id="adcit" name="adcit" value="<?php echo $accountInfo['adcit']; ?>">
         <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info">Cancel</button></a>
         <button class="btn btn-success" type="submit" >Save</button>
-         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
      </form>
 
     </div>
