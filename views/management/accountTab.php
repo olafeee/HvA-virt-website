@@ -42,7 +42,7 @@ $accountInfo = $this->accountInfo[0];
 		?>
 	    </table>
 
-	    <br /><br />
+	    <br />
 
 	    <h4><span class="glyphicon glyphicon-home"></span>   General Information</h4> 
 		<div class="editGI"><a href="javascript:showEditstreet()"><button type="button" class="btn btn-info">Edit</button></a></div><hr />
@@ -62,7 +62,7 @@ $accountInfo = $this->accountInfo[0];
 	      </tr>
 	    </table>
 
-	    <br /><br />
+	    <br />
 
 		<h4><span class="glyphicon glyphicon-euro"></span>   Payment Information</h4><hr />
 

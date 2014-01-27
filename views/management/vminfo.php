@@ -103,28 +103,28 @@ $date = str_replace('T', ' ', $date);
 
     <table>
       <tr>
-        <th class="right">Name: </th>
-        <td><?php echo $vmResponse[0]['displayname']; ?></td>
+        <th class="right-table">Name: </th>
+        <td class="left-table"><?php echo $vmResponse[0]['displayname']; ?></td>
       </tr>
       <tr>
-        <th class="right">Status: </th>
-        <td><?php echo $state; ?></td>
+        <th class="right-table">Status: </th>
+        <td class="left-table"><?php echo $state; ?></td>
       </tr>
       <tr>
-        <th class="right">Created: </th>
-        <td><?php echo $date ?></td>
+        <th class="right-table">Created: </th>
+        <td class="left-table"><?php echo $date ?></td>
       </tr>
       <tr>
-        <th class="right">Template:</th>
-        <td><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
+        <th class="right-table">Template:</th>
+        <td class="left-table"><?php echo $vmResponse[0]['templatedisplaytext']; ?></td>
       </tr>
       <tr>
-        <th class="right">Iso: </th>
-        <td><?php echo getInfo('isodisplaytext') ?></td>
+        <th class="right-table">Iso: </th>
+        <td class="left-table"><?php echo getInfo('isodisplaytext') ?></td>
       </tr>
       <tr>
-        <th class="right">Address: </th>
-        <td><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
+        <th class="right-table">Address: </th>
+        <td class="left-table"><?php echo $vmResponse[0]['nic'][0]['ipaddress']." / ". prefixSubnet($vmResponse[0]["nic"][0]["netmask"]);?></td>
       </tr>
     </table>
   </div>
@@ -132,20 +132,20 @@ $date = str_replace('T', ' ', $date);
   <div class="col-md-6" role="main">
     <table>
       <tr>
-        <th class="right">Offering: </th>
-        <td><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
+        <th class="right-table">Offering: </th>
+        <td class="left-table"><?php echo $vmResponse[0]['serviceofferingname']; ?></td>
       </tr>
       <tr>
-        <th class="right">CPUs: </th>
-        <td><?php echo $vmResponse[0]['cpunumber']; ?></td>
+        <th class="right-table">CPUs: </th>
+        <td class="left-table"><?php echo $vmResponse[0]['cpunumber']; ?></td>
       </tr>
       <tr>
-        <th class="right">CPU Speed: </th>
-        <td><?php echo $vmResponse[0]['cpuspeed']; ?></td>
+        <th class="right-table">CPU Speed: </th>
+        <td class="left-table"><?php echo $vmResponse[0]['cpuspeed']; ?></td>
       </tr>
       <tr>
-        <th class="right">Memory: </th>
-        <td><?php echo $vmResponse[0]['memory']; ?></td>
+        <th class="right-table">Memory: </th>
+        <td class="left-table"><?php echo $vmResponse[0]['memory']; ?></td>
       </tr>
     </table>
   </div>
