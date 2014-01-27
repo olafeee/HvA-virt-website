@@ -66,12 +66,11 @@ $invoices = $this->invoice;
 			$("#invoices").tablesorter({
 				sortList: [[1,0]
 			}); 
-		});
-		$(function() {
 			$("table")
 				.tablesorter({widthFixed: true, widgets: ['zebra']})
-				.tablesorterPager({container: $("#pager")});
+				.tablesorterPager({container: $("#pager")
 			});
+		});
 		</script>
 	</div>
       </div>
