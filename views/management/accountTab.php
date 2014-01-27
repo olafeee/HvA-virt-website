@@ -16,7 +16,6 @@ $accountInfo = $this->accountInfo[0];
         
       	<h4><span class="glyphicon glyphicon-user"></span>   Account Information</h4><hr />
 
-
       	<table>
 	      <tr>
 	        <th class="right-table">First Name : </th>
@@ -45,55 +44,27 @@ $accountInfo = $this->accountInfo[0];
 
 	    <br /><br />
 
-
-		<label for="fname" class="col-sm-2 control-label">First Name :</label>
-		<div class="col-sm-10">
-			<p id="fname" name="fname"><?php echo $accountInfo['firstname']; ?></p>
-		</div>
-
-		<label for="lname" class="col-sm-2 control-label">Last Name :</label>
-		<div class="col-sm-10">
-			<p id="lname"><?php echo $accountInfo['lastname']; ?></p>
-		</div>
-
-		<label for="email" class="col-sm-2 control-label">Email :</label>
-		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['username']; ?></p>
-		</div>
-		<label for="phone" class="col-sm-2 control-label">Phone :</label>
-		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['phone']; ?></p>
-		</div>
-		<?php if($accountInfo['reseller'] == "TRUE"){?>
-		<label for="reseller" class="col-sm-2 control-label">Reseller :</label>
-		<div class="col-sm-10">
-			<p id="email"><span class="glyphicon glyphicon-check"></p>
-		</div>
-
-		<?php }
-		?>
-
-		<br><br>
-
-		<h4><span class="glyphicon glyphicon-home"></span>   General Information</h4> 
+	    <h4><span class="glyphicon glyphicon-home"></span>   General Information</h4> 
 		<div class="editGI"><a href="javascript:showEditstreet()"><button type="button" class="btn btn-info">Edit</button></a></div><hr />
 
-		<label for="adstr" class="col-sm-2 control-label">Street :</label>
-		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['adstr']; ?></p>
-		</div>
-		<label for="adzip-adcit" class="col-sm-2 control-label">Place :</label>
-		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['adzip'].' '.$accountInfo['adcit']; ?></p>
-		</div>
-		<label for="country" class="col-sm-2 control-label">Country :</label>
-		<div class="col-sm-10">
-			<p id="email"><?php echo $accountInfo['country']; ?></p>
-		</div>
-		
+	    <table>
+	      <tr>
+	        <th class="right-table">Street : </th>
+	        <td class="left-table"><?php echo $accountInfo['adstr']; ?></td>
+	      </tr>
+	      <tr>
+	        <th class="right-table">Place : </th>
+	        <td class="left-table"><?php echo $accountInfo['adzip'].' '.$accountInfo['adcit']; ?></td>
+	      </tr>
+	      <tr>
+	        <th class="right-table">Country : </th>
+	        <td class="left-table"><?php echo $accountInfo['country']; ?></td>
+	      </tr>
+	    </table>
+
+	    <br /><br />
 
 		<h4><span class="glyphicon glyphicon-euro"></span>   Payment Information</h4><hr />
-
 
 		Filler here<br />
 
