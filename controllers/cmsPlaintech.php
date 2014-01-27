@@ -115,10 +115,11 @@ class cmsPlaintech extends baseController {
 	}
 
 	function addPrivileges(){
+		$username = $_POST['username'];
 		$CSID = $_POST['CSID'];
 		$role_id = $_POST['rol_id'];
 		$delete = $this->model->addPrivileges($role_id, $CSID);
-		print_r($delete);
+		header('location: /managePrivileges/'.$CSID.'/'.$username);
 	}
 
 	function jan(){
