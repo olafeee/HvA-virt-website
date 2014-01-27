@@ -2,7 +2,6 @@
 <?php /*<script type="text/javascript" src="/js/jquery.tablesorter.pager.js"></script> */ ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <script type="text/javascript" src="//dl.dropboxusercontent.com/u/4151695/html/pajinate/examples/js/jquery.pajinate.js"></script>
-<link rel="stylesheet" href="//dl.dropboxusercontent.com/u/4151695/html/pajinate/examples/css/styles.css">
 <style>
 th.headerSortDown { 
     background-image: url(http://tablesorter.com/themes/blue/desc.gif); 
