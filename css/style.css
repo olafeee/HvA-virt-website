@@ -701,3 +701,7 @@ p.order_options_OS{
     padding: 10px;
     margin: auto;
 }
+
+.editGI{
+	float: right;
+}
