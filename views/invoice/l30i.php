@@ -64,10 +64,11 @@ $invoices = $this->invoice;
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$("#invoices").tablesorter({
-				sortList: [[1,0]
+				sortList: [[1,0],
+				widthFixed: true,
+				widgets: ['zebra']
 			}); 
-			$("#invoices")
-				.tablesorter({widthFixed: true, widgets: ['zebra']})
+			$("table")
 				.tablesorterPager({container: $("#pager")
 			});
 		});
