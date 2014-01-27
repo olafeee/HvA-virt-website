@@ -59,7 +59,8 @@ $vmResponse = $this->vmResponse;
         while ($i < $maxArray) {
 
           if ($vmResponse['virtualmachine'][$i]['state'] != 'Expunging') {
-             if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
+            if ($vmResponse['virtualmachine'][$i]['state'] != 'Error') {
+                           if($vmResponse['virtualmachine'][$i]['state'] == 'Running' ) {
               $stateColor = 'alert-success';
             } else if($vmResponse['virtualmachine'][$i]['state'] == 'Stopped' ) {
               $stateColor = 'alert-danger';
@@ -80,6 +81,9 @@ $vmResponse = $this->vmResponse;
             </tr>
         <?php
            
+            }
+             
+
           }
           $i++;
         } // End While loop

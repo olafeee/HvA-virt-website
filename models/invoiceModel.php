@@ -27,7 +27,7 @@ class invoiceModel extends baseModel {
 		if(!preg_match('/^[a-zA-Z\s]+$/', $name)){ $names = explode(' ',"Nonexistent Default Name");}else{ $names = explode(' ',$name);
 		//fixes error when $name is empty...
 		if(empty($names[1])){ $names = explode(' ',"Nonexistent Default Name");}
-	    $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE firstname='$names[0]' AND lastname='$names[1]' ORDER BY date ASC");
+	    $sqlArray = $this->db->selectAll("SELECT * FROM invoice_files WHERE firstname LIKE '%$names[0]%' AND lastname LIKE '%$names[1]%' ORDER BY date ASC");
         return $sqlArray;
 		}
     }

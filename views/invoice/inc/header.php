@@ -1,13 +1,6 @@
 <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
-<script type="text/javascript" src="/js/jquery.tablesorter.pager.js"></script> 
+<?php /*<script type="text/javascript" src="/js/jquery.tablesorter.pager.js"></script> */ ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-<script type="text/javascript">
-	$(function() {
-		$("table")
-			.tablesorter({widthFixed: true, widgets: ['zebra']})
-			.tablesorterPager({container: $("#pager")});
-	});
-	</script>
 <style>
 th.headerSortDown { 
     background-image: url(http://tablesorter.com/themes/blue/desc.gif); 
@@ -59,6 +52,12 @@ th.headerSortUp {
 				$("#custName").on('click', function(){
 					var custName1 = document.getElementById('name').value;
 					document.location.href = "/invoice/showByName/" + custName1; 
+				});
+				
+				$("#name").keyup(function(event){
+					if(event.keyCode == 13){
+						$("#custName").click();
+					}
 				});
 			</script>
 		</div>
