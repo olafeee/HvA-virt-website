@@ -28,7 +28,6 @@ $accountInfo = $this->accountInfo[0];
         <a href="javascript:hideEditstreet()"><button type="button" class="btn btn-info">Cancel</button></a>
         <button class="btn btn-success" type="submit">Save</button>
      </form>
-
     </div>
   </div>
 </div>
@@ -62,33 +61,6 @@ $accountInfo = $this->accountInfo[0];
 
 
 <script type="text/javascript">
-
-// Ajax Edit account info
-$("#editAccount").submit(function(e)
-{
-  var postData = $(this).serializeArray();
-  var formURL = $(this).attr("action");
-  $.ajax(
-  {
-    url : formURL,
-    type: "POST",
-    data : postData,
-    success:function(data, textStatus, jqXHR) 
-    {
-        hideWarning();
-    },
-    error: function(jqXHR, textStatus, errorThrown) 
-    {
-      hideWarning();
-      window.console ={log: 'FAILED TO EDIT ACCOUNT INFO'};   
-    }
-  });
-  e.preventDefault(); //STOP default action
-  //e.unbind(); //unbind. to stop multiple form submit.
-});
- 
-$("#editAccount").submit(); //Submit  the FORM
-
 
 // Ajax Auto reload!
 var url;
@@ -136,6 +108,35 @@ $(document).ready(function() {
       }, 3000);// the "3000" here refers to the time to refresh the div.  it is in milliseconds. 
   } 
 });
+
+// Ajax Edit account info
+$("#editAccount").submit(function(e)
+{
+  var postData = $(this).serializeArray();
+  var formURL = $(this).attr("action");
+  $.ajax(
+  {
+    url : formURL,
+    type: "POST",
+    data : postData,
+    success:function(data, textStatus, jqXHR) 
+    {
+        hideWarning();
+        //url='/management/accountTab';
+        $('#vmContentWindow').load(url);
+
+    },
+    error: function(jqXHR, textStatus, errorThrown) 
+    {
+      hideWarning();
+      window.console ={log: 'FAILED TO EDIT ACCOUNT INFO'};   
+    }
+  });
+  e.preventDefault(); //STOP default action
+  //e.unbind(); //unbind. to stop multiple form submit.
+});
+ 
+$("#editAccount").submit(); //Submit  the FORM
 
 
 </script>
