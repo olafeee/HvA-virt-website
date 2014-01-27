@@ -30,7 +30,7 @@ $accountInfo = $this->accountInfo[0];
 	        <th class="right-table">Username : </th>
 	        <td><?php echo $accountInfo['username']; ?></td>
 	      </tr>
-	      <tr>
+	      <tr class="right-table">
 	        <th class="right-table">Phone : </th>
 	        <td><?php echo $accountInfo['phone']; ?></td>
 	      </tr>
