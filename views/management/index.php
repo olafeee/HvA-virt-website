@@ -94,7 +94,7 @@ $('#nav-invoiceTab').click(function (){
   var num = $(this).attr('id');
   args={page: num};
   url='/management/invoiceTab';
-  $('#vmContentWindow').load(url, queryString);
+  $('#vmContentWindow').load(url);
   refresh='false';
 });
 
