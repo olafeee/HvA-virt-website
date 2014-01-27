@@ -11,7 +11,7 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<td>GB</td>
+					<td>Amount</td>
 					<td>Price</td>
 					<td></td>
 				</tr>
