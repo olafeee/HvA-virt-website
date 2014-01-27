@@ -43,7 +43,7 @@ $invoices = $this->invoice;
 		<!-- nein man ich will no-->
 		</tbody>
         </table>
-		<div id="pager" class="pager">
+		<?php /*<div id="pager" class="pager">
 			<form>
 				<span class="glyphicon glyphicon-fast-backward"></span>
 				<span class="glyphicon glyphicon-backward"></span>
@@ -58,7 +58,7 @@ $invoices = $this->invoice;
 					<option value="100">100</option>
 				</select>
 			</form>
-		</div>
+		</div>*/?>
 
 		<?php /*echo "<pre>";print_r($invoices);echo "</pre>";*/ ?>
 		<script type="text/javascript">
@@ -66,10 +66,6 @@ $invoices = $this->invoice;
 			$("#invoices").tablesorter({
 				sortList: [[1,0]
 			}); 
-			$("table")
-				.tablesorter({widthFixed: true, widgets: ['zebra']})
-				.tablesorterPager({container: $("#pager")});
-			});
 		});
 		</script>
 	</div>

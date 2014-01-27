@@ -1,5 +1,5 @@
 <script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
-<script type="text/javascript" src="/js/jquery.tablesorter.pager.js"></script> 
+<?php /*<script type="text/javascript" src="/js/jquery.tablesorter.pager.js"></script> */ ?>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
 <style>
 th.headerSortDown { 
